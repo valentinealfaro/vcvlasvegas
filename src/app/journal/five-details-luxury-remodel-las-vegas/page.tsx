@@ -6,6 +6,7 @@ import { PageHero } from '@/components/PageHero';
 import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
+import { StickySectionNav } from '@/components/StickySectionNav';
 import { kitchenImages, bathroomImages, customHomeImages, flooringImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';
@@ -63,6 +64,16 @@ export default function Post() {
         ]}
       />
 
+      <StickySectionNav
+        sections={[
+          { id: 'd1', label: 'Plane' },
+          { id: 'd2', label: 'Millwork' },
+          { id: 'd3', label: 'Lighting' },
+          { id: 'd4', label: 'Stone' },
+          { id: 'd5', label: 'Weight' },
+        ]}
+      />
+
       <PageHero
         eyebrow="Studio Notes · 01"
         title="Five details"
@@ -96,7 +107,7 @@ export default function Post() {
             </Reveal>
 
             {/* 01 */}
-            <div className="mt-16 border-t border-bone/10 pt-12">
+            <section id="d1" className="mt-16 border-t border-bone/10 pt-12">
               <Reveal>
                 <p className="font-display text-7xl text-gold-light">01</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
@@ -118,7 +129,7 @@ export default function Post() {
                   reads as one calm architectural plane.
                 </p>
               </Reveal>
-            </div>
+            </section>
 
             {/* image break */}
             <Reveal delay={2}>
@@ -134,7 +145,7 @@ export default function Post() {
             </Reveal>
 
             {/* 02 */}
-            <div className="border-t border-bone/10 pt-12">
+            <section id="d2" className="border-t border-bone/10 pt-12">
               <Reveal>
                 <p className="font-display text-7xl text-gold-light">02</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
@@ -156,7 +167,7 @@ export default function Post() {
                   any kitchen you love — it’s almost certainly bespoke.
                 </p>
               </Reveal>
-            </div>
+            </section>
 
             {/* pull quote */}
             <Reveal delay={2}>
@@ -173,7 +184,7 @@ export default function Post() {
             </Reveal>
 
             {/* 03 */}
-            <div className="border-t border-bone/10 pt-12">
+            <section id="d3" className="border-t border-bone/10 pt-12">
               <Reveal>
                 <p className="font-display text-7xl text-gold-light">03</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
@@ -197,7 +208,7 @@ export default function Post() {
                   they say a space feels expensive.
                 </p>
               </Reveal>
-            </div>
+            </section>
 
             <Reveal delay={2}>
               <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-ink-700">
@@ -212,7 +223,7 @@ export default function Post() {
             </Reveal>
 
             {/* 04 */}
-            <div className="border-t border-bone/10 pt-12">
+            <section id="d4" className="border-t border-bone/10 pt-12">
               <Reveal>
                 <p className="font-display text-7xl text-gold-light">04</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
@@ -235,10 +246,10 @@ export default function Post() {
                   inevitable rather than incidental.
                 </p>
               </Reveal>
-            </div>
+            </section>
 
             {/* 05 */}
-            <div className="mt-12 border-t border-bone/10 pt-12">
+            <section id="d5" className="mt-12 border-t border-bone/10 pt-12">
               <Reveal>
                 <p className="font-display text-7xl text-gold-light">05</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
@@ -259,7 +270,7 @@ export default function Post() {
                   rest of the build is real.
                 </p>
               </Reveal>
-            </div>
+            </section>
 
             {/* closing */}
             <Reveal delay={2}>

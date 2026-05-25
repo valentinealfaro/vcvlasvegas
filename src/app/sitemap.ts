@@ -14,6 +14,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/standards',
     '/journal',
     '/journal/five-details-luxury-remodel-las-vegas',
+    '/journal/designing-spa-bathroom-desert',
+    '/journal/opening-up-vegas-floor-plan',
     '/about',
     '/contact',
   ];
