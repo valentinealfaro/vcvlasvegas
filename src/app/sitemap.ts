@@ -11,6 +11,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/projects/the-summerlin-residence',
     '/lookbook',
     '/process',
+    '/standards',
+    '/journal',
+    '/journal/five-details-luxury-remodel-las-vegas',
     '/about',
     '/contact',
   ];

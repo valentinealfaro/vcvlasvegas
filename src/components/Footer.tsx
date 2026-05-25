@@ -73,7 +73,10 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-bone/70">
               <li><Link href="/about" className="hover:text-gold">About</Link></li>
               <li><Link href="/process" className="hover:text-gold">Our Process</Link></li>
+              <li><Link href="/standards" className="hover:text-gold">Standards</Link></li>
               <li><Link href="/projects" className="hover:text-gold">Projects</Link></li>
+              <li><Link href="/lookbook" className="hover:text-gold">Lookbook</Link></li>
+              <li><Link href="/journal" className="hover:text-gold">Journal</Link></li>
               <li><Link href="/contact" className="hover:text-gold">Contact</Link></li>
             </ul>
             <div className="mt-10">
