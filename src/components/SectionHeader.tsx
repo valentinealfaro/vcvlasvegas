@@ -26,9 +26,28 @@ export function SectionHeader({
     >
       {eyebrow && (
         <Reveal>
-          <div className="mb-6 flex items-center gap-4">
-            {align !== 'center' && <span className="hairline" />}
+          <div
+            className={cn(
+              'mb-6 flex items-center gap-4',
+              align === 'center' && 'justify-center',
+            )}
+          >
+            {align !== 'center' && (
+              <span
+                aria-hidden
+                className="h-px w-12 origin-left bg-gradient-to-r from-gold via-gold to-transparent"
+                style={{
+                  animation: 'fade-up 0.9s cubic-bezier(0.16,1,0.3,1) backwards, hairline-grow 1.2s cubic-bezier(0.16,1,0.3,1) backwards',
+                }}
+              />
+            )}
             <p className="eyebrow !text-bone">{eyebrow}</p>
+            {align !== 'center' && (
+              <span
+                aria-hidden
+                className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold"
+              />
+            )}
           </div>
         </Reveal>
       )}
@@ -36,6 +55,15 @@ export function SectionHeader({
         <h2 className="font-display text-4xl text-bone text-balance md:text-5xl lg:text-6xl">
           {title}
         </h2>
+      </Reveal>
+      <Reveal delay={1}>
+        <div
+          aria-hidden
+          className={cn(
+            'mt-5 h-px w-24 bg-gradient-to-r from-gold via-gold/40 to-transparent',
+            align === 'center' && 'mx-auto bg-gradient-to-r from-transparent via-gold to-transparent',
+          )}
+        />
       </Reveal>
       {description && (
         <Reveal delay={2}>

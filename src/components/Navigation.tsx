@@ -44,11 +44,21 @@ export function Navigation() {
       <header
         className={cn(
           'fixed inset-x-0 top-0 z-50 transition-all duration-500',
-          scrolled
-            ? 'bg-ink/85 backdrop-blur-xl border-b border-bone/5'
-            : 'bg-transparent',
+          scrolled ? 'bg-ink/85 backdrop-blur-xl' : 'bg-transparent',
         )}
       >
+        {/* Gradient bottom-border when scrolled — quietly announces the chrome */}
+        <div
+          aria-hidden
+          className={cn(
+            'pointer-events-none absolute inset-x-0 bottom-0 h-px transition-opacity duration-500',
+            scrolled ? 'opacity-100' : 'opacity-0',
+          )}
+          style={{
+            background:
+              'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 35%, rgba(59,130,246,0.55) 65%, transparent 100%)',
+          }}
+        />
         <div className="container-luxe flex items-center justify-between py-5 lg:py-6">
           <Link
             href="/"
