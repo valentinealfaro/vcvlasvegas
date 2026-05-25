@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Check, X } from 'lucide-react';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { SectionHeader } from '@/components/SectionHeader';
 import { CTASection } from '@/components/CTASection';
@@ -78,12 +78,12 @@ export default function WhyPage() {
         ])}
       />
 
-      <PageHero
+      <CinematicHero
         eyebrow="Positioning"
         title="Who we’re"
         italic="built for."
         description="A clear read on how VCV Vegas works, what we do not do, and who we are right for. We would rather lose a project at the door than at the punch list."
-        image={customHomeImages[0]}
+        images={[customHomeImages[0], customHomeImages[1], bathroomImages[0], customHomeImages[3]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Why VCV Vegas' }]}
       />
 

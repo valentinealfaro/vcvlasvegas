@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
-import { kitchenImages, customHomeImages } from '@/lib/images';
+import { kitchenImages, customHomeImages, bathroomImages } from '@/lib/images';
 import { JsonLd, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import { siteConfig } from '@/lib/site';
 
@@ -118,12 +118,12 @@ export default function FAQPage() {
         ]}
       />
 
-      <PageHero
+      <CinematicHero
         eyebrow="Frequently Asked"
         title="Direct"
         italic="answers."
         description="Common questions about a luxury remodel — investment, timeline, process, neighborhoods, materials, and warranty. Answered directly by the studio."
-        image={kitchenImages[0]}
+        images={[kitchenImages[0], customHomeImages[0], bathroomImages[0]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'FAQ' }]}
       />
 

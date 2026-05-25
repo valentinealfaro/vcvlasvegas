@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { CTASection } from '@/components/CTASection';
@@ -91,12 +91,12 @@ export default function ForTradePage() {
         ]}
       />
 
-      <PageHero
+      <CinematicHero
         eyebrow="The Trade Program"
         title="A construction arm"
         italic="for design professionals."
         description="VCV Vegas operates as the licensed construction studio behind architects and interior designers working on luxury Las Vegas residences. One senior lead, protected design intent, and pricing on your timeline."
-        image={customHomeImages[0]}
+        images={[customHomeImages[0], customHomeImages[1], kitchenImages[1], bathroomImages[3]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'For Architects & Designers' },

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { ImageCard } from '@/components/ImageCard';
 import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
@@ -43,12 +43,12 @@ export default function ServicesPage() {
           { name: 'Services', url: `${siteConfig.url}/services` },
         ])}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Studio Services"
         title="Every service"
         italic="under one studio."
         description="VCV Vegas operates as a single design-build studio across kitchens, bathrooms, whole-home renovations, general contracting, and outdoor living."
-        image={flooringImages[3]}
+        images={[flooringImages[3], kitchenImages[0], bathroomImages[0], customHomeImages[0], remodelImages[0]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]}
       />
 

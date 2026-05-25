@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { ImageCard } from '@/components/ImageCard';
 import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
@@ -49,12 +49,12 @@ const sections = [
 export default function ProjectsPage() {
   return (
     <>
-      <PageHero
+      <CinematicHero
         eyebrow="Selected Work"
         title="A quiet"
         italic="portfolio."
         description="A curated selection of recent VCV Vegas projects across kitchens, bathrooms, whole-home renovations, and custom builds in the Las Vegas valley."
-        image={kitchenImages[1]}
+        images={[kitchenImages[1], bathroomImages[0], customHomeImages[1], kitchenImages[0], bathroomImages[3]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Projects' }]}
       />
 

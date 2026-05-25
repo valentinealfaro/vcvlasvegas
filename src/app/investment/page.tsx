@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
 import { InvestmentCalculator } from '@/components/InvestmentCalculator';
-import { kitchenImages, customHomeImages } from '@/lib/images';
+import { kitchenImages, customHomeImages, bathroomImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';
 
@@ -39,12 +39,12 @@ export default function InvestmentPage() {
         ])}
       />
 
-      <PageHero
+      <CinematicHero
         eyebrow="The Numbers"
         title="What a"
         italic="luxury remodel costs."
         description="An honest, indicative range tied to your project type, square footage, and finish level — calculated against real VCV Vegas data. Request the detailed breakdown anytime."
-        image={kitchenImages[0]}
+        images={[kitchenImages[0], customHomeImages[0], bathroomImages[0], kitchenImages[3]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Investment Calculator' }]}
       />
 

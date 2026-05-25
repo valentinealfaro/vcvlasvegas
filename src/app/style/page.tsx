@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
 import { StyleQuiz } from '@/components/StyleQuiz';
@@ -39,12 +39,12 @@ export default function StylePage() {
         ])}
       />
 
-      <PageHero
+      <CinematicHero
         eyebrow="Find Your Style"
         title="Four questions."
         italic="One palette."
         description="A short interactive profile that points us toward your direction — the architecture, the warmth, the light, and the scope. Takes about 90 seconds."
-        image={bathroomImages[0]}
+        images={[bathroomImages[0], kitchenImages[0], bathroomImages[3], kitchenImages[1]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Find Your Style' }]}
       />
 

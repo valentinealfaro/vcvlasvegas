@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { ConsultationForm } from '@/components/ConsultationForm';
 import { Reveal } from '@/components/Reveal';
-import { kitchenImages } from '@/lib/images';
+import { kitchenImages, bathroomImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <PageHero
+      <CinematicHero
         eyebrow="Private Consultation"
         title="Start"
         italic="your remodel."
         description="Tell us about your project and a senior designer will respond within one business day to schedule a private consultation in your Las Vegas home."
-        image={kitchenImages[3]}
+        images={[kitchenImages[3], kitchenImages[0], bathroomImages[0], kitchenImages[1]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Contact' }]}
       />
 

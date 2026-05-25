@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { ImageCard } from '@/components/ImageCard';
 import { CTASection } from '@/components/CTASection';
@@ -54,12 +54,12 @@ const adjacentAreas = [
 export default function NeighborhoodsPage() {
   return (
     <>
-      <PageHero
+      <CinematicHero
         eyebrow="Service Area"
         title="Where we"
         italic="build."
         description="VCV Vegas serves the full Las Vegas metro. Selected neighborhoods are profiled below — every additional listed area falls inside our active project radius."
-        image={customHomeImages[3]}
+        images={[customHomeImages[3], customHomeImages[1], customHomeImages[0], kitchenImages[0]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Neighborhoods' }]}
       />
 

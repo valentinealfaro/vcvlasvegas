@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { SectionHeader } from '@/components/SectionHeader';
 import { CTASection } from '@/components/CTASection';
@@ -147,12 +147,12 @@ export default function CostGuidePage() {
         ]}
       />
 
-      <PageHero
+      <CinematicHero
         eyebrow="2026 Cost Guide"
         title="What a luxury remodel"
         italic="actually costs in Las Vegas."
         description="An honest, studio-written guide to luxury remodel pricing across the Las Vegas valley — kitchen, bathroom, whole-home, and outdoor scopes. Updated for 2026."
-        image={kitchenImages[0]}
+        images={[kitchenImages[0], customHomeImages[0], bathroomImages[0], customHomeImages[1], kitchenImages[1]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Luxury Remodel Cost' },

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Calendar, Clock, MapPin } from 'lucide-react';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { ConsultationForm } from '@/components/ConsultationForm';
 import { CTASection } from '@/components/CTASection';
-import { customHomeImages, bathroomImages } from '@/lib/images';
+import { customHomeImages, bathroomImages, kitchenImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -36,12 +36,12 @@ const expect = [
 export default function VisitPage() {
   return (
     <>
-      <PageHero
+      <CinematicHero
         eyebrow="Private Consultation"
         title="By"
         italic="appointment."
         description="The VCV Vegas studio consults privately, in your home, across the Las Vegas metro. A senior designer responds within one business day."
-        image={customHomeImages[2]}
+        images={[customHomeImages[2], customHomeImages[0], bathroomImages[0], kitchenImages[0]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'By Appointment' }]}
       />
 
