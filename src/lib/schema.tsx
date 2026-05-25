@@ -1,5 +1,18 @@
 import { siteConfig } from './site';
 
+export function websiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteConfig.url}#website`,
+    name: siteConfig.name,
+    url: siteConfig.url,
+    description: siteConfig.description,
+    inLanguage: 'en-US',
+    publisher: { '@id': `${siteConfig.url}#organization` },
+  };
+}
+
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',

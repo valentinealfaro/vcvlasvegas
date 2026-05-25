@@ -7,7 +7,7 @@ import { FloatingCTA } from '@/components/FloatingCTA';
 import { AffiliationStrip } from '@/components/AffiliationStrip';
 import { ScrollProgress } from '@/components/ScrollProgress';
 import { CursorGlow } from '@/components/CursorGlow';
-import { JsonLd, organizationSchema } from '@/lib/schema';
+import { JsonLd, organizationSchema, websiteSchema } from '@/lib/schema';
 import { siteConfig } from '@/lib/site';
 import './globals.css';
 
@@ -89,9 +89,15 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://firebasestorage.googleapis.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="VCV Vegas · Journal"
+          href="/feed.xml"
+        />
       </head>
       <body className="min-h-screen bg-ink text-bone antialiased">
-        <JsonLd data={organizationSchema()} />
+        <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <ScrollProgress />
         <CursorGlow />
         <a

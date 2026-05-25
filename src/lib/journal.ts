@@ -8,6 +8,7 @@ export type JournalPost = {
   summary: string;
   image: LuxeImage;
   read: string;
+  publishedAt: string;
 };
 
 export const journalPosts: JournalPost[] = [
@@ -19,24 +20,7 @@ export const journalPosts: JournalPost[] = [
       'A short, candid guide to evaluating high-end residential contractors in the valley — what to look for, what to ignore, and the five questions that separate a serious studio from a bidding contractor.',
     image: customHomeImages[0],
     read: '7 min read',
-  },
-  {
-    slug: 'five-details-luxury-remodel-las-vegas',
-    eyebrow: 'Studio Notes · 01',
-    title: 'The five details that quietly separate a luxury remodel.',
-    summary:
-      'Walk through any high-end Las Vegas home and the difference between a builder-grade renovation and a designed one comes down to roughly five things. Here they are.',
-    image: kitchenImages[0],
-    read: '6 min read',
-  },
-  {
-    slug: 'designing-spa-bathroom-desert',
-    eyebrow: 'Studio Notes · 02',
-    title: 'Designing a spa bathroom for desert living.',
-    summary:
-      'Why the best Las Vegas primary baths are built around restraint — not maximalism — and how we engineer wet rooms that read like architecture.',
-    image: bathroomImages[0],
-    read: '5 min read',
+    publishedAt: '2026-05-20',
   },
   {
     slug: 'opening-up-vegas-floor-plan',
@@ -46,5 +30,26 @@ export const journalPosts: JournalPost[] = [
       'Almost every home in the valley was built on a closed-plan layout that no longer reads. Here is how we re-engineer the great room without losing the architecture.',
     image: customHomeImages[0],
     read: '7 min read',
+    publishedAt: '2026-05-08',
+  },
+  {
+    slug: 'designing-spa-bathroom-desert',
+    eyebrow: 'Studio Notes · 02',
+    title: 'Designing a spa bathroom for desert living.',
+    summary:
+      'Why the best Las Vegas primary baths are built around restraint — not maximalism — and how we engineer wet rooms that read like architecture.',
+    image: bathroomImages[0],
+    read: '5 min read',
+    publishedAt: '2026-04-22',
+  },
+  {
+    slug: 'five-details-luxury-remodel-las-vegas',
+    eyebrow: 'Studio Notes · 01',
+    title: 'The five details that quietly separate a luxury remodel.',
+    summary:
+      'Walk through any high-end Las Vegas home and the difference between a builder-grade renovation and a designed one comes down to roughly five things. Here they are.',
+    image: kitchenImages[0],
+    read: '6 min read',
+    publishedAt: '2026-04-10',
   },
 ];
