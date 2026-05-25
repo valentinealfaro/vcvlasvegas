@@ -13,6 +13,16 @@ export type JournalPost = {
 
 export const journalPosts: JournalPost[] = [
   {
+    slug: 'indoor-outdoor-living-las-vegas-climate',
+    eyebrow: 'Studio Notes · 06',
+    title: 'Indoor-outdoor living in a Las Vegas climate.',
+    summary:
+      'A patio in Las Vegas works for ten months a year — if it is engineered correctly. Six principles for designing an outdoor room that reads as architecture, not as a backyard.',
+    image: customHomeImages[3],
+    read: '6 min read',
+    publishedAt: '2026-05-25',
+  },
+  {
     slug: 'what-pre-construction-actually-looks-like',
     eyebrow: 'Studio Notes · 05',
     title: 'What pre-construction actually looks like.',

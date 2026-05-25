@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/journal/opening-up-vegas-floor-plan',
     '/journal/how-to-choose-luxury-contractor-las-vegas',
     '/journal/what-pre-construction-actually-looks-like',
+    '/journal/indoor-outdoor-living-las-vegas-climate',
     '/about',
     '/letter',
     '/why-vcv-vegas',
