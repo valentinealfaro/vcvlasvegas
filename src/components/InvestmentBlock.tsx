@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 type Row = { label: string; value: string };
@@ -28,6 +30,15 @@ export function InvestmentBlock({
                   {description}
                 </p>
               )}
+              <div className="mt-8">
+                <Link
+                  href="/investment"
+                  className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-gold transition-colors hover:text-gold-light"
+                >
+                  Calculate your range
+                  <ArrowUpRight className="h-3 w-3 transition-transform group-hover:rotate-45" />
+                </Link>
+              </div>
             </div>
           </Reveal>
           <Reveal delay={1}>
