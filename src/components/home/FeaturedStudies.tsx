@@ -24,6 +24,15 @@ const studies = [
     duration: '7 months',
     image: customHomeImages[1],
   },
+  {
+    href: '/projects/the-paradise-penthouse',
+    eyebrow: 'Project Study · 03',
+    title: 'The Paradise',
+    italic: 'Penthouse.',
+    scope: 'Kitchen · Primary · Powder · Terrace',
+    duration: '4 months',
+    image: kitchenImages[3],
+  },
 ];
 
 export function FeaturedStudies() {
@@ -44,7 +53,7 @@ export function FeaturedStudies() {
           </Reveal>
         </div>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-2 lg:gap-8">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {studies.map((s, i) => (
             <Reveal key={s.href} delay={i}>
               <Link

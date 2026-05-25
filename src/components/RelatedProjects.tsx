@@ -24,6 +24,15 @@ const projects = [
     duration: '7 months',
     image: customHomeImages[1],
   },
+  {
+    slug: 'the-paradise-penthouse',
+    eyebrow: 'Project Study · 03',
+    title: 'The Paradise',
+    italic: 'Penthouse.',
+    scope: 'Kitchen · Primary · Powder · Terrace',
+    duration: '4 months',
+    image: kitchenImages[3],
+  },
 ];
 
 export function RelatedProjects({ currentSlug }: { currentSlug: string }) {

@@ -66,7 +66,7 @@ export default function ProjectsPage() {
             title="A closer look."
             description="Representative VCV Vegas commissions — opened up, broken down, and walked through end to end."
           />
-          <div className="mt-16 grid gap-6 lg:grid-cols-2 lg:gap-8">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {[
               {
                 href: '/projects/the-summerlin-residence',
@@ -83,6 +83,14 @@ export default function ProjectsPage() {
                 italic: 'Highlands Residence.',
                 scope: 'Kitchen · Primary · Wine Room · Outdoor',
                 image: customHomeImages[1],
+              },
+              {
+                href: '/projects/the-paradise-penthouse',
+                eyebrow: 'Project Study · 03',
+                title: 'The Paradise',
+                italic: 'Penthouse.',
+                scope: 'Kitchen · Primary · Powder · Terrace',
+                image: kitchenImages[3],
               },
             ].map((s, i) => (
               <Reveal key={s.href} delay={i}>

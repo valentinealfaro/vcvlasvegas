@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/projects',
     '/projects/the-summerlin-residence',
     '/projects/macdonald-highlands-residence',
+    '/projects/the-paradise-penthouse',
     '/for-architects-and-designers',
     '/concierge',
     '/engagement',
