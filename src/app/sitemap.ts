@@ -33,6 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/investment',
     '/luxury-remodel-cost-las-vegas',
     '/style',
+    '/resources',
     '/intake',
     '/contact',
   ];
