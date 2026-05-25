@@ -8,6 +8,7 @@ import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { SectionHeader } from '@/components/SectionHeader';
+import { RelatedProjects } from '@/components/RelatedProjects';
 import {
   customHomeImages,
   bathroomImages,
@@ -209,6 +210,8 @@ export default function CaseStudyPage() {
           </Link>
         </div>
       </section>
+
+      <RelatedProjects currentSlug="macdonald-highlands-residence" />
 
       <CTASection
         title="Build at the standard of the address."

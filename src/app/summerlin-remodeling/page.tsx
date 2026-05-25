@@ -6,6 +6,7 @@ import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
+import { RelatedReading } from '@/components/RelatedReading';
 import { customHomeImages, kitchenImages, bathroomImages } from '@/lib/images';
 import {
   JsonLd,
@@ -120,6 +121,11 @@ export default function SummerlinPage() {
           </div>
         </div>
       </section>
+
+      <RelatedReading
+        slugs={['five-details-luxury-remodel-las-vegas', 'designing-spa-bathroom-desert']}
+        description="Two studio notes that map directly onto Summerlin work — the five details that separate a remodel from a renovation, and how we design spa bathrooms for desert living."
+      />
 
       <CTASection
         title="Re-imagine your Summerlin home."

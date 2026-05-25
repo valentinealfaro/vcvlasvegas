@@ -6,6 +6,7 @@ import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
+import { RelatedReading } from '@/components/RelatedReading';
 import { kitchenImages, bathroomImages, customHomeImages } from '@/lib/images';
 import {
   JsonLd,
@@ -124,6 +125,11 @@ export default function TheRidgesPage() {
           </div>
         </div>
       </section>
+
+      <RelatedReading
+        slugs={['what-pre-construction-actually-looks-like', 'five-details-luxury-remodel-las-vegas']}
+        description="Two studio notes that bear on top-of-market Ridges work — what pre-construction actually looks like, and the five details every Ridges build deserves."
+      />
 
       <CTASection
         title="Build at the standard the address requires."

@@ -6,6 +6,7 @@ import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
+import { RelatedReading } from '@/components/RelatedReading';
 import { kitchenImages, bathroomImages, customHomeImages } from '@/lib/images';
 import {
   JsonLd,
@@ -119,6 +120,11 @@ export default function ParadisePage() {
           </div>
         </div>
       </section>
+
+      <RelatedReading
+        slugs={['opening-up-vegas-floor-plan', 'designing-spa-bathroom-desert']}
+        description="Two studio notes useful in Paradise work — how we open up closed floor plans and how we design wet-room spa bathrooms."
+      />
 
       <CTASection
         title="Remodel your Paradise home."

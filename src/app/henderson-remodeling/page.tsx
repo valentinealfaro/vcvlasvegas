@@ -6,6 +6,7 @@ import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
+import { RelatedReading } from '@/components/RelatedReading';
 import { customHomeImages, kitchenImages, bathroomImages } from '@/lib/images';
 import {
   JsonLd,
@@ -120,6 +121,11 @@ export default function HendersonPage() {
           </div>
         </div>
       </section>
+
+      <RelatedReading
+        slugs={['opening-up-vegas-floor-plan', 'how-to-choose-luxury-contractor-las-vegas']}
+        description="Two studio notes that bear on Henderson work — how we open up a typical Vegas floor plan, and how to evaluate the contractor leading the build."
+      />
 
       <CTASection
         title="Build the Henderson home you actually want."

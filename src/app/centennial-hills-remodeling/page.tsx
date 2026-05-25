@@ -6,6 +6,7 @@ import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
+import { RelatedReading } from '@/components/RelatedReading';
 import { kitchenImages, bathroomImages, customHomeImages } from '@/lib/images';
 import {
   JsonLd,
@@ -120,6 +121,11 @@ export default function CentennialHillsPage() {
           </div>
         </div>
       </section>
+
+      <RelatedReading
+        slugs={['how-to-choose-luxury-contractor-las-vegas', 'what-pre-construction-actually-looks-like']}
+        description="Two studio notes useful when evaluating a Centennial Hills remodel — how to read the contractor in front of you, and what real pre-construction discipline looks like."
+      />
 
       <CTASection
         title="Re-imagine your Centennial Hills home."
