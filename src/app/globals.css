@@ -151,6 +151,37 @@ body {
   cursor: pointer;
 }
 
+/* Print styles — used by /spec-sheet for save-to-PDF */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0a0a0a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-page {
+    background: #ffffff !important;
+    color: #0a0a0a !important;
+    padding: 0 !important;
+  }
+  .print-page * {
+    color: #0a0a0a !important;
+    border-color: #0a0a0a !important;
+  }
+  .print-page .print-gold {
+    color: #8a6e3f !important;
+  }
+  .print-page section {
+    page-break-inside: avoid;
+  }
+  header,
+  footer,
+  nav {
+    display: none !important;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: #0a0a0a; }

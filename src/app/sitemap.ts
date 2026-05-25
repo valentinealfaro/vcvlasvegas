@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/lookbook',
     '/process',
     '/standards',
+    '/spec-sheet',
     '/materials',
     '/material-selection',
     '/journal',
