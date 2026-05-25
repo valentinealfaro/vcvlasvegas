@@ -5,6 +5,7 @@ import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
+import { InvestmentBlock } from '@/components/InvestmentBlock';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { kitchenImages } from '@/lib/images';
@@ -114,6 +115,18 @@ export default function KitchenPage() {
         ]}
         image={kitchenImages[3]}
         reverse
+      />
+
+      <InvestmentBlock
+        title="What a chef-grade kitchen looks like — in numbers."
+        description="Indicative ranges only. A precise investment range is shared after your private consultation, tied to your home and your goals."
+        rows={[
+          { label: 'Signature Range', value: '$150k – $350k+' },
+          { label: 'Build Window', value: '8 – 14 weeks on site' },
+          { label: 'Long-Lead Order', value: 'Pre-construction phase' },
+          { label: 'Studio Lead', value: 'Senior Designer · End-to-end' },
+          { label: 'Warranty', value: '1-Year Workmanship Standard' },
+        ]}
       />
 
       <FinishSpec

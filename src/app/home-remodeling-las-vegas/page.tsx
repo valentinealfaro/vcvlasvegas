@@ -5,6 +5,7 @@ import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
+import { InvestmentBlock } from '@/components/InvestmentBlock';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { remodelImages, customHomeImages, kitchenImages } from '@/lib/images';
@@ -110,6 +111,18 @@ export default function HomeRemodelingPage() {
         ]}
         image={kitchenImages[2]}
         reverse
+      />
+
+      <InvestmentBlock
+        title="What a whole-home renovation looks like — in numbers."
+        description="Indicative ranges only. Whole-home scope scales with square footage, structural work, and finish level."
+        rows={[
+          { label: 'Signature Range', value: '$500k – $2M+' },
+          { label: 'Build Window', value: '4 – 9 months on site' },
+          { label: 'Engineering', value: 'NV-PE Structural · Managed' },
+          { label: 'Studio Lead', value: 'Senior Designer · End-to-end' },
+          { label: 'Warranty', value: '1-Year Workmanship Standard' },
+        ]}
       />
 
       <FinishSpec

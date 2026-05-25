@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { siteConfig, servicesIndex } from '@/lib/site';
 import { NewsletterSignup } from './NewsletterSignup';
+import { Monogram } from './Monogram';
 
 export function Footer() {
   return (
@@ -32,12 +33,15 @@ export function Footer() {
       <div className="container-luxe py-20 lg:py-24">
         <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
-            <Link href="/" className="flex items-baseline gap-2">
-              <span className="font-display text-3xl tracking-tight text-bone">
-                VCV
-              </span>
-              <span className="font-sans text-xs uppercase tracking-[0.4em] text-gold">
-                Vegas
+            <Link href="/" className="flex items-center gap-4">
+              <Monogram size={48} className="text-gold" />
+              <span className="flex items-baseline gap-2">
+                <span className="font-display text-3xl tracking-tight text-bone">
+                  VCV
+                </span>
+                <span className="font-sans text-xs uppercase tracking-[0.4em] text-gold">
+                  Vegas
+                </span>
               </span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-bone/60">

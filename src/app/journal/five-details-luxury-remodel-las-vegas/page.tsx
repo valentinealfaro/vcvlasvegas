@@ -7,6 +7,7 @@ import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { StickySectionNav } from '@/components/StickySectionNav';
+import { ReadNext } from '@/components/ReadNext';
 import { kitchenImages, bathroomImages, customHomeImages, flooringImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';
@@ -324,6 +325,8 @@ export default function Post() {
         italic="Start with a senior designer."
         description="The team that writes these notes is the team that will lead your project."
       />
+
+      <ReadNext currentSlug="five-details-luxury-remodel-las-vegas" />
 
       <CTASection
         title="Design your next chapter."

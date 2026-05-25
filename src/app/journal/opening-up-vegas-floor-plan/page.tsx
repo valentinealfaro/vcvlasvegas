@@ -7,6 +7,7 @@ import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { StickySectionNav } from '@/components/StickySectionNav';
+import { ReadNext } from '@/components/ReadNext';
 import { kitchenImages, remodelImages, customHomeImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';
@@ -295,6 +296,8 @@ export default function Post() {
         italic="Start with a walkthrough."
         description="A senior designer will walk your floor plan and respond with scope direction within one business day."
       />
+
+      <ReadNext currentSlug="opening-up-vegas-floor-plan" />
 
       <CTASection
         title="Re-engineer your floor plan."

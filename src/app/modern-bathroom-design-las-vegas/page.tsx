@@ -5,6 +5,7 @@ import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
+import { InvestmentBlock } from '@/components/InvestmentBlock';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { bathroomImages } from '@/lib/images';
@@ -92,6 +93,18 @@ export default function ModernBathPage() {
         ]}
         image={bathroomImages[3]}
         reverse
+      />
+
+      <InvestmentBlock
+        title="What an architectural bath looks like — in numbers."
+        description="Indicative ranges only. Architectural scope adds engineering for wet rooms, curbless drainage, and integrated lighting."
+        rows={[
+          { label: 'Signature Range', value: '$100k – $220k' },
+          { label: 'Build Window', value: '7 – 11 weeks on site' },
+          { label: 'Wet-Room Engineering', value: 'Included Where Specified' },
+          { label: 'Studio Lead', value: 'Senior Designer · End-to-end' },
+          { label: 'Warranty', value: '1-Year Workmanship Standard' },
+        ]}
       />
 
       <FinishSpec
