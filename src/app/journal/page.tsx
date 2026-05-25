@@ -59,7 +59,15 @@ export default function JournalIndex() {
                   <div className="mt-7">
                     <div className="flex items-center justify-between gap-4 text-[0.65rem] uppercase tracking-[0.28em]">
                       <span className="text-gold">{post.eyebrow}</span>
-                      <span className="text-bone/45">{post.read}</span>
+                      <span className="text-bone/45">
+                        {new Date(post.publishedAt).toLocaleDateString('en-US', {
+                          month: 'short',
+                          day: 'numeric',
+                          year: 'numeric',
+                        })}
+                        {' · '}
+                        {post.read}
+                      </span>
                     </div>
                     <h2 className="mt-4 font-display text-3xl text-bone text-balance transition-colors group-hover:text-gold md:text-4xl">
                       {post.title}

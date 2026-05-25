@@ -27,6 +27,24 @@ body {
   color: #0a0a0a;
 }
 
+/* Keyboard focus ring — applied only on keyboard nav, not on mouse click */
+:focus-visible {
+  outline: 2px solid #b8945c;
+  outline-offset: 3px;
+  border-radius: 1px;
+  transition: outline-offset 0.15s ease;
+}
+button:focus-visible,
+a:focus-visible {
+  outline-offset: 4px;
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 1px solid #b8945c;
+  outline-offset: 0;
+}
+
 @layer base {
   h1, h2, h3, h4 {
     font-family: var(--font-display);
