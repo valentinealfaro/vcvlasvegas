@@ -56,27 +56,40 @@ export function InvestmentRange() {
           </Reveal>
         </div>
 
-        <div className="mt-16 grid gap-px bg-bone/10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-7">
           {tiers.map((t, i) => (
             <Reveal key={t.label} delay={i % 4}>
-              <Link
-                href={t.href}
-                className="group flex h-full flex-col justify-between gap-12 bg-ink p-8 transition-colors hover:bg-ink-700 lg:p-10"
-              >
-                <div>
-                  <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
-                    {t.label}
-                  </p>
-                  <p className="mt-5 font-display text-3xl text-bone group-hover:text-gold-light md:text-4xl">
-                    {t.range}
-                  </p>
-                  <p className="mt-3 text-sm text-bone/55">{t.duration}</p>
-                </div>
-                <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-gold opacity-70 transition-opacity group-hover:opacity-100">
-                  Explore
-                  <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
-                </div>
-              </Link>
+              <div className="border-gradient h-full">
+                <Link
+                  href={t.href}
+                  className="group relative flex h-full flex-col justify-between gap-12 overflow-hidden bg-ink p-8 transition-colors duration-500 hover:bg-ink-700 lg:p-10"
+                >
+                  {/* Subtle corner sweep */}
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                    style={{
+                      background:
+                        i % 2 === 0
+                          ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.14), transparent 60%)'
+                          : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.14), transparent 60%)',
+                    }}
+                  />
+                  <div>
+                    <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                      {t.label}
+                    </p>
+                    <p className="mt-5 font-display text-3xl text-bone transition-colors group-hover:text-gold-light md:text-4xl">
+                      {t.range}
+                    </p>
+                    <p className="mt-3 text-sm text-bone/55">{t.duration}</p>
+                  </div>
+                  <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-gold opacity-70 transition-opacity group-hover:opacity-100">
+                    Explore
+                    <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                  </div>
+                </Link>
+              </div>
             </Reveal>
           ))}
         </div>

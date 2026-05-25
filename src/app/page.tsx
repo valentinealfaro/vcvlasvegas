@@ -12,6 +12,7 @@ import { LatestNote } from '@/components/home/LatestNote';
 import { TrustBar } from '@/components/TrustBar';
 import { BookingStrip } from '@/components/BookingStrip';
 import { StatsBanner } from '@/components/StatsBanner';
+import { ServiceMarquee } from '@/components/home/ServiceMarquee';
 import { LeadMagnet } from '@/components/LeadMagnet';
 import { CTASection } from '@/components/CTASection';
 import { FAQ } from '@/components/FAQ';
@@ -51,6 +52,7 @@ export default function HomePage() {
       <Manifesto />
       <StatsBanner />
       <SignatureServices />
+      <ServiceMarquee />
       <InvestmentRange />
       <CalculatorPromo />
       <FeaturedStudies />

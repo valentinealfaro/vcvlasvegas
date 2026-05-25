@@ -61,26 +61,42 @@ export function SignatureServices() {
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:gap-8">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i % 2}>
-              <Link href={s.href} className="group block">
-                <ImageCard
-                  image={s.image}
-                  aspect="wide"
-                  caption={false}
-                  className="mb-6"
-                />
-                <div className="flex items-start justify-between gap-6">
-                  <div>
-                    <p className="eyebrow mb-2 !text-bone/40">{s.eyebrow}</p>
-                    <h3 className="font-display text-3xl text-bone transition-colors group-hover:text-gold md:text-4xl">
-                      {s.title}
-                    </h3>
-                    <p className="mt-3 max-w-md text-bone/60">{s.summary}</p>
+              <div className="border-gradient">
+                <Link
+                  href={s.href}
+                  className="group relative block overflow-hidden bg-ink-800 p-6 transition-colors duration-500 hover:bg-ink-700 lg:p-7"
+                >
+                  {/* Per-card hover sweep */}
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                    style={{
+                      background:
+                        i % 2 === 0
+                          ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.12), transparent 55%)'
+                          : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.12), transparent 55%)',
+                    }}
+                  />
+                  <ImageCard
+                    image={s.image}
+                    aspect="wide"
+                    caption={false}
+                    className="mb-6"
+                  />
+                  <div className="flex items-start justify-between gap-6">
+                    <div>
+                      <p className="eyebrow mb-2 !text-bone/40">{s.eyebrow}</p>
+                      <h3 className="font-display text-3xl text-bone transition-colors group-hover:text-gold md:text-4xl">
+                        {s.title}
+                      </h3>
+                      <p className="mt-3 max-w-md text-bone/60">{s.summary}</p>
+                    </div>
+                    <div className="grid h-12 w-12 shrink-0 place-items-center border border-bone/15 transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-ink">
+                      <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:rotate-45" />
+                    </div>
                   </div>
-                  <div className="grid h-12 w-12 shrink-0 place-items-center border border-bone/15 transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-ink">
-                    <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:rotate-45" />
-                  </div>
-                </div>
-              </Link>
+                </Link>
+              </div>
             </Reveal>
           ))}
         </div>
