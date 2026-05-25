@@ -1,0 +1,94 @@
+import Link from 'next/link';
+import { Phone, Mail, MapPin } from 'lucide-react';
+import { siteConfig, servicesIndex } from '@/lib/site';
+
+export function Footer() {
+  return (
+    <footer className="relative overflow-hidden border-t border-bone/5 bg-ink">
+      <div className="container-luxe py-20 lg:py-28">
+        <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
+          <div>
+            <Link href="/" className="flex items-baseline gap-2">
+              <span className="font-display text-3xl tracking-tight text-bone">
+                VCV
+              </span>
+              <span className="font-sans text-xs uppercase tracking-[0.4em] text-gold">
+                Vegas
+              </span>
+            </Link>
+            <p className="mt-6 max-w-sm text-sm leading-relaxed text-bone/60">
+              Luxury remodeling and general contracting for the Las Vegas metro.
+              Modern kitchens, spa bathrooms, and full-home renovations
+              engineered for the way Vegas lives now.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 text-sm text-bone/70">
+              <a
+                href={siteConfig.phoneHref}
+                className="group flex items-center gap-3 transition-colors hover:text-gold"
+              >
+                <Phone className="h-4 w-4 text-gold" />
+                {siteConfig.phone}
+              </a>
+              <a
+                href={siteConfig.emailHref}
+                className="group flex items-center gap-3 transition-colors hover:text-gold"
+              >
+                <Mail className="h-4 w-4 text-gold" />
+                {siteConfig.email}
+              </a>
+              <div className="flex items-center gap-3">
+                <MapPin className="h-4 w-4 text-gold" />
+                Serving the Las Vegas Metro
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <p className="eyebrow mb-6">Services</p>
+            <ul className="space-y-3 text-sm text-bone/70">
+              {servicesIndex.slice(0, 6).map((s) => (
+                <li key={s.slug}>
+                  <Link
+                    href={`/${s.slug}`}
+                    className="transition-colors hover:text-gold"
+                  >
+                    {s.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="eyebrow mb-6">Service Area</p>
+            <ul className="space-y-3 text-sm text-bone/70">
+              {siteConfig.serviceArea.slice(0, 8).map((city) => (
+                <li key={city}>{city}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="eyebrow mb-6">Company</p>
+            <ul className="space-y-3 text-sm text-bone/70">
+              <li><Link href="/about" className="hover:text-gold">About</Link></li>
+              <li><Link href="/process" className="hover:text-gold">Our Process</Link></li>
+              <li><Link href="/projects" className="hover:text-gold">Projects</Link></li>
+              <li><Link href="/contact" className="hover:text-gold">Contact</Link></li>
+            </ul>
+            <div className="mt-10">
+              <Link href="/contact" className="btn-ghost !px-5 !py-3 !text-[0.65rem]">
+                Start Your Remodel
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-bone/10 pt-8 text-xs uppercase tracking-[0.22em] text-bone/40 md:flex-row md:items-center">
+          <p>© {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.</p>
+          <p className="text-bone/40">{siteConfig.hours}</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
