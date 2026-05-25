@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
@@ -57,12 +57,12 @@ export default function CentennialHillsPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Centennial Hills · NW Las Vegas"
         title="Luxury remodeling"
         italic="for Centennial Hills."
         description="Iron Mountain Ranch, Providence, Skye Canyon, and the new northwest master-planned communities — VCV Vegas brings the design-build standard the rest of the valley already takes for granted."
-        image={customHomeImages[2]}
+        images={[customHomeImages[2], customHomeImages[0], kitchenImages[2], bathroomImages[1], customHomeImages[4]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Centennial Hills Remodeling' }]}
       />
 

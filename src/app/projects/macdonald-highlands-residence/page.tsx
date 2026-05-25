@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { ImageCard } from '@/components/ImageCard';
 import { Reveal } from '@/components/Reveal';
@@ -56,12 +56,12 @@ export default function CaseStudyPage() {
         ])}
       />
 
-      <PageHero
+      <CinematicHero
         eyebrow="Project Study · 02"
         title="The MacDonald"
         italic="Highlands Residence."
         description="A representative VCV Vegas commission in Henderson — a course-frontage estate re-imagined as a chef’s kitchen, a wine room, a spa primary, and an outdoor great room engineered for the long Henderson view."
-        image={customHomeImages[1]}
+        images={[customHomeImages[1], kitchenImages[2], bathroomImages[3], kitchenImages[0], customHomeImages[3]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Projects', href: '/projects' },

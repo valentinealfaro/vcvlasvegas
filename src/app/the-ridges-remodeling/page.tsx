@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
@@ -61,12 +61,12 @@ export default function TheRidgesPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="The Ridges · Summerlin"
         title="A studio"
         italic="for The Ridges."
         description="Top-of-market remodeling for The Ridges — Falcon Ridge, The Pointe, Promontory Pointe, and the Bear’s Best frontage. Architectural finish to a standard the rest of the valley aspires to."
-        image={customHomeImages[0]}
+        images={[customHomeImages[0], customHomeImages[1], kitchenImages[0], bathroomImages[0], customHomeImages[3]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'The Ridges Remodeling' }]}
       />
 

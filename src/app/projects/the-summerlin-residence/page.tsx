@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { ImageCard } from '@/components/ImageCard';
 import { Reveal } from '@/components/Reveal';
@@ -56,12 +56,12 @@ export default function CaseStudyPage() {
         ])}
       />
 
-      <PageHero
+      <CinematicHero
         eyebrow="Project Study · 01"
         title="The Summerlin"
         italic="Residence."
         description="A representative VCV Vegas commission: a Summerlin residence re-imagined as an open-plan great room, a chef’s kitchen, and a primary suite that reads like a private resort. Indicative of the scope and standard of our typical Vegas-valley project."
-        image={kitchenImages[0]}
+        images={[kitchenImages[0], bathroomImages[0], customHomeImages[3], flooringImages[0], kitchenImages[1]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Projects', href: '/projects' },

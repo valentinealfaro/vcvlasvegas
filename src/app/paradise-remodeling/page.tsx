@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
@@ -57,12 +57,12 @@ export default function ParadisePage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Paradise · Las Vegas"
         title="Luxury remodeling"
         italic="for Paradise homes."
         description="Strip-adjacent estates, mid-century moderns east of the Strip, and high-rise interiors — VCV Vegas brings architectural finish standards to the most diverse residential market in the valley."
-        image={kitchenImages[3]}
+        images={[kitchenImages[3], bathroomImages[0], kitchenImages[1], customHomeImages[0], bathroomImages[2]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Paradise Remodeling' }]}
       />
 

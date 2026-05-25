@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
@@ -57,12 +57,12 @@ export default function SummerlinPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Summerlin"
         title="Luxury remodeling"
         italic="for Summerlin homes."
         description="From The Ridges and Red Rock Country Club to Reverence and Summerlin West — design-build remodeling tuned for Summerlin’s architecture, lots, and Strip-facing light."
-        image={kitchenImages[0]}
+        images={[kitchenImages[0], kitchenImages[1], customHomeImages[1], bathroomImages[0], customHomeImages[3]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Summerlin Remodeling' }]}
       />
 

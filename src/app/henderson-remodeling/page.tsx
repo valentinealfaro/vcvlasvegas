@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
@@ -57,12 +57,12 @@ export default function HendersonPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Henderson, NV"
         title="Luxury remodeling"
         italic="for Henderson homes."
         description="From Green Valley and Seven Hills to MacDonald Highlands and Lake Las Vegas — design-build remodeling tuned for the architecture, light, and lifestyle of Henderson’s most considered streets."
-        image={customHomeImages[1]}
+        images={[customHomeImages[1], kitchenImages[0], bathroomImages[2], customHomeImages[3], kitchenImages[1]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Henderson Remodeling' }]}
       />
 
