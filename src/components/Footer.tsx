@@ -150,7 +150,12 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-bone/10 pt-8 text-xs uppercase tracking-[0.22em] text-bone/40 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} {siteConfig.legalName}. All rights reserved.</p>
-          <p className="text-bone/40">{siteConfig.hours}</p>
+          <div className="flex items-center gap-6">
+            <Link href="/site-index" className="link-quiet text-bone/45 hover:text-gold">
+              Site Index
+            </Link>
+            <p className="text-bone/40">{siteConfig.hours}</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -38,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/resources',
     '/intake',
     '/contact',
+    '/site-index',
   ];
   return [
     ...staticRoutes.map((r) => ({

@@ -62,6 +62,7 @@ export default function HomeRemodelingPage() {
               'Whole-home design-build remodeling for Las Vegas homeowners — layout reconfigurations, structural changes, and complete finish renovations.',
             url: pageUrl,
             image: remodelImages[0].src,
+            priceRange: { low: 500000, high: 2000000 },
           }),
           breadcrumbSchema([
             { name: 'Home', url: siteConfig.url },

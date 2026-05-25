@@ -66,6 +66,7 @@ export default function KitchenPage() {
               'Design-build luxury kitchen remodeling for Las Vegas homes — waterfall islands, custom cabinetry, integrated appliances, and architectural finish work.',
             url: pageUrl,
             image: kitchenImages[0].src,
+            priceRange: { low: 150000, high: 350000 },
           }),
           breadcrumbSchema([
             { name: 'Home', url: siteConfig.url },

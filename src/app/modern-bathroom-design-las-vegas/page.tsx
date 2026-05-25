@@ -51,6 +51,7 @@ export default function ModernBathPage() {
               'Modern architectural bathroom design for desert homes — wet rooms, frameless walk-ins, and matte stone palettes.',
             url: pageUrl,
             image: bathroomImages[1].src,
+            priceRange: { low: 100000, high: 220000 },
           }),
           breadcrumbSchema([
             { name: 'Home', url: siteConfig.url },

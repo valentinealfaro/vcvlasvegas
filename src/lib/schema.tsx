@@ -77,8 +77,9 @@ export function serviceSchema(opts: {
   description: string;
   url: string;
   image?: string;
+  priceRange?: { low: number; high: number };
 }) {
-  return {
+  const base: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: opts.name,
@@ -87,6 +88,7 @@ export function serviceSchema(opts: {
     image: opts.image,
     provider: {
       '@type': 'GeneralContractor',
+      '@id': `${siteConfig.url}#organization`,
       name: siteConfig.name,
       telephone: siteConfig.phone,
       url: siteConfig.url,
@@ -96,6 +98,19 @@ export function serviceSchema(opts: {
       name: c,
     })),
   };
+
+  if (opts.priceRange) {
+    base.offers = {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'USD',
+      lowPrice: opts.priceRange.low,
+      highPrice: opts.priceRange.high,
+      availability: 'https://schema.org/InStock',
+      offeredBy: { '@id': `${siteConfig.url}#organization` },
+    };
+  }
+
+  return base;
 }
 
 export function breadcrumbSchema(items: { name: string; url: string }[]) {

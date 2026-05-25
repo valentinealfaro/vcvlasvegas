@@ -66,6 +66,7 @@ export default function BathroomPage() {
               'Design-build luxury bathroom remodeling for Las Vegas homeowners — walk-in showers, soaking tubs, floating vanities, and spa-grade primary suites.',
             url: pageUrl,
             image: bathroomImages[0].src,
+            priceRange: { low: 80000, high: 180000 },
           }),
           breadcrumbSchema([
             { name: 'Home', url: siteConfig.url },
