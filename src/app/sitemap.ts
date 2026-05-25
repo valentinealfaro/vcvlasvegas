@@ -50,6 +50,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/press',
     '/site-index',
+    '/privacy',
+    '/terms',
+    '/accessibility',
   ];
   return [
     ...staticRoutes.map((r) => ({
