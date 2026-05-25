@@ -9,6 +9,7 @@ import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { StickySectionNav } from '@/components/StickySectionNav';
 import { ReadNext } from '@/components/ReadNext';
 import { JournalSubscribe } from '@/components/JournalSubscribe';
+import { RelatedServices } from '@/components/RelatedServices';
 import { customHomeImages, kitchenImages, bathroomImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';
@@ -301,6 +302,11 @@ export default function Post() {
         title="Use those questions on us."
         italic="Start with a walkthrough."
         description="A senior designer responds within one business day. Confidential."
+      />
+
+      <RelatedServices
+        slugs={['general-contractor-las-vegas', 'home-remodeling-las-vegas']}
+        description="The criteria in this note describe how we run the studio. Explore the work directly."
       />
 
       <JournalSubscribe />

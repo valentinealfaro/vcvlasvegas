@@ -9,6 +9,7 @@ import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { StickySectionNav } from '@/components/StickySectionNav';
 import { ReadNext } from '@/components/ReadNext';
 import { JournalSubscribe } from '@/components/JournalSubscribe';
+import { RelatedServices } from '@/components/RelatedServices';
 import { bathroomImages, kitchenImages, customHomeImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';
@@ -310,6 +311,11 @@ export default function Post() {
         title="Want a bathroom built like this?"
         italic="Start with a senior designer."
         description="A private design consultation in your home — by appointment, within one business day."
+      />
+
+      <RelatedServices
+        slugs={['bathroom-remodeling-las-vegas', 'modern-bathroom-design-las-vegas']}
+        description="The principles in this note apply across two services — explore where they live in the studio's work."
       />
 
       <JournalSubscribe />

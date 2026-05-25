@@ -9,6 +9,7 @@ import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { StickySectionNav } from '@/components/StickySectionNav';
 import { ReadNext } from '@/components/ReadNext';
 import { JournalSubscribe } from '@/components/JournalSubscribe';
+import { RelatedServices } from '@/components/RelatedServices';
 import { kitchenImages, bathroomImages, customHomeImages, flooringImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';
@@ -325,6 +326,11 @@ export default function Post() {
         title="Want a remodel built like this?"
         italic="Start with a senior designer."
         description="The team that writes these notes is the team that will lead your project."
+      />
+
+      <RelatedServices
+        slugs={['kitchen-remodeling-las-vegas', 'bathroom-remodeling-las-vegas']}
+        description="The five details show up most clearly in two rooms — explore how we apply them in our kitchen and bathroom work."
       />
 
       <JournalSubscribe />

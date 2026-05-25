@@ -9,6 +9,7 @@ import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { StickySectionNav } from '@/components/StickySectionNav';
 import { ReadNext } from '@/components/ReadNext';
 import { JournalSubscribe } from '@/components/JournalSubscribe';
+import { RelatedServices } from '@/components/RelatedServices';
 import { kitchenImages, remodelImages, customHomeImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';
@@ -296,6 +297,11 @@ export default function Post() {
         title="Want to open up your home?"
         italic="Start with a walkthrough."
         description="A senior designer will walk your floor plan and respond with scope direction within one business day."
+      />
+
+      <RelatedServices
+        slugs={['home-remodeling-las-vegas', 'general-contractor-las-vegas']}
+        description="Opening up a floor plan is whole-home design-build work. Explore where the studio applies these moves at scale."
       />
 
       <JournalSubscribe />
