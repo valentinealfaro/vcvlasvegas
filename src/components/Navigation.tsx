@@ -8,6 +8,7 @@ import { Menu, Phone, X, ArrowUpRight } from 'lucide-react';
 import { navigation, siteConfig, servicesIndex } from '@/lib/site';
 import { cn } from '@/lib/utils';
 import { ServicesMegaMenu } from './ServicesMegaMenu';
+import { Monogram } from './Monogram';
 import { heroGalleryImages } from '@/lib/images';
 
 export function Navigation() {
@@ -51,14 +52,17 @@ export function Navigation() {
         <div className="container-luxe flex items-center justify-between py-5 lg:py-6">
           <Link
             href="/"
-            className="group flex items-baseline gap-2 text-bone"
+            className="group flex items-center gap-3 text-bone"
             aria-label="VCV Vegas Home"
           >
-            <span className="font-display text-2xl tracking-tight lg:text-[1.65rem]">
-              VCV
-            </span>
-            <span className="font-sans text-[0.62rem] uppercase tracking-[0.4em] text-gold transition-colors group-hover:text-gold-light">
-              Vegas
+            <Monogram size={36} className="text-gold transition-colors group-hover:text-gold-light" />
+            <span className="flex items-baseline gap-2">
+              <span className="font-display text-2xl tracking-tight lg:text-[1.65rem]">
+                VCV
+              </span>
+              <span className="font-sans text-[0.62rem] uppercase tracking-[0.4em] text-gold transition-colors group-hover:text-gold-light">
+                Vegas
+              </span>
             </span>
           </Link>
 
