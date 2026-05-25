@@ -1,22 +1,22 @@
 import { SectionHeader } from '../SectionHeader';
 import { ImageCard } from '../ImageCard';
 import { Reveal } from '../Reveal';
-import { kitchenImages, bathroomImages, customHomeImages, flooringImages } from '@/lib/images';
+import {
+  kitchenImages,
+  bathroomImages,
+  customHomeImages,
+  flooringImages,
+} from '@/lib/images';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 export function GallerySection() {
-  const grid = [
-    { img: kitchenImages[1], aspect: 'tall' as const, span: 'row-span-2' },
-    { img: bathroomImages[3], aspect: 'landscape' as const, span: '' },
-    { img: customHomeImages[0], aspect: 'landscape' as const, span: '' },
-    { img: kitchenImages[3], aspect: 'tall' as const, span: 'row-span-2' },
-    { img: bathroomImages[0], aspect: 'landscape' as const, span: '' },
-    { img: flooringImages[0], aspect: 'landscape' as const, span: '' },
-  ];
-
+  // Asymmetric featured-tile layout — one large hero tile + smaller cards
+  // surrounding it for editorial cadence.
   return (
-    <section className="bg-ink py-28 lg:py-40">
+    <section className="relative overflow-hidden bg-ink py-28 lg:py-40">
+      <div aria-hidden className="glow-amber" />
+
       <div className="container-luxe">
         <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-end">
           <SectionHeader
@@ -32,12 +32,29 @@ export function GallerySection() {
           </Reveal>
         </div>
 
-        <div className="mt-16 grid gap-4 md:grid-cols-3 md:grid-rows-2 md:gap-6">
-          {grid.map((g, i) => (
-            <Reveal key={i} delay={i} className={g.span}>
-              <ImageCard image={g.img} aspect={g.aspect} caption className="h-full" />
-            </Reveal>
-          ))}
+        {/* Featured asymmetric grid:
+            - Left column: one large tall hero tile (rows 1-3)
+            - Right column: stack of three smaller tiles
+            On mobile: simple stack. */}
+        <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-3 md:gap-6 lg:gap-8">
+          <Reveal className="md:col-span-2 md:row-span-2">
+            <ImageCard image={kitchenImages[0]} aspect="wide" caption className="h-full" />
+          </Reveal>
+          <Reveal delay={1}>
+            <ImageCard image={bathroomImages[0]} aspect="square" caption className="h-full" />
+          </Reveal>
+          <Reveal delay={2}>
+            <ImageCard image={customHomeImages[1]} aspect="square" caption className="h-full" />
+          </Reveal>
+          <Reveal delay={3}>
+            <ImageCard image={kitchenImages[3]} aspect="landscape" caption className="h-full" />
+          </Reveal>
+          <Reveal delay={4}>
+            <ImageCard image={bathroomImages[3]} aspect="landscape" caption className="h-full" />
+          </Reveal>
+          <Reveal delay={5}>
+            <ImageCard image={flooringImages[0]} aspect="landscape" caption className="h-full" />
+          </Reveal>
         </div>
       </div>
     </section>
