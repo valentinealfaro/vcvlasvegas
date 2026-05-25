@@ -62,9 +62,12 @@ export function Footer() {
           <div>
             <p className="eyebrow mb-6">Service Area</p>
             <ul className="space-y-3 text-sm text-bone/70">
-              {siteConfig.serviceArea.slice(0, 8).map((city) => (
-                <li key={city}>{city}</li>
-              ))}
+              <li><Link href="/summerlin-remodeling" className="hover:text-gold">Summerlin</Link></li>
+              <li><Link href="/the-ridges-remodeling" className="hover:text-gold">The Ridges</Link></li>
+              <li><Link href="/henderson-remodeling" className="hover:text-gold">Henderson</Link></li>
+              <li><Link href="/paradise-remodeling" className="hover:text-gold">Paradise</Link></li>
+              <li><Link href="/centennial-hills-remodeling" className="hover:text-gold">Centennial Hills</Link></li>
+              <li><Link href="/neighborhoods" className="hover:text-gold text-gold">All Neighborhoods →</Link></li>
             </ul>
           </div>
 

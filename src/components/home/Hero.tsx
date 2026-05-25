@@ -8,6 +8,7 @@ import { ArrowDown, ArrowRight, Phone } from 'lucide-react';
 import { heroGalleryImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { CountUp } from '../CountUp';
+import { MagneticButton } from '../MagneticButton';
 
 const headlineLines: { text: string; italic?: boolean }[] = [
   { text: 'Luxury remodeling' },
@@ -137,10 +138,10 @@ export function Hero() {
             transition={{ delay: 1.55, duration: 0.9 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <Link href="/contact" className="btn-gold">
+            <MagneticButton href="/contact">
               Schedule Consultation
               <ArrowRight className="h-3.5 w-3.5" />
-            </Link>
+            </MagneticButton>
             <a href={siteConfig.phoneHref} className="btn-ghost">
               <Phone className="h-3.5 w-3.5" />
               {siteConfig.phone}

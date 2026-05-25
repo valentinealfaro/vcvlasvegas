@@ -96,6 +96,9 @@ export const servicesIndex = [
 ];
 
 export const cityPages = [
-  { slug: 'henderson-remodeling', city: 'Henderson' },
-  { slug: 'summerlin-remodeling', city: 'Summerlin' },
+  { slug: 'henderson-remodeling', city: 'Henderson', region: 'Henderson, NV' },
+  { slug: 'summerlin-remodeling', city: 'Summerlin', region: 'Summerlin · Las Vegas' },
+  { slug: 'the-ridges-remodeling', city: 'The Ridges', region: 'Summerlin · Las Vegas' },
+  { slug: 'paradise-remodeling', city: 'Paradise', region: 'Paradise · Las Vegas' },
+  { slug: 'centennial-hills-remodeling', city: 'Centennial Hills', region: 'NW Las Vegas' },
 ];
