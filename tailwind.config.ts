@@ -5,31 +5,41 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Brand-aligned with vcvservices.com:
+        // pure-black background, amber gold accent, blue secondary.
         ink: {
-          DEFAULT: '#0a0a0a',
-          900: '#0a0a0a',
-          800: '#141414',
-          700: '#1a1a1a',
-          600: '#222222',
-          500: '#2c2c2c',
+          DEFAULT: '#000000',
+          900: '#000000',
+          800: '#0a0a0a',
+          700: '#141414',
+          600: '#1a1a1a',
+          500: '#222222',
         },
         bone: {
-          DEFAULT: '#f4f1ec',
-          50: '#fbfaf7',
-          100: '#f4f1ec',
-          200: '#e8e3d8',
-          300: '#d8d1c2',
+          DEFAULT: '#ffffff',
+          50: '#fafafa',
+          100: '#f5f5f5',
+          200: '#e5e5e5',
+          300: '#d4d4d4',
         },
         stone: {
           warm: '#a89c8a',
           cool: '#8a8a87',
           mist: '#c9c4bb',
         },
+        // Amber gold — primary accent, matches vcvservices.com amber-400/500
         gold: {
-          DEFAULT: '#b8945c',
-          light: '#d4b483',
-          deep: '#8a6e3f',
-          champagne: '#d6c8a5',
+          DEFAULT: '#fcbb00',  // amber-400
+          light: '#ffd236',    // amber-300
+          deep: '#b45309',     // amber-700
+          champagne: '#fde68a', // amber-200
+        },
+        // Blue accent — secondary CTA / contractor signal
+        accent: {
+          DEFAULT: '#2563eb',  // blue-600
+          light: '#3b82f6',    // blue-500
+          deep: '#1d4ed8',     // blue-700
+          glow: '#0a66ff',
         },
       },
       fontFamily: {
@@ -76,6 +86,13 @@ const config: Config = {
       },
       backgroundImage: {
         'grain': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+        // Franchise signature gradients (vcvservices.com)
+        'gradient-amber': 'linear-gradient(to right, #fcbb00, #b45309)',
+        'gradient-amber-soft': 'linear-gradient(to bottom right, rgba(252,187,0,0.18), rgba(180,83,9,0.04))',
+        'gradient-blue': 'linear-gradient(to right, #3b82f6, #1d4ed8)',
+        'gradient-blue-radial': 'radial-gradient(circle at 100% 0%, rgba(59,130,246,0.18), transparent 60%)',
+        'gradient-amber-radial': 'radial-gradient(circle at 0% 100%, rgba(252,187,0,0.20), transparent 55%)',
+        'gradient-ink-fade': 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.92) 100%)',
       },
     },
   },

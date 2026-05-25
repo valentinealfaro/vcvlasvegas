@@ -79,13 +79,20 @@ export function CinematicHero({
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/72 via-ink/55 to-ink" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/40 to-transparent" />
 
-      {/* Ambient gold glow */}
+      {/* Ambient amber + blue franchise glow */}
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.3 }}
+        animate={{ opacity: 0.42 }}
         transition={{ delay: 1.2, duration: 2.5 }}
         className="pointer-events-none absolute -bottom-32 -left-32 -z-10 h-[420px] w-[420px] rounded-full bg-gold blur-[160px] md:h-[560px] md:w-[560px]"
+      />
+      <motion.div
+        aria-hidden
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.28 }}
+        transition={{ delay: 1.4, duration: 2.5 }}
+        className="pointer-events-none absolute -right-32 -top-24 -z-10 h-[380px] w-[380px] rounded-full bg-accent-light blur-[180px] md:h-[560px] md:w-[560px]"
       />
 
       <div className="container-luxe relative flex min-h-[88svh] flex-col justify-end pt-36 pb-24 lg:min-h-[92svh] lg:pt-44 lg:pb-28">

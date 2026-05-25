@@ -14,7 +14,7 @@ export default function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: '#0a0a0a',
+          background: '#000000',
           borderRadius: '50%',
         }}
       >
@@ -23,11 +23,11 @@ export default function Icon() {
             width: 60,
             height: 60,
             borderRadius: '50%',
-            border: '1px solid #b8945c',
+            border: '1px solid #fcbb00',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            color: '#d4b483',
+            color: '#ffd236',
             fontFamily: 'Georgia, serif',
             fontStyle: 'italic',
             fontSize: 22,

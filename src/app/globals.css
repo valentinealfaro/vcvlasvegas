@@ -16,20 +16,20 @@ html {
 }
 
 body {
-  background-color: #0a0a0a;
-  color: #f4f1ec;
+  background-color: #000000;
+  color: #ffffff;
   font-family: var(--font-sans);
   font-feature-settings: 'ss01', 'cv11';
 }
 
 ::selection {
-  background-color: #b8945c;
-  color: #0a0a0a;
+  background-color: #fcbb00;
+  color: #000000;
 }
 
 /* Keyboard focus ring — applied only on keyboard nav, not on mouse click */
 :focus-visible {
-  outline: 2px solid #b8945c;
+  outline: 2px solid #fcbb00;
   outline-offset: 3px;
   border-radius: 1px;
   transition: outline-offset 0.15s ease;
@@ -41,7 +41,7 @@ a:focus-visible {
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 1px solid #b8945c;
+  outline: 1px solid #fcbb00;
   outline-offset: 0;
 }
 
@@ -58,7 +58,7 @@ textarea:focus-visible {
     font-weight: 500;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: #b8945c;
+    color: #fcbb00;
   }
 }
 
@@ -72,7 +72,7 @@ textarea:focus-visible {
   }
 
   .btn-gold {
-    @apply inline-flex items-center justify-center gap-2 bg-gold px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:bg-gold-light hover:shadow-[0_20px_60px_-20px_rgba(184,148,92,0.5)];
+    @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold-light to-gold px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:from-gold hover:to-gold-deep hover:shadow-[0_20px_60px_-20px_rgba(252,187,0,0.55)];
   }
 
   .btn-ghost {
@@ -81,6 +81,26 @@ textarea:focus-visible {
 
   .btn-dark {
     @apply inline-flex items-center justify-center gap-2 bg-ink px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:bg-ink-700;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-light to-accent px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:from-accent hover:to-accent-deep hover:shadow-[0_20px_60px_-20px_rgba(37,99,235,0.55)];
+  }
+
+  /* Signature franchise overlays — drop these on any section with `relative` */
+  .glow-amber {
+    @apply pointer-events-none absolute inset-0 -z-10;
+    background: radial-gradient(circle at 0% 100%, rgba(252, 187, 0, 0.18), transparent 55%);
+  }
+  .glow-blue {
+    @apply pointer-events-none absolute inset-0 -z-10;
+    background: radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.18), transparent 60%);
+  }
+  .glow-duotone {
+    @apply pointer-events-none absolute inset-0 -z-10;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.15), transparent 55%),
+      radial-gradient(circle at 0% 100%, rgba(252, 187, 0, 0.15), transparent 55%);
   }
 
   .reveal {
@@ -142,7 +162,7 @@ textarea:focus-visible {
   -webkit-appearance: none;
   appearance: none;
   height: 2px;
-  background: rgba(244, 241, 236, 0.15);
+  background: rgba(255, 255, 255, 0.15);
   outline: none;
 }
 .vcv-slider::-webkit-slider-thumb {
@@ -151,11 +171,11 @@ textarea:focus-visible {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #b8945c;
-  border: 2px solid #f4f1ec;
+  background: #fcbb00;
+  border: 2px solid #ffffff;
   cursor: pointer;
   transition: transform 0.2s ease;
-  box-shadow: 0 4px 20px rgba(184, 148, 92, 0.4);
+  box-shadow: 0 4px 20px rgba(252, 187, 0, 0.55);
 }
 .vcv-slider::-webkit-slider-thumb:hover {
   transform: scale(1.15);
@@ -164,8 +184,8 @@ textarea:focus-visible {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #b8945c;
-  border: 2px solid #f4f1ec;
+  background: #fcbb00;
+  border: 2px solid #ffffff;
   cursor: pointer;
 }
 

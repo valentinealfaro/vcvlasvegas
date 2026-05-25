@@ -17,10 +17,10 @@ export default async function Image() {
           flexDirection: 'column',
           justifyContent: 'space-between',
           padding: 80,
-          backgroundColor: '#0a0a0a',
+          backgroundColor: '#000000',
           backgroundImage:
-            'radial-gradient(circle at 85% 110%, rgba(184,148,92,0.35) 0%, rgba(10,10,10,0) 55%)',
-          color: '#f4f1ec',
+            'radial-gradient(circle at 85% 110%, rgba(252,187,0,0.42) 0%, rgba(0,0,0,0) 55%), radial-gradient(circle at 5% 0%, rgba(59,130,246,0.20) 0%, rgba(0,0,0,0) 55%)',
+          color: '#ffffff',
           fontFamily: 'serif',
         }}
       >
@@ -32,10 +32,10 @@ export default async function Image() {
             letterSpacing: 6,
             textTransform: 'uppercase',
             fontSize: 18,
-            color: '#b8945c',
+            color: '#fcbb00',
           }}
         >
-          <div style={{ width: 48, height: 1, background: '#b8945c' }} />
+          <div style={{ width: 48, height: 1, background: '#fcbb00' }} />
           EST. Las Vegas Metro · Luxury Design-Build
         </div>
 
@@ -46,13 +46,13 @@ export default async function Image() {
               lineHeight: 1.02,
               fontWeight: 300,
               letterSpacing: -2,
-              color: '#f4f1ec',
+              color: '#ffffff',
               display: 'flex',
               flexDirection: 'column',
             }}
           >
             <span>Luxury remodeling</span>
-            <span style={{ fontStyle: 'italic', color: '#d4b483' }}>
+            <span style={{ fontStyle: 'italic', color: '#ffd236' }}>
               designed for
             </span>
             <span>Las Vegas living.</span>
@@ -64,19 +64,19 @@ export default async function Image() {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'flex-end',
-            color: 'rgba(244,241,236,0.7)',
+            color: 'rgba(255,255,255,0.7)',
             fontSize: 24,
             fontFamily: 'sans-serif',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'baseline', gap: 14 }}>
-            <span style={{ fontSize: 36, color: '#f4f1ec' }}>VCV</span>
+            <span style={{ fontSize: 36, color: '#ffffff' }}>VCV</span>
             <span
               style={{
                 fontSize: 16,
                 textTransform: 'uppercase',
                 letterSpacing: 8,
-                color: '#b8945c',
+                color: '#fcbb00',
               }}
             >
               Vegas
@@ -87,7 +87,7 @@ export default async function Image() {
               fontSize: 18,
               letterSpacing: 4,
               textTransform: 'uppercase',
-              color: 'rgba(244,241,236,0.55)',
+              color: 'rgba(255,255,255,0.55)',
             }}
           >
             Kitchens · Baths · Whole-Home

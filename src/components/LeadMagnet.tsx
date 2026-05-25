@@ -24,11 +24,8 @@ export function LeadMagnet() {
 
   return (
     <section className="relative isolate overflow-hidden bg-ink-800 py-24 lg:py-32">
-      {/* Ambient gold glow */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-32 top-1/2 -z-10 h-[420px] w-[420px] -translate-y-1/2 rounded-full bg-gold/15 blur-[180px]"
-      />
+      {/* Franchise duotone — amber bottom-left, blue top-right */}
+      <div aria-hidden className="glow-duotone" />
 
       <div className="container-luxe">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">

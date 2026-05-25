@@ -2,7 +2,8 @@ import { Reveal } from '../Reveal';
 
 export function Manifesto() {
   return (
-    <section className="relative bg-ink py-28 lg:py-40">
+    <section className="relative overflow-hidden bg-ink py-28 lg:py-40">
+      <div aria-hidden className="glow-duotone" />
       <div className="container-luxe">
         <div className="grid items-start gap-16 lg:grid-cols-[1fr_1.4fr]">
           <Reveal>

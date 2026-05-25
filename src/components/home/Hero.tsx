@@ -63,13 +63,20 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/72 via-ink/55 to-ink" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/40 to-transparent" />
 
-      {/* Ambient gold glow */}
+      {/* Ambient amber + blue franchise glow */}
+      <motion.div
+        aria-hidden
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ delay: 1.4, duration: 2.5 }}
+        className="pointer-events-none absolute -bottom-32 -left-32 -z-10 h-[420px] w-[420px] rounded-full bg-gold blur-[160px] md:h-[600px] md:w-[600px]"
+      />
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.35 }}
-        transition={{ delay: 1.4, duration: 2.5 }}
-        className="pointer-events-none absolute -bottom-32 -left-32 -z-10 h-[420px] w-[420px] rounded-full bg-gold blur-[160px] md:h-[600px] md:w-[600px]"
+        transition={{ delay: 1.6, duration: 2.5 }}
+        className="pointer-events-none absolute -right-40 -top-32 -z-10 h-[420px] w-[420px] rounded-full bg-accent-light blur-[180px] md:h-[640px] md:w-[640px]"
       />
 
       <div className="container-luxe relative flex min-h-[100svh] flex-col justify-between pt-32 pb-28 lg:pt-40 lg:pb-32">

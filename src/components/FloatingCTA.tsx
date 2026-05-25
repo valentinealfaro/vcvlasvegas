@@ -20,7 +20,7 @@ export function FloatingCTA() {
       href="/contact"
       aria-label="Schedule a consultation"
       className={cn(
-        'group fixed bottom-8 right-8 z-40 hidden items-center gap-3 rounded-full bg-gold pl-6 pr-7 py-4 text-[0.7rem] font-medium uppercase tracking-[0.26em] text-ink shadow-[0_20px_50px_-15px_rgba(184,148,92,0.45)] transition-all duration-500 hover:bg-gold-light hover:shadow-[0_25px_60px_-15px_rgba(184,148,92,0.6)] lg:flex',
+        'group fixed bottom-8 right-8 z-40 hidden items-center gap-3 rounded-full bg-gold pl-6 pr-7 py-4 text-[0.7rem] font-medium uppercase tracking-[0.26em] text-ink shadow-[0_20px_50px_-15px_rgba(252,187,0,0.45)] transition-all duration-500 hover:bg-gold-light hover:shadow-[0_25px_60px_-15px_rgba(252,187,0,0.6)] lg:flex',
         visible
           ? 'translate-y-0 opacity-100'
           : 'pointer-events-none translate-y-6 opacity-0',

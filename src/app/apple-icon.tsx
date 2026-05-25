@@ -14,9 +14,9 @@ export default function AppleIcon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: '#0a0a0a',
+          background: '#000000',
           backgroundImage:
-            'radial-gradient(circle at 70% 110%, rgba(184,148,92,0.35) 0%, rgba(10,10,10,0) 60%)',
+            'radial-gradient(circle at 70% 110%, rgba(252,187,0,0.40) 0%, rgba(0,0,0,0) 60%), radial-gradient(circle at 0% 0%, rgba(59,130,246,0.18) 0%, rgba(0,0,0,0) 55%)',
         }}
       >
         <div
@@ -24,12 +24,12 @@ export default function AppleIcon() {
             width: 160,
             height: 160,
             borderRadius: '50%',
-            border: '2px solid rgba(184,148,92,0.7)',
+            border: '2px solid rgba(252,187,0,0.85)',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            color: '#d4b483',
+            color: '#ffd236',
           }}
         >
           <div
@@ -49,7 +49,7 @@ export default function AppleIcon() {
               fontSize: 11,
               letterSpacing: 8,
               textTransform: 'uppercase',
-              color: 'rgba(184,148,92,0.7)',
+              color: 'rgba(252,187,0,0.85)',
             }}
           >
             Vegas
