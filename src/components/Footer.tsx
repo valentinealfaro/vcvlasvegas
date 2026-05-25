@@ -119,6 +119,7 @@ export function Footer() {
               <li><Link href="/lookbook" className="link-quiet hover:text-gold">Lookbook</Link></li>
               <li><Link href="/journal" className="link-quiet hover:text-gold">Journal</Link></li>
               <li><Link href="/investment" className="link-quiet hover:text-gold">Investment Calculator</Link></li>
+              <li><Link href="/style" className="link-quiet hover:text-gold">Find Your Style</Link></li>
               <li><Link href="/faq" className="link-quiet hover:text-gold">FAQ</Link></li>
               <li><Link href="/contact" className="link-quiet hover:text-gold">Contact</Link></li>
             </ul>
