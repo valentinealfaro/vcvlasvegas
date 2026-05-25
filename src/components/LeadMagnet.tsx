@@ -30,28 +30,32 @@ export function LeadMagnet() {
       <div className="container-luxe">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
-            <div className="relative aspect-[4/5] overflow-hidden bg-ink-700">
-              <Image
-                src={kitchenImages[1].src}
-                alt="VCV Vegas Investment Guide"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/30 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-between p-8 lg:p-12">
-                <div className="flex items-center gap-3 text-bone">
-                  <BookOpen className="h-5 w-5 text-bone" />
-                  <p className="eyebrow !text-bone/85">Studio Brief · 2026</p>
-                </div>
-                <div>
-                  <p className="font-display text-3xl text-bone md:text-5xl">
-                    The Las Vegas
-                    <br />
-                    <span className="italic text-bone">Luxury Remodel</span>
-                    <br />
-                    Investment Guide.
-                  </p>
+            <div className="border-gradient">
+              <div className="relative aspect-[4/5] overflow-hidden bg-ink-700">
+                <Image
+                  src={kitchenImages[1].src}
+                  alt="VCV Vegas Investment Guide"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/30 to-transparent" />
+                <div className="absolute inset-0 flex flex-col justify-between p-8 lg:p-12">
+                  <div className="flex items-center gap-3 text-bone">
+                    <span className="grid h-9 w-9 place-items-center border border-gold/40 bg-gold/5 backdrop-blur-md">
+                      <BookOpen className="h-4 w-4 text-bone" />
+                    </span>
+                    <p className="eyebrow !text-bone/85">Studio Brief · 2026</p>
+                  </div>
+                  <div>
+                    <p className="font-display text-3xl text-bone md:text-5xl">
+                      The Las Vegas
+                      <br />
+                      <span className="italic text-bone">Luxury Remodel</span>
+                      <br />
+                      Investment Guide.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
