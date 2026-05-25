@@ -30,6 +30,7 @@ export const navigation = [
   { label: 'Kitchens', href: '/kitchen-remodeling-las-vegas' },
   { label: 'Bathrooms', href: '/bathroom-remodeling-las-vegas' },
   { label: 'Projects', href: '/projects' },
+  { label: 'Lookbook', href: '/lookbook' },
   { label: 'Process', href: '/process' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },

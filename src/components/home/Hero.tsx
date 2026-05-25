@@ -2,7 +2,8 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion, useReducedMotion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ArrowDown, ArrowRight, Phone } from 'lucide-react';
 import { heroGalleryImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
@@ -10,32 +11,54 @@ import { siteConfig } from '@/lib/site';
 const headlineLines: { text: string; italic?: boolean }[] = [
   { text: 'Luxury remodeling' },
   { text: 'designed for', italic: true },
-  { text: 'Las Vegas living.' },
+  { text: 'Las Vegas living.' },
 ];
+
+const ROTATION_MS = 6500;
 
 export function Hero() {
   const reduce = useReducedMotion();
-  const heroImage = heroGalleryImages[0];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (reduce) return;
+    const id = window.setInterval(
+      () => setIndex((i) => (i + 1) % heroGalleryImages.length),
+      ROTATION_MS,
+    );
+    return () => window.clearInterval(id);
+  }, [reduce]);
+
+  const active = heroGalleryImages[index];
 
   return (
     <section className="relative isolate min-h-[100svh] w-full overflow-hidden bg-ink">
-      {/* Background image */}
-      <motion.div
-        initial={{ scale: 1.08, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 2.2, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-0 -z-10"
-      >
-        <Image
-          src={heroImage.src}
-          alt={heroImage.alt}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-      </motion.div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/70 via-ink/55 to-ink" />
+      {/* Crossfading Ken Burns background gallery */}
+      <div className="absolute inset-0 -z-10">
+        <AnimatePresence>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 1.06 }}
+            animate={{ opacity: 1, scale: 1.0 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              opacity: { duration: 1.4, ease: [0.16, 1, 0.3, 1] },
+              scale: { duration: ROTATION_MS / 1000 + 1, ease: 'linear' },
+            }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={active.src}
+              alt={active.alt}
+              fill
+              priority={index === 0}
+              sizes="100vw"
+              className="object-cover"
+            />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/72 via-ink/55 to-ink" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/40 to-transparent" />
 
       {/* Ambient gold glow */}
@@ -151,6 +174,34 @@ export function Hero() {
                   {stat.l}
                 </p>
               </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Indicator dots */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.2, duration: 1 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 lg:right-16 lg:left-auto lg:translate-x-0"
+        >
+          <div className="flex items-center gap-2">
+            {heroGalleryImages.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setIndex(i)}
+                aria-label={`Show image ${i + 1}`}
+                className="group p-1"
+              >
+                <span
+                  className={`block h-px transition-all duration-700 ${
+                    i === index
+                      ? 'w-10 bg-gold'
+                      : 'w-5 bg-bone/30 group-hover:bg-bone/60'
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </motion.div>
