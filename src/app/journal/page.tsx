@@ -6,7 +6,7 @@ import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
 import { kitchenImages, bathroomImages } from '@/lib/images';
-import { journalPosts } from '@/lib/journal';
+import { journalPosts, topicMeta, type JournalTopic } from '@/lib/journal';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -30,6 +30,18 @@ export default function JournalIndex() {
 
       <section className="bg-ink py-24 lg:py-32">
         <div className="container-luxe">
+          <div className="mb-12 flex flex-wrap items-center gap-3">
+            <span className="eyebrow !text-bone/45">Browse by</span>
+            {(Object.keys(topicMeta) as JournalTopic[]).map((key) => (
+              <Link
+                key={key}
+                href={`/journal/topic/${key}`}
+                className="border border-bone/15 px-4 py-2 text-[0.6rem] uppercase tracking-[0.24em] text-bone/60 transition-all duration-300 hover:border-gold/60 hover:text-bone"
+              >
+                {topicMeta[key].label}
+              </Link>
+            ))}
+          </div>
           <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
             {journalPosts.map((post, i) => (
               <Reveal key={post.slug} delay={i % 2}>

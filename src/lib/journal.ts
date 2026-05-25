@@ -1,6 +1,8 @@
 import { kitchenImages, bathroomImages, customHomeImages } from './images';
 import type { LuxeImage } from './images';
 
+export type JournalTopic = 'design' | 'architecture' | 'studio';
+
 export type JournalPost = {
   slug: string;
   eyebrow: string;
@@ -9,6 +11,31 @@ export type JournalPost = {
   image: LuxeImage;
   read: string;
   publishedAt: string;
+  topic: JournalTopic;
+};
+
+export const topicMeta: Record<
+  JournalTopic,
+  { label: string; eyebrow: string; description: string }
+> = {
+  design: {
+    label: 'Design',
+    eyebrow: 'Design Notes',
+    description:
+      'Notes on the architectural details, room compositions, and finish decisions that quietly define a luxury Las Vegas remodel.',
+  },
+  architecture: {
+    label: 'Architecture',
+    eyebrow: 'Architectural Notes',
+    description:
+      'Notes on floor plans, structure, and the architectural moves that re-shape how a Las Vegas home actually lives.',
+  },
+  studio: {
+    label: 'Studio',
+    eyebrow: 'Studio Notes',
+    description:
+      'Notes on how the studio runs — selecting a contractor, pre-construction, and the operational disciplines behind every project.',
+  },
 };
 
 export const journalPosts: JournalPost[] = [
@@ -21,6 +48,7 @@ export const journalPosts: JournalPost[] = [
     image: customHomeImages[3],
     read: '6 min read',
     publishedAt: '2026-05-25',
+    topic: 'design',
   },
   {
     slug: 'what-pre-construction-actually-looks-like',
@@ -31,6 +59,7 @@ export const journalPosts: JournalPost[] = [
     image: customHomeImages[1],
     read: '8 min read',
     publishedAt: '2026-05-24',
+    topic: 'studio',
   },
   {
     slug: 'how-to-choose-luxury-contractor-las-vegas',
@@ -41,6 +70,7 @@ export const journalPosts: JournalPost[] = [
     image: customHomeImages[0],
     read: '7 min read',
     publishedAt: '2026-05-20',
+    topic: 'studio',
   },
   {
     slug: 'opening-up-vegas-floor-plan',
@@ -51,6 +81,7 @@ export const journalPosts: JournalPost[] = [
     image: customHomeImages[0],
     read: '7 min read',
     publishedAt: '2026-05-08',
+    topic: 'architecture',
   },
   {
     slug: 'designing-spa-bathroom-desert',
@@ -61,6 +92,7 @@ export const journalPosts: JournalPost[] = [
     image: bathroomImages[0],
     read: '5 min read',
     publishedAt: '2026-04-22',
+    topic: 'design',
   },
   {
     slug: 'five-details-luxury-remodel-las-vegas',
@@ -71,5 +103,6 @@ export const journalPosts: JournalPost[] = [
     image: kitchenImages[0],
     read: '6 min read',
     publishedAt: '2026-04-10',
+    topic: 'design',
   },
 ];
