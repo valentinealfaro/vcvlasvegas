@@ -39,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/investment',
     '/luxury-remodel-cost-las-vegas',
     '/sample-budgets',
+    '/before-you-start',
     '/style',
     '/resources',
     '/intake',
