@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { SectionHeader } from '@/components/SectionHeader';
 import { CTASection } from '@/components/CTASection';
-import { kitchenImages, bathroomImages } from '@/lib/images';
+import { kitchenImages, bathroomImages, customHomeImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -49,12 +49,12 @@ const phases = [
 export default function ProcessPage() {
   return (
     <>
-      <PageHero
+      <CinematicHero
         eyebrow="The VCV Process"
         title="A calm,"
         italic="controlled build."
         description="Luxury isn’t just the finishes — it’s how the project feels from week one to keys-back. Here’s how we make that happen."
-        image={kitchenImages[2]}
+        images={[kitchenImages[2], bathroomImages[0], customHomeImages[1], kitchenImages[0]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Process' }]}
       />
 

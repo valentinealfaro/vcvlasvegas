@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { SectionHeader } from '@/components/SectionHeader';
 import { CTASection } from '@/components/CTASection';
@@ -215,12 +215,12 @@ export default function MaterialsPage() {
         ])}
       />
 
-      <PageHero
+      <CinematicHero
         eyebrow="The Finish Library"
         title="The materials"
         italic="that hold the work up."
         description="Stone, wood, metal, glass, lighting, and flooring — the curated finish library behind every VCV Vegas project. Trade-only specifications reserved for design-build studios."
-        image={kitchenImages[1]}
+        images={[kitchenImages[1], bathroomImages[3], flooringImages[0], customHomeImages[3], bathroomImages[0]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'The Finish Library' }]}
       />
 

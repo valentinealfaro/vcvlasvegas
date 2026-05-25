@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { SectionHeader } from '@/components/SectionHeader';
 import { CTASection } from '@/components/CTASection';
@@ -75,12 +75,12 @@ const pillars = [
 export default function StandardsPage() {
   return (
     <>
-      <PageHero
+      <CinematicHero
         eyebrow="The Standards"
         title="How we hold"
         italic="the line."
         description="What you can expect from a VCV Vegas project — licensing, engineering, materials, site discipline, and warranty. The disciplines that hold the rest of the work up."
-        image={customHomeImages[0]}
+        images={[customHomeImages[0], customHomeImages[1], customHomeImages[3], kitchenImages[0]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Standards' }]}
       />
 

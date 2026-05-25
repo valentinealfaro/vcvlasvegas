@@ -9,6 +9,7 @@ import { InvestmentRange } from '@/components/home/InvestmentRange';
 import { CalculatorPromo } from '@/components/home/CalculatorPromo';
 import { FeaturedStudies } from '@/components/home/FeaturedStudies';
 import { TrustBar } from '@/components/TrustBar';
+import { BookingStrip } from '@/components/BookingStrip';
 import { LeadMagnet } from '@/components/LeadMagnet';
 import { CTASection } from '@/components/CTASection';
 import { FAQ } from '@/components/FAQ';
@@ -44,6 +45,7 @@ export default function HomePage() {
       <JsonLd data={faqSchema(homepageFAQs)} />
       <Hero />
       <TrustBar />
+      <BookingStrip />
       <Manifesto />
       <SignatureServices />
       <InvestmentRange />

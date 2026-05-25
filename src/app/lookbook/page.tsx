@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
 import {
@@ -50,12 +50,12 @@ const aspectClass = {
 export default function LookbookPage() {
   return (
     <>
-      <PageHero
+      <CinematicHero
         eyebrow="Lookbook"
         title="A visual"
         italic="standard."
         description="A magazine-grade selection of finishes, materials, and rooms from VCV Vegas. No commentary — just the spaces."
-        image={kitchenImages[3]}
+        images={[kitchenImages[3], bathroomImages[0], customHomeImages[0], kitchenImages[0], bathroomImages[3]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Lookbook' }]}
       />
 

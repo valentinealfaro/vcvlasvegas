@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { SectionHeader } from '@/components/SectionHeader';
 import { CTASection } from '@/components/CTASection';
@@ -26,12 +26,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <PageHero
+      <CinematicHero
         eyebrow="The Studio"
         title="A luxury studio"
         italic="quietly expanding into Las Vegas."
         description="VCV Vegas is a focused design-build studio bringing architectural finish standards, trade-only material partners, and white-glove project management to luxury remodeling across the Las Vegas metro."
-        image={customHomeImages[0]}
+        images={[customHomeImages[0], kitchenImages[0], bathroomImages[0], customHomeImages[3], customHomeImages[1]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'About' }]}
       />
 

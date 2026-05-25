@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
 import { kitchenImages, bathroomImages } from '@/lib/images';
@@ -19,12 +19,12 @@ export const metadata: Metadata = {
 export default function JournalIndex() {
   return (
     <>
-      <PageHero
+      <CinematicHero
         eyebrow="The Journal"
         title="Notes"
         italic="from the studio."
         description="Design thinking, finish specifications, and the quiet details behind luxury remodeling in Las Vegas. Written by senior designers from our team."
-        image={kitchenImages[1]}
+        images={[kitchenImages[1], bathroomImages[0], kitchenImages[0], bathroomImages[2]]}
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Journal' }]}
       />
 
