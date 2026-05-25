@@ -10,9 +10,10 @@ type Props = {
   children: ReactNode;
   className?: string;
   variant?: 'gold' | 'ghost';
+  pulse?: boolean;
 };
 
-export function MagneticButton({ href, children, className, variant = 'gold' }: Props) {
+export function MagneticButton({ href, children, className, variant = 'gold', pulse = false }: Props) {
   const ref = useRef<HTMLAnchorElement>(null);
   const reduce = useReducedMotion();
 
@@ -36,13 +37,18 @@ export function MagneticButton({ href, children, className, variant = 'gold' }: 
   };
 
   return (
-    <motion.div style={{ x: sx, y: sy }} className="inline-flex">
+    <motion.div style={{ x: sx, y: sy }} className="relative inline-flex">
       <Link
         ref={ref}
         href={href}
         onMouseMove={handleMove}
         onMouseLeave={handleLeave}
-        className={cn(variant === 'gold' ? 'btn-gold' : 'btn-ghost', className)}
+        className={cn(
+          'relative isolate',
+          variant === 'gold' ? 'btn-gold' : 'btn-ghost',
+          pulse && variant === 'gold' && 'pulse-amber',
+          className,
+        )}
       >
         {children}
       </Link>

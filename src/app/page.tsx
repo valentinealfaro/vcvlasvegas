@@ -11,6 +11,7 @@ import { FeaturedStudies } from '@/components/home/FeaturedStudies';
 import { LatestNote } from '@/components/home/LatestNote';
 import { TrustBar } from '@/components/TrustBar';
 import { BookingStrip } from '@/components/BookingStrip';
+import { StatsBanner } from '@/components/StatsBanner';
 import { LeadMagnet } from '@/components/LeadMagnet';
 import { CTASection } from '@/components/CTASection';
 import { FAQ } from '@/components/FAQ';
@@ -48,6 +49,7 @@ export default function HomePage() {
       <TrustBar />
       <BookingStrip />
       <Manifesto />
+      <StatsBanner />
       <SignatureServices />
       <InvestmentRange />
       <CalculatorPromo />

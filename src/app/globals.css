@@ -103,6 +103,55 @@ textarea:focus-visible {
       radial-gradient(circle at 0% 100%, rgba(252, 187, 0, 0.15), transparent 55%);
   }
 
+  /* Gradient hairline border via padding+mask. Wrap any card in
+     <div class="border-gradient"><div class="..."></div></div> */
+  .border-gradient {
+    position: relative;
+    border-radius: 1px;
+    background: linear-gradient(
+      135deg,
+      rgba(252, 187, 0, 0.55) 0%,
+      rgba(252, 187, 0, 0.04) 35%,
+      rgba(59, 130, 246, 0.04) 65%,
+      rgba(59, 130, 246, 0.55) 100%
+    );
+    padding: 1px;
+    transition: background 0.6s ease;
+  }
+  .border-gradient:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(252, 187, 0, 0.85) 0%,
+      rgba(252, 187, 0, 0.1) 35%,
+      rgba(59, 130, 246, 0.1) 65%,
+      rgba(59, 130, 246, 0.85) 100%
+    );
+  }
+
+  /* A subtle amber pulse on primary CTAs at rest — invites interaction
+     without being aggressive. */
+  .pulse-amber::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: inherit;
+    box-shadow: 0 0 0 0 rgba(252, 187, 0, 0.55);
+    animation: cta-pulse 2.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes cta-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(252, 187, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(252, 187, 0, 0.06);
+  }
+}
+
+@layer components {
+
   .reveal {
     opacity: 0;
     transform: translateY(28px);

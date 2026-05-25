@@ -145,7 +145,7 @@ export function Hero() {
             transition={{ delay: 1.55, duration: 0.9 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <MagneticButton href="/contact">
+            <MagneticButton href="/contact" pulse>
               Schedule Consultation
               <ArrowRight className="h-3.5 w-3.5" />
             </MagneticButton>
