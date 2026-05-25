@@ -86,6 +86,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://firebasestorage.googleapis.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://firebasestorage.googleapis.com" />
+      </head>
       <body className="min-h-screen bg-ink text-bone antialiased">
         <JsonLd data={organizationSchema()} />
         <ScrollProgress />
