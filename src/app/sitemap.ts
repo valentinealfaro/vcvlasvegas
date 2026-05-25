@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/journal/what-pre-construction-actually-looks-like',
     '/about',
     '/why-vcv-vegas',
+    '/now',
     '/visit',
     '/neighborhoods',
     '/faq',
