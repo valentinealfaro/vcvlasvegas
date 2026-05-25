@@ -37,7 +37,7 @@ export function CTASection({
           <Reveal>
             <div className="mb-6 flex items-center gap-4">
               <span className="h-px w-12 bg-gradient-to-r from-gold to-transparent" />
-              <p className="eyebrow !text-gold">{eyebrow}</p>
+              <p className="eyebrow !text-bone">{eyebrow}</p>
             </div>
           </Reveal>
           <Reveal delay={1}>

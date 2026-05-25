@@ -11,7 +11,7 @@ export function MobileStickyCTA() {
         href={siteConfig.phoneHref}
         className="flex items-center justify-center gap-2 py-4 text-[0.7rem] font-medium uppercase tracking-[0.24em] text-bone"
       >
-        <Phone className="h-4 w-4 text-gold" />
+        <Phone className="h-4 w-4 text-bone" />
         Call
       </a>
       <Link

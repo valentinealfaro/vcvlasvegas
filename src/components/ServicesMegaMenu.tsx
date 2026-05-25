@@ -42,7 +42,7 @@ export function ServicesMegaMenu() {
     >
       <Link
         href="/services"
-        className="text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-gold"
+        className="text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-bone"
       >
         Services
       </Link>
@@ -69,12 +69,12 @@ export function ServicesMegaMenu() {
                           className="group flex items-center justify-between gap-4 border-b border-transparent py-3 transition-all hover:border-bone/15"
                         >
                           <div>
-                            <p className="font-display text-xl text-bone group-hover:text-gold transition-colors md:text-2xl">
+                            <p className="font-display text-xl text-bone group-hover:text-bone transition-colors md:text-2xl">
                               {s.title}
                             </p>
                             <p className="mt-1 text-xs text-bone/45">{s.eyebrow}</p>
                           </div>
-                          <ArrowUpRight className="h-4 w-4 text-bone/30 transition-all group-hover:text-gold group-hover:rotate-45" />
+                          <ArrowUpRight className="h-4 w-4 text-bone/30 transition-all group-hover:text-bone group-hover:rotate-45" />
                         </Link>
                       </li>
                     ))}
@@ -101,7 +101,7 @@ export function ServicesMegaMenu() {
                     </motion.div>
                   </AnimatePresence>
                   <div className="absolute inset-x-0 bottom-0 p-6">
-                    <p className="eyebrow !text-gold-light">Preview</p>
+                    <p className="eyebrow !text-bone">Preview</p>
                   </div>
                 </div>
               </div>

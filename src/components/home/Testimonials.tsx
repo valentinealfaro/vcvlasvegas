@@ -31,7 +31,7 @@ export function Testimonials() {
         <div className="mt-20 grid gap-10 md:grid-cols-3">
           {promises.map((p, i) => (
             <Reveal key={p.n} delay={i} className="relative">
-              <p className="font-display text-5xl text-gold-light">{p.n}</p>
+              <p className="font-display text-5xl text-bone">{p.n}</p>
               <h3 className="mt-6 font-display text-2xl text-bone md:text-[1.65rem]">
                 {p.t}
               </h3>

@@ -80,16 +80,16 @@ export default function StartPage() {
                     className="group flex h-full flex-col justify-between gap-12 border border-bone/15 p-8 transition-all duration-500 hover:border-gold hover:bg-ink-700 lg:p-10"
                   >
                     <div>
-                      <Icon className="h-6 w-6 text-gold transition-colors group-hover:text-gold-light" />
+                      <Icon className="h-6 w-6 text-bone transition-colors group-hover:text-bone" />
                       <p className="eyebrow mt-6 !text-bone/45">{p.eyebrow}</p>
-                      <p className="mt-3 font-display text-3xl text-bone group-hover:text-gold-light md:text-4xl">
+                      <p className="mt-3 font-display text-3xl text-bone group-hover:text-bone md:text-4xl">
                         {p.title}
                       </p>
                       <p className="mt-4 text-base leading-relaxed text-bone/60">
                         {p.description}
                       </p>
                     </div>
-                    <div className="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-gold">
+                    <div className="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-bone">
                       {p.cta}
                       <ArrowUpRight className="h-3 w-3 transition-transform group-hover:rotate-45" />
                     </div>
@@ -110,7 +110,7 @@ export default function StartPage() {
                 <p className="eyebrow mb-6 justify-center">Direct Path</p>
                 <h2 className="font-display text-4xl text-bone md:text-5xl">
                   Send the project<br />
-                  <span className="italic text-gold-light">to a senior designer.</span>
+                  <span className="italic text-bone">to a senior designer.</span>
                 </h2>
                 <p className="mt-6 text-bone/65">
                   A 60-second form. A one-business-day response. Confidential.
@@ -133,7 +133,7 @@ export default function StartPage() {
             <Reveal>
               <p className="font-display text-3xl text-bone md:text-4xl">
                 A senior designer reads every inquiry.<br />
-                <span className="italic text-gold-light">No salespeople. No marketing cadence.</span>
+                <span className="italic text-bone">No salespeople. No marketing cadence.</span>
               </p>
               <p className="mt-6 text-bone/55">
                 One email. One conversation. Confidential.

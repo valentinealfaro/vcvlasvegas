@@ -96,7 +96,7 @@ export default function Post() {
           <div className="mx-auto max-w-3xl">
             <Reveal>
               <p className="text-lg leading-relaxed text-bone/75 md:text-xl">
-                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-gold-light md:text-8xl">
+                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-bone md:text-8xl">
                   T
                 </span>
                 here is a recognizable difference between a remodel that
@@ -112,7 +112,7 @@ export default function Post() {
             {/* 01 */}
             <section id="d1" className="mt-16 border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">01</p>
+                <p className="font-display text-7xl text-bone">01</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   The plane of the wall continues into the shower.
                 </h2>
@@ -150,7 +150,7 @@ export default function Post() {
             {/* 02 */}
             <section id="d2" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">02</p>
+                <p className="font-display text-7xl text-bone">02</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   The cabinetry is millwork, not a product.
                 </h2>
@@ -180,7 +180,7 @@ export default function Post() {
                   with its panels, you’re standing in a luxury kitchen. If they
                   don’t, you’re not.”
                 </blockquote>
-                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-gold">
+                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
                   — From the studio
                 </figcaption>
               </figure>
@@ -189,7 +189,7 @@ export default function Post() {
             {/* 03 */}
             <section id="d3" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">03</p>
+                <p className="font-display text-7xl text-bone">03</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   The lighting works in layers.
                 </h2>
@@ -228,7 +228,7 @@ export default function Post() {
             {/* 04 */}
             <section id="d4" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">04</p>
+                <p className="font-display text-7xl text-bone">04</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   The stone is book-matched and dry-laid first.
                 </h2>
@@ -254,7 +254,7 @@ export default function Post() {
             {/* 05 */}
             <section id="d5" className="mt-12 border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">05</p>
+                <p className="font-display text-7xl text-bone">05</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   The hardware is the right weight.
                 </h2>
@@ -304,14 +304,14 @@ export default function Post() {
               <div className="flex items-center justify-between border-t border-bone/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55">
                 <Link
                   href="/journal"
-                  className="flex items-center gap-3 transition-colors hover:text-gold"
+                  className="flex items-center gap-3 transition-colors hover:text-bone"
                 >
                   <ArrowLeft className="h-4 w-4" />
                   All Notes
                 </Link>
                 <Link
                   href="/contact"
-                  className="flex items-center gap-3 text-gold transition-colors hover:text-gold-light"
+                  className="flex items-center gap-3 text-bone transition-colors hover:text-bone"
                 >
                   Start a project
                   <ArrowRight className="h-4 w-4" />

@@ -89,14 +89,14 @@ export default function AccessibilityPage() {
                 email{' '}
                 <a
                   href={siteConfig.emailHref}
-                  className="text-gold underline-offset-4 hover:underline"
+                  className="text-bone underline-offset-4 hover:underline"
                 >
                   {siteConfig.email}
                 </a>{' '}
                 or call{' '}
                 <a
                   href={siteConfig.phoneHref}
-                  className="text-gold underline-offset-4 hover:underline"
+                  className="text-bone underline-offset-4 hover:underline"
                 >
                   {siteConfig.phone}
                 </a>

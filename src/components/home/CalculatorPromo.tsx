@@ -16,13 +16,13 @@ export function CalculatorPromo() {
           <Reveal>
             <div>
               <p className="eyebrow mb-5 flex items-center gap-3">
-                <Calculator className="h-3.5 w-3.5 text-gold" />
+                <Calculator className="h-3.5 w-3.5 text-bone" />
                 Investment Calculator
               </p>
               <h2 className="font-display text-4xl text-bone text-balance md:text-5xl lg:text-6xl">
                 Calculate the range
                 <br />
-                <span className="italic text-gold-light">before you call.</span>
+                <span className="italic text-bone">before you call.</span>
               </h2>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-bone/65 md:text-lg">
                 A live, three-step estimator tuned to real VCV Vegas project

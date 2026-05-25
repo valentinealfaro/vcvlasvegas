@@ -121,7 +121,7 @@ export default function EngagementPage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/20 to-transparent" />
                       <div className="absolute left-6 top-6">
-                        <Icon className="h-7 w-7 text-gold" />
+                        <Icon className="h-7 w-7 text-bone" />
                       </div>
                     </div>
 
@@ -139,7 +139,7 @@ export default function EngagementPage() {
                           <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
                             Investment Range
                           </dt>
-                          <dd className="font-display text-lg text-gold-light">
+                          <dd className="font-display text-lg text-bone">
                             {tier.range}
                           </dd>
                         </div>
@@ -147,7 +147,7 @@ export default function EngagementPage() {
                           <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
                             Build Window
                           </dt>
-                          <dd className="font-display text-lg text-gold-light">
+                          <dd className="font-display text-lg text-bone">
                             {tier.duration}
                           </dd>
                         </div>
@@ -165,7 +165,7 @@ export default function EngagementPage() {
                       <div className="mt-10">
                         <Link
                           href={tier.href}
-                          className="inline-flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-gold transition-colors hover:text-gold-light"
+                          className="inline-flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
                         >
                           {tier.cta}
                           <ArrowUpRight className="h-3.5 w-3.5" />

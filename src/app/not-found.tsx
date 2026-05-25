@@ -24,11 +24,11 @@ export default function NotFound() {
         <div className="max-w-3xl">
           <p className="eyebrow mb-8">Lost in the Build</p>
           <h1 className="font-display text-[5rem] leading-[0.95] text-bone text-balance md:text-[10rem] lg:text-[14rem]">
-            4<span className="italic text-gold-light">0</span>4
+            4<span className="italic text-bone">0</span>4
           </h1>
           <p className="mt-8 max-w-xl font-display text-2xl text-bone/85 md:text-3xl">
             This page has been re-imagined,
-            <span className="italic text-gold-light"> or never built.</span>
+            <span className="italic text-bone"> or never built.</span>
           </p>
           <p className="mt-4 max-w-xl text-base text-bone/55 md:text-lg">
             Either way — let’s get you back to the studio.

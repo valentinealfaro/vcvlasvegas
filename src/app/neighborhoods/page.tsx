@@ -82,7 +82,7 @@ export default function NeighborhoodsPage() {
                   <div className="flex items-start justify-between gap-6">
                     <div>
                       <p className="eyebrow mb-2 !text-bone/45">{c.region}</p>
-                      <h2 className="font-display text-3xl text-bone transition-colors group-hover:text-gold md:text-4xl">
+                      <h2 className="font-display text-3xl text-bone transition-colors group-hover:text-bone md:text-4xl">
                         {c.city}
                       </h2>
                       <p className="mt-3 max-w-md text-bone/60">
@@ -106,7 +106,7 @@ export default function NeighborhoodsPage() {
             <p className="eyebrow mb-6">Also Within Our Radius</p>
             <h3 className="font-display text-3xl text-bone md:text-4xl">
               We serve every corner<br />
-              <span className="italic text-gold-light">of the Las Vegas metro.</span>
+              <span className="italic text-bone">of the Las Vegas metro.</span>
             </h3>
           </Reveal>
           <Reveal delay={1} className="mt-10 grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-3 lg:grid-cols-6">

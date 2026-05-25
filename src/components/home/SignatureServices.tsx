@@ -86,7 +86,7 @@ export function SignatureServices() {
                   <div className="flex items-start justify-between gap-6">
                     <div>
                       <p className="eyebrow mb-2 !text-bone/40">{s.eyebrow}</p>
-                      <h3 className="font-display text-3xl text-bone transition-colors group-hover:text-gold md:text-4xl">
+                      <h3 className="font-display text-3xl text-bone transition-colors group-hover:text-bone md:text-4xl">
                         {s.title}
                       </h3>
                       <p className="mt-3 max-w-md text-bone/60">{s.summary}</p>

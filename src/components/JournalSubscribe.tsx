@@ -31,7 +31,7 @@ export function JournalSubscribe() {
                   transition={{ duration: 0.5 }}
                   className="flex items-center gap-3 border border-gold/30 bg-gold/5 px-5 py-4"
                 >
-                  <CheckCircle2 className="h-5 w-5 text-gold" />
+                  <CheckCircle2 className="h-5 w-5 text-bone" />
                   <p className="text-sm text-bone/75">Subscribed.</p>
                 </motion.div>
               ) : (

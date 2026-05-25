@@ -58,7 +58,7 @@ textarea:focus-visible {
     font-weight: 500;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: #fcbb00;
+    color: #ffffff;
   }
 }
 
@@ -76,7 +76,7 @@ textarea:focus-visible {
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 border border-bone/20 px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:text-gold;
+    @apply inline-flex items-center justify-center gap-2 border border-bone/20 px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:text-bone;
   }
 
   .btn-dark {
@@ -169,7 +169,7 @@ textarea:focus-visible {
     bottom: -2px;
     height: 1px;
     width: 100%;
-    background-color: #b8945c;
+    background-color: #fcbb00;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
@@ -273,4 +273,4 @@ textarea:focus-visible {
 ::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: #0a0a0a; }
 ::-webkit-scrollbar-thumb { background: #2c2c2c; border-radius: 0; }
-::-webkit-scrollbar-thumb:hover { background: #b8945c; }
+::-webkit-scrollbar-thumb:hover { background: #fcbb00; }

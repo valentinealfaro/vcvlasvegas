@@ -65,11 +65,11 @@ export function RelatedServices({
                     <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
                       {s.eyebrow}
                     </p>
-                    <h3 className="mt-3 font-display text-2xl text-bone transition-colors group-hover:text-gold md:text-3xl">
+                    <h3 className="mt-3 font-display text-2xl text-bone transition-colors group-hover:text-bone md:text-3xl">
                       {s.title}
                     </h3>
                     <p className="mt-3 text-sm text-bone/60">{s.summary}</p>
-                    <div className="mt-5 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-gold">
+                    <div className="mt-5 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
                       Explore the service
                       <ArrowUpRight className="h-3 w-3 transition-transform group-hover:rotate-45" />
                     </div>

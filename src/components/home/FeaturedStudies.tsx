@@ -81,10 +81,10 @@ export function FeaturedStudies() {
                 <div className="absolute inset-x-0 bottom-0 flex flex-col p-8 md:p-10">
                   <h3 className="font-display text-3xl text-bone md:text-5xl">
                     {s.title}{' '}
-                    <span className="italic text-gold-light">{s.italic}</span>
+                    <span className="italic text-bone">{s.italic}</span>
                   </h3>
                   <p className="mt-3 max-w-md text-bone/75">{s.scope}</p>
-                  <div className="mt-5 flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-gold">
+                  <div className="mt-5 flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-bone">
                     Read the study
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
                   </div>

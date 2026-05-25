@@ -120,7 +120,7 @@ export function StyleQuiz() {
         >
           {step === 0 && (
             <div>
-              <p className="eyebrow mb-3 !text-gold">Question 01 · Architecture</p>
+              <p className="eyebrow mb-3 !text-bone">Question 01 · Architecture</p>
               <h3 className="font-display text-3xl text-bone md:text-4xl">
                 Which language speaks to you?
               </h3>
@@ -144,7 +144,7 @@ export function StyleQuiz() {
                         />
                       ))}
                     </div>
-                    <p className="font-display text-xl text-bone group-hover:text-gold-light">
+                    <p className="font-display text-xl text-bone group-hover:text-bone">
                       {s.label}
                     </p>
                     <p className="mt-2 text-xs leading-snug text-bone/55">
@@ -158,7 +158,7 @@ export function StyleQuiz() {
 
           {step === 1 && (
             <div>
-              <p className="eyebrow mb-3 !text-gold">Question 02 · Material Warmth</p>
+              <p className="eyebrow mb-3 !text-bone">Question 02 · Material Warmth</p>
               <h3 className="font-display text-3xl text-bone md:text-4xl">
                 How warm should the rooms feel?
               </h3>
@@ -183,7 +183,7 @@ export function StyleQuiz() {
 
           {step === 2 && (
             <div>
-              <p className="eyebrow mb-3 !text-gold">Question 03 · Light</p>
+              <p className="eyebrow mb-3 !text-bone">Question 03 · Light</p>
               <h3 className="font-display text-3xl text-bone md:text-4xl">
                 What kind of light do you want to live in?
               </h3>
@@ -208,7 +208,7 @@ export function StyleQuiz() {
 
           {step === 3 && (
             <div>
-              <p className="eyebrow mb-3 !text-gold">Question 04 · Project Scope</p>
+              <p className="eyebrow mb-3 !text-bone">Question 04 · Project Scope</p>
               <h3 className="font-display text-3xl text-bone md:text-4xl">
                 How much of the home are we touching?
               </h3>
@@ -233,10 +233,10 @@ export function StyleQuiz() {
 
           {step === 4 && (
             <div>
-              <p className="eyebrow mb-3 !text-gold">Your Style Profile</p>
+              <p className="eyebrow mb-3 !text-bone">Your Style Profile</p>
               <h3 className="font-display text-4xl text-bone md:text-5xl">
                 {selectedStyle?.label}{' '}
-                <span className="italic text-gold-light">·</span>{' '}
+                <span className="italic text-bone">·</span>{' '}
                 {warmths.find((w) => w.key === answers.warmth)?.label}
               </h3>
               <p className="mt-4 max-w-xl text-bone/65">
@@ -275,7 +275,7 @@ export function StyleQuiz() {
                   transition={{ duration: 0.5 }}
                   className="mt-8 flex items-start gap-4 border border-gold/30 bg-gold/5 p-6"
                 >
-                  <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-gold" />
+                  <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-bone" />
                   <div>
                     <p className="font-display text-xl text-bone">
                       Your style direction is on its way.
@@ -320,7 +320,7 @@ export function StyleQuiz() {
               <button
                 type="button"
                 onClick={reset}
-                className="mt-8 flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-gold"
+                className="mt-8 flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-bone"
               >
                 <RotateCcw className="h-3 w-3" />
                 Start Over
@@ -337,7 +337,7 @@ export function StyleQuiz() {
             type="button"
             onClick={() => setStep((s) => Math.max(0, s - 1))}
             disabled={step === 0}
-            className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-gold disabled:cursor-not-allowed disabled:opacity-30"
+            className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-bone disabled:cursor-not-allowed disabled:opacity-30"
           >
             <ArrowLeft className="h-3 w-3" />
             Back

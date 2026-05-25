@@ -42,13 +42,13 @@ export function RelatedReading({
                 </figure>
                 <div className="mt-6">
                   <div className="flex items-center justify-between gap-4 text-[0.65rem] uppercase tracking-[0.28em]">
-                    <span className="text-gold">{post.eyebrow}</span>
+                    <span className="text-bone">{post.eyebrow}</span>
                     <span className="text-bone/45">{post.read}</span>
                   </div>
-                  <h3 className="mt-4 font-display text-2xl text-bone transition-colors group-hover:text-gold md:text-3xl">
+                  <h3 className="mt-4 font-display text-2xl text-bone transition-colors group-hover:text-bone md:text-3xl">
                     {post.title}
                   </h3>
-                  <div className="mt-4 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 group-hover:text-gold">
+                  <div className="mt-4 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 group-hover:text-bone">
                     Read the note
                     <ArrowUpRight className="h-3 w-3 transition-transform group-hover:rotate-45" />
                   </div>

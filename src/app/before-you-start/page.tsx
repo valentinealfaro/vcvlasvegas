@@ -96,7 +96,7 @@ export default function BeforeYouStartPage() {
             {steps.map((step) => (
               <Reveal key={step.n}>
                 <div className="grid items-start gap-10 border-t border-bone/10 pt-12 lg:grid-cols-[auto_1fr_1.6fr] lg:gap-16">
-                  <p className="font-display text-6xl text-gold-light lg:text-7xl">
+                  <p className="font-display text-6xl text-bone lg:text-7xl">
                     {step.n}
                   </p>
                   <h3 className="font-display text-2xl text-bone md:text-3xl">
@@ -109,7 +109,7 @@ export default function BeforeYouStartPage() {
                     {step.link && (
                       <Link
                         href={step.link.href}
-                        className="mt-5 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-gold transition-colors hover:text-gold-light"
+                        className="mt-5 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
                       >
                         {step.link.label}
                         <ArrowUpRight className="h-3 w-3" />
@@ -149,7 +149,7 @@ export default function BeforeYouStartPage() {
               </p>
               <Link
                 href="/contact"
-                className="mt-8 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-gold transition-colors hover:text-gold-light"
+                className="mt-8 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
               >
                 Open the consultation form
                 <ArrowRight className="h-3 w-3" />
@@ -167,7 +167,7 @@ export default function BeforeYouStartPage() {
               </p>
               <Link
                 href="/intake"
-                className="mt-8 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-gold transition-colors hover:text-gold-light"
+                className="mt-8 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
               >
                 Open the project brief
                 <ArrowRight className="h-3 w-3" />

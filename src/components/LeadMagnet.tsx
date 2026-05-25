@@ -41,14 +41,14 @@ export function LeadMagnet() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/30 to-transparent" />
               <div className="absolute inset-0 flex flex-col justify-between p-8 lg:p-12">
                 <div className="flex items-center gap-3 text-bone">
-                  <BookOpen className="h-5 w-5 text-gold" />
+                  <BookOpen className="h-5 w-5 text-bone" />
                   <p className="eyebrow !text-bone/85">Studio Brief · 2026</p>
                 </div>
                 <div>
                   <p className="font-display text-3xl text-bone md:text-5xl">
                     The Las Vegas
                     <br />
-                    <span className="italic text-gold-light">Luxury Remodel</span>
+                    <span className="italic text-bone">Luxury Remodel</span>
                     <br />
                     Investment Guide.
                   </p>
@@ -61,7 +61,7 @@ export function LeadMagnet() {
             <p className="eyebrow mb-6">Complimentary Guide</p>
             <h2 className="font-display text-4xl text-bone text-balance md:text-5xl">
               What a luxury remodel<br />
-              <span className="italic text-gold-light">actually costs.</span>
+              <span className="italic text-bone">actually costs.</span>
             </h2>
             <p className="mt-6 max-w-lg text-base leading-relaxed text-bone/65 md:text-lg">
               A short, candid guide from our studio — investment ranges, timeline
@@ -85,7 +85,7 @@ export function LeadMagnet() {
                 transition={{ duration: 0.5 }}
                 className="mt-8 flex items-start gap-4 border border-gold/30 bg-gold/5 p-6"
               >
-                <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-gold" />
+                <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-bone" />
                 <div>
                   <p className="font-display text-xl text-bone">
                     On its way.

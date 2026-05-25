@@ -100,7 +100,7 @@ export default function SpecSheetPage() {
             <p className="eyebrow mb-4">Specification Sheet</p>
             <h1 className="font-display text-3xl text-bone text-balance md:text-4xl">
               A single-document overview of{' '}
-              <span className="italic text-gold-light">how the studio specifies a build.</span>
+              <span className="italic text-bone">how the studio specifies a build.</span>
             </h1>
             <p className="mt-4 max-w-2xl text-sm text-bone/55">
               Print this page or save it as PDF for a one-document studio
@@ -121,7 +121,7 @@ export default function SpecSheetPage() {
             {/* Document header */}
             <header className="flex items-end justify-between gap-6 border-b border-bone/15 pb-8">
               <div className="flex items-center gap-4">
-                <Monogram size={56} className="text-gold print-gold" />
+                <Monogram size={56} className="text-bone print-gold" />
                 <div>
                   <p className="font-display text-2xl text-bone">{siteConfig.name}</p>
                   <p className="text-[0.62rem] uppercase tracking-[0.32em] text-bone/55">
@@ -143,7 +143,7 @@ export default function SpecSheetPage() {
             <div className="mt-12 space-y-12">
               {sections.map((section) => (
                 <section key={section.h}>
-                  <h2 className="font-display text-xl text-gold-light print-gold">
+                  <h2 className="font-display text-xl text-bone print-gold">
                     {section.h}
                   </h2>
                   <dl className="mt-4 divide-y divide-bone/10 border-y border-bone/10">

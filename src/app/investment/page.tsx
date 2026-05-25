@@ -70,7 +70,7 @@ export default function InvestmentPage() {
           <div className="grid gap-px bg-bone/10 md:grid-cols-3">
             {notes.map((n) => (
               <Reveal key={n.t} className="bg-ink-800 p-8 lg:p-10">
-                <p className="font-display text-xl text-gold-light md:text-2xl">
+                <p className="font-display text-xl text-bone md:text-2xl">
                   {n.t}
                 </p>
                 <p className="mt-3 text-sm leading-relaxed text-bone/60">

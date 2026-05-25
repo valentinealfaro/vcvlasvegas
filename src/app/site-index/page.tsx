@@ -123,7 +123,7 @@ export default function SiteIndexPage() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="link-quiet text-sm leading-relaxed text-bone/70 transition-colors hover:text-gold"
+                        className="link-quiet text-sm leading-relaxed text-bone/70 transition-colors hover:text-bone"
                       >
                         {link.label}
                       </Link>

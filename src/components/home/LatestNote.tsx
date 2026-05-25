@@ -15,8 +15,8 @@ export function LatestNote() {
           <Reveal>
             <div className="flex h-full flex-col justify-center">
               <div className="mb-6 flex items-center gap-3">
-                <BookOpen className="h-4 w-4 text-gold" />
-                <p className="eyebrow !text-gold">Latest from the Journal</p>
+                <BookOpen className="h-4 w-4 text-bone" />
+                <p className="eyebrow !text-bone">Latest from the Journal</p>
               </div>
               <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
                 {latest.eyebrow} · {latest.read}
@@ -37,7 +37,7 @@ export function LatestNote() {
                 </Link>
                 <Link
                   href="/journal"
-                  className="flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-gold"
+                  className="flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-bone"
                 >
                   All Notes
                   <ArrowUpRight className="h-3 w-3" />

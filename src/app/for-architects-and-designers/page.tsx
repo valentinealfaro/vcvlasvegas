@@ -133,7 +133,7 @@ export default function ForTradePage() {
             {program.map((p, i) => (
               <Reveal key={p.n} delay={i}>
                 <div className="grid items-start gap-8 border-t border-bone/10 pt-10 lg:grid-cols-[auto_1fr_2fr] lg:gap-14">
-                  <p className="font-display text-5xl text-gold-light lg:text-6xl">
+                  <p className="font-display text-5xl text-bone lg:text-6xl">
                     {p.n}
                   </p>
                   <h3 className="font-display text-2xl text-bone md:text-3xl">
@@ -201,7 +201,7 @@ export default function ForTradePage() {
                 <p className="eyebrow mb-6">Trade Intake</p>
                 <h2 className="font-display text-4xl text-bone md:text-5xl">
                   Send a project<br />
-                  <span className="italic text-gold-light">straight to pre-construction.</span>
+                  <span className="italic text-bone">straight to pre-construction.</span>
                 </h2>
                 <p className="mt-6 text-bone/65">
                   Three short sections — the firm, the project, and the

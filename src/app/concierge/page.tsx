@@ -93,7 +93,7 @@ export default function ConciergePage() {
           <div className="mt-16 grid gap-px bg-bone/10 sm:grid-cols-2">
             {principles.map((p, i) => (
               <Reveal key={p.t} delay={i % 2} className="bg-ink-800 p-8 lg:p-12">
-                <p className="font-display text-4xl text-gold-light">0{i + 1}</p>
+                <p className="font-display text-4xl text-bone">0{i + 1}</p>
                 <p className="mt-6 font-display text-2xl text-bone md:text-3xl">
                   {p.t}
                 </p>
@@ -132,7 +132,7 @@ export default function ConciergePage() {
                 Studio Concierge engagements are typically introduced through
                 a previous client, architect, designer, or private wealth
                 advisor.{' '}
-                <span className="italic text-gold-light">
+                <span className="italic text-bone">
                   Direct inquiries are welcomed and reviewed personally by a
                   studio principal.
                 </span>

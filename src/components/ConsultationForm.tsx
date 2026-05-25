@@ -94,7 +94,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
         transition={{ duration: 0.6 }}
         className="flex flex-col items-start gap-5 py-12"
       >
-        <CheckCircle2 className="h-12 w-12 text-gold" />
+        <CheckCircle2 className="h-12 w-12 text-bone" />
         <div>
           <h3 className="font-display text-4xl text-bone">Thank you.</h3>
           <p className="mt-3 max-w-md text-bone/65">
@@ -139,7 +139,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
         >
           {step === 0 && (
             <div>
-              <p className="eyebrow mb-3 !text-gold">Your Project</p>
+              <p className="eyebrow mb-3 !text-bone">Your Project</p>
               <h3 className="font-display text-3xl text-bone md:text-4xl">
                 What kind of project are you considering?
               </h3>
@@ -164,7 +164,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
                       <Icon
                         className={cn(
                           'h-5 w-5 shrink-0 transition-colors',
-                          active ? 'text-gold' : 'text-bone/45 group-hover:text-gold',
+                          active ? 'text-bone' : 'text-bone/45 group-hover:text-bone',
                         )}
                       />
                       <span className="text-sm tracking-wide">{label}</span>
@@ -177,7 +177,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
 
           {step === 1 && (
             <div>
-              <p className="eyebrow mb-3 !text-gold">Investment Range</p>
+              <p className="eyebrow mb-3 !text-bone">Investment Range</p>
               <h3 className="font-display text-3xl text-bone md:text-4xl">
                 What investment range are you working with?
               </h3>
@@ -212,7 +212,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
 
           {step === 2 && (
             <div>
-              <p className="eyebrow mb-3 !text-gold">Timing</p>
+              <p className="eyebrow mb-3 !text-bone">Timing</p>
               <h3 className="font-display text-3xl text-bone md:text-4xl">
                 When would you like to begin?
               </h3>
@@ -244,7 +244,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
 
           {step === 3 && (
             <form onSubmit={handleSubmit} className="grid gap-5">
-              <p className="eyebrow mb-1 !text-gold">Private Details</p>
+              <p className="eyebrow mb-1 !text-bone">Private Details</p>
               <h3 className="font-display text-3xl text-bone md:text-4xl">
                 How can we reach you?
               </h3>
@@ -331,7 +331,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
           type="button"
           onClick={() => setStep((s) => Math.max(0, s - 1))}
           disabled={step === 0}
-          className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-gold disabled:cursor-not-allowed disabled:opacity-30"
+          className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-bone disabled:cursor-not-allowed disabled:opacity-30"
         >
           <ArrowLeft className="h-3 w-3" />
           Back
@@ -341,7 +341,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
             type="button"
             onClick={() => setStep((s) => Math.min(3, s + 1))}
             disabled={!canAdvance()}
-            className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-gold transition-opacity disabled:cursor-not-allowed disabled:opacity-30"
+            className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-opacity disabled:cursor-not-allowed disabled:opacity-30"
           >
             Continue
             <ArrowRight className="h-3 w-3" />

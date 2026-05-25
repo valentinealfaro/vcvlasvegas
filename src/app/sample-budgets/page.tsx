@@ -163,7 +163,7 @@ export default function SampleBudgetsPage() {
                     {budget.title}
                   </h2>
                   <div className="mt-6 flex items-baseline gap-6">
-                    <p className="font-display text-5xl text-gold-light md:text-6xl">
+                    <p className="font-display text-5xl text-bone md:text-6xl">
                       {budget.total}
                     </p>
                   </div>
@@ -173,7 +173,7 @@ export default function SampleBudgetsPage() {
                   <div className="mt-8">
                     <Link
                       href={budget.href}
-                      className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-gold transition-colors hover:text-gold-light"
+                      className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
                     >
                       {budget.hrefLabel}
                       <ArrowUpRight className="h-3 w-3" />
@@ -184,7 +184,7 @@ export default function SampleBudgetsPage() {
 
               <Reveal delay={1}>
                 <div>
-                  <p className="eyebrow mb-6 !text-gold">Line-Item Breakdown</p>
+                  <p className="eyebrow mb-6 !text-bone">Line-Item Breakdown</p>
                   <ul className="divide-y divide-bone/10 border-y border-bone/10">
                     {budget.lines.map((line) => (
                       <li
@@ -202,7 +202,7 @@ export default function SampleBudgetsPage() {
                         <p className="text-[0.65rem] uppercase tracking-[0.24em] text-bone/45 md:order-2">
                           {line.share}%
                         </p>
-                        <p className="font-display text-lg text-gold-light md:order-3 md:text-xl">
+                        <p className="font-display text-lg text-bone md:order-3 md:text-xl">
                           {formatAmount(budget.total, line.share)}
                         </p>
                       </li>

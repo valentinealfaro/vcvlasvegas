@@ -58,7 +58,7 @@ export default function JournalIndex() {
                   </figure>
                   <div className="mt-7">
                     <div className="flex items-center justify-between gap-4 text-[0.65rem] uppercase tracking-[0.28em]">
-                      <span className="text-gold">{post.eyebrow}</span>
+                      <span className="text-bone">{post.eyebrow}</span>
                       <span className="text-bone/45">
                         {new Date(post.publishedAt).toLocaleDateString('en-US', {
                           month: 'short',
@@ -69,11 +69,11 @@ export default function JournalIndex() {
                         {post.read}
                       </span>
                     </div>
-                    <h2 className="mt-4 font-display text-3xl text-bone text-balance transition-colors group-hover:text-gold md:text-4xl">
+                    <h2 className="mt-4 font-display text-3xl text-bone text-balance transition-colors group-hover:text-bone md:text-4xl">
                       {post.title}
                     </h2>
                     <p className="mt-3 max-w-xl text-bone/60">{post.summary}</p>
-                    <div className="mt-5 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 group-hover:text-gold">
+                    <div className="mt-5 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 group-hover:text-bone">
                       Read the note
                       <ArrowUpRight className="h-3 w-3 transition-transform group-hover:rotate-45" />
                     </div>

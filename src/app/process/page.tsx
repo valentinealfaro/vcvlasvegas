@@ -64,7 +64,7 @@ export default function ProcessPage() {
             {phases.map((phase) => (
               <Reveal key={phase.n}>
                 <div className="grid gap-12 border-t border-bone/10 pt-16 lg:grid-cols-[auto_1fr_1fr] lg:gap-16">
-                  <p className="font-display text-7xl text-gold-light lg:text-8xl">
+                  <p className="font-display text-7xl text-bone lg:text-8xl">
                     {phase.n}
                   </p>
                   <div>

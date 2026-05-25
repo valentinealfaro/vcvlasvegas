@@ -246,7 +246,7 @@ export default function MaterialsPage() {
                     />
                   )}
                   <p className="font-display text-xl text-bone md:text-2xl">{s.name}</p>
-                  <p className="mt-2 text-[0.6rem] uppercase tracking-[0.24em] text-gold">
+                  <p className="mt-2 text-[0.6rem] uppercase tracking-[0.24em] text-bone">
                     {s.spec}
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-bone/55">

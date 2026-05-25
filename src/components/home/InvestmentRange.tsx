@@ -39,7 +39,7 @@ export function InvestmentRange() {
               <p className="eyebrow mb-6">Investment Ranges</p>
               <h2 className="font-display text-4xl text-bone text-balance md:text-5xl">
                 Transparent ranges,<br />
-                <span className="italic text-gold-light">private numbers.</span>
+                <span className="italic text-bone">private numbers.</span>
               </h2>
               <p className="mt-6 max-w-xl text-bone/65">
                 Indicative investment windows for typical VCV Vegas projects.
@@ -79,12 +79,12 @@ export function InvestmentRange() {
                     <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
                       {t.label}
                     </p>
-                    <p className="mt-5 font-display text-3xl text-bone transition-colors group-hover:text-gold-light md:text-4xl">
+                    <p className="mt-5 font-display text-3xl text-bone transition-colors group-hover:text-bone md:text-4xl">
                       {t.range}
                     </p>
                     <p className="mt-3 text-sm text-bone/55">{t.duration}</p>
                   </div>
-                  <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-gold opacity-70 transition-opacity group-hover:opacity-100">
+                  <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone opacity-70 transition-opacity group-hover:opacity-100">
                     Explore
                     <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
                   </div>

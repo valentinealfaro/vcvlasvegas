@@ -28,7 +28,7 @@ export function SectionHeader({
         <Reveal>
           <div className="mb-6 flex items-center gap-4">
             {align !== 'center' && <span className="hairline" />}
-            <p className="eyebrow !text-gold">{eyebrow}</p>
+            <p className="eyebrow !text-bone">{eyebrow}</p>
           </div>
         </Reveal>
       )}

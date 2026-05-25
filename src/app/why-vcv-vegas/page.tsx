@@ -99,12 +99,12 @@ export default function WhyPage() {
             {/* Do */}
             <Reveal>
               <div className="bg-ink p-8 lg:p-12">
-                <p className="eyebrow mb-6 !text-gold">What We Do</p>
+                <p className="eyebrow mb-6 !text-bone">What We Do</p>
                 <ul className="space-y-5">
                   {doDo.map((d) => (
                     <li key={d} className="flex items-start gap-4">
                       <span className="mt-1.5 grid h-5 w-5 shrink-0 place-items-center border border-gold/50 bg-gold/10">
-                        <Check className="h-3 w-3 text-gold" />
+                        <Check className="h-3 w-3 text-bone" />
                       </span>
                       <span className="text-base text-bone/80 md:text-lg">{d}</span>
                     </li>
@@ -143,7 +143,7 @@ export default function WhyPage() {
           <div className="mt-16 grid gap-px bg-bone/10 sm:grid-cols-2">
             {rightFor.map((r, i) => (
               <Reveal key={r.t} delay={i % 2} className="bg-ink-800 p-8 lg:p-10">
-                <p className="font-display text-3xl text-gold-light">0{i + 1}</p>
+                <p className="font-display text-3xl text-bone">0{i + 1}</p>
                 <p className="mt-5 font-display text-xl text-bone md:text-2xl">
                   {r.t}
                 </p>
@@ -192,12 +192,12 @@ export default function WhyPage() {
         <div className="container-luxe">
           <div className="mx-auto max-w-4xl">
             <Reveal>
-              <p className="font-display text-7xl leading-none text-gold/40">“</p>
+              <p className="font-display text-7xl leading-none text-bone/40">“</p>
               <blockquote className="mt-6 font-display text-3xl leading-snug text-bone text-balance md:text-5xl">
                 We would rather lose a project at the door than at the
                 punch list. Both happen — the first one quietly.
               </blockquote>
-              <figcaption className="mt-8 text-[0.65rem] uppercase tracking-[0.28em] text-gold">
+              <figcaption className="mt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
                 — From the studio
               </figcaption>
             </Reveal>

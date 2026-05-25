@@ -33,7 +33,7 @@ export function InvestmentBlock({
               <div className="mt-8">
                 <Link
                   href="/investment"
-                  className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-gold transition-colors hover:text-gold-light"
+                  className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
                 >
                   Calculate your range
                   <ArrowUpRight className="h-3 w-3 transition-transform group-hover:rotate-45" />
@@ -51,7 +51,7 @@ export function InvestmentBlock({
                   <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
                     {row.label}
                   </dt>
-                  <dd className="font-display text-xl text-gold-light md:text-2xl">
+                  <dd className="font-display text-xl text-bone md:text-2xl">
                     {row.value}
                   </dd>
                 </div>

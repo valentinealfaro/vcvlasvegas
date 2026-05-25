@@ -33,7 +33,7 @@ export default function ContactPage() {
                 <p className="eyebrow mb-6">Consultation Request</p>
                 <h2 className="font-display text-4xl text-bone md:text-5xl">
                   A short form,<br />
-                  <span className="italic text-gold-light">a real conversation.</span>
+                  <span className="italic text-bone">a real conversation.</span>
                 </h2>
                 <p className="mt-6 max-w-xl text-bone/65">
                   The more you share, the more useful our first call can be.
@@ -55,9 +55,9 @@ export default function ContactPage() {
                     </p>
                     <a
                       href={siteConfig.phoneHref}
-                      className="mt-2 flex items-center gap-3 font-display text-2xl text-bone transition-colors hover:text-gold"
+                      className="mt-2 flex items-center gap-3 font-display text-2xl text-bone transition-colors hover:text-bone"
                     >
-                      <Phone className="h-5 w-5 text-gold" />
+                      <Phone className="h-5 w-5 text-bone" />
                       {siteConfig.phone}
                     </a>
                   </div>
@@ -67,9 +67,9 @@ export default function ContactPage() {
                     </p>
                     <a
                       href={siteConfig.emailHref}
-                      className="mt-2 flex items-center gap-3 text-bone transition-colors hover:text-gold"
+                      className="mt-2 flex items-center gap-3 text-bone transition-colors hover:text-bone"
                     >
-                      <Mail className="h-5 w-5 text-gold" />
+                      <Mail className="h-5 w-5 text-bone" />
                       {siteConfig.email}
                     </a>
                   </div>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                       Service Area
                     </p>
                     <div className="mt-2 flex items-start gap-3 text-bone/80">
-                      <MapPin className="mt-1 h-5 w-5 shrink-0 text-gold" />
+                      <MapPin className="mt-1 h-5 w-5 shrink-0 text-bone" />
                       Las Vegas Metro — Summerlin, Henderson, Paradise, Spring Valley, Enterprise, Centennial Hills, Mountains Edge, Silverado Ranch
                     </div>
                   </div>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                       Hours
                     </p>
                     <div className="mt-2 flex items-center gap-3 text-bone/80">
-                      <Clock className="h-5 w-5 text-gold" />
+                      <Clock className="h-5 w-5 text-bone" />
                       {siteConfig.hours}
                     </div>
                   </div>

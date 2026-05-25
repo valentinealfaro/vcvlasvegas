@@ -44,7 +44,7 @@ export default function AboutPage() {
                 <p className="eyebrow mb-6">Philosophy</p>
                 <h2 className="font-display text-4xl text-bone md:text-6xl">
                   Build like the architects you<br />
-                  <span className="italic text-gold-light">actually admire.</span>
+                  <span className="italic text-bone">actually admire.</span>
                 </h2>
               </div>
             </Reveal>
@@ -105,7 +105,7 @@ export default function AboutPage() {
             ].map((stat, i) => (
               <Reveal key={stat.l} delay={i}>
                 <div>
-                  <p className="font-display text-5xl text-gold-light md:text-6xl">
+                  <p className="font-display text-5xl text-bone md:text-6xl">
                     {stat.n}
                   </p>
                   <p className="mt-3 max-w-[18ch] text-sm uppercase tracking-[0.22em] text-bone/55">
@@ -153,7 +153,7 @@ export default function AboutPage() {
               },
             ].map((v, i) => (
               <Reveal key={v.t} delay={i % 3} className="bg-ink p-8 lg:p-10">
-                <p className="font-display text-3xl text-gold-light">0{i + 1}</p>
+                <p className="font-display text-3xl text-bone">0{i + 1}</p>
                 <p className="mt-5 font-display text-xl text-bone md:text-2xl">
                   {v.t}
                 </p>
@@ -175,13 +175,13 @@ export default function AboutPage() {
         <div className="container-luxe">
           <div className="mx-auto max-w-4xl">
             <Reveal>
-              <p className="font-display text-7xl leading-none text-gold/40">“</p>
+              <p className="font-display text-7xl leading-none text-bone/40">“</p>
               <blockquote className="mt-6 font-display text-3xl leading-snug text-bone text-balance md:text-5xl">
                 The brief we give every senior designer is to build the home
                 they would want to walk into ten years from now. That single
                 instruction does most of the work.
               </blockquote>
-              <figcaption className="mt-8 text-[0.65rem] uppercase tracking-[0.28em] text-gold">
+              <figcaption className="mt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
                 — From the studio
               </figcaption>
             </Reveal>

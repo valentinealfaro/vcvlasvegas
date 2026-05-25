@@ -14,7 +14,7 @@ export function Manifesto() {
               </div>
               <h2 className="font-display text-4xl text-bone md:text-5xl">
                 Architectural<br />
-                <span className="italic text-gold-light">restraint.</span>
+                <span className="italic text-bone">restraint.</span>
               </h2>
             </div>
           </Reveal>
@@ -57,7 +57,7 @@ export function Manifesto() {
                   },
                 ].map((b) => (
                   <div key={b.t}>
-                    <p className="text-gold-light font-medium">{b.t}</p>
+                    <p className="text-bone font-medium">{b.t}</p>
                     <p className="mt-2 text-base text-bone/60">{b.d}</p>
                   </div>
                 ))}

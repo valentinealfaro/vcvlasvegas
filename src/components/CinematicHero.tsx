@@ -107,11 +107,11 @@ export function CinematicHero({
             {breadcrumbs.map((c, i) => (
               <span key={i} className="flex items-center gap-3">
                 {c.href ? (
-                  <Link href={c.href} className="transition-colors hover:text-gold">
+                  <Link href={c.href} className="transition-colors hover:text-bone">
                     {c.label}
                   </Link>
                 ) : (
-                  <span className="text-gold">{c.label}</span>
+                  <span className="text-bone">{c.label}</span>
                 )}
                 {i < breadcrumbs.length - 1 && (
                   <span className="text-bone/30">/</span>
@@ -162,7 +162,7 @@ export function CinematicHero({
                       duration: 0.95,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="mr-[0.25em] inline-block italic text-gold-light"
+                    className="mr-[0.25em] inline-block italic text-bone"
                   >
                     {w}
                   </motion.span>

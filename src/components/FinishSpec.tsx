@@ -25,7 +25,7 @@ export function FinishSpec({
         <div className="mt-16 grid gap-px bg-bone/10 sm:grid-cols-2 lg:grid-cols-3">
           {specs.map((s, i) => (
             <Reveal key={s.label} delay={i % 3} className="bg-ink-800 p-8 lg:p-10">
-              <p className="font-display text-2xl text-gold-light">
+              <p className="font-display text-2xl text-bone">
                 {s.label}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-bone/65">

@@ -118,7 +118,7 @@ export function Hero() {
                       duration: 0.95,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    className={`mr-[0.25em] inline-block ${line.italic ? 'italic text-gold-light' : ''}`}
+                    className={`mr-[0.25em] inline-block ${line.italic ? 'italic text-bone' : ''}`}
                   >
                     {word}
                   </motion.span>
@@ -164,7 +164,7 @@ export function Hero() {
           className="flex items-end justify-between gap-6"
         >
           <div className="hidden items-center gap-3 text-bone/55 md:flex">
-            <ArrowDown className="h-4 w-4 animate-pulse text-gold" />
+            <ArrowDown className="h-4 w-4 animate-pulse text-bone" />
             <span className="text-[0.65rem] uppercase tracking-[0.32em]">
               Discover
             </span>

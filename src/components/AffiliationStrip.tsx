@@ -15,7 +15,7 @@ export function AffiliationStrip() {
           {items.map((item, i) => (
             <span key={item} className="flex items-center gap-10">
               {i > 0 && <span className="hidden h-px w-6 bg-gold/40 md:inline-block" aria-hidden />}
-              <span className="transition-colors hover:text-gold">{item}</span>
+              <span className="transition-colors hover:text-bone">{item}</span>
             </span>
           ))}
         </div>

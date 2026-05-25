@@ -55,12 +55,12 @@ export function Navigation() {
             className="group flex items-center gap-3 text-bone"
             aria-label="VCV Vegas Home"
           >
-            <Monogram size={36} className="text-gold transition-colors group-hover:text-gold-light" />
+            <Monogram size={36} className="text-bone transition-colors group-hover:text-bone" />
             <span className="flex items-baseline gap-2">
               <span className="font-display text-2xl tracking-tight lg:text-[1.65rem]">
                 VCV
               </span>
-              <span className="font-sans text-[0.62rem] uppercase tracking-[0.4em] text-gold transition-colors group-hover:text-gold-light">
+              <span className="font-sans text-[0.62rem] uppercase tracking-[0.4em] text-bone transition-colors group-hover:text-bone">
                 Vegas
               </span>
             </span>
@@ -74,7 +74,7 @@ export function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-gold"
+                  className="text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-bone"
                 >
                   {item.label}
                 </Link>
@@ -85,7 +85,7 @@ export function Navigation() {
           <div className="hidden items-center gap-4 lg:flex">
             <a
               href={siteConfig.phoneHref}
-              className="flex items-center gap-2 text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-gold"
+              className="flex items-center gap-2 text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-bone"
             >
               <Phone className="h-3.5 w-3.5" />
               {siteConfig.phone}
@@ -148,7 +148,7 @@ export function Navigation() {
                   className="flex items-baseline gap-2 text-bone"
                 >
                   <span className="font-display text-2xl tracking-tight">VCV</span>
-                  <span className="font-sans text-[0.62rem] uppercase tracking-[0.4em] text-gold">
+                  <span className="font-sans text-[0.62rem] uppercase tracking-[0.4em] text-bone">
                     Vegas
                   </span>
                 </Link>
@@ -180,10 +180,10 @@ export function Navigation() {
                           <Link
                             href={item.href}
                             onClick={() => setOpen(false)}
-                            className="group flex items-center justify-between border-b border-bone/10 pb-4 font-display text-3xl text-bone transition-colors hover:text-gold"
+                            className="group flex items-center justify-between border-b border-bone/10 pb-4 font-display text-3xl text-bone transition-colors hover:text-bone"
                           >
                             {item.label}
-                            <ArrowUpRight className="h-5 w-5 text-bone/30 transition-all group-hover:rotate-45 group-hover:text-gold" />
+                            <ArrowUpRight className="h-5 w-5 text-bone/30 transition-all group-hover:rotate-45 group-hover:text-bone" />
                           </Link>
                         </motion.div>
                       </li>
@@ -206,7 +206,7 @@ export function Navigation() {
                         <Link
                           href={`/${s.slug}`}
                           onClick={() => setOpen(false)}
-                          className="block text-sm text-bone/70 transition-colors hover:text-gold"
+                          className="block text-sm text-bone/70 transition-colors hover:text-bone"
                         >
                           {s.title}
                         </Link>
@@ -221,7 +221,7 @@ export function Navigation() {
                   <a
                     href={siteConfig.phoneHref}
                     onClick={() => setOpen(false)}
-                    className="mb-3 flex items-center gap-2 text-sm uppercase tracking-[0.22em] text-gold"
+                    className="mb-3 flex items-center gap-2 text-sm uppercase tracking-[0.22em] text-bone"
                   >
                     <Phone className="h-4 w-4" />
                     {siteConfig.phone}

@@ -54,7 +54,7 @@ export default function IntakePage() {
           <div className="grid gap-px bg-bone/10 md:grid-cols-3">
             {why.map((w, i) => (
               <Reveal key={w.t} delay={i} className="bg-ink-800 p-8 lg:p-10">
-                <p className="font-display text-3xl text-gold-light">0{i + 1}</p>
+                <p className="font-display text-3xl text-bone">0{i + 1}</p>
                 <p className="mt-5 font-display text-xl text-bone md:text-2xl">
                   {w.t}
                 </p>
@@ -76,7 +76,7 @@ export default function IntakePage() {
                 <p className="eyebrow mb-6">The Brief</p>
                 <h2 className="font-display text-4xl text-bone md:text-5xl">
                   Four short sections.<br />
-                  <span className="italic text-gold-light">About ten minutes.</span>
+                  <span className="italic text-bone">About ten minutes.</span>
                 </h2>
                 <p className="mt-6 text-bone/65">
                   Contact, the property, the project, the vision. The deeper

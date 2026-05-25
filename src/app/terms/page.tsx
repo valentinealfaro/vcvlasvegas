@@ -74,7 +74,7 @@ export default function TermsPage() {
                 handle submissions according to our{' '}
                 <a
                   href="/privacy"
-                  className="text-gold underline-offset-4 hover:underline"
+                  className="text-bone underline-offset-4 hover:underline"
                 >
                   Privacy Policy
                 </a>
@@ -122,7 +122,7 @@ export default function TermsPage() {
                 Questions about these terms can be sent to{' '}
                 <a
                   href={siteConfig.emailHref}
-                  className="text-gold underline-offset-4 hover:underline"
+                  className="text-bone underline-offset-4 hover:underline"
                 >
                   {siteConfig.email}
                 </a>

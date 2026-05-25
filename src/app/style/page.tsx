@@ -72,7 +72,7 @@ export default function StylePage() {
           <div className="grid gap-px bg-bone/10 md:grid-cols-3">
             {why.map((w, i) => (
               <Reveal key={w.t} delay={i} className="bg-ink-800 p-8 lg:p-10">
-                <p className="font-display text-3xl text-gold-light">0{i + 1}</p>
+                <p className="font-display text-3xl text-bone">0{i + 1}</p>
                 <p className="mt-5 font-display text-xl text-bone md:text-2xl">
                   {w.t}
                 </p>

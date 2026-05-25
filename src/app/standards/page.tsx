@@ -90,7 +90,7 @@ export default function StandardsPage() {
             {pillars.map((p) => (
               <Reveal key={p.n}>
                 <div className="grid gap-10 border-t border-bone/10 pt-14 lg:grid-cols-[auto_1.2fr_1fr] lg:gap-16">
-                  <p className="font-display text-6xl text-gold-light lg:text-7xl">
+                  <p className="font-display text-6xl text-bone lg:text-7xl">
                     {p.n}
                   </p>
                   <div>
@@ -111,7 +111,7 @@ export default function StandardsPage() {
                           <dt className="text-[0.65rem] uppercase tracking-[0.22em] text-bone/50">
                             {row.l}
                           </dt>
-                          <dd className="text-sm text-gold-light">{row.v}</dd>
+                          <dd className="text-sm text-bone">{row.v}</dd>
                         </div>
                       ))}
                     </dl>

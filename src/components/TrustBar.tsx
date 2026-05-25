@@ -19,7 +19,7 @@ export function TrustBar() {
                 className="group flex items-center justify-center gap-3 bg-ink/95 px-6 py-6 text-center transition-colors duration-500 hover:bg-ink-700 md:py-7"
               >
                 <Icon
-                  className="h-4 w-4 shrink-0 text-gold transition-transform duration-500 group-hover:scale-110"
+                  className="h-4 w-4 shrink-0 text-bone transition-transform duration-500 group-hover:scale-110"
                   aria-hidden
                 />
                 <span className="text-[0.7rem] uppercase tracking-[0.24em] text-bone/70 md:text-[0.72rem]">

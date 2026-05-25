@@ -51,9 +51,9 @@ export function FAQ({ items }: { items: FAQItem[] }) {
                 )}
               >
                 {isOpen ? (
-                  <Minus className="h-4 w-4 text-gold" />
+                  <Minus className="h-4 w-4 text-bone" />
                 ) : (
-                  <Plus className="h-4 w-4 text-bone transition-colors group-hover:text-gold" />
+                  <Plus className="h-4 w-4 text-bone transition-colors group-hover:text-bone" />
                 )}
               </span>
             </button>

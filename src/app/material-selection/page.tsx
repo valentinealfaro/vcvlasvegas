@@ -94,7 +94,7 @@ export default function MaterialSelectionPage() {
             {phases.map((p) => (
               <Reveal key={p.n}>
                 <div className="grid items-start gap-10 border-t border-bone/10 pt-12 lg:grid-cols-[auto_1fr_2fr] lg:gap-16">
-                  <p className="font-display text-6xl text-gold-light lg:text-7xl">
+                  <p className="font-display text-6xl text-bone lg:text-7xl">
                     {p.n}
                   </p>
                   <h3 className="font-display text-2xl text-bone md:text-3xl">
@@ -121,7 +121,7 @@ export default function MaterialSelectionPage() {
           <div className="mt-16 grid gap-px bg-bone/10 sm:grid-cols-3">
             {why.map((w, i) => (
               <Reveal key={w.t} delay={i} className="bg-ink-800 p-8 lg:p-10">
-                <p className="font-display text-3xl text-gold-light">0{i + 1}</p>
+                <p className="font-display text-3xl text-bone">0{i + 1}</p>
                 <p className="mt-5 font-display text-xl text-bone md:text-2xl">
                   {w.t}
                 </p>

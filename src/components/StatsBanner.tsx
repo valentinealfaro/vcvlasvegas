@@ -61,11 +61,11 @@ export function StatsBanner() {
                             : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.12), transparent 60%)',
                       }}
                     />
-                    <Icon className="h-6 w-6 text-gold transition-transform duration-500 group-hover:scale-110" />
+                    <Icon className="h-6 w-6 text-bone transition-transform duration-500 group-hover:scale-110" />
                     <p className="mt-8 font-display text-5xl text-bone md:text-6xl">
                       <CountUp value={s.value} prefix={s.prefix} suffix={s.suffix} />
                     </p>
-                    <p className="mt-4 text-[0.65rem] uppercase tracking-[0.28em] text-gold">
+                    <p className="mt-4 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
                       {s.label}
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-bone/55">

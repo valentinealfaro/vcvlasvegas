@@ -60,11 +60,11 @@ export function PageHero({
             {breadcrumbs.map((c, i) => (
               <span key={i} className="flex items-center gap-3">
                 {c.href ? (
-                  <Link href={c.href} className="transition-colors hover:text-gold">
+                  <Link href={c.href} className="transition-colors hover:text-bone">
                     {c.label}
                   </Link>
                 ) : (
-                  <span className="text-gold">{c.label}</span>
+                  <span className="text-bone">{c.label}</span>
                 )}
                 {i < breadcrumbs.length - 1 && (
                   <span className="text-bone/30">/</span>
@@ -93,7 +93,7 @@ export function PageHero({
             {italic && (
               <>
                 {' '}
-                <span className="italic text-gold-light">{italic}</span>
+                <span className="italic text-bone">{italic}</span>
               </>
             )}
           </motion.h1>

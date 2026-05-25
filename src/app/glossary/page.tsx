@@ -256,7 +256,7 @@ export default function GlossaryPage() {
             {groups.map((group) => (
               <Reveal key={group.letter}>
                 <div className="grid gap-8 border-t border-bone/10 pt-10 lg:grid-cols-[auto_1fr] lg:gap-16">
-                  <p className="font-display text-7xl text-gold-light lg:text-8xl">
+                  <p className="font-display text-7xl text-bone lg:text-8xl">
                     {group.letter}
                   </p>
                   <dl className="space-y-8">
@@ -271,7 +271,7 @@ export default function GlossaryPage() {
                         {entry.link && (
                           <Link
                             href={entry.link.href}
-                            className="mt-4 inline-flex items-center gap-3 text-[0.6rem] uppercase tracking-[0.28em] text-gold transition-colors hover:text-gold-light"
+                            className="mt-4 inline-flex items-center gap-3 text-[0.6rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
                           >
                             {entry.link.label}
                             <span aria-hidden>→</span>

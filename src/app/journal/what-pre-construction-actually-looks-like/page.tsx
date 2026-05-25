@@ -91,7 +91,7 @@ export default function Post() {
           <div className="mx-auto max-w-3xl">
             <Reveal>
               <p className="text-lg leading-relaxed text-bone/75 md:text-xl">
-                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-gold-light md:text-8xl">
+                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-bone md:text-8xl">
                   T
                 </span>
                 he most consequential phase of a luxury remodel is the one
@@ -106,7 +106,7 @@ export default function Post() {
 
             <section id="discovery" className="mt-16 border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">01</p>
+                <p className="font-display text-7xl text-bone">01</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Discovery — the week the project actually starts.
                 </h2>
@@ -143,7 +143,7 @@ export default function Post() {
 
             <section id="drawings" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">02</p>
+                <p className="font-display text-7xl text-bone">02</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Drawings — turning design into instructions.
                 </h2>
@@ -172,7 +172,7 @@ export default function Post() {
                   Every line we draw in pre-construction is a question we
                   never have to answer in the field.”
                 </blockquote>
-                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-gold">
+                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
                   — From the studio
                 </figcaption>
               </figure>
@@ -180,7 +180,7 @@ export default function Post() {
 
             <section id="engineering" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">03</p>
+                <p className="font-display text-7xl text-bone">03</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Engineering — the work no one will ever see.
                 </h2>
@@ -216,7 +216,7 @@ export default function Post() {
 
             <section id="longlead" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">04</p>
+                <p className="font-display text-7xl text-bone">04</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Long-lead orders — placed before the wall comes down.
                 </h2>
@@ -239,7 +239,7 @@ export default function Post() {
 
             <section id="calendar" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">05</p>
+                <p className="font-display text-7xl text-bone">05</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   The build calendar — published before the first hammer.
                 </h2>
@@ -286,11 +286,11 @@ export default function Post() {
 
             <Reveal delay={3}>
               <div className="flex items-center justify-between border-t border-bone/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55">
-                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-gold">
+                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-bone">
                   <ArrowLeft className="h-4 w-4" />
                   All Notes
                 </Link>
-                <Link href="/process" className="flex items-center gap-3 text-gold transition-colors hover:text-gold-light">
+                <Link href="/process" className="flex items-center gap-3 text-bone transition-colors hover:text-bone">
                   Read our full process
                   <ArrowRight className="h-4 w-4" />
                 </Link>

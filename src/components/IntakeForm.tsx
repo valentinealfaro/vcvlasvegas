@@ -42,7 +42,7 @@ export function IntakeForm() {
         transition={{ duration: 0.6 }}
         className="flex flex-col items-start gap-5 py-12"
       >
-        <CheckCircle2 className="h-12 w-12 text-gold" />
+        <CheckCircle2 className="h-12 w-12 text-bone" />
         <div>
           <h3 className="font-display text-4xl text-bone">Project received.</h3>
           <p className="mt-3 max-w-md text-bone/65">
@@ -70,7 +70,7 @@ export function IntakeForm() {
     >
       {/* Section 01 */}
       <section className={sectionClass}>
-        <p className="eyebrow mb-6 !text-gold">Section 01 · Contact</p>
+        <p className="eyebrow mb-6 !text-bone">Section 01 · Contact</p>
         <div className="grid gap-5 md:grid-cols-2">
           <label>
             <span className={labelClass}>Full Name</span>
@@ -101,7 +101,7 @@ export function IntakeForm() {
 
       {/* Section 02 */}
       <section className={sectionClass}>
-        <p className="eyebrow mb-6 !text-gold">Section 02 · The Property</p>
+        <p className="eyebrow mb-6 !text-bone">Section 02 · The Property</p>
         <div className="grid gap-5 md:grid-cols-2">
           <label>
             <span className={labelClass}>Neighborhood</span>
@@ -133,7 +133,7 @@ export function IntakeForm() {
 
       {/* Section 03 */}
       <section className={sectionClass}>
-        <p className="eyebrow mb-6 !text-gold">Section 03 · The Project</p>
+        <p className="eyebrow mb-6 !text-bone">Section 03 · The Project</p>
         <div className="grid gap-5">
           <label>
             <span className={labelClass}>Project type</span>
@@ -177,7 +177,7 @@ export function IntakeForm() {
 
       {/* Section 04 */}
       <section className={sectionClass}>
-        <p className="eyebrow mb-6 !text-gold">Section 04 · The Vision</p>
+        <p className="eyebrow mb-6 !text-bone">Section 04 · The Vision</p>
         <div className="grid gap-5">
           <label>
             <span className={labelClass}>Tell us what your home is missing.</span>

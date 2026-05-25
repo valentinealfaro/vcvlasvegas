@@ -41,7 +41,7 @@ export function TradeIntakeForm() {
         transition={{ duration: 0.6 }}
         className="flex flex-col items-start gap-5 py-12"
       >
-        <CheckCircle2 className="h-12 w-12 text-gold" />
+        <CheckCircle2 className="h-12 w-12 text-bone" />
         <div>
           <h3 className="font-display text-4xl text-bone">Brief received.</h3>
           <p className="mt-3 max-w-md text-bone/65">
@@ -69,7 +69,7 @@ export function TradeIntakeForm() {
     >
       {/* Section 01 - The firm */}
       <section className="border-b border-bone/10 pb-10">
-        <p className="eyebrow mb-6 !text-gold">Section 01 · The Firm</p>
+        <p className="eyebrow mb-6 !text-bone">Section 01 · The Firm</p>
         <div className="grid gap-5 md:grid-cols-2">
           <label>
             <span className={labelClass}>Firm name</span>
@@ -107,7 +107,7 @@ export function TradeIntakeForm() {
 
       {/* Section 02 - The project */}
       <section className="border-b border-bone/10 pb-10">
-        <p className="eyebrow mb-6 !text-gold">Section 02 · The Project</p>
+        <p className="eyebrow mb-6 !text-bone">Section 02 · The Project</p>
         <div className="grid gap-5 md:grid-cols-2">
           <label>
             <span className={labelClass}>Project type</span>
@@ -148,7 +148,7 @@ export function TradeIntakeForm() {
 
       {/* Section 03 - Engagement */}
       <section className="border-b border-bone/10 pb-10">
-        <p className="eyebrow mb-6 !text-gold">Section 03 · The Engagement</p>
+        <p className="eyebrow mb-6 !text-bone">Section 03 · The Engagement</p>
         <div className="grid gap-5">
           <label>
             <span className={labelClass}>Target start window</span>

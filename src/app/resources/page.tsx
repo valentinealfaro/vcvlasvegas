@@ -187,15 +187,15 @@ export default function ResourcesPage() {
                       >
                         <div className="grid lg:grid-cols-[1.1fr_1fr]">
                           <div className="p-8 lg:p-10">
-                            <Icon className="h-6 w-6 text-gold transition-colors group-hover:text-gold-light" />
+                            <Icon className="h-6 w-6 text-bone transition-colors group-hover:text-bone" />
                             <p className="eyebrow mt-6 !text-bone/45">{r.eyebrow}</p>
-                            <p className="mt-3 font-display text-2xl text-bone group-hover:text-gold-light md:text-3xl">
+                            <p className="mt-3 font-display text-2xl text-bone group-hover:text-bone md:text-3xl">
                               {r.title}
                             </p>
                             <p className="mt-4 text-sm leading-relaxed text-bone/60">
                               {r.description}
                             </p>
-                            <div className="mt-6 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-gold">
+                            <div className="mt-6 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
                               Open
                               <ArrowUpRight className="h-3 w-3 transition-transform group-hover:rotate-45" />
                             </div>

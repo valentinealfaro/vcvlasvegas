@@ -168,7 +168,7 @@ export default function CaseStudyPage() {
                 <p className="eyebrow mb-6">The Outcome</p>
                 <h2 className="font-display text-4xl text-bone md:text-5xl">
                   The view, finally,<br />
-                  <span className="italic text-gold-light">becomes the room.</span>
+                  <span className="italic text-bone">becomes the room.</span>
                 </h2>
               </div>
             </Reveal>
@@ -201,7 +201,7 @@ export default function CaseStudyPage() {
         <div className="container-luxe">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-gold"
+            className="inline-flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-bone"
           >
             <ArrowLeft className="h-4 w-4" />
             All Projects

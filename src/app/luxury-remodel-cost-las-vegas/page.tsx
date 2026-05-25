@@ -187,12 +187,12 @@ export default function CostGuidePage() {
                     <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
                       {r.label}
                     </p>
-                    <p className="mt-4 font-display text-3xl text-bone group-hover:text-gold-light md:text-4xl">
+                    <p className="mt-4 font-display text-3xl text-bone group-hover:text-bone md:text-4xl">
                       {r.range}
                     </p>
                     <p className="mt-2 text-sm text-bone/55">{r.duration}</p>
                   </div>
-                  <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-gold opacity-70 transition-opacity group-hover:opacity-100">
+                  <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone opacity-70 transition-opacity group-hover:opacity-100">
                     Explore
                     <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
                   </div>
@@ -214,7 +214,7 @@ export default function CostGuidePage() {
           <div className="mt-16 grid gap-px bg-bone/10 sm:grid-cols-2 lg:grid-cols-3">
             {drivers.map((d, i) => (
               <Reveal key={d.t} delay={i % 3} className="bg-ink-800 p-8 lg:p-10">
-                <p className="font-display text-3xl text-gold-light">0{i + 1}</p>
+                <p className="font-display text-3xl text-bone">0{i + 1}</p>
                 <p className="mt-5 font-display text-xl text-bone md:text-2xl">
                   {d.t}
                 </p>

@@ -105,7 +105,7 @@ export function InvestmentCalculator() {
       {/* Inputs */}
       <div>
         <div>
-          <p className="eyebrow mb-4 !text-gold">Step 01 · Project Type</p>
+          <p className="eyebrow mb-4 !text-bone">Step 01 · Project Type</p>
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             {projects.map(({ key, label, icon: Icon }) => {
               const active = project === key;
@@ -124,7 +124,7 @@ export function InvestmentCalculator() {
                   <Icon
                     className={cn(
                       'h-5 w-5 transition-colors',
-                      active ? 'text-gold' : 'text-bone/45 group-hover:text-gold',
+                      active ? 'text-bone' : 'text-bone/45 group-hover:text-bone',
                     )}
                   />
                   <span className="text-xs">{label}</span>
@@ -136,7 +136,7 @@ export function InvestmentCalculator() {
 
         <div className="mt-12">
           <div className="flex items-baseline justify-between">
-            <p className="eyebrow !text-gold">Step 02 · Square Footage</p>
+            <p className="eyebrow !text-bone">Step 02 · Square Footage</p>
             <p className="font-display text-2xl text-bone">
               {sqft.toLocaleString()} <span className="text-base text-bone/40">sqft</span>
             </p>
@@ -158,7 +158,7 @@ export function InvestmentCalculator() {
         </div>
 
         <div className="mt-12">
-          <p className="eyebrow mb-4 !text-gold">Step 03 · Finish Level</p>
+          <p className="eyebrow mb-4 !text-bone">Step 03 · Finish Level</p>
           <div className="grid gap-3 sm:grid-cols-3">
             {(Object.keys(finishMultiplier) as Finish[]).map((k) => {
               const m = finishMultiplier[k];
@@ -178,7 +178,7 @@ export function InvestmentCalculator() {
                   <p
                     className={cn(
                       'font-display text-lg transition-colors',
-                      active ? 'text-gold-light' : 'text-bone',
+                      active ? 'text-bone' : 'text-bone',
                     )}
                   >
                     {m.label}
@@ -220,7 +220,7 @@ export function InvestmentCalculator() {
               <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
                 Build Window
               </dt>
-              <dd className="font-display text-lg text-gold-light">
+              <dd className="font-display text-lg text-bone">
                 {result.weeks[0]}–{result.weeks[1]} weeks
               </dd>
             </div>
@@ -228,13 +228,13 @@ export function InvestmentCalculator() {
               <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
                 Long-Lead Order
               </dt>
-              <dd className="font-display text-lg text-gold-light">Pre-Construction</dd>
+              <dd className="font-display text-lg text-bone">Pre-Construction</dd>
             </div>
             <div className="flex items-baseline justify-between py-4">
               <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
                 Studio Lead
               </dt>
-              <dd className="font-display text-lg text-gold-light">Senior Designer</dd>
+              <dd className="font-display text-lg text-bone">Senior Designer</dd>
             </div>
           </dl>
 
@@ -250,7 +250,7 @@ export function InvestmentCalculator() {
               transition={{ duration: 0.5 }}
               className="mt-8 flex items-start gap-4 border border-gold/30 bg-gold/5 p-5"
             >
-              <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-gold" />
+              <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-bone" />
               <div>
                 <p className="font-display text-lg text-bone">On its way.</p>
                 <p className="mt-1 text-xs text-bone/65">

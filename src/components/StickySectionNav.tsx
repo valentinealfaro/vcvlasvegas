@@ -45,7 +45,7 @@ export function StickySectionNav({ sections }: { sections: SectionLink[] }) {
                   className={cn(
                     'text-[0.6rem] uppercase tracking-[0.28em] transition-all duration-500',
                     isActive
-                      ? 'text-gold opacity-100'
+                      ? 'text-bone opacity-100'
                       : 'translate-x-2 text-bone/40 opacity-0 group-hover:translate-x-0 group-hover:opacity-100',
                   )}
                 >

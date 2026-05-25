@@ -41,7 +41,7 @@ export function TwoColumnFeature({
               {italic && (
                 <>
                   {' '}
-                  <span className="italic text-gold-light">{italic}</span>
+                  <span className="italic text-bone">{italic}</span>
                 </>
               )}
             </h2>

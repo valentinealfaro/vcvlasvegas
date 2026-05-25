@@ -99,7 +99,7 @@ export default function PrinciplesPage() {
             {principles.map((p) => (
               <Reveal key={p.n}>
                 <div className="grid items-baseline gap-8 border-t border-bone/10 pt-10 lg:grid-cols-[auto_1fr_1.6fr] lg:gap-16">
-                  <p className="font-display text-6xl text-gold-light lg:text-7xl">
+                  <p className="font-display text-6xl text-bone lg:text-7xl">
                     {p.n}
                   </p>
                   <h3 className="font-display text-2xl text-bone md:text-3xl">

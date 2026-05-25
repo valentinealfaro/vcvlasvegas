@@ -92,7 +92,7 @@ export default function Post() {
           <div className="mx-auto max-w-3xl">
             <Reveal>
               <p className="text-lg leading-relaxed text-bone/75 md:text-xl">
-                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-gold-light md:text-8xl">
+                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-bone md:text-8xl">
                   T
                 </span>
                 he single strongest move in modern Vegas residential architecture
@@ -106,7 +106,7 @@ export default function Post() {
 
             <section id="threshold" className="mt-16 border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">01</p>
+                <p className="font-display text-7xl text-bone">01</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   The threshold has to disappear.
                 </h2>
@@ -141,7 +141,7 @@ export default function Post() {
 
             <section id="shade" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">02</p>
+                <p className="font-display text-7xl text-bone">02</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Shade is the floor plan.
                 </h2>
@@ -170,7 +170,7 @@ export default function Post() {
                   architect. It’s designed by the architect — and the most
                   important line is the shade line.”
                 </blockquote>
-                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-gold">
+                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
                   — From the studio
                 </figcaption>
               </figure>
@@ -178,7 +178,7 @@ export default function Post() {
 
             <section id="air" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">03</p>
+                <p className="font-display text-7xl text-bone">03</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Engineer the air movement.
                 </h2>
@@ -200,7 +200,7 @@ export default function Post() {
 
             <section id="floor" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">04</p>
+                <p className="font-display text-7xl text-bone">04</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Match the floor across the threshold.
                 </h2>
@@ -233,7 +233,7 @@ export default function Post() {
 
             <section id="light" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">05</p>
+                <p className="font-display text-7xl text-bone">05</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Light the outdoor room like an indoor one.
                 </h2>
@@ -254,7 +254,7 @@ export default function Post() {
 
             <section id="kitchen" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">06</p>
+                <p className="font-display text-7xl text-bone">06</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Build the outdoor kitchen, even if you’re unsure.
                 </h2>
@@ -293,11 +293,11 @@ export default function Post() {
 
             <Reveal delay={3}>
               <div className="flex items-center justify-between border-t border-bone/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55">
-                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-gold">
+                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-bone">
                   <ArrowLeft className="h-4 w-4" />
                   All Notes
                 </Link>
-                <Link href="/outdoor-living-las-vegas" className="flex items-center gap-3 text-gold transition-colors hover:text-gold-light">
+                <Link href="/outdoor-living-las-vegas" className="flex items-center gap-3 text-bone transition-colors hover:text-bone">
                   Explore outdoor living
                   <ArrowRight className="h-4 w-4" />
                 </Link>

@@ -46,7 +46,7 @@ export default function LetterPage() {
 
             <Reveal delay={1}>
               <p className="mt-8 text-lg leading-relaxed text-bone/80 md:text-xl">
-                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-gold-light md:text-8xl">
+                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-bone md:text-8xl">
                   L
                 </span>
                 as Vegas has been waiting for a different kind of remodeling
@@ -101,7 +101,7 @@ export default function LetterPage() {
             <Reveal delay={6}>
               <p className="mt-10 font-display text-2xl leading-snug text-bone text-balance md:text-3xl">
                 If that is the kind of project you are imagining,
-                <span className="italic text-gold-light"> we should talk.</span>
+                <span className="italic text-bone"> we should talk.</span>
               </p>
             </Reveal>
 
@@ -122,7 +122,7 @@ export default function LetterPage() {
                   With architectural restraint,
                 </p>
                 <div className="mt-6 flex items-center gap-4">
-                  <Monogram size={56} className="text-gold" />
+                  <Monogram size={56} className="text-bone" />
                   <div>
                     <p className="font-display text-2xl text-bone">
                       The VCV Vegas Studio
@@ -144,14 +144,14 @@ export default function LetterPage() {
                   If the letter resonates, two next steps. The shorter:{' '}
                   <Link
                     href="/contact"
-                    className="text-gold underline-offset-4 hover:underline"
+                    className="text-bone underline-offset-4 hover:underline"
                   >
                     schedule a consultation
                   </Link>
                   . The deeper:{' '}
                   <Link
                     href="/intake"
-                    className="text-gold underline-offset-4 hover:underline"
+                    className="text-bone underline-offset-4 hover:underline"
                   >
                     send a project brief
                   </Link>
@@ -165,7 +165,7 @@ export default function LetterPage() {
               <div className="mt-10">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-gold transition-colors hover:text-gold-light"
+                  className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
                 >
                   Begin a conversation
                   <ArrowRight className="h-3 w-3" />

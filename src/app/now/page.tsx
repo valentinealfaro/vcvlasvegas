@@ -63,16 +63,16 @@ export default function NowPage() {
             <Reveal>
               <div className="flex items-center gap-4">
                 <span className="grid h-12 w-12 shrink-0 place-items-center border border-gold/50 bg-gold/10">
-                  <Calendar className="h-5 w-5 text-gold" />
+                  <Calendar className="h-5 w-5 text-bone" />
                 </span>
-                <p className="eyebrow !text-gold">Studio Calendar</p>
+                <p className="eyebrow !text-bone">Studio Calendar</p>
               </div>
             </Reveal>
             <Reveal delay={1}>
               <div>
                 <p className="font-display text-3xl text-bone text-balance md:text-4xl">
                   Currently booking design consultations for{' '}
-                  <span className="italic text-gold-light">Q3 2026</span>.
+                  <span className="italic text-bone">Q3 2026</span>.
                 </p>
                 <p className="mt-4 text-bone/55 md:text-lg">
                   Limited capacity for premium-scope projects. Q4 2026 opens
@@ -85,7 +85,7 @@ export default function NowPage() {
                   </Link>
                   <Link
                     href="/intake"
-                    className="flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/65 transition-colors hover:text-gold"
+                    className="flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/65 transition-colors hover:text-bone"
                   >
                     Send a Project Brief
                     <ArrowUpRight className="h-3 w-3" />
@@ -110,7 +110,7 @@ export default function NowPage() {
               const Icon = f.icon;
               return (
                 <Reveal key={f.title} delay={i % 2} className="bg-ink p-8 lg:p-12">
-                  <Icon className="h-6 w-6 text-gold" />
+                  <Icon className="h-6 w-6 text-bone" />
                   <p className="eyebrow mt-6 !text-bone/45">{f.eyebrow}</p>
                   <p className="mt-3 font-display text-2xl text-bone md:text-3xl">
                     {f.title}
@@ -148,15 +148,15 @@ export default function NowPage() {
                   />
                 </div>
                 <div className="flex flex-col justify-center p-8 lg:p-12">
-                  <BookOpen className="h-5 w-5 text-gold" />
+                  <BookOpen className="h-5 w-5 text-bone" />
                   <p className="eyebrow mt-5 !text-bone/45">
                     {latestNote.eyebrow} · {latestNote.read}
                   </p>
-                  <p className="mt-3 font-display text-2xl text-bone group-hover:text-gold-light md:text-3xl">
+                  <p className="mt-3 font-display text-2xl text-bone group-hover:text-bone md:text-3xl">
                     {latestNote.title}
                   </p>
                   <p className="mt-4 text-bone/65">{latestNote.summary}</p>
-                  <div className="mt-6 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-gold">
+                  <div className="mt-6 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
                     Read the note
                     <ArrowUpRight className="h-3 w-3 transition-transform group-hover:rotate-45" />
                   </div>

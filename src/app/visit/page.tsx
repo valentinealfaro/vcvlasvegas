@@ -54,7 +54,7 @@ export default function VisitPage() {
                 <p className="eyebrow mb-6">The Visit</p>
                 <h2 className="font-display text-4xl text-bone md:text-5xl">
                   What a first<br />
-                  <span className="italic text-gold-light">consultation looks like.</span>
+                  <span className="italic text-bone">consultation looks like.</span>
                 </h2>
               </div>
             </Reveal>
@@ -62,7 +62,7 @@ export default function VisitPage() {
               {expect.map((e, i) => (
                 <Reveal key={e.t} delay={i}>
                   <div className="grid gap-6 border-t border-bone/10 pt-8 sm:grid-cols-[auto_1fr] sm:gap-10">
-                    <p className="font-display text-4xl text-gold-light">
+                    <p className="font-display text-4xl text-bone">
                       0{i + 1}
                     </p>
                     <div>
@@ -91,7 +91,7 @@ export default function VisitPage() {
               { icon: Calendar, t: 'How', d: 'Schedule below. We respond within one business day.' },
             ].map(({ icon: Icon, t, d }) => (
               <div key={t} className="bg-ink-800/60 p-8 lg:p-10">
-                <Icon className="h-5 w-5 text-gold" />
+                <Icon className="h-5 w-5 text-bone" />
                 <p className="mt-5 text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
                   {t}
                 </p>
@@ -111,7 +111,7 @@ export default function VisitPage() {
                 <p className="eyebrow mb-6 justify-center">Schedule</p>
                 <h2 className="font-display text-4xl text-bone md:text-5xl">
                   Request your<br />
-                  <span className="italic text-gold-light">private consultation.</span>
+                  <span className="italic text-bone">private consultation.</span>
                 </h2>
                 <p className="mt-6 text-bone/65">
                   Senior-designer response within one business day. Confidential.

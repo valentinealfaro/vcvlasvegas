@@ -107,13 +107,13 @@ export default function ProjectsPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent" />
                   <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10">
-                    <p className="eyebrow mb-4 !text-gold-light">{s.eyebrow}</p>
+                    <p className="eyebrow mb-4 !text-bone">{s.eyebrow}</p>
                     <h3 className="font-display text-3xl text-bone md:text-5xl">
                       {s.title}{' '}
-                      <span className="italic text-gold-light">{s.italic}</span>
+                      <span className="italic text-bone">{s.italic}</span>
                     </h3>
                     <p className="mt-3 max-w-md text-bone/70">{s.scope}</p>
-                    <div className="mt-5 flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-gold">
+                    <div className="mt-5 flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-bone">
                       Read the case study
                       <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
                     </div>

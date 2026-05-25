@@ -27,7 +27,7 @@ export function LegalLayout({
               {italic && (
                 <>
                   {' '}
-                  <span className="italic text-gold-light">{italic}</span>
+                  <span className="italic text-bone">{italic}</span>
                 </>
               )}
             </h1>
@@ -40,7 +40,7 @@ export function LegalLayout({
             {sections.map((s, i) => (
               <Reveal key={s.id ?? s.heading} delay={i % 3}>
                 <section id={s.id} className="border-t border-bone/10 pt-10">
-                  <h2 className="font-display text-2xl text-gold-light md:text-3xl">
+                  <h2 className="font-display text-2xl text-bone md:text-3xl">
                     {s.heading}
                   </h2>
                   <div className="mt-5 space-y-4 text-base leading-relaxed text-bone/70 md:text-lg">

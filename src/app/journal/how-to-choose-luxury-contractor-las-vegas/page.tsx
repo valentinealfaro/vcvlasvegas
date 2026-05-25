@@ -90,7 +90,7 @@ export default function Post() {
           <div className="mx-auto max-w-3xl">
             <Reveal>
               <p className="text-lg leading-relaxed text-bone/75 md:text-xl">
-                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-gold-light md:text-8xl">
+                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-bone md:text-8xl">
                   H
                 </span>
                 iring a contractor for a luxury Las Vegas remodel is the
@@ -104,7 +104,7 @@ export default function Post() {
 
             <section id="standard" className="mt-16 border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">01</p>
+                <p className="font-display text-7xl text-bone">01</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Read the standard, not the sales pitch.
                 </h2>
@@ -140,7 +140,7 @@ export default function Post() {
 
             <section id="questions" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">02</p>
+                <p className="font-display text-7xl text-bone">02</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Five questions to ask in the first meeting.
                 </h2>
@@ -175,7 +175,7 @@ export default function Post() {
                     },
                   ].map((q, i) => (
                     <li key={i}>
-                      <p className="font-display text-xl text-gold-light md:text-2xl">
+                      <p className="font-display text-xl text-bone md:text-2xl">
                         {i + 1}. {q.q}
                       </p>
                       <p className="mt-3 text-base leading-relaxed text-bone/65">
@@ -193,7 +193,7 @@ export default function Post() {
                   “If they can’t name the senior designer on your project
                   in the first meeting, they aren’t one. They’re a bidder.”
                 </blockquote>
-                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-gold">
+                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
                   — From the studio
                 </figcaption>
               </figure>
@@ -201,7 +201,7 @@ export default function Post() {
 
             <section id="red-flags" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">03</p>
+                <p className="font-display text-7xl text-bone">03</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   Five red flags. Walk away.
                 </h2>
@@ -238,7 +238,7 @@ export default function Post() {
 
             <section id="after" className="border-t border-bone/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-gold-light">04</p>
+                <p className="font-display text-7xl text-bone">04</p>
                 <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
                   What happens after you sign.
                 </h2>
@@ -284,11 +284,11 @@ export default function Post() {
 
             <Reveal delay={3}>
               <div className="flex items-center justify-between border-t border-bone/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55">
-                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-gold">
+                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-bone">
                   <ArrowLeft className="h-4 w-4" />
                   All Notes
                 </Link>
-                <Link href="/why-vcv-vegas" className="flex items-center gap-3 text-gold transition-colors hover:text-gold-light">
+                <Link href="/why-vcv-vegas" className="flex items-center gap-3 text-bone transition-colors hover:text-bone">
                   See our positioning
                   <ArrowRight className="h-4 w-4" />
                 </Link>

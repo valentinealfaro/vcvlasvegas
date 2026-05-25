@@ -69,9 +69,9 @@ export default function PressPage() {
             <Reveal>
               <div className="flex items-center gap-4">
                 <span className="grid h-12 w-12 shrink-0 place-items-center border border-gold/50 bg-gold/10">
-                  <Mail className="h-5 w-5 text-gold" />
+                  <Mail className="h-5 w-5 text-bone" />
                 </span>
-                <p className="eyebrow !text-gold">Press Contact</p>
+                <p className="eyebrow !text-bone">Press Contact</p>
               </div>
             </Reveal>
             <Reveal delay={1}>
@@ -80,7 +80,7 @@ export default function PressPage() {
                   Press and editorial requests reach the studio at{' '}
                   <a
                     href={siteConfig.emailHref}
-                    className="italic text-gold-light underline-offset-4 hover:underline"
+                    className="italic text-bone underline-offset-4 hover:underline"
                   >
                     {siteConfig.email}
                   </a>
@@ -100,7 +100,7 @@ export default function PressPage() {
                   </a>
                   <a
                     href={siteConfig.phoneHref}
-                    className="flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/65 transition-colors hover:text-gold"
+                    className="flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/65 transition-colors hover:text-bone"
                   >
                     {siteConfig.phone}
                     <ArrowUpRight className="h-3 w-3" />
@@ -125,7 +125,7 @@ export default function PressPage() {
               const Icon = a.icon;
               return (
                 <Reveal key={a.t} delay={i} className="bg-ink p-8 lg:p-10">
-                  <Icon className="h-6 w-6 text-gold" />
+                  <Icon className="h-6 w-6 text-bone" />
                   <p className="mt-6 font-display text-xl text-bone md:text-2xl">
                     {a.t}
                   </p>

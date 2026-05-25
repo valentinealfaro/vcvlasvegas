@@ -20,7 +20,7 @@ export function InlineLeadStrip({
             <div>
               <h3 className="font-display text-3xl text-bone text-balance md:text-4xl">
                 {title}{' '}
-                <span className="italic text-gold-light">{italic}</span>
+                <span className="italic text-bone">{italic}</span>
               </h3>
               <p className="mt-3 max-w-xl text-bone/60">{description}</p>
             </div>
