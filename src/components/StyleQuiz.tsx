@@ -94,7 +94,17 @@ export function StyleQuiz() {
   const selectedStyle = styles.find((s) => s.key === answers.style);
 
   return (
-    <div className="border border-bone/10 bg-ink-800/40 p-6 md:p-10">
+    <div className="border-gradient">
+      <div className="relative overflow-hidden bg-ink-800/40 p-6 md:p-10">
+        {/* Soft amber wash inside the quiz */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 -z-10"
+          style={{
+            background:
+              'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.05), transparent 55%)',
+          }}
+        />
       {/* Progress */}
       <div className="mb-8 flex items-center gap-4">
         <div className="relative h-px flex-1 overflow-hidden bg-bone/15">
@@ -347,6 +357,7 @@ export function StyleQuiz() {
           </p>
         </div>
       )}
+      </div>
     </div>
   );
 }
