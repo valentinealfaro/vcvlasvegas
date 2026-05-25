@@ -1,9 +1,9 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { ArrowRight, Phone } from 'lucide-react';
 import { kitchenImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { Reveal } from './Reveal';
+import { MagneticButton } from './MagneticButton';
 
 export function CTASection({
   eyebrow = 'Begin Your Project',
@@ -46,10 +46,10 @@ export function CTASection({
           </Reveal>
           <Reveal delay={3}>
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/contact" className="btn-gold">
+              <MagneticButton href="/contact">
                 Schedule Consultation
                 <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
+              </MagneticButton>
               <a href={siteConfig.phoneHref} className="btn-ghost">
                 <Phone className="h-3.5 w-3.5" />
                 {siteConfig.phone}

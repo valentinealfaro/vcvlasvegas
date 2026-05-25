@@ -6,6 +6,7 @@ import { ProcessSection } from '@/components/home/ProcessSection';
 import { Testimonials } from '@/components/home/Testimonials';
 import { AreasServed } from '@/components/home/AreasServed';
 import { InvestmentRange } from '@/components/home/InvestmentRange';
+import { CalculatorPromo } from '@/components/home/CalculatorPromo';
 import { TrustBar } from '@/components/TrustBar';
 import { LeadMagnet } from '@/components/LeadMagnet';
 import { CTASection } from '@/components/CTASection';
@@ -45,6 +46,7 @@ export default function HomePage() {
       <Manifesto />
       <SignatureServices />
       <InvestmentRange />
+      <CalculatorPromo />
       <GallerySection />
       <ProcessSection />
       <LeadMagnet />
