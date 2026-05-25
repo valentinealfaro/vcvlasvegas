@@ -146,6 +146,7 @@ export function Footer() {
               <li><Link href="/faq" className="link-quiet hover:text-gold">FAQ</Link></li>
               <li><Link href="/intake" className="link-quiet hover:text-gold">Project Brief</Link></li>
               <li><Link href="/contact" className="link-quiet hover:text-gold">Contact</Link></li>
+              <li><Link href="/press" className="link-quiet hover:text-gold">Press</Link></li>
             </ul>
           </div>
         </div>

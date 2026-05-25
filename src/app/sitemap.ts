@@ -45,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/resources',
     '/intake',
     '/contact',
+    '/press',
     '/site-index',
   ];
   return [
