@@ -177,30 +177,25 @@ export function Hero() {
             </span>
           </div>
           <div className="grid grid-cols-3 gap-6 text-bone/70 md:gap-12">
-            <div className="border-l border-bone/15 pl-4">
-              <p className="font-display text-2xl text-bone md:text-3xl">
-                <CountUp value={100} suffix="%" />
-              </p>
-              <p className="mt-1 text-[0.6rem] uppercase tracking-[0.24em] text-bone/50">
-                Licensed &amp; Insured
-              </p>
-            </div>
-            <div className="border-l border-bone/15 pl-4">
-              <p className="font-display text-2xl text-bone md:text-3xl">
-                7-Figure
-              </p>
-              <p className="mt-1 text-[0.6rem] uppercase tracking-[0.24em] text-bone/50">
-                Project Capacity
-              </p>
-            </div>
-            <div className="border-l border-bone/15 pl-4">
-              <p className="font-display text-2xl text-bone md:text-3xl">
-                Single-Source
-              </p>
-              <p className="mt-1 text-[0.6rem] uppercase tracking-[0.24em] text-bone/50">
-                Design-Build Team
-              </p>
-            </div>
+            {[
+              { value: <CountUp value={100} suffix="%" />, label: 'Licensed & Insured' },
+              { value: '7-Figure', label: 'Project Capacity' },
+              { value: 'Single-Source', label: 'Design-Build Team' },
+            ].map((stat, i) => (
+              <div key={i} className="group relative pl-4">
+                {/* Left border — fades amber on hover */}
+                <span
+                  aria-hidden
+                  className="absolute inset-y-1 left-0 w-px bg-bone/15 transition-colors duration-500 group-hover:bg-gold"
+                />
+                <p className="font-display text-2xl text-bone md:text-3xl">
+                  {stat.value}
+                </p>
+                <p className="mt-1 text-[0.6rem] uppercase tracking-[0.24em] text-bone/50">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
           </div>
         </motion.div>
 

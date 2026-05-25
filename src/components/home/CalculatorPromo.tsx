@@ -65,16 +65,21 @@ export function CalculatorPromo() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" />
 
-              {/* Floating calculator card preview */}
-              <div className="absolute bottom-6 left-6 right-6 border border-bone/15 bg-ink-800/95 p-6 backdrop-blur-xl md:bottom-8 md:left-8 md:right-8">
-                <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bone/45">
-                  Indicative Range · Premium Kitchen
-                </p>
-                <p className="mt-3 font-display text-3xl text-bone md:text-4xl">
-                  $243k <span className="mx-2 text-bone/30">–</span> $567k
-                </p>
-                <p className="mt-2 text-xs text-bone/55">300 sqft · 8–14 weeks</p>
-                <div className="mt-4 h-px w-full bg-gradient-to-r from-gold via-gold-light to-transparent" />
+              {/* Floating calculator card preview — gradient bordered */}
+              <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8">
+                <div className="border-gradient">
+                  <div className="relative overflow-hidden bg-ink-800/95 p-6 backdrop-blur-xl">
+                    <div className="flex items-center gap-2 text-[0.6rem] uppercase tracking-[0.28em] text-bone/45">
+                      <span aria-hidden className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-gold" />
+                      Indicative Range · Premium Kitchen
+                    </div>
+                    <p className="mt-3 font-display text-3xl text-bone md:text-4xl">
+                      $243k <span className="mx-2 text-bone/30">–</span> $567k
+                    </p>
+                    <p className="mt-2 text-xs text-bone/55">300 sqft · 8–14 weeks</p>
+                    <div className="mt-4 h-px w-full bg-gradient-to-r from-gold via-gold to-transparent" />
+                  </div>
+                </div>
               </div>
             </div>
           </Reveal>
