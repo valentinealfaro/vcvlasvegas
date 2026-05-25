@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
@@ -59,12 +59,12 @@ export default function ModernBathPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Modern Bathroom Design"
         title="Architectural baths"
         italic="for desert homes."
         description="Wet rooms, oversized walk-ins, frameless partitions, and matte stone — modern bathroom design tuned for how Las Vegas homes catch light, air, and quiet."
-        image={bathroomImages[1]}
+        images={[bathroomImages[1], bathroomImages[3], bathroomImages[4], bathroomImages[5], bathroomImages[0]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },

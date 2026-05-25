@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { CTASection } from '@/components/CTASection';
@@ -57,12 +57,12 @@ export default function OutdoorPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Outdoor Living & Poolside"
         title="A second living room"
         italic="under the sky."
         description="Sheltered patios, outdoor kitchens, and poolside remodels engineered for the Las Vegas climate — designed to be used year-round, not just photographed."
-        image={customHomeImages[3]}
+        images={[customHomeImages[3], customHomeImages[4], customHomeImages[2], customHomeImages[0], customHomeImages[5]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },

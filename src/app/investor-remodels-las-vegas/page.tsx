@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { CTASection } from '@/components/CTASection';
@@ -61,12 +61,12 @@ export default function InvestorPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Investor & Airbnb Remodels"
         title="Design"
         italic="that prints."
         description="Renovations engineered to lift ADR, occupancy, and resale value — finish quality that photographs, durability that holds up to turnover, and a build calendar your projections can trust."
-        image={remodelImages[1]}
+        images={[remodelImages[1], kitchenImages[3], bathroomImages[1], remodelImages[2], kitchenImages[0]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },

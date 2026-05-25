@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
@@ -58,12 +58,12 @@ export default function LuxuryRenovationsPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Luxury Renovations"
         title="The bespoke layer"
         italic="above a remodel."
         description="Luxury renovations are defined by the details you cannot buy off the shelf — bespoke millwork, stone fabricated to the inch, and architectural glass engineered to the room."
-        image={customHomeImages[2]}
+        images={[customHomeImages[2], customHomeImages[1], customHomeImages[3], customHomeImages[5], kitchenImages[1]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { CTASection } from '@/components/CTASection';
@@ -67,12 +67,12 @@ export default function GeneralContractorPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Luxury General Contractor"
         title="A general contractor"
         italic="built for high-value homes."
         description="Licensed, insured, and design-led — VCV Vegas brings architectural finish standards and white-glove project management to luxury construction across the Las Vegas valley."
-        image={customHomeImages[0]}
+        images={[customHomeImages[0], customHomeImages[1], customHomeImages[3], customHomeImages[4], remodelImages[0]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },
