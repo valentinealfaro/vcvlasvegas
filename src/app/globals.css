@@ -71,6 +71,27 @@ body {
     animation: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
+  .link-quiet {
+    position: relative;
+    display: inline-block;
+  }
+  .link-quiet::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 1px;
+    width: 100%;
+    background-color: #b8945c;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .link-quiet:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
   .reveal-delay-1 { animation-delay: 0.12s; }
   .reveal-delay-2 { animation-delay: 0.24s; }
   .reveal-delay-3 { animation-delay: 0.36s; }
