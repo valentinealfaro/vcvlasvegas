@@ -131,6 +131,7 @@ export function Footer() {
               <li><Link href="/process" className="link-quiet hover:text-gold">Our Process</Link></li>
               <li><Link href="/standards" className="link-quiet hover:text-gold">Standards</Link></li>
               <li><Link href="/materials" className="link-quiet hover:text-gold">Finish Library</Link></li>
+              <li><Link href="/material-selection" className="link-quiet hover:text-gold">Material Selection</Link></li>
               <li><Link href="/visit" className="link-quiet hover:text-gold">By Appointment</Link></li>
               <li><Link href="/projects" className="link-quiet hover:text-gold">Projects</Link></li>
               <li><Link href="/lookbook" className="link-quiet hover:text-gold">Lookbook</Link></li>
