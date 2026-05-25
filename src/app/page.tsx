@@ -8,6 +8,7 @@ import { AreasServed } from '@/components/home/AreasServed';
 import { InvestmentRange } from '@/components/home/InvestmentRange';
 import { CalculatorPromo } from '@/components/home/CalculatorPromo';
 import { FeaturedStudies } from '@/components/home/FeaturedStudies';
+import { LatestNote } from '@/components/home/LatestNote';
 import { TrustBar } from '@/components/TrustBar';
 import { BookingStrip } from '@/components/BookingStrip';
 import { LeadMagnet } from '@/components/LeadMagnet';
@@ -53,6 +54,7 @@ export default function HomePage() {
       <FeaturedStudies />
       <GallerySection />
       <ProcessSection />
+      <LatestNote />
       <LeadMagnet />
       <Testimonials />
       <AreasServed />
