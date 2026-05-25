@@ -1,5 +1,24 @@
 import { Reveal } from '../Reveal';
 
+const principles = [
+  {
+    t: 'Design-Build, One Team',
+    d: 'Single point of accountability from concept through completion.',
+  },
+  {
+    t: 'Luxury Specification',
+    d: 'Trade-only finishes, hardware, and stone reserved for high-end builds.',
+  },
+  {
+    t: 'White-Glove Process',
+    d: 'Cleaner sites, clearer timelines, weekly client briefings.',
+  },
+  {
+    t: 'Vegas Valley Focus',
+    d: 'A focused service area means faster decisions and tighter execution.',
+  },
+];
+
 export function Manifesto() {
   return (
     <section className="relative overflow-hidden bg-ink py-28 lg:py-40">
@@ -9,13 +28,21 @@ export function Manifesto() {
           <Reveal>
             <div className="sticky top-32">
               <div className="mb-6 flex items-center gap-4">
-                <span className="hairline" />
-                <p className="eyebrow">Studio Philosophy</p>
+                <span
+                  className="h-px w-12 origin-left bg-gradient-to-r from-gold via-gold to-transparent"
+                  style={{ animation: 'hairline-grow 1.2s cubic-bezier(0.16,1,0.3,1) backwards' }}
+                />
+                <p className="eyebrow !text-bone">Studio Philosophy</p>
+                <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
               </div>
-              <h2 className="font-display text-4xl text-bone md:text-5xl">
+              <h2 className="font-display text-4xl text-bone md:text-5xl lg:text-6xl">
                 Architectural<br />
                 <span className="italic text-bone">restraint.</span>
               </h2>
+              <span
+                aria-hidden
+                className="mt-5 block h-px w-24 bg-gradient-to-r from-gold via-gold/40 to-transparent"
+              />
             </div>
           </Reveal>
 
@@ -37,28 +64,40 @@ export function Manifesto() {
               </p>
             </Reveal>
             <Reveal delay={3}>
-              <div className="grid gap-8 border-t border-bone/10 pt-10 sm:grid-cols-2">
-                {[
-                  {
-                    t: 'Design-Build, One Team',
-                    d: 'Single point of accountability from concept through completion.',
-                  },
-                  {
-                    t: 'Luxury Specification',
-                    d: 'Trade-only finishes, hardware, and stone reserved for high-end builds.',
-                  },
-                  {
-                    t: 'White-Glove Process',
-                    d: 'Cleaner sites, clearer timelines, weekly client briefings.',
-                  },
-                  {
-                    t: 'Vegas Valley Focus',
-                    d: 'A focused service area means faster decisions and tighter execution.',
-                  },
-                ].map((b) => (
-                  <div key={b.t}>
-                    <p className="text-bone font-medium">{b.t}</p>
-                    <p className="mt-2 text-base text-bone/60">{b.d}</p>
+              <div className="grid gap-px bg-bone/10 border-y border-bone/10 sm:grid-cols-2">
+                {principles.map((b, i) => (
+                  <div
+                    key={b.t}
+                    className="group relative overflow-hidden bg-ink p-6 transition-colors duration-500 hover:bg-ink-700"
+                    style={{
+                      animation: `fade-up 0.6s cubic-bezier(0.16,1,0.3,1) ${
+                        0.08 * i + 0.3
+                      }s backwards`,
+                    }}
+                  >
+                    {/* Per-card corner sweep */}
+                    <span
+                      aria-hidden
+                      className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                      style={{
+                        background:
+                          i % 2 === 0
+                            ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.10), transparent 55%)'
+                            : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.10), transparent 55%)',
+                      }}
+                    />
+                    <div className="flex items-center gap-3">
+                      <span
+                        aria-hidden
+                        className="h-px w-6 bg-gold transition-all duration-500 group-hover:w-10"
+                      />
+                      <p className="font-display text-lg text-bone md:text-xl">
+                        {b.t}
+                      </p>
+                    </div>
+                    <p className="mt-3 text-sm text-bone/60 transition-colors duration-500 group-hover:text-bone/80">
+                      {b.d}
+                    </p>
                   </div>
                 ))}
               </div>

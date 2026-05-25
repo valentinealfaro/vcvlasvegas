@@ -195,8 +195,22 @@ export function InvestmentCalculator() {
 
       {/* Output */}
       <div className="relative">
-        <div className="sticky top-32 border border-bone/10 bg-ink-800/60 p-8 lg:p-10">
-          <p className="eyebrow mb-6">Indicative Range</p>
+        <div className="sticky top-32">
+          <div className="border-gradient">
+            <div className="relative overflow-hidden bg-ink-800/60 p-8 lg:p-10">
+              {/* Soft amber glow inside the output card */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-0 -z-10"
+                style={{
+                  background:
+                    'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.06), transparent 55%)',
+                }}
+              />
+              <div className="mb-6 flex items-center gap-2">
+                <span aria-hidden className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-gold" />
+                <p className="eyebrow !text-bone">Indicative Range · Live</p>
+              </div>
 
           <motion.div
             key={`${project}-${sqft}-${finish}`}
@@ -286,6 +300,8 @@ export function InvestmentCalculator() {
               </button>
             </form>
           )}
+            </div>
+          </div>
         </div>
       </div>
     </div>

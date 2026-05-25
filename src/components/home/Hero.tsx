@@ -206,24 +206,32 @@ export function Hero() {
           transition={{ delay: 2.2, duration: 1 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 lg:right-16 lg:left-auto lg:translate-x-0"
         >
-          <div className="flex items-center gap-2">
-            {heroGalleryImages.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setIndex(i)}
-                aria-label={`Show image ${i + 1}`}
-                className="group p-1"
-              >
-                <span
-                  className={`block h-px transition-all duration-700 ${
-                    i === index
-                      ? 'w-10 bg-gold'
-                      : 'w-5 bg-bone/30 group-hover:bg-bone/60'
-                  }`}
-                />
-              </button>
-            ))}
+          <div className="flex items-center gap-3">
+            <span className="text-[0.6rem] uppercase tracking-[0.32em] tabular-nums text-bone/55">
+              {String(index + 1).padStart(2, '0')}
+            </span>
+            <div className="flex items-center gap-2">
+              {heroGalleryImages.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setIndex(i)}
+                  aria-label={`Show image ${i + 1}`}
+                  className="group p-1"
+                >
+                  <span
+                    className={`block h-[2px] transition-all duration-700 ease-out ${
+                      i === index
+                        ? 'w-12 bg-gradient-to-r from-gold to-gold-light'
+                        : 'w-5 bg-bone/25 group-hover:bg-bone/60'
+                    }`}
+                  />
+                </button>
+              ))}
+            </div>
+            <span className="text-[0.6rem] uppercase tracking-[0.32em] tabular-nums text-bone/35">
+              / {String(heroGalleryImages.length).padStart(2, '0')}
+            </span>
           </div>
         </motion.div>
       </div>
