@@ -9,13 +9,28 @@ export function JournalSubscribe() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section className="border-y border-bone/10 bg-ink-800/40">
-      <div className="container-luxe py-14 lg:py-16">
+    <section className="relative overflow-hidden bg-ink-800/40">
+      <div
+        aria-hidden
+        className="h-px w-full"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 50%, transparent 100%)',
+        }}
+      />
+      <div aria-hidden className="glow-amber" />
+
+      <div className="container-luxe relative py-14 lg:py-16">
         <div className="mx-auto max-w-3xl">
           <Reveal>
             <div className="grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
               <div>
-                <p className="eyebrow mb-4">Quarterly Letter</p>
+                <div className="mb-4 flex items-center gap-3">
+                  <span className="grid h-9 w-9 place-items-center border border-gold/40 bg-gold/5">
+                    <Mail className="h-4 w-4 text-bone" aria-hidden />
+                  </span>
+                  <p className="eyebrow !text-bone">Quarterly Letter</p>
+                </div>
                 <h3 className="font-display text-2xl text-bone text-balance md:text-3xl">
                   Get the next note in your inbox.
                 </h3>
@@ -62,6 +77,15 @@ export function JournalSubscribe() {
           </Reveal>
         </div>
       </div>
+
+      <div
+        aria-hidden
+        className="h-px w-full"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 50%, transparent 100%)',
+        }}
+      />
     </section>
   );
 }

@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { ArrowRight, Phone } from 'lucide-react';
 import { Reveal } from './Reveal';
+import { MagneticButton } from './MagneticButton';
 import { siteConfig } from '@/lib/site';
 
 export function InlineLeadStrip({
@@ -13,8 +13,21 @@ export function InlineLeadStrip({
   description?: string;
 }) {
   return (
-    <section className="border-y border-bone/10 bg-ink-800/60">
-      <div className="container-luxe py-14 lg:py-16">
+    <section className="relative overflow-hidden bg-ink-800/60">
+      {/* Gradient hairline top + bottom */}
+      <div
+        aria-hidden
+        className="h-px w-full"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 50%, transparent 100%)',
+        }}
+      />
+
+      {/* Soft duotone wash */}
+      <div aria-hidden className="glow-duotone" />
+
+      <div className="container-luxe relative py-16 lg:py-20">
         <div className="grid items-center gap-8 lg:grid-cols-[1.5fr_1fr]">
           <Reveal>
             <div>
@@ -27,10 +40,10 @@ export function InlineLeadStrip({
           </Reveal>
           <Reveal delay={1}>
             <div className="flex flex-wrap items-center gap-4 lg:justify-end">
-              <Link href="/contact" className="btn-gold">
+              <MagneticButton href="/contact">
                 Schedule Consultation
                 <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
+              </MagneticButton>
               <a href={siteConfig.phoneHref} className="btn-ghost">
                 <Phone className="h-3.5 w-3.5" />
                 {siteConfig.phone}
@@ -39,6 +52,15 @@ export function InlineLeadStrip({
           </Reveal>
         </div>
       </div>
+
+      <div
+        aria-hidden
+        className="h-px w-full"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.55) 50%, transparent 100%)',
+        }}
+      />
     </section>
   );
 }
