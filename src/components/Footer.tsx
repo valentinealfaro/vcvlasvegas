@@ -92,6 +92,14 @@ export function Footer() {
                   For Architects &amp; Designers
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/concierge"
+                  className="link-quiet transition-colors hover:text-gold"
+                >
+                  Studio Concierge
+                </Link>
+              </li>
             </ul>
           </div>
 

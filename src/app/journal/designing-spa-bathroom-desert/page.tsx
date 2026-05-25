@@ -8,6 +8,7 @@ import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { StickySectionNav } from '@/components/StickySectionNav';
 import { ReadNext } from '@/components/ReadNext';
+import { JournalSubscribe } from '@/components/JournalSubscribe';
 import { bathroomImages, kitchenImages, customHomeImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';
@@ -310,6 +311,8 @@ export default function Post() {
         italic="Start with a senior designer."
         description="A private design consultation in your home — by appointment, within one business day."
       />
+
+      <JournalSubscribe />
 
       <ReadNext currentSlug="designing-spa-bathroom-desert" />
 
