@@ -24,15 +24,21 @@ export function CTASection({
           alt={image.alt}
           fill
           sizes="100vw"
-          className="object-cover opacity-50"
+          className="object-cover opacity-45"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/65 to-ink/45" />
       </div>
+
+      {/* Franchise duotone glow */}
+      <div aria-hidden className="glow-duotone" />
 
       <div className="container-luxe">
         <div className="max-w-3xl">
           <Reveal>
-            <p className="eyebrow mb-6">{eyebrow}</p>
+            <div className="mb-6 flex items-center gap-4">
+              <span className="h-px w-12 bg-gradient-to-r from-gold to-transparent" />
+              <p className="eyebrow !text-gold">{eyebrow}</p>
+            </div>
           </Reveal>
           <Reveal delay={1}>
             <h2 className="font-display text-4xl text-bone text-balance md:text-6xl lg:text-7xl">
@@ -46,7 +52,7 @@ export function CTASection({
           </Reveal>
           <Reveal delay={3}>
             <div className="mt-10 flex flex-wrap gap-4">
-              <MagneticButton href="/contact">
+              <MagneticButton href="/contact" pulse>
                 Schedule Consultation
                 <ArrowRight className="h-3.5 w-3.5" />
               </MagneticButton>

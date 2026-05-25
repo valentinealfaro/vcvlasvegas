@@ -35,15 +35,31 @@ export function ImageCard({
         fill
         priority={priority}
         sizes={sizes}
-        className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
+        className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
       />
+      {/* Base bottom-up gradient — always visible for legibility */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/0 to-transparent" />
+      {/* Amber sweep that lights the bottom-left on hover */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+        style={{
+          background:
+            'radial-gradient(circle at 12% 100%, rgba(252,187,0,0.22), transparent 55%)',
+        }}
+      />
       {caption && image.caption && (
         <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 lg:p-6">
-          <p className="font-display text-lg text-bone md:text-xl">
-            {image.caption}
-          </p>
-          <span className="h-px flex-1 max-w-12 bg-gold/60" />
+          <div className="overflow-hidden">
+            <p className="font-display text-lg text-bone transition-transform duration-700 ease-out md:text-xl group-hover:-translate-y-1">
+              {image.caption}
+            </p>
+            <span
+              aria-hidden
+              className="mt-2 block h-px w-0 bg-gold transition-[width] duration-700 ease-out group-hover:w-12"
+            />
+          </div>
+          <span className="h-px flex-1 max-w-12 bg-gold/60 transition-colors duration-500 group-hover:bg-gold" />
         </figcaption>
       )}
     </figure>
