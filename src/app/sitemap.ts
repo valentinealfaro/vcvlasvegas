@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/journal/how-to-choose-luxury-contractor-las-vegas',
     '/journal/what-pre-construction-actually-looks-like',
     '/about',
+    '/letter',
     '/why-vcv-vegas',
     '/now',
     '/visit',

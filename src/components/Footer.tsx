@@ -127,6 +127,7 @@ export function Footer() {
             <p className="eyebrow mb-6">Studio</p>
             <ul className="space-y-3 text-sm text-bone/70">
               <li><Link href="/about" className="link-quiet hover:text-gold">About</Link></li>
+              <li><Link href="/letter" className="link-quiet hover:text-gold">A Letter from the Studio</Link></li>
               <li><Link href="/why-vcv-vegas" className="link-quiet hover:text-gold">Why VCV Vegas</Link></li>
               <li><Link href="/now" className="link-quiet hover:text-gold">Now</Link></li>
               <li><Link href="/process" className="link-quiet hover:text-gold">Our Process</Link></li>
