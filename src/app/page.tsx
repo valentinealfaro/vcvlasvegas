@@ -7,6 +7,7 @@ import { Testimonials } from '@/components/home/Testimonials';
 import { AreasServed } from '@/components/home/AreasServed';
 import { InvestmentRange } from '@/components/home/InvestmentRange';
 import { CalculatorPromo } from '@/components/home/CalculatorPromo';
+import { FeaturedStudies } from '@/components/home/FeaturedStudies';
 import { TrustBar } from '@/components/TrustBar';
 import { LeadMagnet } from '@/components/LeadMagnet';
 import { CTASection } from '@/components/CTASection';
@@ -47,6 +48,7 @@ export default function HomePage() {
       <SignatureServices />
       <InvestmentRange />
       <CalculatorPromo />
+      <FeaturedStudies />
       <GallerySection />
       <ProcessSection />
       <LeadMagnet />

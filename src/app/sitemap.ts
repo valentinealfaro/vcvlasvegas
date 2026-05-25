@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/lookbook',
     '/process',
     '/standards',
+    '/materials',
     '/journal',
     '/journal/five-details-luxury-remodel-las-vegas',
     '/journal/designing-spa-bathroom-desert',
