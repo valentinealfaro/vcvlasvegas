@@ -7,6 +7,7 @@ import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { Reveal } from '@/components/Reveal';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
+import { TradeIntakeForm } from '@/components/TradeIntakeForm';
 import {
   customHomeImages,
   kitchenImages,
@@ -175,8 +176,8 @@ export default function ForTradePage() {
 
       <InlineLeadStrip
         title="Have a project to introduce?"
-        italic="Send drawings."
-        description="Our pre-construction team responds within one business day. NDAs available on request before any drawings are shared."
+        italic="The trade brief is below."
+        description="Three short sections covering the firm, project, and engagement type. Our pre-construction team responds within one business day. NDA available on request before any drawings are shared."
       />
 
       <section className="bg-ink py-24 lg:py-32">
@@ -187,6 +188,34 @@ export default function ForTradePage() {
           />
           <div className="mt-16 max-w-4xl">
             <FAQ items={faqs} />
+          </div>
+        </div>
+      </section>
+
+      {/* Trade intake */}
+      <section id="trade-intake" className="bg-ink-800 py-24 lg:py-32">
+        <div className="container-luxe">
+          <div className="mx-auto max-w-3xl">
+            <Reveal>
+              <div>
+                <p className="eyebrow mb-6">Trade Intake</p>
+                <h2 className="font-display text-4xl text-bone md:text-5xl">
+                  Send a project<br />
+                  <span className="italic text-gold-light">straight to pre-construction.</span>
+                </h2>
+                <p className="mt-6 text-bone/65">
+                  Three short sections — the firm, the project, and the
+                  engagement you want from us. NDA available on request
+                  before drawings are shared. Senior pre-construction lead
+                  reviews every brief personally.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={1}>
+              <div className="mt-14 border border-bone/10 bg-ink p-8 md:p-10">
+                <TradeIntakeForm />
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
