@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/neighborhoods',
     '/faq',
     '/investment',
+    '/luxury-remodel-cost-las-vegas',
     '/contact',
   ];
   return [

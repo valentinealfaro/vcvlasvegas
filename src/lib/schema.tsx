@@ -4,23 +4,48 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'GeneralContractor',
+    '@id': `${siteConfig.url}#organization`,
     name: siteConfig.name,
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
     image: `${siteConfig.url}/og.jpg`,
+    logo: `${siteConfig.url}/og.jpg`,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       addressCountry: 'US',
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 36.1716,
+      longitude: -115.1391,
+    },
     areaServed: siteConfig.serviceArea.map((c) => ({
       '@type': 'City',
       name: c,
     })),
+    serviceArea: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: 36.1716,
+        longitude: -115.1391,
+      },
+      geoRadius: 35000,
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '09:00',
+        closes: '18:00',
+      },
+    ],
     priceRange: '$$$$',
+    paymentAccepted: 'Cash, Check, Wire Transfer',
     knowsAbout: [
       'Luxury Bathroom Remodeling',
       'Luxury Kitchen Remodeling',
@@ -28,6 +53,8 @@ export function organizationSchema() {
       'General Contracting',
       'Custom Renovation',
       'Outdoor Living',
+      'High-Rise Renovation',
+      'Investor Property Renovation',
     ],
   };
 }
