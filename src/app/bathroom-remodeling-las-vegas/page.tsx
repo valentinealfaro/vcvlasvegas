@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
@@ -73,12 +73,12 @@ export default function BathroomPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Luxury Bathroom Remodeling"
         title="Spa bathrooms"
         italic="for desert living."
         description="Frameless walk-ins, soaking tubs, floating vanities, and matte stone — primary suites designed to feel like the best resort in Las Vegas, only quieter."
-        image={bathroomImages[0]}
+        images={[bathroomImages[0], bathroomImages[2], bathroomImages[3], bathroomImages[4], bathroomImages[5]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },

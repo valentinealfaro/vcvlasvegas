@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
@@ -73,12 +73,12 @@ export default function KitchenPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Luxury Kitchen Remodeling"
         title="Kitchens built"
         italic="for how Vegas lives."
         description="Waterfall islands, integrated appliances, and custom cabinetry — designed around the way you actually entertain, cook, and gather in your Las Vegas home."
-        image={kitchenImages[0]}
+        images={[kitchenImages[0], kitchenImages[1], kitchenImages[3], kitchenImages[4], kitchenImages[5]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },

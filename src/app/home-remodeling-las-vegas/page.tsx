@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { PageHero } from '@/components/PageHero';
+import { CinematicHero } from '@/components/CinematicHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
@@ -69,12 +69,12 @@ export default function HomeRemodelingPage() {
           faqSchema(faqs),
         ]}
       />
-      <PageHero
+      <CinematicHero
         eyebrow="Whole-Home Renovation"
         title="A house"
         italic="re-imagined."
         description="VCV Vegas leads full-home renovations across the Las Vegas valley — single team, single timeline, single point of accountability from concept through completion."
-        image={remodelImages[0]}
+        images={[remodelImages[0], customHomeImages[0], customHomeImages[1], remodelImages[1], remodelImages[2]]}
         breadcrumbs={[
           { label: 'Home', href: '/' },
           { label: 'Services', href: '/services' },
