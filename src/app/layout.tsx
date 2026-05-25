@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Inter } from 'next/font/google';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { MobileStickyCTA } from '@/components/MobileStickyCTA';
+import { FloatingCTA } from '@/components/FloatingCTA';
 import { JsonLd, organizationSchema } from '@/lib/schema';
 import { siteConfig } from '@/lib/site';
 import './globals.css';
@@ -93,6 +94,7 @@ export default function RootLayout({
         <Navigation />
         <main id="main">{children}</main>
         <Footer />
+        <FloatingCTA />
         <MobileStickyCTA />
       </body>
     </html>

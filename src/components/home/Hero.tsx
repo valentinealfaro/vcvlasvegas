@@ -7,6 +7,12 @@ import { ArrowDown, ArrowRight, Phone } from 'lucide-react';
 import { heroGalleryImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 
+const headlineLines: { text: string; italic?: boolean }[] = [
+  { text: 'Luxury remodeling' },
+  { text: 'designed for', italic: true },
+  { text: 'Las Vegas living.' },
+];
+
 export function Hero() {
   const reduce = useReducedMotion();
   const heroImage = heroGalleryImages[0];
@@ -32,6 +38,15 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/70 via-ink/55 to-ink" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/40 to-transparent" />
 
+      {/* Ambient gold glow */}
+      <motion.div
+        aria-hidden
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.35 }}
+        transition={{ delay: 1.4, duration: 2.5 }}
+        className="pointer-events-none absolute -bottom-32 -left-32 -z-10 h-[420px] w-[420px] rounded-full bg-gold blur-[160px] md:h-[600px] md:w-[600px]"
+      />
+
       <div className="container-luxe relative flex min-h-[100svh] flex-col justify-between pt-32 pb-28 lg:pt-40 lg:pb-32">
         {/* Top eyebrow row */}
         <motion.div
@@ -41,7 +56,12 @@ export function Hero() {
           className="hidden items-center justify-between lg:flex"
         >
           <div className="flex items-center gap-4">
-            <span className="hairline" />
+            <motion.span
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.5, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              className="hairline origin-left"
+            />
             <p className="eyebrow !text-bone/70">
               EST. Las Vegas Metro · Luxury Design-Build
             </p>
@@ -51,25 +71,34 @@ export function Hero() {
           </p>
         </motion.div>
 
-        {/* Main headline */}
+        {/* Main headline — kinetic word-by-word */}
         <div className="max-w-5xl">
-          <motion.h1
-            initial={reduce ? { opacity: 1 } : { opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-[2.6rem] leading-[1.02] text-bone text-balance sm:text-6xl md:text-7xl lg:text-[6rem]"
-          >
-            Luxury remodeling
-            <br />
-            <span className="italic text-gold-light">designed for</span>
-            <br />
-            Las&nbsp;Vegas living.
-          </motion.h1>
+          <h1 className="font-display text-[2.6rem] leading-[1.02] text-bone text-balance sm:text-6xl md:text-7xl lg:text-[6rem]">
+            {headlineLines.map((line, lineIdx) => (
+              <span key={lineIdx} className="block overflow-hidden pb-[0.05em]">
+                {line.text.split(' ').map((word, wIdx) => (
+                  <motion.span
+                    key={`${lineIdx}-${wIdx}`}
+                    initial={reduce ? { y: 0, opacity: 1 } : { y: '110%', opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      delay: 0.55 + lineIdx * 0.18 + wIdx * 0.06,
+                      duration: 0.95,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
+                    className={`mr-[0.25em] inline-block ${line.italic ? 'italic text-gold-light' : ''}`}
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </span>
+            ))}
+          </h1>
 
           <motion.p
             initial={reduce ? { opacity: 1 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.0, duration: 0.9 }}
+            transition={{ delay: 1.4, duration: 0.9 }}
             className="mt-8 max-w-xl text-base leading-relaxed text-bone/70 md:text-lg"
           >
             VCV Vegas builds architectural kitchens, spa-inspired bathrooms, and
@@ -81,7 +110,7 @@ export function Hero() {
           <motion.div
             initial={reduce ? { opacity: 1 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.9 }}
+            transition={{ delay: 1.55, duration: 0.9 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
             <Link href="/contact" className="btn-gold">
@@ -99,7 +128,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.6, duration: 1.2 }}
+          transition={{ delay: 1.8, duration: 1.2 }}
           className="flex items-end justify-between gap-6"
         >
           <div className="hidden items-center gap-3 text-bone/55 md:flex">

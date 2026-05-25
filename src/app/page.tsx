@@ -5,6 +5,8 @@ import { GallerySection } from '@/components/home/GallerySection';
 import { ProcessSection } from '@/components/home/ProcessSection';
 import { Testimonials } from '@/components/home/Testimonials';
 import { AreasServed } from '@/components/home/AreasServed';
+import { InvestmentRange } from '@/components/home/InvestmentRange';
+import { TrustBar } from '@/components/TrustBar';
 import { CTASection } from '@/components/CTASection';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
@@ -38,12 +40,14 @@ export default function HomePage() {
     <>
       <JsonLd data={faqSchema(homepageFAQs)} />
       <Hero />
-      <AreasServed />
+      <TrustBar />
       <Manifesto />
       <SignatureServices />
+      <InvestmentRange />
       <GallerySection />
       <ProcessSection />
       <Testimonials />
+      <AreasServed />
 
       <section className="bg-ink py-28 lg:py-40">
         <div className="container-luxe">
