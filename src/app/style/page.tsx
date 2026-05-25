@@ -2,7 +2,16 @@ import type { Metadata } from 'next';
 import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
-import { StyleQuiz } from '@/components/StyleQuiz';
+import dynamic from 'next/dynamic';
+
+const StyleQuiz = dynamic(
+  () => import('@/components/StyleQuiz').then((m) => m.StyleQuiz),
+  {
+    loading: () => (
+      <div className="h-[560px] w-full animate-pulse border border-bone/10 bg-ink-800/40" aria-label="Loading style quiz" />
+    ),
+  },
+);
 import { kitchenImages, bathroomImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';

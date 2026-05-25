@@ -2,7 +2,16 @@ import type { Metadata } from 'next';
 import { CinematicHero } from '@/components/CinematicHero';
 import { Reveal } from '@/components/Reveal';
 import { CTASection } from '@/components/CTASection';
-import { InvestmentCalculator } from '@/components/InvestmentCalculator';
+import dynamic from 'next/dynamic';
+
+const InvestmentCalculator = dynamic(
+  () => import('@/components/InvestmentCalculator').then((m) => m.InvestmentCalculator),
+  {
+    loading: () => (
+      <div className="h-[640px] w-full animate-pulse border border-bone/10 bg-ink-800/40" aria-label="Loading calculator" />
+    ),
+  },
+);
 import { kitchenImages, customHomeImages, bathroomImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';

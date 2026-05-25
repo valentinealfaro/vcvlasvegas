@@ -100,6 +100,14 @@ export function Footer() {
                   Studio Concierge
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/engagement"
+                  className="link-quiet transition-colors hover:text-gold"
+                >
+                  Engagement Tiers
+                </Link>
+              </li>
             </ul>
           </div>
 

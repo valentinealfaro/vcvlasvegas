@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/projects/macdonald-highlands-residence',
     '/for-architects-and-designers',
     '/concierge',
+    '/engagement',
     '/lookbook',
     '/process',
     '/standards',

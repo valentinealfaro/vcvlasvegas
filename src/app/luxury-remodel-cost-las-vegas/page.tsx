@@ -7,7 +7,16 @@ import { SectionHeader } from '@/components/SectionHeader';
 import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { FAQ } from '@/components/FAQ';
-import { InvestmentCalculator } from '@/components/InvestmentCalculator';
+import dynamic from 'next/dynamic';
+
+const InvestmentCalculator = dynamic(
+  () => import('@/components/InvestmentCalculator').then((m) => m.InvestmentCalculator),
+  {
+    loading: () => (
+      <div className="h-[640px] w-full animate-pulse border border-bone/10 bg-ink-800/40" aria-label="Loading calculator" />
+    ),
+  },
+);
 import { ImageCard } from '@/components/ImageCard';
 import { kitchenImages, bathroomImages, customHomeImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
