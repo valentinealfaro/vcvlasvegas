@@ -32,6 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/journal/indoor-outdoor-living-las-vegas-climate',
     '/about',
     '/letter',
+    '/principles',
     '/why-vcv-vegas',
     '/now',
     '/visit',
