@@ -4,6 +4,7 @@ import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
+import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { bathroomImages } from '@/lib/images';
@@ -107,6 +108,12 @@ export default function ModernBathPage() {
       />
 
       <ImageRow images={bathroomImages.slice(2, 5)} />
+
+      <InlineLeadStrip
+        title="Design a bathroom that reads as architecture."
+        italic="Start with a senior designer."
+        description="A private design consultation in your home — by appointment, within one business day."
+      />
 
       <section className="bg-ink py-24 lg:py-32">
         <div className="container-luxe">

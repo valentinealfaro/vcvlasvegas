@@ -4,6 +4,7 @@ import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
+import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { customHomeImages, flooringImages, kitchenImages } from '@/lib/images';
@@ -107,6 +108,12 @@ export default function LuxuryRenovationsPage() {
       />
 
       <ImageRow images={[customHomeImages[1], customHomeImages[3], customHomeImages[5]]} />
+
+      <InlineLeadStrip
+        title="Commission your bespoke renovation."
+        italic="Quietly, by appointment."
+        description="A senior designer will sit with you, walk the project, and respond within one business day."
+      />
 
       <section className="bg-ink py-24 lg:py-32">
         <div className="container-luxe">

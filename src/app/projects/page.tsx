@@ -58,45 +58,62 @@ export default function ProjectsPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Projects' }]}
       />
 
-      {/* Featured case study */}
+      {/* Featured case studies */}
       <section className="bg-ink py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
-            eyebrow="Featured Project Study"
+            eyebrow="Featured Project Studies"
             title="A closer look."
-            description="A representative VCV Vegas commission — opened up, broken down, and walked through end to end."
+            description="Representative VCV Vegas commissions — opened up, broken down, and walked through end to end."
           />
-          <Reveal delay={2} className="mt-16">
-            <Link
-              href="/projects/the-summerlin-residence"
-              className="group relative block aspect-[16/10] w-full overflow-hidden bg-ink-700"
-            >
-              <Image
-                src={kitchenImages[0].src}
-                alt="The Summerlin Residence — featured project study"
-                fill
-                priority
-                sizes="100vw"
-                className="object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.04]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12 lg:p-16">
-                <p className="eyebrow mb-4 !text-gold-light">Project Study · 01</p>
-                <h3 className="font-display text-4xl text-bone md:text-6xl lg:text-7xl">
-                  The Summerlin{' '}
-                  <span className="italic text-gold-light">Residence.</span>
-                </h3>
-                <p className="mt-4 max-w-xl text-bone/70">
-                  Kitchen · Primary Suite · Great Room · Patio — opened up,
-                  re-imagined, and finished to studio standard.
-                </p>
-                <div className="mt-6 flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-gold">
-                  Read the case study
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
-                </div>
-              </div>
-            </Link>
-          </Reveal>
+          <div className="mt-16 grid gap-6 lg:grid-cols-2 lg:gap-8">
+            {[
+              {
+                href: '/projects/the-summerlin-residence',
+                eyebrow: 'Project Study · 01',
+                title: 'The Summerlin',
+                italic: 'Residence.',
+                scope: 'Kitchen · Primary Suite · Great Room · Patio',
+                image: kitchenImages[0],
+              },
+              {
+                href: '/projects/macdonald-highlands-residence',
+                eyebrow: 'Project Study · 02',
+                title: 'The MacDonald',
+                italic: 'Highlands Residence.',
+                scope: 'Kitchen · Primary · Wine Room · Outdoor',
+                image: customHomeImages[1],
+              },
+            ].map((s, i) => (
+              <Reveal key={s.href} delay={i}>
+                <Link
+                  href={s.href}
+                  className="group relative block aspect-[4/5] w-full overflow-hidden bg-ink-700"
+                >
+                  <Image
+                    src={s.image.src}
+                    alt={`${s.title} ${s.italic} — featured project study`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.04]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent" />
+                  <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10">
+                    <p className="eyebrow mb-4 !text-gold-light">{s.eyebrow}</p>
+                    <h3 className="font-display text-3xl text-bone md:text-5xl">
+                      {s.title}{' '}
+                      <span className="italic text-gold-light">{s.italic}</span>
+                    </h3>
+                    <p className="mt-3 max-w-md text-bone/70">{s.scope}</p>
+                    <div className="mt-5 flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-gold">
+                      Read the case study
+                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
+                    </div>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

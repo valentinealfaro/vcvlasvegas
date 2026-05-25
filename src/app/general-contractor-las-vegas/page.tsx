@@ -3,6 +3,7 @@ import { PageHero } from '@/components/PageHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { CTASection } from '@/components/CTASection';
+import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { customHomeImages, remodelImages } from '@/lib/images';
@@ -108,6 +109,12 @@ export default function GeneralContractorPage() {
         ]}
         image={remodelImages[0]}
         reverse
+      />
+
+      <InlineLeadStrip
+        title="Have drawings to price?"
+        italic="Send them over."
+        description="Our pre-construction team responds within one business day. NDA available on request."
       />
 
       <FinishSpec

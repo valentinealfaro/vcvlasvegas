@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/services',
     '/projects',
     '/projects/the-summerlin-residence',
+    '/projects/macdonald-highlands-residence',
+    '/for-architects-and-designers',
     '/lookbook',
     '/process',
     '/standards',

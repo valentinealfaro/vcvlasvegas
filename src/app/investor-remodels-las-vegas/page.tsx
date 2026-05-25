@@ -3,6 +3,7 @@ import { PageHero } from '@/components/PageHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { CTASection } from '@/components/CTASection';
+import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { kitchenImages, bathroomImages, remodelImages } from '@/lib/images';
@@ -102,6 +103,12 @@ export default function InvestorPage() {
         ]}
         image={bathroomImages[1]}
         reverse
+      />
+
+      <InlineLeadStrip
+        title="Have a property to reposition?"
+        italic="Send your pro-forma."
+        description="Our team responds with scope direction within one business day. Pro-forma and address welcomed."
       />
 
       <FinishSpec

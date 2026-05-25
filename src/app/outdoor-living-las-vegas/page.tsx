@@ -3,6 +3,7 @@ import { PageHero } from '@/components/PageHero';
 import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { CTASection } from '@/components/CTASection';
+import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { customHomeImages, kitchenImages } from '@/lib/images';
@@ -98,6 +99,12 @@ export default function OutdoorPage() {
         ]}
         image={kitchenImages[2]}
         reverse
+      />
+
+      <InlineLeadStrip
+        title="Re-imagine your outdoor room."
+        italic="Schedule a walkthrough."
+        description="A senior designer will walk your patio, your pool, and your view — and respond within one business day."
       />
 
       <FinishSpec
