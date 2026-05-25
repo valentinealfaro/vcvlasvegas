@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Menu, Phone, X } from 'lucide-react';
 import { navigation, siteConfig } from '@/lib/site';
 import { cn } from '@/lib/utils';
+import { ServicesMegaMenu } from './ServicesMegaMenu';
 
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
@@ -49,15 +50,19 @@ export function Navigation() {
           </Link>
 
           <nav className="hidden items-center gap-9 lg:flex">
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-gold"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navigation.map((item) =>
+              item.href === '/services' ? (
+                <ServicesMegaMenu key={item.href} />
+              ) : (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-gold"
+                >
+                  {item.label}
+                </Link>
+              ),
+            )}
           </nav>
 
           <div className="hidden items-center gap-4 lg:flex">

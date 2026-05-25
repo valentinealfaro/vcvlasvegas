@@ -1,18 +1,21 @@
 import { Reveal } from '../Reveal';
 import { SectionHeader } from '../SectionHeader';
 
-const quotes = [
+const promises = [
   {
-    q: 'The most quietly capable team we’ve worked with. Our primary suite feels like a five-star resort and the build itself was almost serene.',
-    a: 'Homeowner · Summerlin',
+    n: '01',
+    t: 'A senior designer leads every project.',
+    d: 'No junior team behind the curtain. The designer you meet at the first walkthrough is the designer you keep through the final punch list.',
   },
   {
-    q: 'VCV Vegas treated our renovation like an architecture project, not a contractor job. Worth every dollar.',
-    a: 'Homeowner · Henderson',
+    n: '02',
+    t: 'A published, fixed build calendar.',
+    d: 'Long-lead items are ordered before demolition. You see the calendar before the wall comes down — and we keep to it.',
   },
   {
-    q: 'We hired them for a kitchen and ended up redoing the whole main floor. The level of finish made everything else in the house look tired.',
-    a: 'Homeowner · Paradise',
+    n: '03',
+    t: 'Quiet sites, weekly briefings, white-glove finish.',
+    d: 'Cleaner sites than the industry standard. Weekly client check-ins. And the kind of finishing that holds up at close inspection.',
   },
 ];
 
@@ -21,21 +24,19 @@ export function Testimonials() {
     <section className="bg-ink py-28 lg:py-40">
       <div className="container-luxe">
         <SectionHeader
-          eyebrow="Client Voices"
-          title="Quiet confidence from quiet clients."
+          eyebrow="Studio Promises"
+          title="What every VCV Vegas client expects."
           align="center"
         />
         <div className="mt-20 grid gap-10 md:grid-cols-3">
-          {quotes.map((q, i) => (
-            <Reveal key={i} delay={i} className="relative">
-              <span className="absolute -top-4 left-0 font-display text-7xl leading-none text-gold/30">
-                “
-              </span>
-              <p className="pt-10 font-display text-2xl leading-snug text-bone/85 md:text-[1.55rem]">
-                {q.q}
-              </p>
-              <p className="mt-6 text-[0.7rem] uppercase tracking-[0.28em] text-gold">
-                {q.a}
+          {promises.map((p, i) => (
+            <Reveal key={p.n} delay={i} className="relative">
+              <p className="font-display text-5xl text-gold-light">{p.n}</p>
+              <h3 className="mt-6 font-display text-2xl text-bone md:text-[1.65rem]">
+                {p.t}
+              </h3>
+              <p className="mt-4 text-base leading-relaxed text-bone/65">
+                {p.d}
               </p>
             </Reveal>
           ))}

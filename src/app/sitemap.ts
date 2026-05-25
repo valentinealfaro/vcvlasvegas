@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/services',
     '/projects',
+    '/projects/the-summerlin-residence',
     '/process',
     '/about',
     '/contact',
