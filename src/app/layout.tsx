@@ -4,6 +4,7 @@ import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { MobileStickyCTA } from '@/components/MobileStickyCTA';
 import { FloatingCTA } from '@/components/FloatingCTA';
+import { AffiliationStrip } from '@/components/AffiliationStrip';
 import { JsonLd, organizationSchema } from '@/lib/schema';
 import { siteConfig } from '@/lib/site';
 import './globals.css';
@@ -93,6 +94,7 @@ export default function RootLayout({
         </a>
         <Navigation />
         <main id="main">{children}</main>
+        <AffiliationStrip />
         <Footer />
         <FloatingCTA />
         <MobileStickyCTA />

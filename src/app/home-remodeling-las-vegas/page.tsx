@@ -4,6 +4,7 @@ import { TwoColumnFeature } from '@/components/TwoColumnFeature';
 import { FinishSpec } from '@/components/FinishSpec';
 import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
+import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { remodelImages, customHomeImages, kitchenImages } from '@/lib/images';
@@ -128,6 +129,12 @@ export default function HomeRemodelingPage() {
       />
 
       <ImageRow images={remodelImages.slice(0, 3)} />
+
+      <InlineLeadStrip
+        title="Thinking through a whole-home remodel?"
+        italic="We’ll walk it with you."
+        description="A senior designer visits, walks the property, and listens — before we draw anything. By appointment."
+      />
 
       <section className="bg-ink py-24 lg:py-32">
         <div className="container-luxe">
