@@ -155,6 +155,12 @@ textarea:focus-visible {
   100% { transform: scaleX(1); opacity: 1; }
 }
 
+@keyframes discover-sweep {
+  0% { transform: translateY(-100%); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
 @layer components {
 
   .reveal {
@@ -182,6 +188,28 @@ textarea:focus-visible {
   .link-quiet:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+  }
+
+  /* Nav-link: animated gradient underline that expands from the center.
+     Pair with text-bone Tailwind for the base color. */
+  .link-nav {
+    position: relative;
+    display: inline-block;
+  }
+  .link-nav::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, #fcbb00, transparent);
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .link-nav:hover::after,
+  .link-nav[aria-current='page']::after {
+    transform: translateX(-50%) scaleX(1);
   }
 
   .reveal-delay-1 { animation-delay: 0.12s; }

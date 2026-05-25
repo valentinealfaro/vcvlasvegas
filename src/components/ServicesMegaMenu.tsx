@@ -42,7 +42,7 @@ export function ServicesMegaMenu() {
     >
       <Link
         href="/services"
-        className="text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-bone"
+        className="link-nav text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-bone"
       >
         Services
       </Link>

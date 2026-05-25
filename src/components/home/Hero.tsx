@@ -164,7 +164,14 @@ export function Hero() {
           className="flex items-end justify-between gap-6"
         >
           <div className="hidden items-center gap-3 text-bone/55 md:flex">
-            <ArrowDown className="h-4 w-4 animate-pulse text-bone" />
+            <span className="relative grid h-9 w-9 place-items-center overflow-hidden border border-bone/20">
+              <span
+                aria-hidden
+                className="absolute inset-0 bg-gradient-to-b from-transparent via-gold/30 to-transparent"
+                style={{ animation: 'discover-sweep 2.2s cubic-bezier(0.4,0,0.6,1) infinite' }}
+              />
+              <ArrowDown className="relative h-3.5 w-3.5 text-bone" />
+            </span>
             <span className="text-[0.65rem] uppercase tracking-[0.32em]">
               Discover
             </span>
