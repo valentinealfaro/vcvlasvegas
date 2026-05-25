@@ -6,7 +6,25 @@ import { Monogram } from './Monogram';
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-bone/5 bg-ink">
+    <footer className="relative overflow-hidden bg-ink">
+      {/* Gradient lead-in hairline + soft amber wash above the newsletter band */}
+      <div
+        aria-hidden
+        className="h-px w-full"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 25%, rgba(59,130,246,0.55) 75%, transparent 100%)',
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-64"
+        style={{
+          background:
+            'linear-gradient(to bottom, rgba(252,187,0,0.05) 0%, transparent 100%)',
+        }}
+      />
+
       {/* Newsletter band */}
       <div className="border-b border-bone/8 bg-ink-800/40">
         <div className="container-luxe py-16 lg:py-20">

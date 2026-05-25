@@ -13,6 +13,7 @@ import { TrustBar } from '@/components/TrustBar';
 import { BookingStrip } from '@/components/BookingStrip';
 import { StatsBanner } from '@/components/StatsBanner';
 import { ServiceMarquee } from '@/components/home/ServiceMarquee';
+import { SectionDivider } from '@/components/SectionDivider';
 import { LeadMagnet } from '@/components/LeadMagnet';
 import { CTASection } from '@/components/CTASection';
 import { FAQ } from '@/components/FAQ';
@@ -56,9 +57,11 @@ export default function HomePage() {
       <InvestmentRange />
       <CalculatorPromo />
       <FeaturedStudies />
+      <SectionDivider />
       <GallerySection />
       <ProcessSection />
       <LatestNote />
+      <SectionDivider />
       <LeadMagnet />
       <Testimonials />
       <AreasServed />
