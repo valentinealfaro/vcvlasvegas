@@ -12,6 +12,15 @@ export type JournalPost = {
 
 export const journalPosts: JournalPost[] = [
   {
+    slug: 'how-to-choose-luxury-contractor-las-vegas',
+    eyebrow: 'Studio Notes · 04',
+    title: 'How to choose a luxury contractor in Las Vegas.',
+    summary:
+      'A short, candid guide to evaluating high-end residential contractors in the valley — what to look for, what to ignore, and the five questions that separate a serious studio from a bidding contractor.',
+    image: customHomeImages[0],
+    read: '7 min read',
+  },
+  {
     slug: 'five-details-luxury-remodel-las-vegas',
     eyebrow: 'Studio Notes · 01',
     title: 'The five details that quietly separate a luxury remodel.',
