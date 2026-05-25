@@ -180,7 +180,7 @@ export function Hero() {
             </div>
             <div className="border-l border-bone/15 pl-4">
               <p className="font-display text-2xl text-bone md:text-3xl">
-                <CountUp value={1} prefix="" />-Source
+                Single-Source
               </p>
               <p className="mt-1 text-[0.6rem] uppercase tracking-[0.24em] text-bone/50">
                 Design-Build Team

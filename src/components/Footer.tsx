@@ -74,6 +74,7 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-gold">About</Link></li>
               <li><Link href="/process" className="hover:text-gold">Our Process</Link></li>
               <li><Link href="/standards" className="hover:text-gold">Standards</Link></li>
+              <li><Link href="/visit" className="hover:text-gold">By Appointment</Link></li>
               <li><Link href="/projects" className="hover:text-gold">Projects</Link></li>
               <li><Link href="/lookbook" className="hover:text-gold">Lookbook</Link></li>
               <li><Link href="/journal" className="hover:text-gold">Journal</Link></li>

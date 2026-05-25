@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/journal/designing-spa-bathroom-desert',
     '/journal/opening-up-vegas-floor-plan',
     '/about',
+    '/visit',
     '/contact',
   ];
   return [
