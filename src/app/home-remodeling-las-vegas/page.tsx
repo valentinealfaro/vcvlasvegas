@@ -6,6 +6,7 @@ import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { InvestmentBlock } from '@/components/InvestmentBlock';
+import { RelatedReading } from '@/components/RelatedReading';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { remodelImages, customHomeImages, kitchenImages } from '@/lib/images';
@@ -160,6 +161,11 @@ export default function HomeRemodelingPage() {
           </div>
         </div>
       </section>
+
+      <RelatedReading
+        slugs={['opening-up-vegas-floor-plan', 'how-to-choose-luxury-contractor-las-vegas']}
+        description="Two studio notes bearing on a whole-home renovation — how we re-engineer a closed-plan Vegas floor plan, and how to evaluate the contractor you choose."
+      />
 
       <CTASection
         title="Re-imagine your Las Vegas home."

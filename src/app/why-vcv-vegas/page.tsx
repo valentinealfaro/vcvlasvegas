@@ -5,6 +5,7 @@ import { Reveal } from '@/components/Reveal';
 import { SectionHeader } from '@/components/SectionHeader';
 import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
+import { RelatedReading } from '@/components/RelatedReading';
 import { customHomeImages, bathroomImages } from '@/lib/images';
 import { siteConfig } from '@/lib/site';
 import { JsonLd, breadcrumbSchema } from '@/lib/schema';
@@ -203,6 +204,11 @@ export default function WhyPage() {
           </div>
         </div>
       </section>
+
+      <RelatedReading
+        slugs={['how-to-choose-luxury-contractor-las-vegas', 'five-details-luxury-remodel-las-vegas']}
+        description="Two studio notes that bear on the question of fit — what to look for in a luxury contractor, and what separates a true luxury remodel from a builder-grade one."
+      />
 
       <CTASection
         title="If the fit reads right —"

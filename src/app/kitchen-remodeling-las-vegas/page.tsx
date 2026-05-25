@@ -6,6 +6,7 @@ import { ImageRow } from '@/components/Marquee';
 import { CTASection } from '@/components/CTASection';
 import { InlineLeadStrip } from '@/components/InlineLeadStrip';
 import { InvestmentBlock } from '@/components/InvestmentBlock';
+import { RelatedReading } from '@/components/RelatedReading';
 import { FAQ } from '@/components/FAQ';
 import { SectionHeader } from '@/components/SectionHeader';
 import { kitchenImages } from '@/lib/images';
@@ -185,6 +186,11 @@ export default function KitchenPage() {
           </div>
         </div>
       </section>
+
+      <RelatedReading
+        slugs={['five-details-luxury-remodel-las-vegas', 'opening-up-vegas-floor-plan']}
+        description="Two studio notes that bear directly on a luxury kitchen — the five details that separate a remodel from a renovation, and how we open up a typical Vegas floor plan."
+      />
 
       <CTASection
         title="Design the kitchen your home was always meant to have."
