@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/process',
     '/standards',
     '/spec-sheet',
+    '/glossary',
     '/materials',
     '/material-selection',
     '/journal',
