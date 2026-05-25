@@ -5,6 +5,8 @@ import { Footer } from '@/components/Footer';
 import { MobileStickyCTA } from '@/components/MobileStickyCTA';
 import { FloatingCTA } from '@/components/FloatingCTA';
 import { AffiliationStrip } from '@/components/AffiliationStrip';
+import { ScrollProgress } from '@/components/ScrollProgress';
+import { CursorGlow } from '@/components/CursorGlow';
 import { JsonLd, organizationSchema } from '@/lib/schema';
 import { siteConfig } from '@/lib/site';
 import './globals.css';
@@ -86,6 +88,8 @@ export default function RootLayout({
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <body className="min-h-screen bg-ink text-bone antialiased">
         <JsonLd data={organizationSchema()} />
+        <ScrollProgress />
+        <CursorGlow />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:bg-gold focus:px-4 focus:py-2 focus:text-ink"
