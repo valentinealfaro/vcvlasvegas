@@ -13,6 +13,16 @@ export type JournalPost = {
 
 export const journalPosts: JournalPost[] = [
   {
+    slug: 'what-pre-construction-actually-looks-like',
+    eyebrow: 'Studio Notes · 05',
+    title: 'What pre-construction actually looks like.',
+    summary:
+      'Most homeowners think construction begins when the first wall comes down. It doesn’t. Eight weeks of pre-construction — drawings, engineering, permits, and long-lead orders — decide whether the build runs on schedule or unravels in the field.',
+    image: customHomeImages[1],
+    read: '8 min read',
+    publishedAt: '2026-05-24',
+  },
+  {
     slug: 'how-to-choose-luxury-contractor-las-vegas',
     eyebrow: 'Studio Notes · 04',
     title: 'How to choose a luxury contractor in Las Vegas.',

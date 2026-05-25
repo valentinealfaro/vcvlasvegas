@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/journal/designing-spa-bathroom-desert',
     '/journal/opening-up-vegas-floor-plan',
     '/journal/how-to-choose-luxury-contractor-las-vegas',
+    '/journal/what-pre-construction-actually-looks-like',
     '/about',
     '/why-vcv-vegas',
     '/visit',
