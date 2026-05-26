@@ -41,10 +41,19 @@ export function TradeIntakeForm() {
         transition={{ duration: 0.6 }}
         className="flex flex-col items-start gap-5 py-12"
       >
-        <CheckCircle2 className="h-12 w-12 text-bone" />
+        <span
+          aria-hidden
+          className="grid h-14 w-14 place-items-center rounded-full border border-gold/40 bg-gold/10 shadow-[0_0_28px_-6px_rgba(252,187,0,0.6)]"
+        >
+          <CheckCircle2 className="h-7 w-7 text-bone" />
+        </span>
         <div>
           <h3 className="font-display text-4xl text-bone">Brief received.</h3>
-          <p className="mt-3 max-w-md text-bone/65">
+          <span
+            aria-hidden
+            className="mt-4 block h-px w-16 bg-gradient-to-r from-gold via-gold/40 to-transparent"
+          />
+          <p className="mt-4 max-w-md text-bone/65">
             A senior pre-construction lead will review it personally and
             respond within one business day with a fit assessment and the
             next step. NDA available on request.
@@ -69,7 +78,11 @@ export function TradeIntakeForm() {
     >
       {/* Section 01 - The firm */}
       <section className="border-b border-bone/10 pb-10">
-        <p className="eyebrow mb-6 !text-bone">Section 01 · The Firm</p>
+        <div className="mb-6 flex items-center gap-3">
+          <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+          <p className="eyebrow !text-bone">Section 01 · The Firm</p>
+        </div>
         <div className="grid gap-5 md:grid-cols-2">
           <label>
             <span className={labelClass}>Firm name</span>
@@ -107,7 +120,11 @@ export function TradeIntakeForm() {
 
       {/* Section 02 - The project */}
       <section className="border-b border-bone/10 pb-10">
-        <p className="eyebrow mb-6 !text-bone">Section 02 · The Project</p>
+        <div className="mb-6 flex items-center gap-3">
+          <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+          <p className="eyebrow !text-bone">Section 02 · The Project</p>
+        </div>
         <div className="grid gap-5 md:grid-cols-2">
           <label>
             <span className={labelClass}>Project type</span>
@@ -148,7 +165,11 @@ export function TradeIntakeForm() {
 
       {/* Section 03 - Engagement */}
       <section className="border-b border-bone/10 pb-10">
-        <p className="eyebrow mb-6 !text-bone">Section 03 · The Engagement</p>
+        <div className="mb-6 flex items-center gap-3">
+          <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+          <p className="eyebrow !text-bone">Section 03 · The Engagement</p>
+        </div>
         <div className="grid gap-5">
           <label>
             <span className={labelClass}>Target start window</span>

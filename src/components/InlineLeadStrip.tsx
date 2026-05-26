@@ -14,13 +14,13 @@ export function InlineLeadStrip({
 }) {
   return (
     <section className="relative overflow-hidden bg-ink-800/60">
-      {/* Gradient hairline top + bottom */}
+      {/* Gradient hairline top — duotone */}
       <div
         aria-hidden
         className="h-px w-full"
         style={{
           background:
-            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 50%, transparent 100%)',
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.45) 35%, rgba(59,130,246,0.45) 65%, transparent 100%)',
         }}
       />
 
@@ -31,6 +31,11 @@ export function InlineLeadStrip({
         <div className="grid items-center gap-8 lg:grid-cols-[1.5fr_1fr]">
           <Reveal>
             <div>
+              <div className="mb-4 flex items-center gap-3">
+                <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+                <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
+                <p className="eyebrow !text-bone">By Appointment</p>
+              </div>
               <h3 className="font-display text-3xl text-bone text-balance md:text-4xl">
                 {title}{' '}
                 <span className="italic text-bone">{italic}</span>
@@ -58,7 +63,7 @@ export function InlineLeadStrip({
         className="h-px w-full"
         style={{
           background:
-            'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.55) 50%, transparent 100%)',
+            'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.45) 35%, rgba(252,187,0,0.45) 65%, transparent 100%)',
         }}
       />
     </section>
