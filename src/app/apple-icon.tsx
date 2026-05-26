@@ -17,14 +17,49 @@ export default function AppleIcon() {
           background: '#000000',
           backgroundImage:
             'radial-gradient(circle at 70% 110%, rgba(252,187,0,0.40) 0%, rgba(0,0,0,0) 60%), radial-gradient(circle at 0% 0%, rgba(59,130,246,0.18) 0%, rgba(0,0,0,0) 55%)',
+          position: 'relative',
         }}
       >
+        {/* Outer primary ring */}
         <div
           style={{
-            width: 160,
-            height: 160,
+            position: 'absolute',
+            top: 10,
+            left: 10,
+            right: 10,
+            bottom: 10,
             borderRadius: '50%',
             border: '2px solid rgba(252,187,0,0.85)',
+          }}
+        />
+        {/* Inner secondary ring for the watchmaker emblem feel */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 26,
+            left: 26,
+            right: 26,
+            bottom: 26,
+            borderRadius: '50%',
+            border: '1px solid rgba(252,187,0,0.25)',
+          }}
+        />
+        {/* Top cardinal gold dot */}
+        <div
+          style={{
+            position: 'absolute',
+            top: 14,
+            left: '50%',
+            transform: 'translateX(-50%)',
+            width: 6,
+            height: 6,
+            borderRadius: '50%',
+            background: '#fcbb00',
+          }}
+        />
+
+        <div
+          style={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
@@ -45,7 +80,7 @@ export default function AppleIcon() {
           </div>
           <div
             style={{
-              marginTop: 8,
+              marginTop: 10,
               fontSize: 11,
               letterSpacing: 8,
               textTransform: 'uppercase',
