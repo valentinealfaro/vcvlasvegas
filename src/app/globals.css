@@ -45,6 +45,40 @@ textarea:focus-visible {
   outline-offset: 0;
 }
 
+/* Form input baseline polish — smooth transitions and hover lift.
+   Applies to inputs/selects/textareas across every form on the site. */
+input:not([type='checkbox']):not([type='radio']):not([type='range']),
+select,
+textarea {
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Subtle hover state — only when not focused, so the focus state isn't fought */
+input:not([type='checkbox']):not([type='radio']):not([type='range']):hover:not(:focus),
+select:hover:not(:focus),
+textarea:hover:not(:focus) {
+  border-color: rgba(252, 187, 0, 0.4);
+}
+
+/* Browser autofill override — keep ink-700 dark background, white text,
+   no rude WebKit yellow autofill fill */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(20, 20, 20, 0.95) inset;
+  caret-color: #ffffff;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Placeholder color softened consistently */
+::placeholder {
+  color: rgba(255, 255, 255, 0.35) !important;
+  opacity: 1;
+}
+
 @layer base {
   h1, h2, h3, h4 {
     font-family: var(--font-display);

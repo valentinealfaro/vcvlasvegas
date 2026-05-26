@@ -65,13 +65,20 @@ export function Navigation() {
             className="group flex items-center gap-3 text-bone"
             aria-label="VCV Vegas Home"
           >
-            <Monogram size={36} className="text-bone transition-colors group-hover:text-bone" />
+            <Monogram
+              size={36}
+              className="text-bone transition-transform duration-700 ease-out group-hover:rotate-[8deg] group-hover:scale-110"
+            />
             <span className="flex items-baseline gap-2">
               <span className="font-display text-2xl tracking-tight lg:text-[1.65rem]">
                 VCV
               </span>
-              <span className="font-sans text-[0.62rem] uppercase tracking-[0.4em] text-bone transition-colors group-hover:text-bone">
+              <span className="relative font-sans text-[0.62rem] uppercase tracking-[0.4em] text-bone">
                 Vegas
+                <span
+                  aria-hidden
+                  className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full"
+                />
               </span>
             </span>
           </Link>

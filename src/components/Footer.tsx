@@ -51,14 +51,21 @@ export function Footer() {
       <div className="container-luxe py-20 lg:py-24">
         <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
           <div>
-            <Link href="/" className="flex items-center gap-4">
-              <Monogram size={48} className="text-bone" />
+            <Link href="/" className="group flex items-center gap-4">
+              <Monogram
+                size={48}
+                className="text-bone transition-transform duration-700 ease-out group-hover:rotate-[8deg] group-hover:scale-110"
+              />
               <span className="flex items-baseline gap-2">
                 <span className="font-display text-3xl tracking-tight text-bone">
                   VCV
                 </span>
-                <span className="font-sans text-xs uppercase tracking-[0.4em] text-bone">
+                <span className="relative font-sans text-xs uppercase tracking-[0.4em] text-bone">
                   Vegas
+                  <span
+                    aria-hidden
+                    className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full"
+                  />
                 </span>
               </span>
             </Link>
