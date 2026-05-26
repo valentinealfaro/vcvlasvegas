@@ -12,7 +12,10 @@ export type JournalPost = {
   read: string;
   publishedAt: string;
   topic: JournalTopic;
+  author?: string;
 };
+
+export const defaultAuthor = 'VCV Vegas Studio';
 
 export const topicMeta: Record<
   JournalTopic,
@@ -106,3 +109,21 @@ export const journalPosts: JournalPost[] = [
     topic: 'design',
   },
 ];
+
+// Lookup helpers — keep call sites focused on UI, not array gymnastics
+export function getPostBySlug(slug: string): JournalPost | undefined {
+  return journalPosts.find((p) => p.slug === slug);
+}
+
+export function getPostsByTopic(topic: JournalTopic): JournalPost[] {
+  return journalPosts.filter((p) => p.topic === topic);
+}
+
+export function getLatestPosts(n = 3, excludeSlug?: string): JournalPost[] {
+  const ordered = [...journalPosts]
+    .filter((p) => p.slug !== excludeSlug)
+    .sort(
+      (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+    );
+  return ordered.slice(0, n);
+}

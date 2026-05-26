@@ -19,11 +19,15 @@ export const siteConfig = {
     'North Las Vegas',
     'Green Valley',
     'Centennial Hills',
-    "Mountains Edge",
+    'Mountains Edge',
     'Silverado Ranch',
   ],
   hours: 'Mon – Sat · By Appointment',
-};
+  // Reserved for future social handles. Empty by default so nothing renders.
+  socials: {} as { instagram?: string; linkedin?: string; pinterest?: string },
+} as const;
+
+export type SiteConfig = typeof siteConfig;
 
 export const navigation = [
   { label: 'Services', href: '/services' },
@@ -34,9 +38,16 @@ export const navigation = [
   { label: 'Process', href: '/process' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
-];
+] as const;
 
-export const servicesIndex = [
+export type Service = {
+  slug: string;
+  title: string;
+  eyebrow: string;
+  summary: string;
+};
+
+export const servicesIndex: Service[] = [
   {
     slug: 'bathroom-remodeling-las-vegas',
     title: 'Luxury Bathroom Remodeling',
@@ -95,10 +106,25 @@ export const servicesIndex = [
   },
 ];
 
-export const cityPages = [
+export type CityPage = {
+  slug: string;
+  city: string;
+  region: string;
+};
+
+export const cityPages: CityPage[] = [
   { slug: 'henderson-remodeling', city: 'Henderson', region: 'Henderson, NV' },
   { slug: 'summerlin-remodeling', city: 'Summerlin', region: 'Summerlin · Las Vegas' },
   { slug: 'the-ridges-remodeling', city: 'The Ridges', region: 'Summerlin · Las Vegas' },
   { slug: 'paradise-remodeling', city: 'Paradise', region: 'Paradise · Las Vegas' },
   { slug: 'centennial-hills-remodeling', city: 'Centennial Hills', region: 'NW Las Vegas' },
 ];
+
+// Lookup helpers — avoid repeating .find() across the codebase
+export function getServiceBySlug(slug: string): Service | undefined {
+  return servicesIndex.find((s) => s.slug === slug);
+}
+
+export function getCityBySlug(slug: string): CityPage | undefined {
+  return cityPages.find((c) => c.slug === slug);
+}

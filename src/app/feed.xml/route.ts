@@ -1,4 +1,4 @@
-import { journalPosts } from '@/lib/journal';
+import { journalPosts, defaultAuthor } from '@/lib/journal';
 import { siteConfig } from '@/lib/site';
 
 function escapeXml(input: string): string {
@@ -26,7 +26,7 @@ export function GET() {
       <link>${url}</link>
       <guid isPermaLink="true">${url}</guid>
       <pubDate>${pubDate}</pubDate>
-      <dc:creator>${escapeXml(siteConfig.name)}</dc:creator>
+      <dc:creator>${escapeXml(post.author ?? defaultAuthor)}</dc:creator>
       <description>${escapeXml(post.summary)}</description>
       <category>${escapeXml(post.eyebrow)}</category>
     </item>`;
