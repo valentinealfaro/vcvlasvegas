@@ -64,26 +64,26 @@ export function Manifesto() {
               </p>
             </Reveal>
             <Reveal delay={3}>
-              <div className="grid gap-px bg-ink/10 border-y border-ink/10 sm:grid-cols-2">
+              <div className="grid gap-px overflow-hidden border-y border-ink/10 bg-ink/8 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.08)] sm:grid-cols-2">
                 {principles.map((b, i) => (
                   <div
                     key={b.t}
-                    className="group relative overflow-hidden bg-bone p-6 transition-colors duration-500 hover:bg-bone-700"
+                    className="group relative overflow-hidden bg-bone-50 p-6 transition-colors duration-500 hover:bg-bone"
                     style={{
                       animation: `fade-up 0.6s cubic-bezier(0.16,1,0.3,1) ${
                         0.08 * i + 0.3
                       }s backwards`,
                     }}
                   >
-                    {/* Per-card corner sweep */}
+                    {/* Per-card corner sweep — amber / coral */}
                     <span
                       aria-hidden
                       className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                       style={{
                         background:
                           i % 2 === 0
-                            ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.10), transparent 55%)'
-                            : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.10), transparent 55%)',
+                            ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.14), transparent 55%)'
+                            : 'radial-gradient(circle at 0% 100%, rgba(249,115,22,0.12), transparent 55%)',
                       }}
                     />
                     {/* Gold corner ticks on hover */}

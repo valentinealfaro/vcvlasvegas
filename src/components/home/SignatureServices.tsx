@@ -61,25 +61,25 @@ export function SignatureServices() {
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:gap-8">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i % 2}>
-              <div className="border-gradient">
+              <div className="border-gradient shadow-[0_8px_30px_-12px_rgba(0,0,0,0.10)] transition-shadow duration-500 hover:shadow-[0_24px_60px_-20px_rgba(249,115,22,0.25)]">
                 <Link
                   href={s.href}
-                  className="group relative block overflow-hidden bg-bone-800 p-6 transition-colors duration-500 hover:bg-bone-700 lg:p-7"
+                  className="group relative block overflow-hidden bg-bone-50 p-6 transition-colors duration-500 hover:bg-bone lg:p-7"
                 >
-                  {/* Per-card hover sweep */}
+                  {/* Per-card hover sweep — alternating amber / coral */}
                   <span
                     aria-hidden
                     className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                     style={{
                       background:
                         i % 2 === 0
-                          ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.12), transparent 55%)'
-                          : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.12), transparent 55%)',
+                          ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.14), transparent 55%)'
+                          : 'radial-gradient(circle at 0% 100%, rgba(249,115,22,0.12), transparent 55%)',
                     }}
                   />
                   {/* Gold corner ticks — appear on hover */}
-                  <span aria-hidden className="pointer-events-none absolute left-3 top-3 h-3 w-3 border-l border-t border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
-                  <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
+                  <span aria-hidden className="pointer-events-none absolute left-3 top-3 h-3 w-3 border-l border-t border-gold/0 transition-colors duration-500 group-hover:border-gold/80" />
+                  <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold/80" />
                   <ImageCard
                     image={s.image}
                     aspect="wide"
@@ -97,7 +97,7 @@ export function SignatureServices() {
                       </h3>
                       <p className="mt-3 max-w-md text-ink/60">{s.summary}</p>
                     </div>
-                    <div className="grid h-12 w-12 shrink-0 place-items-center border border-ink/15 transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-ink group-hover:shadow-[0_0_24px_-4px_rgba(252,187,0,0.7)]">
+                    <div className="grid h-12 w-12 shrink-0 place-items-center border border-ink/15 text-ink transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-ink group-hover:shadow-[0_0_24px_-4px_rgba(252,187,0,0.7)]">
                       <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:rotate-45" />
                     </div>
                   </div>

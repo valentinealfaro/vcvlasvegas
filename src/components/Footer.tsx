@@ -7,21 +7,22 @@ import { Monogram } from './Monogram';
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-bone">
-      {/* Gradient lead-in hairline + soft amber wash above the newsletter band */}
+      {/* Gradient lead-in hairline — amber → coral → blue */}
       <div
         aria-hidden
         className="h-px w-full"
         style={{
           background:
-            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 25%, rgba(59,130,246,0.55) 75%, transparent 100%)',
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.6) 30%, rgba(249,115,22,0.6) 50%, rgba(59,130,246,0.6) 70%, transparent 100%)',
         }}
       />
+      {/* Soft sunset wash above newsletter band */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-64"
+        className="pointer-events-none absolute inset-x-0 top-0 h-72"
         style={{
           background:
-            'linear-gradient(to bottom, rgba(252,187,0,0.05) 0%, transparent 100%)',
+            'radial-gradient(ellipse at 10% 0%, rgba(252,187,0,0.10), transparent 55%), radial-gradient(ellipse at 90% 0%, rgba(249,115,22,0.07), transparent 55%)',
         }}
       />
 
