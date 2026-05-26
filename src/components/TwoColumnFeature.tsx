@@ -38,6 +38,7 @@ export function TwoColumnFeature({
             <div className="mb-6 flex items-center gap-4">
               <span className="h-px w-12 bg-gradient-to-r from-gold via-gold to-transparent" />
               <p className="eyebrow !text-bone">{eyebrow}</p>
+              <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
             </div>
             <h2 className="font-display text-4xl text-bone text-balance md:text-5xl">
               {title}
@@ -67,7 +68,11 @@ export function TwoColumnFeature({
                   >
                     <span
                       aria-hidden
-                      className="mt-2 h-px w-4 shrink-0 bg-gold transition-all duration-500 group-hover:w-7"
+                      className={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full transition-all duration-500 ${i % 2 === 0 ? 'bg-gold/70 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]' : 'bg-accent/70 group-hover:bg-accent group-hover:shadow-[0_0_8px_rgba(59,130,246,0.7)]'}`}
+                    />
+                    <span
+                      aria-hidden
+                      className="mt-2 h-px w-4 shrink-0 bg-gold/60 transition-all duration-500 group-hover:w-7"
                     />
                     {b}
                   </li>
