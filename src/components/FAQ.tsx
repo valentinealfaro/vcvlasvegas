@@ -25,7 +25,9 @@ export function FAQ({ items }: { items: FAQItem[] }) {
               aria-hidden
               className={cn(
                 'absolute left-0 top-1/2 h-12 w-px -translate-y-1/2 transition-all duration-500',
-                isOpen ? 'bg-gold' : 'bg-bone/0 group-hover:bg-bone/15',
+                isOpen
+                  ? 'bg-gold shadow-[0_0_10px_rgba(252,187,0,0.6)]'
+                  : 'bg-bone/0 group-hover:bg-bone/15',
               )}
             />
             <button
@@ -34,19 +36,30 @@ export function FAQ({ items }: { items: FAQItem[] }) {
               className="flex w-full items-center justify-between gap-6 py-7 text-left"
               aria-expanded={isOpen}
             >
-              <span
-                className={cn(
-                  'font-display text-xl transition-colors duration-500 md:text-2xl',
-                  isOpen ? 'text-bone' : 'text-bone/85 group-hover:text-bone',
-                )}
-              >
-                {item.q}
+              <span className="flex items-center gap-4">
+                <span
+                  aria-hidden
+                  className={cn(
+                    'h-1.5 w-1.5 shrink-0 rounded-full transition-all duration-500',
+                    isOpen
+                      ? 'bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]'
+                      : 'bg-bone/30 group-hover:bg-gold/60',
+                  )}
+                />
+                <span
+                  className={cn(
+                    'font-display text-xl transition-colors duration-500 md:text-2xl',
+                    isOpen ? 'text-bone' : 'text-bone/85 group-hover:text-bone',
+                  )}
+                >
+                  {item.q}
+                </span>
               </span>
               <span
                 className={cn(
                   'grid h-9 w-9 shrink-0 place-items-center border transition-all duration-500',
                   isOpen
-                    ? 'rotate-180 border-gold bg-gold/10'
+                    ? 'rotate-180 border-gold bg-gold/10 shadow-[0_0_18px_-4px_rgba(252,187,0,0.5)]'
                     : 'rotate-0 border-bone/15 group-hover:border-gold/60',
                 )}
               >
@@ -64,9 +77,16 @@ export function FAQ({ items }: { items: FAQItem[] }) {
               )}
             >
               <div className="overflow-hidden">
-                <p className="pb-7 pr-12 text-base leading-relaxed text-bone/65 md:text-lg">
-                  {item.a}
-                </p>
+                <div className="pl-6 pr-12 pb-7">
+                  {/* Lead-in mini hairline above answer */}
+                  <span
+                    aria-hidden
+                    className="mb-4 block h-px w-10 bg-gradient-to-r from-gold via-gold/40 to-transparent"
+                  />
+                  <p className="text-base leading-relaxed text-bone/65 md:text-lg">
+                    {item.a}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

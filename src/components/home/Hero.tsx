@@ -183,17 +183,20 @@ export function Hero() {
               { value: 'Single-Source', label: 'Design-Build Team' },
             ].map((stat, i) => (
               <div key={i} className="group relative pl-4">
-                {/* Left border — fades amber on hover */}
+                {/* Left border — fades amber on hover, glows when active */}
                 <span
                   aria-hidden
-                  className="absolute inset-y-1 left-0 w-px bg-bone/15 transition-colors duration-500 group-hover:bg-gold"
+                  className="absolute inset-y-1 left-0 w-px bg-bone/15 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.6)]"
                 />
-                <p className="font-display text-2xl text-bone md:text-3xl">
+                <p className="font-display text-2xl text-bone transition-all duration-500 group-hover:[text-shadow:0_0_18px_rgba(252,187,0,0.45)] md:text-3xl">
                   {stat.value}
                 </p>
-                <p className="mt-1 text-[0.6rem] uppercase tracking-[0.24em] text-bone/50">
-                  {stat.label}
-                </p>
+                <div className="mt-1 flex items-center gap-2">
+                  <span aria-hidden className="h-1 w-1 rounded-full bg-gold/0 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_6px_rgba(252,187,0,0.7)]" />
+                  <p className="text-[0.6rem] uppercase tracking-[0.24em] text-bone/50 transition-colors duration-500 group-hover:text-bone/80">
+                    {stat.label}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
