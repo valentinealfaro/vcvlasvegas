@@ -42,10 +42,19 @@ export function IntakeForm() {
         transition={{ duration: 0.6 }}
         className="flex flex-col items-start gap-5 py-12"
       >
-        <CheckCircle2 className="h-12 w-12 text-bone" />
+        <span
+          aria-hidden
+          className="grid h-14 w-14 place-items-center rounded-full border border-gold/40 bg-gold/10 shadow-[0_0_28px_-6px_rgba(252,187,0,0.6)]"
+        >
+          <CheckCircle2 className="h-7 w-7 text-bone" />
+        </span>
         <div>
           <h3 className="font-display text-4xl text-bone">Project received.</h3>
-          <p className="mt-3 max-w-md text-bone/65">
+          <span
+            aria-hidden
+            className="mt-4 block h-px w-16 bg-gradient-to-r from-gold via-gold/40 to-transparent"
+          />
+          <p className="mt-4 max-w-md text-bone/65">
             A senior VCV Vegas designer will review the brief personally and
             respond within one business day. Your information stays confidential.
           </p>
@@ -70,7 +79,11 @@ export function IntakeForm() {
     >
       {/* Section 01 */}
       <section className={sectionClass}>
-        <p className="eyebrow mb-6 !text-bone">Section 01 · Contact</p>
+        <div className="mb-6 flex items-center gap-3">
+          <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+          <p className="eyebrow !text-bone">Section 01 · Contact</p>
+        </div>
         <div className="grid gap-5 md:grid-cols-2">
           <label>
             <span className={labelClass}>Full Name</span>
@@ -101,7 +114,11 @@ export function IntakeForm() {
 
       {/* Section 02 */}
       <section className={sectionClass}>
-        <p className="eyebrow mb-6 !text-bone">Section 02 · The Property</p>
+        <div className="mb-6 flex items-center gap-3">
+          <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+          <p className="eyebrow !text-bone">Section 02 · The Property</p>
+        </div>
         <div className="grid gap-5 md:grid-cols-2">
           <label>
             <span className={labelClass}>Neighborhood</span>
@@ -133,7 +150,11 @@ export function IntakeForm() {
 
       {/* Section 03 */}
       <section className={sectionClass}>
-        <p className="eyebrow mb-6 !text-bone">Section 03 · The Project</p>
+        <div className="mb-6 flex items-center gap-3">
+          <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+          <p className="eyebrow !text-bone">Section 03 · The Project</p>
+        </div>
         <div className="grid gap-5">
           <label>
             <span className={labelClass}>Project type</span>
@@ -177,7 +198,11 @@ export function IntakeForm() {
 
       {/* Section 04 */}
       <section className={sectionClass}>
-        <p className="eyebrow mb-6 !text-bone">Section 04 · The Vision</p>
+        <div className="mb-6 flex items-center gap-3">
+          <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+          <p className="eyebrow !text-bone">Section 04 · The Vision</p>
+        </div>
         <div className="grid gap-5">
           <label>
             <span className={labelClass}>Tell us what your home is missing.</span>
