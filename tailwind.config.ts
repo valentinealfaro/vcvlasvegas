@@ -61,6 +61,19 @@ const config: Config = {
         'slow-zoom': 'slow-zoom 18s ease-out forwards',
         'marquee': 'marquee 40s linear infinite',
         'shimmer': 'shimmer 2.4s ease-in-out infinite',
+        'cta-pulse': 'cta-pulse 2.6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'hairline-grow': 'hairline-grow 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+        'shimmer-cta': 'shimmer-cta 4s ease-in-out infinite',
+      },
+      transitionTimingFunction: {
+        luxe: 'cubic-bezier(0.16, 1, 0.3, 1)',
+      },
+      boxShadow: {
+        'glow-amber-sm': '0 0 8px rgba(252, 187, 0, 0.5)',
+        'glow-amber': '0 0 18px -4px rgba(252, 187, 0, 0.6)',
+        'glow-amber-lg': '0 20px 60px -20px rgba(252, 187, 0, 0.55)',
+        'glow-blue': '0 0 18px -4px rgba(59, 130, 246, 0.6)',
+        'glow-duotone': '0 12px 40px -10px rgba(252, 187, 0, 0.35), 0 12px 40px -10px rgba(59, 130, 246, 0.25)',
       },
       keyframes: {
         'fade-up': {

@@ -32,17 +32,19 @@ body {
   outline: 2px solid #fcbb00;
   outline-offset: 3px;
   border-radius: 1px;
-  transition: outline-offset 0.15s ease;
+  transition: outline-offset 0.15s ease, box-shadow 0.25s ease;
 }
 button:focus-visible,
 a:focus-visible {
   outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(252, 187, 0, 0.12);
 }
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
   outline: 1px solid #fcbb00;
   outline-offset: 0;
+  box-shadow: 0 0 0 4px rgba(252, 187, 0, 0.1);
 }
 
 /* Form input baseline polish — smooth transitions and hover lift.
@@ -86,6 +88,16 @@ select:-webkit-autofill {
     letter-spacing: -0.015em;
   }
 
+  /* Optical hairline-tighten for very large display headings */
+  h1 {
+    letter-spacing: -0.022em;
+  }
+
+  /* Paragraph rendering — kerning and ligatures for editorial polish */
+  p {
+    font-feature-settings: 'kern', 'liga', 'calt', 'ss01';
+  }
+
   .eyebrow {
     font-family: var(--font-sans);
     font-size: 0.7rem;
@@ -93,6 +105,7 @@ select:-webkit-autofill {
     letter-spacing: 0.32em;
     text-transform: uppercase;
     color: #ffffff;
+    font-feature-settings: 'tnum';
   }
 }
 
