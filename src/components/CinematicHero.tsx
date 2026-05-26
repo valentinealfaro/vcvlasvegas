@@ -79,6 +79,16 @@ export function CinematicHero({
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/72 via-ink/55 to-ink" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/40 to-transparent" />
 
+      {/* Top gradient hairline announcing the chrome */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.4) 35%, rgba(59,130,246,0.4) 65%, transparent 100%)',
+        }}
+      />
+
       {/* Ambient amber + blue franchise glow */}
       <motion.div
         aria-hidden
@@ -122,14 +132,19 @@ export function CinematicHero({
         )}
 
         <div className="max-w-4xl">
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="eyebrow mb-6"
+            className="mb-6 flex items-center gap-4"
           >
-            {eyebrow}
-          </motion.p>
+            <span
+              aria-hidden
+              className="h-px w-10 bg-gradient-to-r from-gold via-gold/40 to-transparent"
+            />
+            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_12px_rgba(252,187,0,0.7)]" />
+            <p className="eyebrow">{eyebrow}</p>
+          </motion.div>
 
           {/* Kinetic title with word-by-word reveal */}
           <h1 className="font-display text-[2.6rem] leading-[1.05] text-bone text-balance sm:text-5xl md:text-6xl lg:text-7xl">
@@ -205,22 +220,32 @@ export function CinematicHero({
             transition={{ delay: 1.8, duration: 1 }}
             className="absolute bottom-8 right-6 lg:right-16"
           >
-            <div className="flex items-center gap-2">
-              {images.map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  onClick={() => setIndex(i)}
-                  aria-label={`Show image ${i + 1}`}
-                  className="group p-1"
-                >
-                  <span
-                    className={`block h-px transition-all duration-700 ${
-                      i === index ? 'w-10 bg-gold' : 'w-5 bg-bone/30 group-hover:bg-bone/60'
-                    }`}
-                  />
-                </button>
-              ))}
+            <div className="flex items-center gap-3">
+              <span className="text-[0.6rem] uppercase tracking-[0.32em] tabular-nums text-bone/55">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <div className="flex items-center gap-2">
+                {images.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setIndex(i)}
+                    aria-label={`Show image ${i + 1}`}
+                    className="group p-1"
+                  >
+                    <span
+                      className={`block h-px transition-all duration-700 ${
+                        i === index
+                          ? 'w-10 bg-gradient-to-r from-gold to-gold-light shadow-[0_0_6px_rgba(252,187,0,0.6)]'
+                          : 'w-5 bg-bone/30 group-hover:bg-bone/60'
+                      }`}
+                    />
+                  </button>
+                ))}
+              </div>
+              <span className="text-[0.6rem] uppercase tracking-[0.32em] tabular-nums text-bone/35">
+                / {String(images.length).padStart(2, '0')}
+              </span>
             </div>
           </motion.div>
         )}

@@ -9,6 +9,7 @@ type Props = {
   className?: string;
   caption?: boolean;
   sizes?: string;
+  cornerTicks?: boolean;
 };
 
 const aspectMap = {
@@ -26,6 +27,7 @@ export function ImageCard({
   className,
   caption = true,
   sizes = '(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw',
+  cornerTicks = false,
 }: Props) {
   return (
     <figure className={cn('group relative overflow-hidden bg-ink-700', aspectMap[aspect], className)}>
@@ -48,6 +50,14 @@ export function ImageCard({
             'radial-gradient(circle at 12% 100%, rgba(252,187,0,0.22), transparent 55%)',
         }}
       />
+      {cornerTicks && (
+        <>
+          <span aria-hidden className="pointer-events-none absolute left-3 top-3 h-3 w-3 border-l border-t border-gold/50 transition-colors duration-500 group-hover:border-gold" />
+          <span aria-hidden className="pointer-events-none absolute right-3 top-3 h-3 w-3 border-r border-t border-gold/50 transition-colors duration-500 group-hover:border-gold" />
+          <span aria-hidden className="pointer-events-none absolute bottom-3 left-3 h-3 w-3 border-b border-l border-gold/50 transition-colors duration-500 group-hover:border-gold" />
+          <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/50 transition-colors duration-500 group-hover:border-gold" />
+        </>
+      )}
       {caption && image.caption && (
         <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 lg:p-6">
           <div className="overflow-hidden">

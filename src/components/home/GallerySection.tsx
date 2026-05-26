@@ -45,7 +45,7 @@ export function GallerySection() {
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:grid-rows-3 md:gap-6 lg:gap-8">
             <Reveal className="md:col-span-2 md:row-span-2">
-              <ImageCard image={kitchenImages[0]} aspect="wide" caption className="h-full" />
+              <ImageCard image={kitchenImages[0]} aspect="wide" caption cornerTicks className="h-full" />
             </Reveal>
             <Reveal delay={1}>
               <ImageCard image={bathroomImages[0]} aspect="square" caption className="h-full" />
