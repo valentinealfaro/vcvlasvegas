@@ -94,10 +94,23 @@ export default function SpecSheetPage() {
       />
 
       {/* On-screen header / no-print */}
-      <section className="no-print border-b border-bone/10 bg-ink-800/40 pt-32 pb-12">
+      <section className="no-print relative overflow-hidden border-b border-bone/10 bg-ink-800/40 pt-32 pb-12">
+        {/* Top gradient hairline */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-px"
+          style={{
+            background:
+              'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.4) 35%, rgba(59,130,246,0.4) 65%, transparent 100%)',
+          }}
+        />
         <div className="container-luxe">
           <Reveal>
-            <p className="eyebrow mb-4">Specification Sheet</p>
+            <div className="mb-4 flex items-center gap-4">
+              <span aria-hidden className="h-px w-12 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
+              <p className="eyebrow !text-bone">Specification Sheet</p>
+            </div>
             <h1 className="font-display text-3xl text-bone text-balance md:text-4xl">
               A single-document overview of{' '}
               <span className="italic text-bone">how the studio specifies a build.</span>
@@ -143,9 +156,12 @@ export default function SpecSheetPage() {
             <div className="mt-12 space-y-12">
               {sections.map((section) => (
                 <section key={section.h}>
-                  <h2 className="font-display text-xl text-bone print-gold">
-                    {section.h}
-                  </h2>
+                  <div className="flex items-center gap-3">
+                    <span aria-hidden className="no-print h-px w-6 bg-gold" />
+                    <h2 className="font-display text-xl text-bone print-gold">
+                      {section.h}
+                    </h2>
+                  </div>
                   <dl className="mt-4 divide-y divide-bone/10 border-y border-bone/10">
                     {section.rows.map((row) => (
                       <div
@@ -172,10 +188,16 @@ export default function SpecSheetPage() {
       </article>
 
       {/* On-screen footer / no-print */}
-      <section className="no-print border-t border-bone/10 bg-ink py-16">
+      <section className="no-print relative overflow-hidden border-t border-bone/10 bg-ink py-16">
+        <div aria-hidden className="glow-amber" />
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
+              <div className="mb-4 flex items-center justify-center gap-3">
+                <span aria-hidden className="h-px w-10 bg-gradient-to-r from-transparent via-gold to-transparent" />
+                <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
+                <span aria-hidden className="h-px w-10 bg-gradient-to-r from-transparent via-gold to-transparent" />
+              </div>
               <p className="font-display text-2xl text-bone md:text-3xl">
                 Ready to apply the spec to your project?
               </p>

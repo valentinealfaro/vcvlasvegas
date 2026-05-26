@@ -61,20 +61,53 @@ export default function LookbookPage() {
 
       <section className="bg-ink py-16 lg:py-24">
         <div className="container-luxe">
+          {/* Editorial header strip above the masonry */}
+          <div className="mb-12 flex items-center justify-between gap-6 border-b border-bone/10 pb-6">
+            <div className="flex items-center gap-3">
+              <span aria-hidden className="h-px w-10 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+              <p className="eyebrow !text-bone">Studio Selects · 2026</p>
+            </div>
+            <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bone/45 tabular-nums">
+              {lookbook.length} frames
+            </p>
+          </div>
+
           <div className="columns-1 gap-4 sm:columns-2 lg:columns-3 lg:gap-6">
             {lookbook.map(({ image, aspect }, i) => (
               <Reveal key={i} className="mb-4 break-inside-avoid lg:mb-6">
-                <figure className={`relative overflow-hidden bg-ink-700 ${aspectClass[aspect]}`}>
+                <figure className={`group relative overflow-hidden bg-ink-700 transition-shadow duration-700 hover:shadow-[0_25px_60px_-20px_rgba(252,187,0,0.25)] ${aspectClass[aspect]}`}>
                   <Image
                     src={image.src}
                     alt={image.alt}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-[1600ms] ease-out hover:scale-[1.04]"
+                    className="object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.04]"
                   />
+                  {/* Amber sweep on hover */}
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                    style={{
+                      background:
+                        'radial-gradient(circle at 12% 100%, rgba(252,187,0,0.18), transparent 55%)',
+                    }}
+                  />
+                  {/* Gold corner ticks — appear on hover */}
+                  <span aria-hidden className="pointer-events-none absolute left-3 top-3 h-3 w-3 border-l border-t border-gold/0 transition-colors duration-500 group-hover:border-gold" />
+                  <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold" />
                 </figure>
               </Reveal>
             ))}
+          </div>
+
+          {/* Editorial closing counter strip */}
+          <div className="mt-12 flex items-center justify-center gap-4 text-[0.62rem] uppercase tracking-[0.32em] text-bone/45">
+            <span aria-hidden className="h-px w-12 bg-gradient-to-r from-transparent to-gold/60" />
+            <span aria-hidden className="h-1 w-1 rounded-full bg-gold shadow-[0_0_6px_rgba(252,187,0,0.6)]" />
+            <span>End of selects</span>
+            <span aria-hidden className="h-1 w-1 rounded-full bg-accent shadow-[0_0_6px_rgba(59,130,246,0.6)]" />
+            <span aria-hidden className="h-px w-12 bg-gradient-to-l from-transparent to-accent/60" />
           </div>
         </div>
       </section>
