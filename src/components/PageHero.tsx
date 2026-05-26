@@ -48,6 +48,26 @@ export function PageHero({
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/75 via-ink/50 to-ink" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/30 to-transparent" />
 
+      {/* Ambient duotone glow — amber bottom-left, blue top-right */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            'radial-gradient(circle at 8% 92%, rgba(252,187,0,0.16), transparent 55%), radial-gradient(circle at 92% 8%, rgba(59,130,246,0.13), transparent 55%)',
+        }}
+      />
+
+      {/* Top gradient hairline announcing the chrome */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.4) 35%, rgba(59,130,246,0.4) 65%, transparent 100%)',
+        }}
+      />
+
       <div className="container-luxe relative flex min-h-[78svh] flex-col justify-end pt-36 pb-20 lg:min-h-[85svh] lg:pt-44 lg:pb-28">
         {breadcrumbs && (
           <motion.nav
@@ -75,14 +95,19 @@ export function PageHero({
         )}
 
         <div className="max-w-4xl">
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="eyebrow mb-6"
+            className="mb-6 flex items-center gap-4"
           >
-            {eyebrow}
-          </motion.p>
+            <span
+              aria-hidden
+              className="h-px w-10 bg-gradient-to-r from-gold via-gold/40 to-transparent"
+            />
+            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_12px_rgba(252,187,0,0.7)]" />
+            <p className="eyebrow">{eyebrow}</p>
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

@@ -209,7 +209,7 @@ export function Navigation() {
                 </nav>
 
                 <p className="eyebrow mb-5 mt-12 !text-bone/60">Signature Services</p>
-                <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
+                <ul className="grid grid-cols-2 gap-3">
                   {servicesIndex.slice(0, 6).map((s, idx) => (
                     <li key={s.slug}>
                       <motion.div
@@ -223,9 +223,19 @@ export function Navigation() {
                         <Link
                           href={`/${s.slug}`}
                           onClick={() => setOpen(false)}
-                          className="block text-sm text-bone/70 transition-colors hover:text-bone"
+                          className="group relative block overflow-hidden border border-bone/10 bg-ink/40 px-4 py-3.5 text-xs text-bone/75 backdrop-blur-sm transition-all duration-500 hover:border-gold/50 hover:bg-ink/70 hover:text-bone"
                         >
-                          {s.title}
+                          {/* Diagonal gold sweep on hover */}
+                          <span
+                            aria-hidden
+                            className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-gold/10 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
+                          />
+                          {/* Corner gold tick */}
+                          <span
+                            aria-hidden
+                            className="absolute right-2 top-2 h-1 w-1 rounded-full bg-gold/40 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]"
+                          />
+                          <span className="relative">{s.title}</span>
                         </Link>
                       </motion.div>
                     </li>
