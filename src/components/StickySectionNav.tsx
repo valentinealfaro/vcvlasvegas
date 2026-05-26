@@ -54,7 +54,18 @@ export function StickySectionNav({ sections }: { sections: SectionLink[] }) {
                 <span
                   className={cn(
                     'h-px transition-all duration-500',
-                    isActive ? 'w-10 bg-gold' : 'w-5 bg-bone/30 group-hover:bg-bone/60',
+                    isActive
+                      ? 'w-10 bg-gradient-to-r from-transparent to-gold shadow-[0_0_8px_rgba(252,187,0,0.6)]'
+                      : 'w-5 bg-bone/30 group-hover:bg-bone/60',
+                  )}
+                />
+                <span
+                  aria-hidden
+                  className={cn(
+                    'h-1.5 w-1.5 shrink-0 rounded-full transition-all duration-500',
+                    isActive
+                      ? 'bg-gold shadow-[0_0_10px_rgba(252,187,0,0.8)]'
+                      : 'scale-50 bg-bone/30 group-hover:scale-100 group-hover:bg-bone/60',
                   )}
                 />
               </a>
