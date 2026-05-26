@@ -59,12 +59,25 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: 'VCV Vegas · Luxury Remodeling in Las Vegas',
     description: siteConfig.description,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'VCV Vegas — Luxury Remodeling & General Contractor in Las Vegas',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'VCV Vegas · Luxury Remodeling',
     description: siteConfig.description,
+    images: ['/opengraph-image'],
   },
+  category: 'business',
+  referrer: 'origin-when-cross-origin',
+  applicationName: siteConfig.name,
+  generator: 'Next.js',
   robots: {
     index: true,
     follow: true,
