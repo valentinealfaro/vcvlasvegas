@@ -17,14 +17,20 @@ export function LatestNote() {
           <Reveal>
             <div className="flex h-full flex-col justify-center">
               <div className="mb-6 flex items-center gap-3">
-                <span className="grid h-9 w-9 place-items-center border border-gold/40 bg-gold/5">
-                  <BookOpen className="h-4 w-4 text-bone" />
+                <span className="relative grid h-9 w-9 place-items-center overflow-hidden border border-gold/40 bg-gold/5 shadow-[0_0_18px_-4px_rgba(252,187,0,0.4)]">
+                  <span aria-hidden className="absolute inset-0 bg-gradient-to-br from-gold/15 to-transparent" />
+                  <span aria-hidden className="absolute left-1 top-1 h-1.5 w-1.5 border-l border-t border-gold" />
+                  <span aria-hidden className="absolute bottom-1 right-1 h-1.5 w-1.5 border-b border-r border-gold" />
+                  <BookOpen className="relative h-4 w-4 text-bone" />
                 </span>
                 <p className="eyebrow !text-bone">Latest from the Journal</p>
               </div>
-              <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
-                {latest.eyebrow} · {latest.read}
-              </p>
+              <div className="flex items-center gap-3">
+                <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+                <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                  {latest.eyebrow} · {latest.read}
+                </p>
+              </div>
               <h2 className="mt-4 font-display text-4xl text-bone text-balance md:text-5xl">
                 {latest.title}
               </h2>
@@ -72,8 +78,12 @@ export function LatestNote() {
                     'radial-gradient(circle at 12% 100%, rgba(252,187,0,0.22), transparent 55%)',
                 }}
               />
-              <div className="absolute bottom-6 right-6 grid h-12 w-12 place-items-center border border-bone/40 bg-ink/50 text-bone backdrop-blur-md transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-ink">
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
+              {/* Gold corner ticks */}
+              <span aria-hidden className="pointer-events-none absolute left-4 top-4 h-3 w-3 border-l border-t border-gold/50 transition-colors duration-500 group-hover:border-gold" />
+              <span aria-hidden className="pointer-events-none absolute right-4 top-4 h-3 w-3 border-r border-t border-gold/50 transition-colors duration-500 group-hover:border-gold" />
+              <span aria-hidden className="pointer-events-none absolute bottom-4 left-4 h-3 w-3 border-b border-l border-gold/50 transition-colors duration-500 group-hover:border-gold" />
+              <div className="absolute bottom-6 right-6 grid h-12 w-12 place-items-center border border-bone/40 bg-ink/50 text-bone backdrop-blur-md transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-ink group-hover:shadow-[0_0_24px_-4px_rgba(252,187,0,0.7)]">
+                <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:rotate-45" />
               </div>
             </Link>
           </Reveal>
