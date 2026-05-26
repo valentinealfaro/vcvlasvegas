@@ -45,13 +45,19 @@ export function CursorGlow() {
         style={{ x: sx, y: sy }}
         className="pointer-events-none fixed left-0 top-0 z-[70] hidden lg:block"
       >
+        {/* Soft amber halo — only visible on interactive hover */}
+        <motion.div
+          animate={{ opacity: hovering ? 0.5 : 0, scale: hovering ? 1.6 : 0.8 }}
+          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 h-20 w-20 rounded-full bg-gold/40 blur-2xl"
+        />
         <motion.div
           animate={{
             scale: hovering ? 1.8 : 1,
-            opacity: hovering ? 0.6 : 0.35,
+            opacity: hovering ? 0.7 : 0.35,
           }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="-translate-x-1/2 -translate-y-1/2 h-10 w-10 rounded-full border border-gold/60 mix-blend-difference"
+          className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 h-10 w-10 rounded-full border border-gold/60 mix-blend-difference"
         />
       </motion.div>
       <motion.div
@@ -59,7 +65,11 @@ export function CursorGlow() {
         style={{ x, y }}
         className="pointer-events-none fixed left-0 top-0 z-[70] hidden lg:block"
       >
-        <div className="-translate-x-1/2 -translate-y-1/2 h-1 w-1 rounded-full bg-gold-light" />
+        <motion.div
+          animate={{ scale: hovering ? 1.4 : 1 }}
+          transition={{ duration: 0.3 }}
+          className="-translate-x-1/2 -translate-y-1/2 h-1 w-1 rounded-full bg-gold-light shadow-[0_0_8px_rgba(252,187,0,0.7)]"
+        />
       </motion.div>
     </>
   );

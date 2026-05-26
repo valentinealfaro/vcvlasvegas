@@ -17,6 +17,11 @@ export function Monogram({ className, size = 28 }: Props) {
     >
       <circle cx="32" cy="32" r="30" stroke="currentColor" strokeWidth="1" opacity="0.55" />
       <circle cx="32" cy="32" r="24" stroke="currentColor" strokeWidth="0.5" opacity="0.2" />
+      {/* Cardinal tick marks — emblem detail at NESW */}
+      <line x1="32" y1="0.5" x2="32" y2="4" stroke="currentColor" strokeWidth="0.75" opacity="0.7" />
+      <line x1="32" y1="60" x2="32" y2="63.5" stroke="currentColor" strokeWidth="0.75" opacity="0.7" />
+      <line x1="0.5" y1="32" x2="4" y2="32" stroke="currentColor" strokeWidth="0.75" opacity="0.7" />
+      <line x1="60" y1="32" x2="63.5" y2="32" stroke="currentColor" strokeWidth="0.75" opacity="0.7" />
       <text
         x="32"
         y="38"
