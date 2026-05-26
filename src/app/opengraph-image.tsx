@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { siteConfig } from '@/lib/site';
 
 export const runtime = 'edge';
 export const size = { width: 1200, height: 630 };
@@ -19,11 +20,18 @@ export default async function Image() {
           padding: 80,
           backgroundColor: '#000000',
           backgroundImage:
-            'radial-gradient(circle at 85% 110%, rgba(252,187,0,0.42) 0%, rgba(0,0,0,0) 55%), radial-gradient(circle at 5% 0%, rgba(59,130,246,0.20) 0%, rgba(0,0,0,0) 55%)',
+            'radial-gradient(circle at 85% 110%, rgba(252,187,0,0.42) 0%, rgba(0,0,0,0) 55%), radial-gradient(circle at 5% 0%, rgba(59,130,246,0.22) 0%, rgba(0,0,0,0) 55%)',
           color: '#ffffff',
           fontFamily: 'serif',
+          position: 'relative',
         }}
       >
+        {/* Gold corner ticks — four corners */}
+        <div style={{ position: 'absolute', top: 40, left: 40, width: 28, height: 28, borderLeft: '1px solid #fcbb00', borderTop: '1px solid #fcbb00' }} />
+        <div style={{ position: 'absolute', top: 40, right: 40, width: 28, height: 28, borderRight: '1px solid #fcbb00', borderTop: '1px solid #fcbb00' }} />
+        <div style={{ position: 'absolute', bottom: 40, left: 40, width: 28, height: 28, borderLeft: '1px solid #fcbb00', borderBottom: '1px solid #fcbb00' }} />
+        <div style={{ position: 'absolute', bottom: 40, right: 40, width: 28, height: 28, borderRight: '1px solid #fcbb00', borderBottom: '1px solid #fcbb00' }} />
+
         <div
           style={{
             display: 'flex',
@@ -33,10 +41,12 @@ export default async function Image() {
             textTransform: 'uppercase',
             fontSize: 18,
             color: '#fcbb00',
+            fontFamily: 'sans-serif',
           }}
         >
           <div style={{ width: 48, height: 1, background: '#fcbb00' }} />
           EST. Las Vegas Metro · Luxury Design-Build
+          <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#fcbb00' }} />
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -84,13 +94,32 @@ export default async function Image() {
           </div>
           <div
             style={{
-              fontSize: 18,
-              letterSpacing: 4,
-              textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.55)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-end',
+              gap: 8,
             }}
           >
-            Kitchens · Baths · Whole-Home
+            <div
+              style={{
+                fontSize: 16,
+                letterSpacing: 4,
+                textTransform: 'uppercase',
+                color: 'rgba(255,255,255,0.55)',
+              }}
+            >
+              Kitchens · Baths · Whole-Home
+            </div>
+            <div
+              style={{
+                fontSize: 22,
+                color: '#ffffff',
+                fontFamily: 'sans-serif',
+                letterSpacing: 1,
+              }}
+            >
+              {siteConfig.phone}
+            </div>
           </div>
         </div>
       </div>

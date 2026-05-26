@@ -1,4 +1,4 @@
-import { siteConfig } from './site';
+import { siteConfig, servicesIndex } from './site';
 
 export function websiteSchema() {
   return {
@@ -10,6 +10,11 @@ export function websiteSchema() {
     description: siteConfig.description,
     inLanguage: 'en-US',
     publisher: { '@id': `${siteConfig.url}#organization` },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${siteConfig.url}/site-index?q={search_term_string}`,
+      'query-input': 'required name=search_term_string',
+    },
   };
 }
 
@@ -19,12 +24,15 @@ export function organizationSchema() {
     '@type': 'GeneralContractor',
     '@id': `${siteConfig.url}#organization`,
     name: siteConfig.name,
+    legalName: siteConfig.legalName,
+    alternateName: 'VCV Vegas',
+    slogan: 'Luxury remodeling designed for Las Vegas living.',
     description: siteConfig.description,
     url: siteConfig.url,
     telephone: siteConfig.phone,
     email: siteConfig.email,
-    image: `${siteConfig.url}/og.jpg`,
-    logo: `${siteConfig.url}/og.jpg`,
+    image: `${siteConfig.url}/opengraph-image`,
+    logo: `${siteConfig.url}/icon`,
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Las Vegas',
@@ -59,6 +67,8 @@ export function organizationSchema() {
     ],
     priceRange: '$$$$',
     paymentAccepted: 'Cash, Check, Wire Transfer',
+    keywords:
+      'luxury remodeling Las Vegas, kitchen remodeling, bathroom remodeling, whole-home renovation, general contractor, design-build, Summerlin, Henderson, The Ridges',
     knowsAbout: [
       'Luxury Bathroom Remodeling',
       'Luxury Kitchen Remodeling',
@@ -69,6 +79,20 @@ export function organizationSchema() {
       'High-Rise Renovation',
       'Investor Property Renovation',
     ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'VCV Vegas Services',
+      itemListElement: servicesIndex.map((s, i) => ({
+        '@type': 'Offer',
+        position: i + 1,
+        itemOffered: {
+          '@type': 'Service',
+          name: s.title,
+          description: s.summary,
+          url: `${siteConfig.url}/${s.slug}`,
+        },
+      })),
+    },
   };
 }
 
