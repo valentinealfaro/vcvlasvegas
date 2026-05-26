@@ -33,17 +33,19 @@ export function Testimonials() {
         <div className="mt-20 grid gap-6 md:grid-cols-3 lg:gap-8">
           {promises.map((p, i) => (
             <Reveal key={p.n} delay={i}>
-              <div className="border-gradient h-full">
-                <div className="group relative h-full overflow-hidden bg-bone p-8 transition-colors duration-500 hover:bg-bone-700 lg:p-10">
-                  {/* Per-card corner sweep */}
+              <div className="border-gradient h-full shadow-[0_8px_30px_-12px_rgba(0,0,0,0.10)] transition-shadow duration-500 hover:shadow-[0_24px_60px_-20px_rgba(249,115,22,0.25)]">
+                <div className="group relative h-full overflow-hidden bg-bone-50 p-8 transition-colors duration-500 hover:bg-bone lg:p-10">
+                  {/* Per-card corner sweep — amber / coral / amber-deep */}
                   <span
                     aria-hidden
                     className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                     style={{
                       background:
-                        i % 2 === 0
-                          ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.10), transparent 55%)'
-                          : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.10), transparent 55%)',
+                        i === 0
+                          ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.14), transparent 55%)'
+                          : i === 1
+                          ? 'radial-gradient(circle at 100% 0%, rgba(249,115,22,0.12), transparent 55%)'
+                          : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.12), transparent 55%)',
                     }}
                   />
                   {/* Gold corner ticks — appear on hover */}

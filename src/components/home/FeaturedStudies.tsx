@@ -59,7 +59,7 @@ export function FeaturedStudies() {
               <div className="group" style={{ perspective: '1200px' }}>
                 <Link
                   href={s.href}
-                  className="relative block aspect-[4/5] w-full overflow-hidden bg-bone-700 transition-transform duration-700 ease-out group-hover:-translate-y-1 group-hover:[transform:rotateX(2deg)_rotateY(-2deg)] group-hover:shadow-[0_30px_80px_-20px_rgba(252,187,0,0.25)]"
+                  className="relative block aspect-[4/5] w-full overflow-hidden bg-bone-700 shadow-[0_12px_40px_-16px_rgba(0,0,0,0.20)] transition-all duration-700 ease-out group-hover:-translate-y-1 group-hover:[transform:rotateX(2deg)_rotateY(-2deg)] group-hover:shadow-[0_36px_80px_-20px_rgba(249,115,22,0.32)]"
                 >
                   <Image
                     src={s.image.src}
@@ -68,7 +68,17 @@ export function FeaturedStudies() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.06]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-bone/90 via-bone/40 to-transparent" />
+                  {/* Bottom cream wash for title legibility + top cream wash for eyebrow */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-bone/95 via-bone/35 to-bone/40" />
+                  {/* Coral sunset tint blended over photo */}
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 mix-blend-overlay opacity-30"
+                    style={{
+                      background:
+                        'linear-gradient(to top, rgba(249,115,22,0.18) 0%, transparent 50%, rgba(252,187,0,0.10) 100%)',
+                    }}
+                  />
 
                   {/* Amber sweep on hover */}
                   <div
@@ -99,7 +109,7 @@ export function FeaturedStudies() {
 
                 {/* Bottom content */}
                 <div className="absolute inset-x-0 bottom-0 flex flex-col p-8 md:p-10">
-                  <h3 className="font-display text-3xl text-ink md:text-5xl">
+                  <h3 className="font-display text-3xl text-ink [text-shadow:0_2px_18px_rgba(250,247,242,0.7)] md:text-5xl">
                     {s.title}{' '}
                     <span className="italic text-ink">{s.italic}</span>
                   </h3>

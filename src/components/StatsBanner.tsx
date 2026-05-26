@@ -40,25 +40,25 @@ export function StatsBanner() {
 
       <div className="container-luxe">
         <Reveal>
-          <div className="border-gradient">
-            <div className="grid gap-px bg-ink/10 bg-bone-800 md:grid-cols-2 lg:grid-cols-4">
+          <div className="border-gradient shadow-[0_16px_50px_-20px_rgba(0,0,0,0.14)]">
+            <div className="grid gap-px overflow-hidden bg-ink/10 bg-bone-50 md:grid-cols-2 lg:grid-cols-4">
               {stats.map((s, i) => {
                 const Icon = s.icon;
                 return (
                   <Reveal
                     key={s.label}
                     delay={i}
-                    className="group relative overflow-hidden bg-bone-800 p-8 transition-colors duration-500 hover:bg-bone-700 lg:p-10"
+                    className="group relative overflow-hidden bg-bone-50 p-8 transition-colors duration-500 hover:bg-bone lg:p-10"
                   >
-                    {/* Per-tile subtle gradient sweep on hover */}
+                    {/* Per-tile subtle gradient sweep on hover — amber / coral / amber / coral */}
                     <span
                       aria-hidden
                       className="pointer-events-none absolute inset-0 -z-10 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                       style={{
                         background:
                           i % 2 === 0
-                            ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.12), transparent 60%)'
-                            : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.12), transparent 60%)',
+                            ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.14), transparent 60%)'
+                            : 'radial-gradient(circle at 0% 100%, rgba(249,115,22,0.12), transparent 60%)',
                       }}
                     />
                     {/* Gold corner ticks on hover */}
