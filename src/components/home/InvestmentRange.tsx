@@ -75,18 +75,27 @@ export function InvestmentRange() {
                           : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.14), transparent 60%)',
                     }}
                   />
+                  {/* Gold corner ticks on hover */}
+                  <span aria-hidden className="pointer-events-none absolute left-3 top-3 h-3 w-3 border-l border-t border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
+                  <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
                   <div>
-                    <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
-                      {t.label}
-                    </p>
-                    <p className="mt-5 font-display text-3xl text-bone transition-colors group-hover:text-bone md:text-4xl">
+                    <div className="flex items-center gap-3">
+                      <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+                      <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                        {t.label}
+                      </p>
+                    </div>
+                    <p className="mt-5 font-display text-3xl text-bone transition-all duration-500 group-hover:[text-shadow:0_0_24px_rgba(252,187,0,0.4)] md:text-4xl">
                       {t.range}
                     </p>
                     <p className="mt-3 text-sm text-bone/55">{t.duration}</p>
                   </div>
-                  <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone opacity-70 transition-opacity group-hover:opacity-100">
-                    Explore
-                    <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                  <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone opacity-70 transition-opacity duration-500 group-hover:opacity-100">
+                    <span className="relative">
+                      Explore
+                      <span aria-hidden className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+                    </span>
+                    <ArrowUpRight className="h-3 w-3 transition-transform duration-500 group-hover:translate-x-1 group-hover:text-gold" />
                   </div>
                 </Link>
               </div>

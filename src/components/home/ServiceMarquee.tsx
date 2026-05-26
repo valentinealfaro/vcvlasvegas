@@ -16,7 +16,26 @@ export function ServiceMarquee() {
   const loop = [...items, ...items];
 
   return (
-    <section className="relative border-y border-bone/8 overflow-hidden bg-ink-800/40 py-8">
+    <section className="relative overflow-hidden bg-ink-800/40 py-9">
+      {/* Top gradient hairline */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.45) 35%, rgba(59,130,246,0.45) 65%, transparent 100%)',
+        }}
+      />
+      {/* Bottom gradient hairline */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.45) 35%, rgba(252,187,0,0.45) 65%, transparent 100%)',
+        }}
+      />
+
       {/* Fade edges */}
       <div
         aria-hidden
@@ -30,12 +49,12 @@ export function ServiceMarquee() {
       <div className="flex w-max animate-marquee items-center gap-12 md:gap-16">
         {loop.map((item, i) => (
           <div key={i} className="flex items-center gap-12 md:gap-16">
-            <span className="font-display text-3xl text-bone/85 md:text-4xl lg:text-5xl">
+            <span className="font-display text-3xl text-bone/85 transition-colors duration-500 hover:text-bone hover:[text-shadow:0_0_20px_rgba(252,187,0,0.4)] md:text-4xl lg:text-5xl">
               {item}
             </span>
             <span
               aria-hidden
-              className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold"
+              className={`h-1.5 w-1.5 shrink-0 rounded-full ${i % 2 === 0 ? 'bg-gold shadow-[0_0_8px_rgba(252,187,0,0.6)]' : 'bg-accent shadow-[0_0_8px_rgba(59,130,246,0.6)]'}`}
             />
           </div>
         ))}

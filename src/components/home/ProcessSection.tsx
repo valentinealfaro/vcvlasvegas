@@ -52,6 +52,15 @@ export function ProcessSection() {
                 'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.85) 8%, rgba(252,187,0,0.55) 50%, rgba(59,130,246,0.55) 92%, transparent 100%)',
             }}
           />
+          {/* Timeline endcaps — gold dots at each end of the line */}
+          <span
+            aria-hidden
+            className="pointer-events-none absolute left-1 top-12 hidden h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.8)] md:block"
+          />
+          <span
+            aria-hidden
+            className="pointer-events-none absolute right-1 top-12 hidden h-1.5 w-1.5 -translate-y-1/2 rounded-full bg-accent shadow-[0_0_10px_rgba(59,130,246,0.8)] md:block"
+          />
 
           <div className="grid gap-6 md:grid-cols-5 md:gap-0">
             {steps.map((s, i) => (
@@ -61,15 +70,21 @@ export function ProcessSection() {
                   <div className="relative">
                     <span
                       aria-hidden
-                      className="absolute -left-2 -top-1 hidden h-4 w-4 -translate-x-1/2 rounded-full border-2 border-gold bg-ink-800 transition-all duration-500 group-hover:scale-125 group-hover:bg-gold md:left-0 md:block"
+                      className="absolute -left-2 -top-1 hidden h-4 w-4 -translate-x-1/2 rounded-full border-2 border-gold bg-ink-800 transition-all duration-500 group-hover:scale-125 group-hover:bg-gold group-hover:shadow-[0_0_16px_rgba(252,187,0,0.7)] md:left-0 md:block"
                       style={{ top: '0.85rem' }}
                     />
-                    <p className="font-display text-5xl text-bone transition-colors duration-500 group-hover:text-bone">
+                    <p className="font-display text-5xl text-bone transition-all duration-500 group-hover:[text-shadow:0_0_24px_rgba(252,187,0,0.45)]">
                       {s.n}
                     </p>
                   </div>
-                  <h3 className="mt-6 font-display text-2xl text-bone">{s.t}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-bone/55">
+                  <div className="mt-6 flex items-center gap-3">
+                    <span
+                      aria-hidden
+                      className="h-px w-5 bg-gold transition-all duration-500 group-hover:w-9"
+                    />
+                    <h3 className="font-display text-2xl text-bone">{s.t}</h3>
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-bone/55 transition-colors duration-500 group-hover:text-bone/80">
                     {s.d}
                   </p>
                 </div>
