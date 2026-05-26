@@ -98,11 +98,18 @@ export default function PrinciplesPage() {
           <div className="mt-20 space-y-14">
             {principles.map((p) => (
               <Reveal key={p.n}>
-                <div className="grid items-baseline gap-8 border-t border-bone/10 pt-10 lg:grid-cols-[auto_1fr_1.6fr] lg:gap-16">
-                  <p className="font-display text-6xl text-bone lg:text-7xl">
-                    {p.n}
-                  </p>
-                  <h3 className="font-display text-2xl text-bone md:text-3xl">
+                <div className="group grid items-baseline gap-8 border-t border-bone/10 pt-10 lg:grid-cols-[auto_1fr_1.6fr] lg:gap-16">
+                  <div className="flex flex-col gap-3">
+                    <p className="font-display text-6xl text-bone [text-shadow:0_0_24px_rgba(252,187,0,0.4)] lg:text-7xl">
+                      {p.n}
+                    </p>
+                    <span aria-hidden className="h-px w-10 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+                  </div>
+                  <h3 className="flex items-baseline gap-3 font-display text-2xl text-bone md:text-3xl">
+                    <span
+                      aria-hidden
+                      className="mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]"
+                    />
                     {p.t}
                   </h3>
                   <p className="text-base leading-relaxed text-bone/70 md:text-lg">

@@ -61,10 +61,13 @@ export default function VisitPage() {
             <div className="space-y-12">
               {expect.map((e, i) => (
                 <Reveal key={e.t} delay={i}>
-                  <div className="grid gap-6 border-t border-bone/10 pt-8 sm:grid-cols-[auto_1fr] sm:gap-10">
-                    <p className="font-display text-4xl text-bone">
-                      0{i + 1}
-                    </p>
+                  <div className="group grid gap-6 border-t border-bone/10 pt-8 sm:grid-cols-[auto_1fr] sm:gap-10">
+                    <div className="flex flex-col gap-2">
+                      <p className="font-display text-4xl text-bone [text-shadow:0_0_20px_rgba(252,187,0,0.4)]">
+                        0{i + 1}
+                      </p>
+                      <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+                    </div>
                     <div>
                       <h3 className="font-display text-2xl text-bone md:text-3xl">
                         {e.t}
@@ -89,12 +92,34 @@ export default function VisitPage() {
               { icon: MapPin, t: 'Where', d: 'In your home, across the Las Vegas metro.' },
               { icon: Clock, t: 'When', d: 'Monday – Saturday, by appointment.' },
               { icon: Calendar, t: 'How', d: 'Schedule below. We respond within one business day.' },
-            ].map(({ icon: Icon, t, d }) => (
-              <div key={t} className="bg-ink-800/60 p-8 lg:p-10">
-                <Icon className="h-5 w-5 text-bone" />
-                <p className="mt-5 text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
-                  {t}
-                </p>
+            ].map(({ icon: Icon, t, d }, i) => (
+              <div key={t} className="group relative overflow-hidden bg-ink-800/60 p-8 transition-colors duration-500 hover:bg-ink-700 lg:p-10">
+                {/* Per-card hover sweep */}
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                  style={{
+                    background:
+                      i % 2 === 0
+                        ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.10), transparent 55%)'
+                        : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.10), transparent 55%)',
+                  }}
+                />
+                {/* Gold corner ticks on hover */}
+                <span aria-hidden className="pointer-events-none absolute left-2 top-2 h-2.5 w-2.5 border-l border-t border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
+                <span aria-hidden className="pointer-events-none absolute bottom-2 right-2 h-2.5 w-2.5 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
+                <span className="relative grid h-10 w-10 place-items-center overflow-hidden border border-gold/40 bg-gold/5 shadow-[0_0_18px_-4px_rgba(252,187,0,0.45)]">
+                  <span aria-hidden className="absolute inset-0 bg-gradient-to-br from-gold/15 to-transparent" />
+                  <span aria-hidden className="absolute left-1 top-1 h-1.5 w-1.5 border-l border-t border-gold" />
+                  <span aria-hidden className="absolute bottom-1 right-1 h-1.5 w-1.5 border-b border-r border-gold" />
+                  <Icon className="relative h-4 w-4 text-bone" />
+                </span>
+                <div className="mt-5 flex items-center gap-3">
+                  <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+                  <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                    {t}
+                  </p>
+                </div>
                 <p className="mt-2 font-display text-xl text-bone">{d}</p>
               </div>
             ))}
@@ -108,7 +133,13 @@ export default function VisitPage() {
           <div className="mx-auto max-w-3xl">
             <Reveal>
               <div className="text-center">
-                <p className="eyebrow mb-6 justify-center">Schedule</p>
+                <div className="mb-6 flex items-center justify-center gap-3">
+                  <span aria-hidden className="h-px w-10 bg-gradient-to-r from-transparent via-gold to-transparent" />
+                  <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
+                  <p className="eyebrow !text-bone">Schedule</p>
+                  <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
+                  <span aria-hidden className="h-px w-10 bg-gradient-to-r from-transparent via-gold to-transparent" />
+                </div>
                 <h2 className="font-display text-4xl text-bone md:text-5xl">
                   Request your<br />
                   <span className="italic text-bone">private consultation.</span>
@@ -119,8 +150,10 @@ export default function VisitPage() {
               </div>
             </Reveal>
             <Reveal delay={1}>
-              <div className="mt-14 border border-bone/10 bg-ink-800/40 p-8 md:p-10">
-                <ConsultationForm />
+              <div className="mt-14 border-gradient">
+                <div className="bg-ink-800/40 p-8 md:p-10">
+                  <ConsultationForm />
+                </div>
               </div>
             </Reveal>
           </div>
