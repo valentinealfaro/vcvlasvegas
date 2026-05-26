@@ -16,7 +16,10 @@ export function CalculatorPromo() {
           <Reveal>
             <div>
               <p className="eyebrow mb-5 flex items-center gap-3">
-                <Calculator className="h-3.5 w-3.5 text-bone" />
+                <span className="relative grid h-7 w-7 place-items-center overflow-hidden border border-gold/40 bg-gold/5 shadow-[0_0_14px_-4px_rgba(252,187,0,0.45)]">
+                  <span aria-hidden className="absolute inset-0 bg-gradient-to-br from-gold/15 to-transparent" />
+                  <Calculator className="relative h-3 w-3 text-bone" />
+                </span>
                 Investment Calculator
               </p>
               <h2 className="font-display text-4xl text-bone text-balance md:text-5xl lg:text-6xl">
@@ -37,9 +40,13 @@ export function CalculatorPromo() {
                   'Three finish tiers from Signature to Bespoke',
                   'Build window and timeline included',
                   'Detailed breakdown sent by email — no salesperson',
-                ].map((b) => (
-                  <li key={b} className="flex items-center gap-3 text-sm text-bone/70">
-                    <span className="h-px w-4 bg-gold" />
+                ].map((b, i) => (
+                  <li key={b} className="group flex items-center gap-3 text-sm text-bone/70 transition-colors duration-500 hover:text-bone">
+                    <span
+                      aria-hidden
+                      className={`h-1.5 w-1.5 shrink-0 rounded-full transition-all duration-500 ${i % 2 === 0 ? 'bg-gold/70 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]' : 'bg-accent/70 group-hover:bg-accent group-hover:shadow-[0_0_8px_rgba(59,130,246,0.7)]'}`}
+                    />
+                    <span aria-hidden className="h-px w-4 bg-gold/60 transition-all duration-500 group-hover:w-8" />
                     {b}
                   </li>
                 ))}
@@ -64,6 +71,9 @@ export function CalculatorPromo() {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" />
+              {/* Gold corner ticks */}
+              <span aria-hidden className="pointer-events-none absolute left-4 top-4 h-3 w-3 border-l border-t border-gold/60" />
+              <span aria-hidden className="pointer-events-none absolute right-4 top-4 h-3 w-3 border-r border-t border-gold/60" />
 
               {/* Floating calculator card preview — gradient bordered */}
               <div className="absolute bottom-6 left-6 right-6 md:bottom-8 md:left-8 md:right-8">
