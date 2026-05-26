@@ -96,7 +96,7 @@ export default function ProjectsPage() {
               <Reveal key={s.href} delay={i}>
                 <Link
                   href={s.href}
-                  className="group relative block aspect-[4/5] w-full overflow-hidden bg-ink-700"
+                  className="group relative block aspect-[4/5] w-full overflow-hidden bg-ink-700 transition-shadow duration-700 group-hover:shadow-[0_30px_80px_-20px_rgba(252,187,0,0.25)]"
                 >
                   <Image
                     src={s.image.src}
@@ -106,16 +106,36 @@ export default function ProjectsPage() {
                     className="object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.04]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent" />
+                  {/* Amber sweep on hover */}
+                  <div
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                    style={{
+                      background:
+                        'radial-gradient(circle at 12% 100%, rgba(252,187,0,0.22), transparent 55%)',
+                    }}
+                  />
+                  {/* Gold corner ticks at all four corners */}
+                  <span aria-hidden className="pointer-events-none absolute left-4 top-4 h-4 w-4 border-l border-t border-gold/40 transition-colors duration-500 group-hover:border-gold" />
+                  <span aria-hidden className="pointer-events-none absolute right-4 top-4 h-4 w-4 border-r border-t border-gold/40 transition-colors duration-500 group-hover:border-gold" />
+                  <span aria-hidden className="pointer-events-none absolute bottom-4 left-4 h-4 w-4 border-b border-l border-gold/40 transition-colors duration-500 group-hover:border-gold" />
+                  <span aria-hidden className="pointer-events-none absolute bottom-4 right-4 h-4 w-4 border-b border-r border-gold/40 transition-colors duration-500 group-hover:border-gold" />
                   <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-10">
-                    <p className="eyebrow mb-4 !text-bone">{s.eyebrow}</p>
+                    <div className="mb-4 flex items-center gap-3">
+                      <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+                      <p className="eyebrow !text-bone">{s.eyebrow}</p>
+                    </div>
                     <h3 className="font-display text-3xl text-bone md:text-5xl">
                       {s.title}{' '}
                       <span className="italic text-bone">{s.italic}</span>
                     </h3>
                     <p className="mt-3 max-w-md text-bone/70">{s.scope}</p>
-                    <div className="mt-5 flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-bone">
-                      Read the case study
-                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
+                    <div className="mt-5 inline-flex items-center gap-3 self-start text-[0.7rem] uppercase tracking-[0.28em] text-bone">
+                      <span className="relative">
+                        Read the case study
+                        <span aria-hidden className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+                      </span>
+                      <ArrowUpRight className="h-4 w-4 transition-all duration-500 group-hover:rotate-45 group-hover:text-gold" />
                     </div>
                   </div>
                 </Link>
