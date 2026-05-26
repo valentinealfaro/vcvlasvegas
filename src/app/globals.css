@@ -105,12 +105,56 @@ select:-webkit-autofill {
     @apply h-px w-12 bg-gold/60;
   }
 
+  /* Duotone gradient hairline — small editorial separator */
+  .hairline-duotone {
+    height: 1px;
+    width: 4rem;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(252, 187, 0, 0.7) 35%,
+      rgba(59, 130, 246, 0.7) 65%,
+      transparent 100%
+    );
+  }
+
+  /* Four faint gold L-corner ticks for hero/banner framing.
+     Drop on any `relative` container; defaults to 1rem inset. */
+  .frame-corners::before,
+  .frame-corners::after,
+  .frame-corners > .frame-tl,
+  .frame-corners > .frame-br {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    border: 0 solid rgba(252, 187, 0, 0.5);
+    pointer-events: none;
+    transition: border-color 0.5s ease;
+  }
+  .frame-corners::before {
+    top: 1rem;
+    left: 1rem;
+    border-top-width: 1px;
+    border-left-width: 1px;
+  }
+  .frame-corners::after {
+    bottom: 1rem;
+    right: 1rem;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+  }
+  .frame-corners:hover::before,
+  .frame-corners:hover::after {
+    border-color: rgba(252, 187, 0, 0.9);
+  }
+
   .btn-gold {
     @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold-light to-gold px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:from-gold hover:to-gold-deep hover:shadow-[0_20px_60px_-20px_rgba(252,187,0,0.55)];
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 border border-bone/20 px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:text-bone;
+    @apply inline-flex items-center justify-center gap-2 border border-bone/20 px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:bg-gold/5 hover:text-bone hover:shadow-[0_12px_36px_-14px_rgba(252,187,0,0.4)];
   }
 
   .btn-dark {
@@ -212,6 +256,7 @@ select:-webkit-autofill {
   .link-quiet {
     position: relative;
     display: inline-block;
+    transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .link-quiet::after {
     content: '';
@@ -220,14 +265,18 @@ select:-webkit-autofill {
     bottom: -2px;
     height: 1px;
     width: 100%;
-    background-color: #fcbb00;
+    background: linear-gradient(to right, #fcbb00, rgba(252, 187, 0, 0.4));
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.55s ease;
+  }
+  .link-quiet:hover {
+    color: #ffffff;
   }
   .link-quiet:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+    box-shadow: 0 0 6px rgba(252, 187, 0, 0.5);
   }
 
   /* Nav-link: animated gradient underline that expands from the center.
