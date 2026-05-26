@@ -32,16 +32,35 @@ export function CTASection({
       {/* Franchise duotone glow */}
       <div aria-hidden className="glow-duotone" />
 
+      {/* Top + bottom gradient hairlines */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.45) 35%, rgba(59,130,246,0.45) 65%, transparent 100%)',
+        }}
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.45) 35%, rgba(252,187,0,0.45) 65%, transparent 100%)',
+        }}
+      />
+
       <div className="container-luxe">
         <div className="max-w-3xl">
           <Reveal>
             <div className="mb-6 flex items-center gap-4">
               <span className="h-px w-12 bg-gradient-to-r from-gold to-transparent" />
               <p className="eyebrow !text-bone">{eyebrow}</p>
+              <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
             </div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="font-display text-4xl text-bone text-balance md:text-6xl lg:text-7xl">
+            <h2 className="font-display text-4xl text-bone text-balance [text-shadow:0_2px_40px_rgba(0,0,0,0.3)] md:text-6xl lg:text-7xl">
               {title}
             </h2>
           </Reveal>

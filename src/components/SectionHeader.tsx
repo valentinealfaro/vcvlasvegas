@@ -41,11 +41,24 @@ export function SectionHeader({
                 }}
               />
             )}
-            <p className="eyebrow !text-bone">{eyebrow}</p>
-            {align !== 'center' && (
+            {align === 'center' && (
               <span
                 aria-hidden
-                className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold"
+                className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]"
+              />
+            )}
+            <p className="eyebrow !text-bone">{eyebrow}</p>
+            <span
+              aria-hidden
+              className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]"
+            />
+            {align === 'center' && (
+              <span
+                aria-hidden
+                className="h-px w-12 bg-gradient-to-l from-gold via-gold to-transparent"
+                style={{
+                  animation: 'fade-up 0.9s cubic-bezier(0.16,1,0.3,1) backwards, hairline-grow 1.2s cubic-bezier(0.16,1,0.3,1) backwards',
+                }}
               />
             )}
           </div>
