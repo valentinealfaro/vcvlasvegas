@@ -80,9 +80,18 @@ export function FeaturedStudies() {
                     }}
                   />
 
+                  {/* Gold corner ticks — always faintly visible, glow on hover */}
+                  <span aria-hidden className="pointer-events-none absolute left-4 top-4 h-4 w-4 border-l border-t border-gold/40 transition-colors duration-500 group-hover:border-gold" />
+                  <span aria-hidden className="pointer-events-none absolute right-4 top-4 h-4 w-4 border-r border-t border-gold/40 transition-colors duration-500 group-hover:border-gold" />
+                  <span aria-hidden className="pointer-events-none absolute bottom-4 left-4 h-4 w-4 border-b border-l border-gold/40 transition-colors duration-500 group-hover:border-gold" />
+                  <span aria-hidden className="pointer-events-none absolute bottom-4 right-4 h-4 w-4 border-b border-r border-gold/40 transition-colors duration-500 group-hover:border-gold" />
+
                   {/* Top eyebrow */}
                   <div className="absolute inset-x-0 top-0 flex items-center justify-between p-8 md:p-10">
-                  <p className="eyebrow !text-bone/85">{s.eyebrow}</p>
+                  <div className="flex items-center gap-3">
+                    <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+                    <p className="eyebrow !text-bone/85">{s.eyebrow}</p>
+                  </div>
                   <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bone/55">
                     {s.duration}
                   </p>
@@ -95,9 +104,12 @@ export function FeaturedStudies() {
                     <span className="italic text-bone">{s.italic}</span>
                   </h3>
                   <p className="mt-3 max-w-md text-bone/75">{s.scope}</p>
-                  <div className="mt-5 flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-bone">
-                    Read the study
-                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
+                  <div className="mt-5 inline-flex items-center gap-3 self-start text-[0.7rem] uppercase tracking-[0.28em] text-bone">
+                    <span className="relative">
+                      Read the study
+                      <span aria-hidden className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+                    </span>
+                    <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:rotate-45 group-hover:text-gold" />
                   </div>
                 </div>
                 </Link>

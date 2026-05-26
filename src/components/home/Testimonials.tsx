@@ -46,12 +46,18 @@ export function Testimonials() {
                           : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.10), transparent 55%)',
                     }}
                   />
-                  <p className="font-display text-5xl text-bone transition-transform duration-500 group-hover:scale-110 group-hover:origin-left">
-                    {p.n}
-                  </p>
+                  {/* Gold corner ticks — appear on hover */}
+                  <span aria-hidden className="pointer-events-none absolute left-4 top-4 h-3 w-3 border-l border-t border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
+                  <span aria-hidden className="pointer-events-none absolute bottom-4 right-4 h-3 w-3 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
+                  <div className="flex items-baseline gap-4">
+                    <p className="font-display text-5xl text-bone transition-all duration-500 group-hover:scale-110 group-hover:origin-left group-hover:[text-shadow:0_0_24px_rgba(252,187,0,0.45)]">
+                      {p.n}
+                    </p>
+                    <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/40 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
+                  </div>
                   <span
                     aria-hidden
-                    className="mt-5 block h-px w-8 bg-gold transition-all duration-500 group-hover:w-16"
+                    className="mt-5 block h-px w-8 bg-gold transition-all duration-500 group-hover:w-16 group-hover:shadow-[0_0_8px_rgba(252,187,0,0.6)]"
                   />
                   <h3 className="mt-6 font-display text-2xl text-bone md:text-[1.65rem]">
                     {p.t}

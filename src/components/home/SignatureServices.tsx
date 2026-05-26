@@ -77,6 +77,9 @@ export function SignatureServices() {
                           : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.12), transparent 55%)',
                     }}
                   />
+                  {/* Gold corner ticks — appear on hover */}
+                  <span aria-hidden className="pointer-events-none absolute left-3 top-3 h-3 w-3 border-l border-t border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
+                  <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
                   <ImageCard
                     image={s.image}
                     aspect="wide"
@@ -85,13 +88,16 @@ export function SignatureServices() {
                   />
                   <div className="flex items-start justify-between gap-6">
                     <div>
-                      <p className="eyebrow mb-2 !text-bone/40">{s.eyebrow}</p>
+                      <div className="mb-2 flex items-center gap-3">
+                        <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+                        <p className="eyebrow !text-bone/40">{s.eyebrow}</p>
+                      </div>
                       <h3 className="font-display text-3xl text-bone transition-colors group-hover:text-bone md:text-4xl">
                         {s.title}
                       </h3>
                       <p className="mt-3 max-w-md text-bone/60">{s.summary}</p>
                     </div>
-                    <div className="grid h-12 w-12 shrink-0 place-items-center border border-bone/15 transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-ink">
+                    <div className="grid h-12 w-12 shrink-0 place-items-center border border-bone/15 transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-ink group-hover:shadow-[0_0_24px_-4px_rgba(252,187,0,0.7)]">
                       <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:rotate-45" />
                     </div>
                   </div>
