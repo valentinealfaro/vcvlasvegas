@@ -71,15 +71,15 @@ export default function CaseStudyPage() {
       />
 
       {/* Project metadata strip */}
-      <section className="border-b border-bone/8 bg-ink-800/40">
+      <section className="border-b border-ink/8 bg-bone-800/40">
         <div className="container-luxe">
-          <div className="grid gap-px bg-bone/10 md:grid-cols-4">
+          <div className="grid gap-px bg-ink/10 md:grid-cols-4">
             {metaData.map((m) => (
-              <div key={m.label} className="bg-ink-800/40 px-6 py-8 lg:px-8">
-                <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bone/45">
+              <div key={m.label} className="bg-bone-800/40 px-6 py-8 lg:px-8">
+                <p className="text-[0.6rem] uppercase tracking-[0.28em] text-ink/45">
                   {m.label}
                 </p>
-                <p className="mt-3 font-display text-xl text-bone md:text-2xl">
+                <p className="mt-3 font-display text-xl text-ink md:text-2xl">
                   {m.value}
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function CaseStudyPage() {
       />
 
       {/* Materials palette */}
-      <section className="bg-ink-800 py-24 lg:py-32">
+      <section className="bg-bone-800 py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Material Palette"
@@ -125,10 +125,10 @@ export default function CaseStudyPage() {
               {palette.map((p) => (
                 <div key={p.label}>
                   <div
-                    className="aspect-square w-full border border-bone/10"
+                    className="aspect-square w-full border border-ink/10"
                     style={{ backgroundColor: p.tone }}
                   />
-                  <p className="mt-4 text-[0.65rem] uppercase tracking-[0.24em] text-bone/65">
+                  <p className="mt-4 text-[0.65rem] uppercase tracking-[0.24em] text-ink/65">
                     {p.label}
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function CaseStudyPage() {
       </section>
 
       {/* Cinematic gallery */}
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader eyebrow="Gallery" title="The Finished Spaces" />
           <div className="mt-16 grid gap-4 md:grid-cols-3 lg:gap-6">
@@ -163,20 +163,20 @@ export default function CaseStudyPage() {
       </section>
 
       {/* Outcome */}
-      <section className="bg-ink-800 py-24 lg:py-32">
+      <section className="bg-bone-800 py-24 lg:py-32">
         <div className="container-luxe">
           <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.4fr]">
             <Reveal>
               <div>
                 <p className="eyebrow mb-6">The Outcome</p>
-                <h2 className="font-display text-4xl text-bone md:text-5xl">
+                <h2 className="font-display text-4xl text-ink md:text-5xl">
                   A home that reads as<br />
-                  <span className="italic text-bone">architecture.</span>
+                  <span className="italic text-ink">architecture.</span>
                 </h2>
               </div>
             </Reveal>
             <Reveal delay={1}>
-              <div className="space-y-5 text-lg leading-relaxed text-bone/70">
+              <div className="space-y-5 text-lg leading-relaxed text-ink/70">
                 <p>
                   The new great room holds eight at the island, twelve at the
                   table, and twenty under the patio — without crowding the
@@ -199,11 +199,11 @@ export default function CaseStudyPage() {
         description="Tell us about your home and what it’s missing — a senior designer responds within one business day."
       />
 
-      <section className="bg-ink py-16">
+      <section className="bg-bone py-16">
         <div className="container-luxe">
           <Link
             href="/projects"
-            className="inline-flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-bone"
+            className="inline-flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-ink/55 transition-colors hover:text-ink"
           >
             <ArrowLeft className="h-4 w-4" />
             All Projects

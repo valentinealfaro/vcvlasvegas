@@ -57,24 +57,24 @@ export default function NowPage() {
       />
 
       {/* Calendar status */}
-      <section className="border-b border-bone/8 bg-ink-800/40 py-20">
+      <section className="border-b border-ink/8 bg-bone-800/40 py-20">
         <div className="container-luxe">
           <div className="grid items-center gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
             <Reveal>
               <div className="flex items-center gap-4">
                 <span className="grid h-12 w-12 shrink-0 place-items-center border border-gold/50 bg-gold/10">
-                  <Calendar className="h-5 w-5 text-bone" />
+                  <Calendar className="h-5 w-5 text-ink" />
                 </span>
-                <p className="eyebrow !text-bone">Studio Calendar</p>
+                <p className="eyebrow !text-ink">Studio Calendar</p>
               </div>
             </Reveal>
             <Reveal delay={1}>
               <div>
-                <p className="font-display text-3xl text-bone text-balance md:text-4xl">
+                <p className="font-display text-3xl text-ink text-balance md:text-4xl">
                   Currently booking design consultations for{' '}
-                  <span className="italic text-bone">Q3 2026</span>.
+                  <span className="italic text-ink">Q3 2026</span>.
                 </p>
-                <p className="mt-4 text-bone/55 md:text-lg">
+                <p className="mt-4 text-ink/55 md:text-lg">
                   Limited capacity for premium-scope projects. Q4 2026 opens
                   by referral first, public booking second. The Studio
                   Concierge calendar is reviewed personally by a principal.
@@ -85,7 +85,7 @@ export default function NowPage() {
                   </Link>
                   <Link
                     href="/intake"
-                    className="flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/65 transition-colors hover:text-bone"
+                    className="flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink/65 transition-colors hover:text-ink"
                   >
                     Send a Project Brief
                     <ArrowUpRight className="h-3 w-3" />
@@ -98,24 +98,24 @@ export default function NowPage() {
       </section>
 
       {/* Studio focus */}
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Studio Focus"
             title="Where the team is, this season."
             description="Anonymized scope categories — no specific clients, no addresses, no recognizable details. Public out of respect for client privacy."
           />
-          <div className="mt-16 grid gap-px bg-bone/10 md:grid-cols-2">
+          <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-2">
             {focus.map((f, i) => {
               const Icon = f.icon;
               return (
-                <Reveal key={f.title} delay={i % 2} className="bg-ink p-8 lg:p-12">
-                  <Icon className="h-6 w-6 text-bone" />
-                  <p className="eyebrow mt-6 !text-bone/45">{f.eyebrow}</p>
-                  <p className="mt-3 font-display text-2xl text-bone md:text-3xl">
+                <Reveal key={f.title} delay={i % 2} className="bg-bone p-8 lg:p-12">
+                  <Icon className="h-6 w-6 text-ink" />
+                  <p className="eyebrow mt-6 !text-ink/45">{f.eyebrow}</p>
+                  <p className="mt-3 font-display text-2xl text-ink md:text-3xl">
                     {f.title}
                   </p>
-                  <p className="mt-4 text-base leading-relaxed text-bone/65">
+                  <p className="mt-4 text-base leading-relaxed text-ink/65">
                     {f.description}
                   </p>
                 </Reveal>
@@ -127,7 +127,7 @@ export default function NowPage() {
 
       {/* Latest journal */}
       {latestNote && (
-        <section className="bg-ink-800 py-24 lg:py-32">
+        <section className="bg-bone-800 py-24 lg:py-32">
           <div className="container-luxe">
             <SectionHeader
               eyebrow="Latest from the Journal"
@@ -136,9 +136,9 @@ export default function NowPage() {
             <Reveal delay={2}>
               <Link
                 href={`/journal/${latestNote.slug}`}
-                className="group mt-16 grid gap-8 overflow-hidden border border-bone/10 lg:grid-cols-[1fr_1.2fr]"
+                className="group mt-16 grid gap-8 overflow-hidden border border-ink/10 lg:grid-cols-[1fr_1.2fr]"
               >
-                <div className="relative aspect-[4/3] bg-ink-700 lg:aspect-auto">
+                <div className="relative aspect-[4/3] bg-bone-700 lg:aspect-auto">
                   <Image
                     src={latestNote.image.src}
                     alt={latestNote.image.alt}
@@ -148,15 +148,15 @@ export default function NowPage() {
                   />
                 </div>
                 <div className="flex flex-col justify-center p-8 lg:p-12">
-                  <BookOpen className="h-5 w-5 text-bone" />
-                  <p className="eyebrow mt-5 !text-bone/45">
+                  <BookOpen className="h-5 w-5 text-ink" />
+                  <p className="eyebrow mt-5 !text-ink/45">
                     {latestNote.eyebrow} · {latestNote.read}
                   </p>
-                  <p className="mt-3 font-display text-2xl text-bone group-hover:text-bone md:text-3xl">
+                  <p className="mt-3 font-display text-2xl text-ink group-hover:text-ink md:text-3xl">
                     {latestNote.title}
                   </p>
-                  <p className="mt-4 text-bone/65">{latestNote.summary}</p>
-                  <div className="mt-6 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
+                  <p className="mt-4 text-ink/65">{latestNote.summary}</p>
+                  <div className="mt-6 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink">
                     Read the note
                     <ArrowUpRight className="h-3 w-3 transition-transform group-hover:rotate-45" />
                   </div>

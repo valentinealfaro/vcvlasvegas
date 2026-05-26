@@ -113,7 +113,7 @@ export default function HendersonPage() {
 
       <ImageRow images={[customHomeImages[0], bathroomImages[2], kitchenImages[1]]} />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader eyebrow="Henderson FAQs" title="Questions from Henderson homeowners." />
           <div className="mt-16 max-w-4xl">

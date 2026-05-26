@@ -86,12 +86,12 @@ export default function Post() {
         ]}
       />
 
-      <article className="bg-ink py-20 lg:py-28">
+      <article className="bg-bone py-20 lg:py-28">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl">
             <Reveal>
-              <p className="text-lg leading-relaxed text-bone/75 md:text-xl">
-                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-bone md:text-8xl">
+              <p className="text-lg leading-relaxed text-ink/75 md:text-xl">
+                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-ink md:text-8xl">
                   T
                 </span>
                 here is a particular kind of bathroom that Las Vegas homes want
@@ -105,15 +105,15 @@ export default function Post() {
             </Reveal>
 
             {/* 01 */}
-            <section id="climate" className="mt-16 border-t border-bone/10 pt-12">
+            <section id="climate" className="mt-16 border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">01</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">01</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Start from the climate, not the catalog.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   In Las Vegas the bathroom is a microclimate inside another
                   microclimate. The room is cooler than the outdoor temperature
                   by 20–40 degrees for most of the year, the humidity swings
@@ -123,7 +123,7 @@ export default function Post() {
                   ventilation, glass, and window orientation — are climate
                   decisions, not aesthetic ones.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   Get those four right and almost every later choice becomes
                   obvious. Get them wrong and no amount of stone hides it.
                 </p>
@@ -131,7 +131,7 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-ink-700">
+              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-bone-700">
                 <Image
                   src={bathroomImages[2].src}
                   alt={bathroomImages[2].alt}
@@ -143,22 +143,22 @@ export default function Post() {
             </Reveal>
 
             {/* 02 */}
-            <section id="restraint" className="border-t border-bone/10 pt-12">
+            <section id="restraint" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">02</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">02</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Restraint is the look. Maximalism is the trap.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   The clearest signal of an over-designed bathroom is too many
                   ideas in one room. A dramatic accent wall. A statement
                   mirror. A bold floor tile. A patterned shower wall. Three
                   metals in the hardware. Each thing is fine; together they
                   are noise.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   Every VCV Vegas bath starts with a five-material short list
                   — typically a stone, a millwork wood, a metal finish, a
                   paint or plaster, and a glass. Those five carry the whole
@@ -170,27 +170,27 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="my-14 border-y border-bone/10 py-10">
-                <blockquote className="font-display text-3xl leading-tight text-bone text-balance md:text-4xl">
+              <figure className="my-14 border-y border-ink/10 py-10">
+                <blockquote className="font-display text-3xl leading-tight text-ink text-balance md:text-4xl">
                   “A spa bathroom is what happens when nothing in the room is
                   trying to get your attention.”
                 </blockquote>
-                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
+                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-ink">
                   — From the studio
                 </figcaption>
               </figure>
             </Reveal>
 
             {/* 03 */}
-            <section id="wetroom" className="border-t border-bone/10 pt-12">
+            <section id="wetroom" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">03</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">03</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Engineer the wet room as a single envelope.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   The single most quietly luxurious move in modern Vegas bath
                   design is the wet room — a tub placed inside the shower
                   envelope, separated from the rest of the bathroom by one
@@ -198,7 +198,7 @@ export default function Post() {
                   finish does not change at the shower line. The light is
                   uninterrupted from vanity to tub.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   Engineering a wet room is harder than building a separate
                   shower and tub. You waterproof the entire envelope.
                   You manage slope to a linear drain. You vent the room as a
@@ -210,7 +210,7 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-ink-700">
+              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-bone-700">
                 <Image
                   src={bathroomImages[3].src}
                   alt={bathroomImages[3].alt}
@@ -222,15 +222,15 @@ export default function Post() {
             </Reveal>
 
             {/* 04 */}
-            <section id="light" className="border-t border-bone/10 pt-12">
+            <section id="light" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">04</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">04</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Layer the light. Hide the sources.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   A great bathroom has four lighting layers and almost no
                   visible fixtures. Ambient ceiling on a dimmer for cleaning.
                   Decorative pendants flanking the mirror for the way the
@@ -239,7 +239,7 @@ export default function Post() {
                   cove lighting at the toe-kick that washes the floor warm
                   through the night.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   The toe-kick light is the detail no one asks for and
                   everyone loves. It eliminates the night-light. It makes the
                   floor feel weightless. And it gives the room a third mode —
@@ -250,22 +250,22 @@ export default function Post() {
             </section>
 
             {/* 05 */}
-            <section id="touch" className="border-t border-bone/10 pt-12">
+            <section id="touch" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">05</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">05</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Specify what the body actually touches.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   In a primary bath there are six things the body touches
                   every day — the floor, the shower handle, the towel rail,
                   the vanity drawer, the faucet, and the tub edge. Spend
                   carefully on those six and the room will feel expensive
                   forever, regardless of what else changes.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   Honed stone underfoot. A thermostatic shower valve. A solid
                   brass towel bar. Push-latch drawers with full-extension
                   hardware. A weighted faucet. A tub edge wide enough to set
@@ -276,11 +276,11 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <div className="my-16 border-y border-bone/10 py-12">
-                <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <div className="my-16 border-y border-ink/10 py-12">
+                <h3 className="font-display text-3xl text-ink md:text-4xl">
                   The point.
                 </h3>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   A spa bathroom is the result of about forty quiet decisions
                   that almost no one will notice individually and everyone
                   will notice collectively. Get them right and the room runs
@@ -292,12 +292,12 @@ export default function Post() {
             </Reveal>
 
             <Reveal delay={3}>
-              <div className="flex items-center justify-between border-t border-bone/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55">
-                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-bone">
+              <div className="flex items-center justify-between border-t border-ink/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-ink/55">
+                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-ink">
                   <ArrowLeft className="h-4 w-4" />
                   All Notes
                 </Link>
-                <Link href="/bathroom-remodeling-las-vegas" className="flex items-center gap-3 text-bone transition-colors hover:text-bone">
+                <Link href="/bathroom-remodeling-las-vegas" className="flex items-center gap-3 text-ink transition-colors hover:text-ink">
                   Explore bathroom remodeling
                   <ArrowRight className="h-4 w-4" />
                 </Link>

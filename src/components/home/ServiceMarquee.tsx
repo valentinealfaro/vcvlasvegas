@@ -16,7 +16,7 @@ export function ServiceMarquee() {
   const loop = [...items, ...items];
 
   return (
-    <section className="relative overflow-hidden bg-ink-800/40 py-9">
+    <section className="relative overflow-hidden bg-bone-800/40 py-9">
       {/* Top gradient hairline */}
       <div
         aria-hidden
@@ -39,17 +39,17 @@ export function ServiceMarquee() {
       {/* Fade edges */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 bg-gradient-to-r from-ink-800 to-transparent"
+        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-32 bg-gradient-to-r from-bone-800 to-transparent"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-ink-800 to-transparent"
+        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-32 bg-gradient-to-l from-bone-800 to-transparent"
       />
 
       <div className="flex w-max animate-marquee items-center gap-12 md:gap-16">
         {loop.map((item, i) => (
           <div key={i} className="flex items-center gap-12 md:gap-16">
-            <span className="font-display text-3xl text-bone/85 transition-colors duration-500 hover:text-bone hover:[text-shadow:0_0_20px_rgba(252,187,0,0.4)] md:text-4xl lg:text-5xl">
+            <span className="font-display text-3xl text-ink/85 transition-colors duration-500 hover:text-ink hover:[text-shadow:0_0_20px_rgba(252,187,0,0.4)] md:text-4xl lg:text-5xl">
               {item}
             </span>
             <span

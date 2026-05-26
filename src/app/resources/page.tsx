@@ -166,7 +166,7 @@ export default function ResourcesPage() {
       {groups.map((group, gi) => (
         <section
           key={group.key}
-          className={gi % 2 === 0 ? 'bg-ink py-24 lg:py-32' : 'bg-ink-800 py-24 lg:py-32'}
+          className={gi % 2 === 0 ? 'bg-bone py-24 lg:py-32' : 'bg-bone-800 py-24 lg:py-32'}
         >
           <div className="container-luxe">
             <SectionHeader
@@ -183,19 +183,19 @@ export default function ResourcesPage() {
                     <Reveal key={r.href} delay={i % 2}>
                       <Link
                         href={r.href}
-                        className="group relative block h-full overflow-hidden border border-bone/15 bg-ink transition-all duration-500 hover:border-gold"
+                        className="group relative block h-full overflow-hidden border border-ink/15 bg-bone transition-all duration-500 hover:border-gold"
                       >
                         <div className="grid lg:grid-cols-[1.1fr_1fr]">
                           <div className="p-8 lg:p-10">
-                            <Icon className="h-6 w-6 text-bone transition-colors group-hover:text-bone" />
-                            <p className="eyebrow mt-6 !text-bone/45">{r.eyebrow}</p>
-                            <p className="mt-3 font-display text-2xl text-bone group-hover:text-bone md:text-3xl">
+                            <Icon className="h-6 w-6 text-ink transition-colors group-hover:text-ink" />
+                            <p className="eyebrow mt-6 !text-ink/45">{r.eyebrow}</p>
+                            <p className="mt-3 font-display text-2xl text-ink group-hover:text-ink md:text-3xl">
                               {r.title}
                             </p>
-                            <p className="mt-4 text-sm leading-relaxed text-bone/60">
+                            <p className="mt-4 text-sm leading-relaxed text-ink/60">
                               {r.description}
                             </p>
-                            <div className="mt-6 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
+                            <div className="mt-6 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink">
                               Open
                               <ArrowUpRight className="h-3 w-3 transition-transform group-hover:rotate-45" />
                             </div>
@@ -208,7 +208,7 @@ export default function ResourcesPage() {
                               sizes="(max-width: 1024px) 100vw, 25vw"
                               className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-l from-transparent to-ink/60" />
+                            <div className="absolute inset-0 bg-gradient-to-l from-transparent to-bone/60" />
                           </div>
                         </div>
                       </Link>

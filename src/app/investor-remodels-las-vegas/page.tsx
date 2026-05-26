@@ -124,7 +124,7 @@ export default function InvestorPage() {
         ]}
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader eyebrow="Investor FAQs" title="What investors ask first." />
           <div className="mt-16 max-w-4xl">

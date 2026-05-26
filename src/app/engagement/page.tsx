@@ -93,7 +93,7 @@ export default function EngagementPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Engagement' }]}
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="The Three Tiers"
@@ -111,7 +111,7 @@ export default function EngagementPage() {
                       i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''
                     }`}
                   >
-                    <div className="relative aspect-[4/5] overflow-hidden bg-ink-700">
+                    <div className="relative aspect-[4/5] overflow-hidden bg-bone-700">
                       <Image
                         src={tier.image.src}
                         alt={tier.image.alt}
@@ -119,35 +119,35 @@ export default function EngagementPage() {
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-bone/60 via-bone/20 to-transparent" />
                       <div className="absolute left-6 top-6">
-                        <Icon className="h-7 w-7 text-bone" />
+                        <Icon className="h-7 w-7 text-ink" />
                       </div>
                     </div>
 
                     <div>
                       <p className="eyebrow mb-4">{tier.eyebrow}</p>
-                      <h2 className="font-display text-4xl text-bone md:text-5xl">
+                      <h2 className="font-display text-4xl text-ink md:text-5xl">
                         {tier.name}
                       </h2>
-                      <p className="mt-5 text-lg leading-relaxed text-bone/70">
+                      <p className="mt-5 text-lg leading-relaxed text-ink/70">
                         {tier.summary}
                       </p>
 
-                      <dl className="mt-10 divide-y divide-bone/10 border-y border-bone/10">
+                      <dl className="mt-10 divide-y divide-ink/10 border-y border-ink/10">
                         <div className="flex items-baseline justify-between gap-6 py-4">
-                          <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                          <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                             Investment Range
                           </dt>
-                          <dd className="font-display text-lg text-bone">
+                          <dd className="font-display text-lg text-ink">
                             {tier.range}
                           </dd>
                         </div>
                         <div className="flex items-baseline justify-between gap-6 py-4">
-                          <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                          <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                             Build Window
                           </dt>
-                          <dd className="font-display text-lg text-bone">
+                          <dd className="font-display text-lg text-ink">
                             {tier.duration}
                           </dd>
                         </div>
@@ -155,7 +155,7 @@ export default function EngagementPage() {
 
                       <ul className="mt-8 space-y-3">
                         {tier.bullets.map((b) => (
-                          <li key={b} className="flex items-start gap-3 text-sm text-bone/70">
+                          <li key={b} className="flex items-start gap-3 text-sm text-ink/70">
                             <span className="mt-2 h-px w-4 shrink-0 bg-gold" />
                             {b}
                           </li>
@@ -165,7 +165,7 @@ export default function EngagementPage() {
                       <div className="mt-10">
                         <Link
                           href={tier.href}
-                          className="inline-flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
+                          className="inline-flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-ink transition-colors hover:text-ink"
                         >
                           {tier.cta}
                           <ArrowUpRight className="h-3.5 w-3.5" />

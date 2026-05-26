@@ -9,14 +9,14 @@ const items = [
 
 export function TrustBar() {
   return (
-    <section className="relative border-y border-bone/8 bg-ink/95">
+    <section className="relative border-y border-ink/8 bg-bone/95">
       <div className="container-luxe py-7">
         <div className="border-gradient">
-          <div className="grid grid-cols-2 gap-px bg-bone/10 bg-ink/95 md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-px bg-ink/10 bg-bone/95 md:grid-cols-4">
             {items.map(({ icon: Icon, label }) => (
               <div
                 key={label}
-                className="group relative flex items-center justify-center gap-3 overflow-hidden bg-ink/95 px-6 py-6 text-center transition-colors duration-500 hover:bg-ink-700 md:py-7"
+                className="group relative flex items-center justify-center gap-3 overflow-hidden bg-bone/95 px-6 py-6 text-center transition-colors duration-500 hover:bg-bone-700 md:py-7"
               >
                 {/* Diagonal gold shimmer sweep on hover */}
                 <span
@@ -24,10 +24,10 @@ export function TrustBar() {
                   className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-gold/8 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
                 />
                 <Icon
-                  className="relative h-4 w-4 shrink-0 text-bone transition-all duration-500 group-hover:scale-110 group-hover:text-gold group-hover:drop-shadow-[0_0_6px_rgba(252,187,0,0.7)]"
+                  className="relative h-4 w-4 shrink-0 text-ink transition-all duration-500 group-hover:scale-110 group-hover:text-gold group-hover:drop-shadow-[0_0_6px_rgba(252,187,0,0.7)]"
                   aria-hidden
                 />
-                <span className="relative text-[0.7rem] uppercase tracking-[0.24em] text-bone/70 transition-colors duration-500 group-hover:text-bone md:text-[0.72rem]">
+                <span className="relative text-[0.7rem] uppercase tracking-[0.24em] text-ink/70 transition-colors duration-500 group-hover:text-ink md:text-[0.72rem]">
                   {label}
                 </span>
                 {/* Bottom gold underline that grows on hover */}

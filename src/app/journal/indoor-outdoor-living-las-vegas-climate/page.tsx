@@ -87,12 +87,12 @@ export default function Post() {
         ]}
       />
 
-      <article className="bg-ink py-20 lg:py-28">
+      <article className="bg-bone py-20 lg:py-28">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl">
             <Reveal>
-              <p className="text-lg leading-relaxed text-bone/75 md:text-xl">
-                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-bone md:text-8xl">
+              <p className="text-lg leading-relaxed text-ink/75 md:text-xl">
+                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-ink md:text-8xl">
                   T
                 </span>
                 he single strongest move in modern Vegas residential architecture
@@ -104,15 +104,15 @@ export default function Post() {
               </p>
             </Reveal>
 
-            <section id="threshold" className="mt-16 border-t border-bone/10 pt-12">
+            <section id="threshold" className="mt-16 border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">01</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">01</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   The threshold has to disappear.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Two glass panels on a track are not indoor-outdoor living.
                   They are doors. A real indoor-outdoor reveal uses multi-panel
                   pocket glass that disappears into the wall, a continuous
@@ -120,7 +120,7 @@ export default function Post() {
                   and a ceiling that reads as one architectural surface across
                   the boundary.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   When the threshold disappears, the room expands. When it
                   doesn’t, you have two rooms separated by glass.
                 </p>
@@ -128,7 +128,7 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-ink-700">
+              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-bone-700">
                 <Image
                   src={customHomeImages[3].src}
                   alt={customHomeImages[3].alt}
@@ -139,15 +139,15 @@ export default function Post() {
               </figure>
             </Reveal>
 
-            <section id="shade" className="border-t border-bone/10 pt-12">
+            <section id="shade" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">02</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">02</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Shade is the floor plan.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   In a Vegas summer, an unshaded patio is unusable from late
                   morning to early evening. A shaded patio is comfortable in
                   the same window. The architecture of the patio cover —
@@ -155,7 +155,7 @@ export default function Post() {
                   standing pergola with engineered shade — decides whether
                   the room exists or not for half the year.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   We treat the shade structure as floor-plan geometry, not as
                   an add-on. It has the same drawing-and-engineering rigor as
                   the interior walls.
@@ -164,55 +164,55 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="my-14 border-y border-bone/10 py-10">
-                <blockquote className="font-display text-3xl leading-tight text-bone text-balance md:text-4xl">
+              <figure className="my-14 border-y border-ink/10 py-10">
+                <blockquote className="font-display text-3xl leading-tight text-ink text-balance md:text-4xl">
                   “A patio in Las Vegas isn’t designed by the landscape
                   architect. It’s designed by the architect — and the most
                   important line is the shade line.”
                 </blockquote>
-                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
+                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-ink">
                   — From the studio
                 </figcaption>
               </figure>
             </Reveal>
 
-            <section id="air" className="border-t border-bone/10 pt-12">
+            <section id="air" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">03</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">03</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Engineer the air movement.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Two large overhead fans, a misting system tucked into the
                   rafters, and a couple of standing infrared heaters for the
                   cold January evenings. None of these are visible. All of
                   them are engineered in during pre-construction and wired
                   into the same scene controller as the indoor lighting.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   The patio is comfortable at 102°F and at 47°F. That is the
                   ten-month-a-year window.
                 </p>
               </Reveal>
             </section>
 
-            <section id="floor" className="border-t border-bone/10 pt-12">
+            <section id="floor" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">04</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">04</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Match the floor across the threshold.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Where possible, the interior floor finish continues onto the
                   patio. Honed-finish large-format porcelain, exterior-rated,
                   is our most-specified solution — it matches an interior
                   porcelain or stone visually and survives the Vegas sun.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   When the floor continues, the eye reads one room. When the
                   floor changes at the threshold, it reads two.
                 </p>
@@ -220,7 +220,7 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-ink-700">
+              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-bone-700">
                 <Image
                   src={kitchenImages[2].src}
                   alt={kitchenImages[2].alt}
@@ -231,36 +231,36 @@ export default function Post() {
               </figure>
             </Reveal>
 
-            <section id="light" className="border-t border-bone/10 pt-12">
+            <section id="light" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">05</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">05</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Light the outdoor room like an indoor one.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Architectural cove lighting integrated into the patio
                   cover. Decorative pendants over the outdoor dining table.
                   Discrete path lighting at floor level. Scene control on the
                   same system as the kitchen. Layers, just as inside.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   The outdoor room should be more inviting at 9pm than at 9am.
                   That is what the lighting is for.
                 </p>
               </Reveal>
             </section>
 
-            <section id="kitchen" className="border-t border-bone/10 pt-12">
+            <section id="kitchen" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">06</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">06</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Build the outdoor kitchen, even if you’re unsure.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Almost every client who hesitates on the outdoor kitchen
                   uses it more than the indoor one for six months of the
                   year. Sealed stone, ventilated stainless appliance bays,
@@ -268,7 +268,7 @@ export default function Post() {
                   engineered for the climate, and built into the patio
                   architecture.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   We treat it as part of the architecture, not as an
                   accessory.
                 </p>
@@ -276,11 +276,11 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <div className="my-16 border-y border-bone/10 py-12">
-                <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <div className="my-16 border-y border-ink/10 py-12">
+                <h3 className="font-display text-3xl text-ink md:text-4xl">
                   The point.
                 </h3>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Indoor-outdoor living in Las Vegas is not a decorating
                   exercise. It is an architectural one — and almost every
                   decision happens during pre-construction, before the
@@ -292,12 +292,12 @@ export default function Post() {
             </Reveal>
 
             <Reveal delay={3}>
-              <div className="flex items-center justify-between border-t border-bone/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55">
-                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-bone">
+              <div className="flex items-center justify-between border-t border-ink/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-ink/55">
+                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-ink">
                   <ArrowLeft className="h-4 w-4" />
                   All Notes
                 </Link>
-                <Link href="/outdoor-living-las-vegas" className="flex items-center gap-3 text-bone transition-colors hover:text-bone">
+                <Link href="/outdoor-living-las-vegas" className="flex items-center gap-3 text-ink transition-colors hover:text-ink">
                   Explore outdoor living
                   <ArrowRight className="h-4 w-4" />
                 </Link>

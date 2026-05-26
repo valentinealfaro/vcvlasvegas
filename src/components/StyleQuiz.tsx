@@ -95,7 +95,7 @@ export function StyleQuiz() {
 
   return (
     <div className="border-gradient">
-      <div className="relative overflow-hidden bg-ink-800/40 p-6 md:p-10">
+      <div className="relative overflow-hidden bg-bone-800/40 p-6 md:p-10">
         {/* Soft amber wash inside the quiz */}
         <div
           aria-hidden
@@ -107,7 +107,7 @@ export function StyleQuiz() {
         />
       {/* Progress */}
       <div className="mb-8 flex items-center gap-4">
-        <div className="relative h-px flex-1 overflow-hidden bg-bone/15">
+        <div className="relative h-px flex-1 overflow-hidden bg-ink/15">
           <motion.div
             initial={false}
             animate={{ width: `${progress}%` }}
@@ -117,7 +117,7 @@ export function StyleQuiz() {
         </div>
         <div className="flex items-center gap-2">
           <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
             {step >= totalSteps - 1 ? 'Profile' : `Step ${step + 1} / ${totalSteps - 1}`}
           </p>
         </div>
@@ -133,8 +133,8 @@ export function StyleQuiz() {
         >
           {step === 0 && (
             <div>
-              <p className="eyebrow mb-3 !text-bone">Question 01 · Architecture</p>
-              <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <p className="eyebrow mb-3 !text-ink">Question 01 · Architecture</p>
+              <h3 className="font-display text-3xl text-ink md:text-4xl">
                 Which language speaks to you?
               </h3>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -144,7 +144,7 @@ export function StyleQuiz() {
                     type="button"
                     onClick={() => update('style', s.key)}
                     className={cn(
-                      'group border border-bone/15 p-5 text-left transition-all duration-300 hover:border-gold',
+                      'group border border-ink/15 p-5 text-left transition-all duration-300 hover:border-gold',
                       answers.style === s.key && 'border-gold bg-gold/5',
                     )}
                   >
@@ -152,15 +152,15 @@ export function StyleQuiz() {
                       {s.tones.map((t, i) => (
                         <span
                           key={i}
-                          className="h-5 w-5 border border-bone/10"
+                          className="h-5 w-5 border border-ink/10"
                           style={{ backgroundColor: t }}
                         />
                       ))}
                     </div>
-                    <p className="font-display text-xl text-bone group-hover:text-bone">
+                    <p className="font-display text-xl text-ink group-hover:text-ink">
                       {s.label}
                     </p>
-                    <p className="mt-2 text-xs leading-snug text-bone/55">
+                    <p className="mt-2 text-xs leading-snug text-ink/55">
                       {s.description}
                     </p>
                   </button>
@@ -171,8 +171,8 @@ export function StyleQuiz() {
 
           {step === 1 && (
             <div>
-              <p className="eyebrow mb-3 !text-bone">Question 02 · Material Warmth</p>
-              <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <p className="eyebrow mb-3 !text-ink">Question 02 · Material Warmth</p>
+              <h3 className="font-display text-3xl text-ink md:text-4xl">
                 How warm should the rooms feel?
               </h3>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -182,12 +182,12 @@ export function StyleQuiz() {
                     type="button"
                     onClick={() => update('warmth', w.key)}
                     className={cn(
-                      'border border-bone/15 p-5 text-left transition-all duration-300 hover:border-gold',
+                      'border border-ink/15 p-5 text-left transition-all duration-300 hover:border-gold',
                       answers.warmth === w.key && 'border-gold bg-gold/5',
                     )}
                   >
-                    <p className="font-display text-xl text-bone">{w.label}</p>
-                    <p className="mt-2 text-xs text-bone/55">{w.description}</p>
+                    <p className="font-display text-xl text-ink">{w.label}</p>
+                    <p className="mt-2 text-xs text-ink/55">{w.description}</p>
                   </button>
                 ))}
               </div>
@@ -196,8 +196,8 @@ export function StyleQuiz() {
 
           {step === 2 && (
             <div>
-              <p className="eyebrow mb-3 !text-bone">Question 03 · Light</p>
-              <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <p className="eyebrow mb-3 !text-ink">Question 03 · Light</p>
+              <h3 className="font-display text-3xl text-ink md:text-4xl">
                 What kind of light do you want to live in?
               </h3>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -207,12 +207,12 @@ export function StyleQuiz() {
                     type="button"
                     onClick={() => update('light', l.key)}
                     className={cn(
-                      'border border-bone/15 p-5 text-left transition-all duration-300 hover:border-gold',
+                      'border border-ink/15 p-5 text-left transition-all duration-300 hover:border-gold',
                       answers.light === l.key && 'border-gold bg-gold/5',
                     )}
                   >
-                    <p className="font-display text-xl text-bone">{l.label}</p>
-                    <p className="mt-2 text-xs text-bone/55">{l.description}</p>
+                    <p className="font-display text-xl text-ink">{l.label}</p>
+                    <p className="mt-2 text-xs text-ink/55">{l.description}</p>
                   </button>
                 ))}
               </div>
@@ -221,8 +221,8 @@ export function StyleQuiz() {
 
           {step === 3 && (
             <div>
-              <p className="eyebrow mb-3 !text-bone">Question 04 · Project Scope</p>
-              <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <p className="eyebrow mb-3 !text-ink">Question 04 · Project Scope</p>
+              <h3 className="font-display text-3xl text-ink md:text-4xl">
                 How much of the home are we touching?
               </h3>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -232,12 +232,12 @@ export function StyleQuiz() {
                     type="button"
                     onClick={() => update('scope', s.key)}
                     className={cn(
-                      'border border-bone/15 p-5 text-left transition-all duration-300 hover:border-gold',
+                      'border border-ink/15 p-5 text-left transition-all duration-300 hover:border-gold',
                       answers.scope === s.key && 'border-gold bg-gold/5',
                     )}
                   >
-                    <p className="font-display text-xl text-bone">{s.label}</p>
-                    <p className="mt-2 text-xs text-bone/55">{s.description}</p>
+                    <p className="font-display text-xl text-ink">{s.label}</p>
+                    <p className="mt-2 text-xs text-ink/55">{s.description}</p>
                   </button>
                 ))}
               </div>
@@ -246,13 +246,13 @@ export function StyleQuiz() {
 
           {step === 4 && (
             <div>
-              <p className="eyebrow mb-3 !text-bone">Your Style Profile</p>
-              <h3 className="font-display text-4xl text-bone md:text-5xl">
+              <p className="eyebrow mb-3 !text-ink">Your Style Profile</p>
+              <h3 className="font-display text-4xl text-ink md:text-5xl">
                 {selectedStyle?.label}{' '}
-                <span className="italic text-bone">·</span>{' '}
+                <span className="italic text-ink">·</span>{' '}
                 {warmths.find((w) => w.key === answers.warmth)?.label}
               </h3>
-              <p className="mt-4 max-w-xl text-bone/65">
+              <p className="mt-4 max-w-xl text-ink/65">
                 Your profile points toward a {selectedStyle?.label.toLowerCase()} home with
                 {' '}
                 {warmths.find((w) => w.key === answers.warmth)?.label.toLowerCase()} materials,
@@ -265,15 +265,15 @@ export function StyleQuiz() {
               </p>
 
               {selectedStyle && (
-                <div className="mt-8 border-y border-bone/10 py-7">
-                  <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                <div className="mt-8 border-y border-ink/10 py-7">
+                  <p className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                     Sample Palette
                   </p>
                   <div className="mt-4 flex gap-2">
                     {selectedStyle.tones.map((t, i) => (
                       <span
                         key={i}
-                        className="h-16 flex-1 border border-bone/10"
+                        className="h-16 flex-1 border border-ink/10"
                         style={{ backgroundColor: t }}
                       />
                     ))}
@@ -294,13 +294,13 @@ export function StyleQuiz() {
                     aria-hidden
                     className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-gold/50 bg-gold/10 shadow-[0_0_18px_-4px_rgba(252,187,0,0.6)]"
                   >
-                    <CheckCircle2 className="h-5 w-5 text-bone" />
+                    <CheckCircle2 className="h-5 w-5 text-ink" />
                   </span>
                   <div>
-                    <p className="font-display text-xl text-bone">
+                    <p className="font-display text-xl text-ink">
                       Your style direction is on its way.
                     </p>
-                    <p className="mt-1 text-sm text-bone/65">
+                    <p className="mt-1 text-sm text-ink/65">
                       A senior designer will follow up within one business day with
                       sample palettes and project examples that match your profile.
                     </p>
@@ -314,19 +314,19 @@ export function StyleQuiz() {
                   }}
                   className="mt-8"
                 >
-                  <p className="mb-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55">
+                  <p className="mb-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink/55">
                     Send the full direction
                   </p>
                   <div className="flex flex-col gap-3 sm:flex-row">
                     <label className="relative flex-1">
-                      <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-bone/40" />
+                      <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40" />
                       <input
                         required
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="you@example.com"
-                        className="w-full border border-bone/15 bg-ink/70 py-3 pl-12 pr-4 text-sm text-bone placeholder:text-bone/40 focus:border-gold focus:outline-none"
+                        className="w-full border border-ink/15 bg-bone/70 py-3 pl-12 pr-4 text-sm text-ink placeholder:text-ink/40 focus:border-gold focus:outline-none"
                       />
                     </label>
                     <button type="submit" className="btn-gold sm:shrink-0">
@@ -340,7 +340,7 @@ export function StyleQuiz() {
               <button
                 type="button"
                 onClick={reset}
-                className="mt-8 flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-bone"
+                className="mt-8 flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-ink/55 transition-colors hover:text-ink"
               >
                 <RotateCcw className="h-3 w-3" />
                 Start Over
@@ -352,17 +352,17 @@ export function StyleQuiz() {
 
       {/* Footer nav (only on questions, not result) */}
       {step < 4 && (
-        <div className="mt-10 flex items-center justify-between border-t border-bone/10 pt-6">
+        <div className="mt-10 flex items-center justify-between border-t border-ink/10 pt-6">
           <button
             type="button"
             onClick={() => setStep((s) => Math.max(0, s - 1))}
             disabled={step === 0}
-            className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-bone disabled:cursor-not-allowed disabled:opacity-30"
+            className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-ink/55 transition-colors hover:text-ink disabled:cursor-not-allowed disabled:opacity-30"
           >
             <ArrowLeft className="h-3 w-3" />
             Back
           </button>
-          <p className="text-[0.6rem] uppercase tracking-[0.22em] text-bone/35">
+          <p className="text-[0.6rem] uppercase tracking-[0.22em] text-ink/35">
             Tap a card to continue
           </p>
         </div>

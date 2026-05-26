@@ -57,7 +57,7 @@ export function CursorGlow() {
             opacity: hovering ? 0.7 : 0.35,
           }}
           transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 h-10 w-10 rounded-full border border-gold/60 mix-blend-difference"
+          className="absolute left-0 top-0 -translate-x-1/2 -translate-y-1/2 h-10 w-10 rounded-full border border-gold"
         />
       </motion.div>
       <motion.div

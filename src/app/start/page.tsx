@@ -68,7 +68,7 @@ export default function StartPage() {
       <TrustBar />
 
       {/* Three paths */}
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
             {paths.map((p, i) => {
@@ -77,19 +77,19 @@ export default function StartPage() {
                 <Reveal key={p.title} delay={i}>
                   <Link
                     href={p.href}
-                    className="group flex h-full flex-col justify-between gap-12 border border-bone/15 p-8 transition-all duration-500 hover:border-gold hover:bg-ink-700 lg:p-10"
+                    className="group flex h-full flex-col justify-between gap-12 border border-ink/15 p-8 transition-all duration-500 hover:border-gold hover:bg-bone-700 lg:p-10"
                   >
                     <div>
-                      <Icon className="h-6 w-6 text-bone transition-colors group-hover:text-bone" />
-                      <p className="eyebrow mt-6 !text-bone/45">{p.eyebrow}</p>
-                      <p className="mt-3 font-display text-3xl text-bone group-hover:text-bone md:text-4xl">
+                      <Icon className="h-6 w-6 text-ink transition-colors group-hover:text-ink" />
+                      <p className="eyebrow mt-6 !text-ink/45">{p.eyebrow}</p>
+                      <p className="mt-3 font-display text-3xl text-ink group-hover:text-ink md:text-4xl">
                         {p.title}
                       </p>
-                      <p className="mt-4 text-base leading-relaxed text-bone/60">
+                      <p className="mt-4 text-base leading-relaxed text-ink/60">
                         {p.description}
                       </p>
                     </div>
-                    <div className="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-bone">
+                    <div className="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-ink">
                       {p.cta}
                       <ArrowUpRight className="h-3 w-3 transition-transform group-hover:rotate-45" />
                     </div>
@@ -102,23 +102,23 @@ export default function StartPage() {
       </section>
 
       {/* Direct consultation form */}
-      <section id="consult" className="border-y border-bone/8 bg-ink-800 py-24 lg:py-32">
+      <section id="consult" className="border-y border-ink/8 bg-bone-800 py-24 lg:py-32">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl">
             <Reveal>
               <div className="text-center">
                 <p className="eyebrow mb-6 justify-center">Direct Path</p>
-                <h2 className="font-display text-4xl text-bone md:text-5xl">
+                <h2 className="font-display text-4xl text-ink md:text-5xl">
                   Send the project<br />
-                  <span className="italic text-bone">to a senior designer.</span>
+                  <span className="italic text-ink">to a senior designer.</span>
                 </h2>
-                <p className="mt-6 text-bone/65">
+                <p className="mt-6 text-ink/65">
                   A 60-second form. A one-business-day response. Confidential.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={1}>
-              <div className="mt-14 border border-bone/10 bg-ink-800/40 p-8 md:p-10">
+              <div className="mt-14 border border-ink/10 bg-bone-800/40 p-8 md:p-10">
                 <ConsultationForm />
               </div>
             </Reveal>
@@ -127,15 +127,15 @@ export default function StartPage() {
       </section>
 
       {/* Final assurance */}
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
-              <p className="font-display text-3xl text-bone md:text-4xl">
+              <p className="font-display text-3xl text-ink md:text-4xl">
                 A senior designer reads every inquiry.<br />
-                <span className="italic text-bone">No salespeople. No marketing cadence.</span>
+                <span className="italic text-ink">No salespeople. No marketing cadence.</span>
               </p>
-              <p className="mt-6 text-bone/55">
+              <p className="mt-6 text-ink/55">
                 One email. One conversation. Confidential.
               </p>
             </Reveal>

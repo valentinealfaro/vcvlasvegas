@@ -94,7 +94,7 @@ export default function SpecSheetPage() {
       />
 
       {/* On-screen header / no-print */}
-      <section className="no-print relative overflow-hidden border-b border-bone/10 bg-ink-800/40 pt-32 pb-12">
+      <section className="no-print relative overflow-hidden border-b border-ink/10 bg-bone-800/40 pt-32 pb-12">
         {/* Top gradient hairline */}
         <div
           aria-hidden
@@ -109,13 +109,13 @@ export default function SpecSheetPage() {
             <div className="mb-4 flex items-center gap-4">
               <span aria-hidden className="h-px w-12 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
               <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
-              <p className="eyebrow !text-bone">Specification Sheet</p>
+              <p className="eyebrow !text-ink">Specification Sheet</p>
             </div>
-            <h1 className="font-display text-3xl text-bone text-balance md:text-4xl">
+            <h1 className="font-display text-3xl text-ink text-balance md:text-4xl">
               A single-document overview of{' '}
-              <span className="italic text-bone">how the studio specifies a build.</span>
+              <span className="italic text-ink">how the studio specifies a build.</span>
             </h1>
-            <p className="mt-4 max-w-2xl text-sm text-bone/55">
+            <p className="mt-4 max-w-2xl text-sm text-ink/55">
               Print this page or save it as PDF for a one-document studio
               reference. The print stylesheet renders the document on a
               white background, in black type, with gold accents.
@@ -128,25 +128,25 @@ export default function SpecSheetPage() {
       </section>
 
       {/* The printable document */}
-      <article className="print-page bg-ink py-20 lg:py-28">
+      <article className="print-page bg-bone py-20 lg:py-28">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl">
             {/* Document header */}
-            <header className="flex items-end justify-between gap-6 border-b border-bone/15 pb-8">
+            <header className="flex items-end justify-between gap-6 border-b border-ink/15 pb-8">
               <div className="flex items-center gap-4">
-                <Monogram size={56} className="text-bone print-gold" />
+                <Monogram size={56} className="text-ink print-gold" />
                 <div>
-                  <p className="font-display text-2xl text-bone">{siteConfig.name}</p>
-                  <p className="text-[0.62rem] uppercase tracking-[0.32em] text-bone/55">
+                  <p className="font-display text-2xl text-ink">{siteConfig.name}</p>
+                  <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ink/55">
                     Specification Sheet · {new Date().getFullYear()}
                   </p>
                 </div>
               </div>
               <div className="text-right">
-                <p className="text-[0.62rem] uppercase tracking-[0.28em] text-bone/55">
+                <p className="text-[0.62rem] uppercase tracking-[0.28em] text-ink/55">
                   Luxury Design-Build
                 </p>
-                <p className="mt-1 text-[0.62rem] uppercase tracking-[0.28em] text-bone/55">
+                <p className="mt-1 text-[0.62rem] uppercase tracking-[0.28em] text-ink/55">
                   Las Vegas Metro
                 </p>
               </div>
@@ -158,20 +158,20 @@ export default function SpecSheetPage() {
                 <section key={section.h}>
                   <div className="flex items-center gap-3">
                     <span aria-hidden className="no-print h-px w-6 bg-gold" />
-                    <h2 className="font-display text-xl text-bone print-gold">
+                    <h2 className="font-display text-xl text-ink print-gold">
                       {section.h}
                     </h2>
                   </div>
-                  <dl className="mt-4 divide-y divide-bone/10 border-y border-bone/10">
+                  <dl className="mt-4 divide-y divide-ink/10 border-y border-ink/10">
                     {section.rows.map((row) => (
                       <div
                         key={row.l}
                         className="grid grid-cols-[1fr_2fr] items-baseline gap-6 py-3"
                       >
-                        <dt className="text-[0.6rem] uppercase tracking-[0.22em] text-bone/55">
+                        <dt className="text-[0.6rem] uppercase tracking-[0.22em] text-ink/55">
                           {row.l}
                         </dt>
-                        <dd className="text-sm text-bone md:text-base">{row.r}</dd>
+                        <dd className="text-sm text-ink md:text-base">{row.r}</dd>
                       </div>
                     ))}
                   </dl>
@@ -179,7 +179,7 @@ export default function SpecSheetPage() {
               ))}
             </div>
 
-            <footer className="mt-16 border-t border-bone/15 pt-6 text-[0.58rem] uppercase tracking-[0.28em] text-bone/45">
+            <footer className="mt-16 border-t border-ink/15 pt-6 text-[0.58rem] uppercase tracking-[0.28em] text-ink/45">
               © {new Date().getFullYear()} {siteConfig.legalName} · Specifications
               indicative. Final spec calibrated to project.
             </footer>
@@ -188,7 +188,7 @@ export default function SpecSheetPage() {
       </article>
 
       {/* On-screen footer / no-print */}
-      <section className="no-print relative overflow-hidden border-t border-bone/10 bg-ink py-16">
+      <section className="no-print relative overflow-hidden border-t border-ink/10 bg-bone py-16">
         <div aria-hidden className="glow-amber" />
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl text-center">
@@ -198,7 +198,7 @@ export default function SpecSheetPage() {
                 <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
                 <span aria-hidden className="h-px w-10 bg-gradient-to-r from-transparent via-gold to-transparent" />
               </div>
-              <p className="font-display text-2xl text-bone md:text-3xl">
+              <p className="font-display text-2xl text-ink md:text-3xl">
                 Ready to apply the spec to your project?
               </p>
               <div className="mt-6 flex flex-wrap items-center justify-center gap-4">

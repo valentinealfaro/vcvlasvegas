@@ -14,7 +14,7 @@ export function GallerySection() {
   // Asymmetric featured-tile layout — one large hero tile + smaller cards
   // surrounding it for editorial cadence.
   return (
-    <section className="relative overflow-hidden bg-ink py-28 lg:py-40">
+    <section className="relative overflow-hidden bg-bone py-28 lg:py-40">
       <div aria-hidden className="glow-amber" />
 
       <div className="container-luxe">
@@ -65,7 +65,7 @@ export function GallerySection() {
           </div>
 
           {/* Editorial counter strip below the grid */}
-          <div className="mt-8 flex items-center justify-center gap-4 text-[0.62rem] uppercase tracking-[0.32em] text-bone/45">
+          <div className="mt-8 flex items-center justify-center gap-4 text-[0.62rem] uppercase tracking-[0.32em] text-ink/45">
             <span aria-hidden className="h-px w-8 bg-gradient-to-r from-transparent to-gold/60" />
             <span aria-hidden className="h-1 w-1 rounded-full bg-gold shadow-[0_0_6px_rgba(252,187,0,0.6)]" />
             <span>Six of many</span>

@@ -7,7 +7,7 @@ export function PrintButton() {
     <button
       type="button"
       onClick={() => window.print()}
-      className="group relative inline-flex items-center gap-3 overflow-hidden border border-bone/20 px-5 py-3 text-[0.65rem] font-medium uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:bg-gold/5"
+      className="group relative inline-flex items-center gap-3 overflow-hidden border border-ink/20 px-5 py-3 text-[0.65rem] font-medium uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:border-gold hover:bg-gold/5"
     >
       {/* Diagonal gold shimmer sweep on hover */}
       <span

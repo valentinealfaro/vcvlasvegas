@@ -13,7 +13,7 @@ export function InlineLeadStrip({
   description?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-ink-800/60">
+    <section className="relative overflow-hidden bg-bone-800/60">
       {/* Gradient hairline top — duotone */}
       <div
         aria-hidden
@@ -34,13 +34,13 @@ export function InlineLeadStrip({
               <div className="mb-4 flex items-center gap-3">
                 <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
                 <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
-                <p className="eyebrow !text-bone">By Appointment</p>
+                <p className="eyebrow !text-ink">By Appointment</p>
               </div>
-              <h3 className="font-display text-3xl text-bone text-balance md:text-4xl">
+              <h3 className="font-display text-3xl text-ink text-balance md:text-4xl">
                 {title}{' '}
-                <span className="italic text-bone">{italic}</span>
+                <span className="italic text-ink">{italic}</span>
               </h3>
-              <p className="mt-3 max-w-xl text-bone/60">{description}</p>
+              <p className="mt-3 max-w-xl text-ink/60">{description}</p>
             </div>
           </Reveal>
           <Reveal delay={1}>

@@ -58,24 +58,24 @@ export default function ProcessPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Process' }]}
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <div className="space-y-24">
             {phases.map((phase) => (
               <Reveal key={phase.n}>
-                <div className="grid gap-12 border-t border-bone/10 pt-16 lg:grid-cols-[auto_1fr_1fr] lg:gap-16">
-                  <p className="font-display text-7xl text-bone lg:text-8xl">
+                <div className="grid gap-12 border-t border-ink/10 pt-16 lg:grid-cols-[auto_1fr_1fr] lg:gap-16">
+                  <p className="font-display text-7xl text-ink lg:text-8xl">
                     {phase.n}
                   </p>
                   <div>
-                    <h2 className="font-display text-4xl text-bone md:text-5xl">
+                    <h2 className="font-display text-4xl text-ink md:text-5xl">
                       {phase.t}
                     </h2>
-                    <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                    <p className="mt-6 text-lg leading-relaxed text-ink/70">
                       {phase.d}
                     </p>
                   </div>
-                  <ul className="space-y-3 self-center text-sm uppercase tracking-[0.18em] text-bone/65">
+                  <ul className="space-y-3 self-center text-sm uppercase tracking-[0.18em] text-ink/65">
                     {phase.detail.map((d) => (
                       <li key={d} className="flex items-center gap-3">
                         <span className="h-px w-5 bg-gold" />

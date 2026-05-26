@@ -35,18 +35,18 @@ export default function LetterPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Letter' }]}
       />
 
-      <article className="bg-ink py-20 lg:py-28">
+      <article className="bg-bone py-20 lg:py-28">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl">
             <Reveal>
-              <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+              <p className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                 Dear reader,
               </p>
             </Reveal>
 
             <Reveal delay={1}>
-              <p className="mt-8 text-lg leading-relaxed text-bone/80 md:text-xl">
-                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-bone md:text-8xl">
+              <p className="mt-8 text-lg leading-relaxed text-ink/80 md:text-xl">
+                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-ink md:text-8xl">
                   L
                 </span>
                 as Vegas has been waiting for a different kind of remodeling
@@ -58,7 +58,7 @@ export default function LetterPage() {
             </Reveal>
 
             <Reveal delay={2}>
-              <p className="mt-6 text-lg leading-relaxed text-bone/75 md:text-xl">
+              <p className="mt-6 text-lg leading-relaxed text-ink/75 md:text-xl">
                 That is why we built VCV Vegas. To run the kind of design-build
                 studio that the best Los Angeles, Scottsdale, and Miami firms
                 have made standard for decades — and bring that standard, intact,
@@ -68,7 +68,7 @@ export default function LetterPage() {
             </Reveal>
 
             <Reveal delay={3}>
-              <p className="mt-6 text-lg leading-relaxed text-bone/75 md:text-xl">
+              <p className="mt-6 text-lg leading-relaxed text-ink/75 md:text-xl">
                 We believe in restraint. We believe in materials that age
                 beautifully — honed stone, warm wood, brushed brass, frameless
                 glass. We believe a kitchen island is the heart of a home,
@@ -78,7 +78,7 @@ export default function LetterPage() {
             </Reveal>
 
             <Reveal delay={4}>
-              <p className="mt-6 text-lg leading-relaxed text-bone/75 md:text-xl">
+              <p className="mt-6 text-lg leading-relaxed text-ink/75 md:text-xl">
                 We believe pre-construction matters more than construction. We
                 believe a site that runs quietly is a site that finishes well.
                 We believe the senior designer who walks your home at the first
@@ -89,7 +89,7 @@ export default function LetterPage() {
             </Reveal>
 
             <Reveal delay={5}>
-              <p className="mt-6 text-lg leading-relaxed text-bone/75 md:text-xl">
+              <p className="mt-6 text-lg leading-relaxed text-ink/75 md:text-xl">
                 And we believe — quietly, but firmly — that the right way to
                 build a luxury home is the slow way. The phase-by-phase way.
                 The drawing-by-drawing way. The dry-laid stone, the
@@ -99,14 +99,14 @@ export default function LetterPage() {
             </Reveal>
 
             <Reveal delay={6}>
-              <p className="mt-10 font-display text-2xl leading-snug text-bone text-balance md:text-3xl">
+              <p className="mt-10 font-display text-2xl leading-snug text-ink text-balance md:text-3xl">
                 If that is the kind of project you are imagining,
-                <span className="italic text-bone"> we should talk.</span>
+                <span className="italic text-ink"> we should talk.</span>
               </p>
             </Reveal>
 
             <Reveal delay={7}>
-              <p className="mt-10 text-lg leading-relaxed text-bone/75 md:text-xl">
+              <p className="mt-10 text-lg leading-relaxed text-ink/75 md:text-xl">
                 What we promise — to every client, every project, every time —
                 is that the studio you hire on day one is the studio you keep
                 through final walkthrough. No bait-and-switch. No staffing
@@ -117,17 +117,17 @@ export default function LetterPage() {
             </Reveal>
 
             <Reveal delay={8}>
-              <div className="mt-16 border-t border-bone/10 pt-12">
-                <p className="text-lg italic text-bone/85 md:text-xl">
+              <div className="mt-16 border-t border-ink/10 pt-12">
+                <p className="text-lg italic text-ink/85 md:text-xl">
                   With architectural restraint,
                 </p>
                 <div className="mt-6 flex items-center gap-4">
-                  <Monogram size={56} className="text-bone" />
+                  <Monogram size={56} className="text-ink" />
                   <div>
-                    <p className="font-display text-2xl text-bone">
+                    <p className="font-display text-2xl text-ink">
                       The VCV Vegas Studio
                     </p>
-                    <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                    <p className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                       Las Vegas Metro · {new Date().getFullYear()}
                     </p>
                   </div>
@@ -136,22 +136,22 @@ export default function LetterPage() {
             </Reveal>
 
             <Reveal delay={9}>
-              <div className="mt-16 border-t border-bone/10 pt-12">
-                <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+              <div className="mt-16 border-t border-ink/10 pt-12">
+                <p className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                   Post-script
                 </p>
-                <p className="mt-4 text-base leading-relaxed text-bone/65 md:text-lg">
+                <p className="mt-4 text-base leading-relaxed text-ink/65 md:text-lg">
                   If the letter resonates, two next steps. The shorter:{' '}
                   <Link
                     href="/contact"
-                    className="text-bone underline-offset-4 hover:underline"
+                    className="text-ink underline-offset-4 hover:underline"
                   >
                     schedule a consultation
                   </Link>
                   . The deeper:{' '}
                   <Link
                     href="/intake"
-                    className="text-bone underline-offset-4 hover:underline"
+                    className="text-ink underline-offset-4 hover:underline"
                   >
                     send a project brief
                   </Link>
@@ -165,7 +165,7 @@ export default function LetterPage() {
               <div className="mt-10">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
+                  className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink transition-colors hover:text-ink"
                 >
                   Begin a conversation
                   <ArrowRight className="h-3 w-3" />

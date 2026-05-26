@@ -244,7 +244,7 @@ export default function GlossaryPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Glossary' }]}
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="A — Z"
@@ -255,9 +255,9 @@ export default function GlossaryPage() {
           <div className="mt-16 space-y-16">
             {groups.map((group) => (
               <Reveal key={group.letter}>
-                <div className="grid gap-8 border-t border-bone/10 pt-10 lg:grid-cols-[auto_1fr] lg:gap-16">
+                <div className="grid gap-8 border-t border-ink/10 pt-10 lg:grid-cols-[auto_1fr] lg:gap-16">
                   <div className="flex flex-col gap-3">
-                    <p className="font-display text-7xl text-bone [text-shadow:0_0_28px_rgba(252,187,0,0.35)] lg:text-8xl">
+                    <p className="font-display text-7xl text-ink [text-shadow:0_0_28px_rgba(252,187,0,0.35)] lg:text-8xl">
                       {group.letter}
                     </p>
                     <span aria-hidden className="h-px w-12 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
@@ -265,20 +265,20 @@ export default function GlossaryPage() {
                   <dl className="space-y-8">
                     {group.entries.map((entry) => (
                       <div key={entry.term} className="group">
-                        <dt className="flex items-baseline gap-3 font-display text-2xl text-bone md:text-3xl">
+                        <dt className="flex items-baseline gap-3 font-display text-2xl text-ink md:text-3xl">
                           <span
                             aria-hidden
                             className="mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]"
                           />
                           {entry.term}
                         </dt>
-                        <dd className="mt-3 pl-5 text-base leading-relaxed text-bone/70 md:text-lg">
+                        <dd className="mt-3 pl-5 text-base leading-relaxed text-ink/70 md:text-lg">
                           {entry.meaning}
                         </dd>
                         {entry.link && (
                           <Link
                             href={entry.link.href}
-                            className="group/link mt-4 ml-5 inline-flex items-center gap-3 text-[0.6rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
+                            className="group/link mt-4 ml-5 inline-flex items-center gap-3 text-[0.6rem] uppercase tracking-[0.28em] text-ink transition-colors hover:text-ink"
                           >
                             <span className="relative">
                               {entry.link.label}

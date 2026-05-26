@@ -84,34 +84,34 @@ export default function StandardsPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Standards' }]}
       />
 
-      <section className="bg-ink py-20 lg:py-28">
+      <section className="bg-bone py-20 lg:py-28">
         <div className="container-luxe">
           <div className="space-y-20">
             {pillars.map((p) => (
               <Reveal key={p.n}>
-                <div className="grid gap-10 border-t border-bone/10 pt-14 lg:grid-cols-[auto_1.2fr_1fr] lg:gap-16">
-                  <p className="font-display text-6xl text-bone lg:text-7xl">
+                <div className="grid gap-10 border-t border-ink/10 pt-14 lg:grid-cols-[auto_1.2fr_1fr] lg:gap-16">
+                  <p className="font-display text-6xl text-ink lg:text-7xl">
                     {p.n}
                   </p>
                   <div>
-                    <h2 className="font-display text-3xl text-bone md:text-4xl">
+                    <h2 className="font-display text-3xl text-ink md:text-4xl">
                       {p.t}
                     </h2>
-                    <p className="mt-5 text-lg leading-relaxed text-bone/70">
+                    <p className="mt-5 text-lg leading-relaxed text-ink/70">
                       {p.d}
                     </p>
                   </div>
                   <div className="self-center">
-                    <dl className="divide-y divide-bone/10 border-y border-bone/10">
+                    <dl className="divide-y divide-ink/10 border-y border-ink/10">
                       {p.rows.map((row) => (
                         <div
                           key={row.l}
                           className="flex items-center justify-between gap-6 py-3"
                         >
-                          <dt className="text-[0.65rem] uppercase tracking-[0.22em] text-bone/50">
+                          <dt className="text-[0.65rem] uppercase tracking-[0.22em] text-ink/50">
                             {row.l}
                           </dt>
-                          <dd className="text-sm text-bone">{row.v}</dd>
+                          <dd className="text-sm text-ink">{row.v}</dd>
                         </div>
                       ))}
                     </dl>

@@ -63,7 +63,7 @@ export default function NeighborhoodsPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Neighborhoods' }]}
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Featured Neighborhoods"
@@ -81,15 +81,15 @@ export default function NeighborhoodsPage() {
                   />
                   <div className="flex items-start justify-between gap-6">
                     <div>
-                      <p className="eyebrow mb-2 !text-bone/45">{c.region}</p>
-                      <h2 className="font-display text-3xl text-bone transition-colors group-hover:text-bone md:text-4xl">
+                      <p className="eyebrow mb-2 !text-ink/45">{c.region}</p>
+                      <h2 className="font-display text-3xl text-ink transition-colors group-hover:text-ink md:text-4xl">
                         {c.city}
                       </h2>
-                      <p className="mt-3 max-w-md text-bone/60">
+                      <p className="mt-3 max-w-md text-ink/60">
                         {overviewBySlug[c.slug]}
                       </p>
                     </div>
-                    <div className="grid h-12 w-12 shrink-0 place-items-center border border-bone/15 transition-all group-hover:border-gold group-hover:bg-gold group-hover:text-ink">
+                    <div className="grid h-12 w-12 shrink-0 place-items-center border border-ink/15 transition-all group-hover:border-gold group-hover:bg-gold group-hover:text-ink">
                       <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
                     </div>
                   </div>
@@ -100,20 +100,20 @@ export default function NeighborhoodsPage() {
         </div>
       </section>
 
-      <section className="border-y border-bone/8 bg-ink-800 py-20">
+      <section className="border-y border-ink/8 bg-bone-800 py-20">
         <div className="container-luxe">
           <Reveal>
             <p className="eyebrow mb-6">Also Within Our Radius</p>
-            <h3 className="font-display text-3xl text-bone md:text-4xl">
+            <h3 className="font-display text-3xl text-ink md:text-4xl">
               We serve every corner<br />
-              <span className="italic text-bone">of the Las Vegas metro.</span>
+              <span className="italic text-ink">of the Las Vegas metro.</span>
             </h3>
           </Reveal>
           <Reveal delay={1} className="mt-10 grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-3 lg:grid-cols-6">
             {adjacentAreas.map((a) => (
               <div
                 key={a}
-                className="flex items-center gap-3 text-sm uppercase tracking-[0.18em] text-bone/65"
+                className="flex items-center gap-3 text-sm uppercase tracking-[0.18em] text-ink/65"
               >
                 <span className="h-px w-4 bg-gold" />
                 {a}

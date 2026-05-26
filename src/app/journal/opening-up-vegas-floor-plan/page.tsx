@@ -86,12 +86,12 @@ export default function Post() {
         ]}
       />
 
-      <article className="bg-ink py-20 lg:py-28">
+      <article className="bg-bone py-20 lg:py-28">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl">
             <Reveal>
-              <p className="text-lg leading-relaxed text-bone/75 md:text-xl">
-                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-bone md:text-8xl">
+              <p className="text-lg leading-relaxed text-ink/75 md:text-xl">
+                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-ink md:text-8xl">
                   A
                 </span>
                 bout eighty percent of the high-end remodel work we do across
@@ -105,15 +105,15 @@ export default function Post() {
             </Reveal>
 
             {/* 01 */}
-            <section id="plan" className="mt-16 border-t border-bone/10 pt-12">
+            <section id="plan" className="mt-16 border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">01</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">01</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Read the plan before you redraw it.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Before we propose changes, we spend an evening with the
                   floor plan as it is — where the light lands at sunrise and
                   sunset, where people gather, which rooms get used and which
@@ -125,7 +125,7 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-ink-700">
+              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-bone-700">
                 <Image
                   src={remodelImages[0].src}
                   alt={remodelImages[0].alt}
@@ -137,22 +137,22 @@ export default function Post() {
             </Reveal>
 
             {/* 02 */}
-            <section id="wall" className="border-t border-bone/10 pt-12">
+            <section id="wall" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">02</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">02</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   The wall is almost always load-bearing.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   The wall you want to remove is the wall that is holding the
                   roof up. That is fine — it is solvable. We bring in a
                   structural engineer, design a flush LVL or steel beam to
                   carry the load, and detail the ceiling so the beam reads as
                   intentional architecture rather than a remodel patch.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   When the beam is flush, the ceiling plane is continuous,
                   and almost no one realizes a wall used to be there. That
                   is the move you are paying for.
@@ -161,34 +161,34 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="my-14 border-y border-bone/10 py-10">
-                <blockquote className="font-display text-3xl leading-tight text-bone text-balance md:text-4xl">
+              <figure className="my-14 border-y border-ink/10 py-10">
+                <blockquote className="font-display text-3xl leading-tight text-ink text-balance md:text-4xl">
                   “The best remodels look like nothing changed and like
                   everything changed at the same time.”
                 </blockquote>
-                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
+                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-ink">
                   — From the studio
                 </figcaption>
               </figure>
             </Reveal>
 
             {/* 03 */}
-            <section id="kitchen" className="border-t border-bone/10 pt-12">
+            <section id="kitchen" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">03</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">03</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Design the kitchen as part of the room.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Once the wall is gone, the kitchen is no longer a separate
                   room. It is one end of the great room. That changes
                   everything — the cabinetry has to read as architecture, not
                   appliances; the range hood becomes a sculptural object;
                   the island is the social center of the home.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   We typically run cabinetry to the ceiling, integrate the
                   refrigeration behind cabinet panels, and treat the back
                   cooking wall as a single architectural plane. The
@@ -198,7 +198,7 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-ink-700">
+              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-bone-700">
                 <Image
                   src={kitchenImages[0].src}
                   alt={kitchenImages[0].alt}
@@ -210,15 +210,15 @@ export default function Post() {
             </Reveal>
 
             {/* 04 */}
-            <section id="sightline" className="border-t border-bone/10 pt-12">
+            <section id="sightline" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">04</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">04</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Protect the long sightline.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   The single best move in any opened-up Vegas remodel is the
                   long sightline — the unbroken view from the front door,
                   across the great room, through the kitchen, and out the
@@ -226,7 +226,7 @@ export default function Post() {
                   exists, every other decision in the room is in service of
                   it.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   We hold that line ruthlessly. Cabinetry stops short of it.
                   Lighting steps around it. The hood doesn’t interrupt it.
                   Everything in the room defers to the one architectural
@@ -236,15 +236,15 @@ export default function Post() {
             </section>
 
             {/* 05 */}
-            <section id="patio" className="border-t border-bone/10 pt-12">
+            <section id="patio" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">05</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">05</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Finish at the patio, not the back wall.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   In Las Vegas the room shouldn’t end at the back glass — it
                   should end at the far edge of the patio. That means
                   matching the interior floor finish into the exterior where
@@ -253,7 +253,7 @@ export default function Post() {
                   structure so the indoor-outdoor relationship reads as one
                   architectural moment.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   This is what people are responding to when they say a
                   remodeled Vegas home “finally feels like a Vegas home.”
                   The architecture, at last, knows where it is.
@@ -262,11 +262,11 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <div className="my-16 border-y border-bone/10 py-12">
-                <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <div className="my-16 border-y border-ink/10 py-12">
+                <h3 className="font-display text-3xl text-ink md:text-4xl">
                   The point.
                 </h3>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Opening up a typical Vegas floor plan is a structural
                   exercise more than a finish one. Get the beam, the
                   cabinetry, the sightline, and the patio right and the
@@ -278,12 +278,12 @@ export default function Post() {
             </Reveal>
 
             <Reveal delay={3}>
-              <div className="flex items-center justify-between border-t border-bone/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55">
-                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-bone">
+              <div className="flex items-center justify-between border-t border-ink/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-ink/55">
+                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-ink">
                   <ArrowLeft className="h-4 w-4" />
                   All Notes
                 </Link>
-                <Link href="/home-remodeling-las-vegas" className="flex items-center gap-3 text-bone transition-colors hover:text-bone">
+                <Link href="/home-remodeling-las-vegas" className="flex items-center gap-3 text-ink transition-colors hover:text-ink">
                   Explore whole-home remodeling
                   <ArrowRight className="h-4 w-4" />
                 </Link>

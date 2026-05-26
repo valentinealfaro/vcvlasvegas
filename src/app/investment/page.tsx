@@ -8,7 +8,7 @@ const InvestmentCalculator = dynamic(
   () => import('@/components/InvestmentCalculator').then((m) => m.InvestmentCalculator),
   {
     loading: () => (
-      <div className="h-[640px] w-full animate-pulse border border-bone/10 bg-ink-800/40" aria-label="Loading calculator" />
+      <div className="h-[640px] w-full animate-pulse border border-ink/10 bg-bone-800/40" aria-label="Loading calculator" />
     ),
   },
 );
@@ -57,7 +57,7 @@ export default function InvestmentPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Investment Calculator' }]}
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <Reveal>
             <InvestmentCalculator />
@@ -65,15 +65,15 @@ export default function InvestmentPage() {
         </div>
       </section>
 
-      <section className="border-y border-bone/8 bg-ink-800 py-20">
+      <section className="border-y border-ink/8 bg-bone-800 py-20">
         <div className="container-luxe">
-          <div className="grid gap-px bg-bone/10 md:grid-cols-3">
+          <div className="grid gap-px bg-ink/10 md:grid-cols-3">
             {notes.map((n) => (
-              <Reveal key={n.t} className="bg-ink-800 p-8 lg:p-10">
-                <p className="font-display text-xl text-bone md:text-2xl">
+              <Reveal key={n.t} className="bg-bone-800 p-8 lg:p-10">
+                <p className="font-display text-xl text-ink md:text-2xl">
                   {n.t}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-bone/60">
+                <p className="mt-3 text-sm leading-relaxed text-ink/60">
                   {n.d}
                 </p>
               </Reveal>

@@ -105,7 +105,7 @@ export function InvestmentCalculator() {
       {/* Inputs */}
       <div>
         <div>
-          <p className="eyebrow mb-4 !text-bone">Step 01 · Project Type</p>
+          <p className="eyebrow mb-4 !text-ink">Step 01 · Project Type</p>
           <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             {projects.map(({ key, label, icon: Icon }) => {
               const active = project === key;
@@ -117,14 +117,14 @@ export function InvestmentCalculator() {
                   className={cn(
                     'group flex flex-col items-start gap-3 border p-4 text-left transition-all duration-300 lg:p-5',
                     active
-                      ? 'border-gold bg-gold/5 text-bone'
-                      : 'border-bone/15 text-bone/75 hover:border-gold/60 hover:text-bone',
+                      ? 'border-gold bg-gold/5 text-ink'
+                      : 'border-ink/15 text-ink/75 hover:border-gold/60 hover:text-ink',
                   )}
                 >
                   <Icon
                     className={cn(
                       'h-5 w-5 transition-colors',
-                      active ? 'text-bone' : 'text-bone/45 group-hover:text-bone',
+                      active ? 'text-ink' : 'text-ink/45 group-hover:text-ink',
                     )}
                   />
                   <span className="text-xs">{label}</span>
@@ -136,9 +136,9 @@ export function InvestmentCalculator() {
 
         <div className="mt-12">
           <div className="flex items-baseline justify-between">
-            <p className="eyebrow !text-bone">Step 02 · Square Footage</p>
-            <p className="font-display text-2xl text-bone">
-              {sqft.toLocaleString()} <span className="text-base text-bone/40">sqft</span>
+            <p className="eyebrow !text-ink">Step 02 · Square Footage</p>
+            <p className="font-display text-2xl text-ink">
+              {sqft.toLocaleString()} <span className="text-base text-ink/40">sqft</span>
             </p>
           </div>
           <input
@@ -151,14 +151,14 @@ export function InvestmentCalculator() {
             className="vcv-slider mt-4 w-full"
             aria-label="Project square footage"
           />
-          <div className="mt-2 flex justify-between text-[0.6rem] uppercase tracking-[0.22em] text-bone/35">
+          <div className="mt-2 flex justify-between text-[0.6rem] uppercase tracking-[0.22em] text-ink/35">
             <span>{selectedProject.sqftRange[0].toLocaleString()} sqft</span>
             <span>{selectedProject.sqftRange[1].toLocaleString()} sqft</span>
           </div>
         </div>
 
         <div className="mt-12">
-          <p className="eyebrow mb-4 !text-bone">Step 03 · Finish Level</p>
+          <p className="eyebrow mb-4 !text-ink">Step 03 · Finish Level</p>
           <div className="grid gap-3 sm:grid-cols-3">
             {(Object.keys(finishMultiplier) as Finish[]).map((k) => {
               const m = finishMultiplier[k];
@@ -172,18 +172,18 @@ export function InvestmentCalculator() {
                     'border p-4 text-left transition-all duration-300',
                     active
                       ? 'border-gold bg-gold/5'
-                      : 'border-bone/15 hover:border-gold/60',
+                      : 'border-ink/15 hover:border-gold/60',
                   )}
                 >
                   <p
                     className={cn(
                       'font-display text-lg transition-colors',
-                      active ? 'text-bone' : 'text-bone',
+                      active ? 'text-ink' : 'text-ink',
                     )}
                   >
                     {m.label}
                   </p>
-                  <p className="mt-1 text-xs leading-snug text-bone/55">
+                  <p className="mt-1 text-xs leading-snug text-ink/55">
                     {m.description}
                   </p>
                 </button>
@@ -197,7 +197,7 @@ export function InvestmentCalculator() {
       <div className="relative">
         <div className="sticky top-32">
           <div className="border-gradient">
-            <div className="relative overflow-hidden bg-ink-800/60 p-8 lg:p-10">
+            <div className="relative overflow-hidden bg-bone-800/60 p-8 lg:p-10">
               {/* Soft amber glow inside the output card */}
               <div
                 aria-hidden
@@ -209,7 +209,7 @@ export function InvestmentCalculator() {
               />
               <div className="mb-6 flex items-center gap-2">
                 <span aria-hidden className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-gold" />
-                <p className="eyebrow !text-bone">Indicative Range · Live</p>
+                <p className="eyebrow !text-ink">Indicative Range · Live</p>
               </div>
 
           <motion.div
@@ -218,41 +218,41 @@ export function InvestmentCalculator() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="font-display text-4xl text-bone [text-shadow:0_0_28px_rgba(252,187,0,0.35)] md:text-6xl">
+            <p className="font-display text-4xl text-ink [text-shadow:0_0_28px_rgba(252,187,0,0.35)] md:text-6xl">
               {formatCurrency(result.low)}
-              <span className="mx-3 text-bone/30">–</span>
+              <span className="mx-3 text-ink/30">–</span>
               {formatCurrency(result.high)}
             </p>
-            <p className="mt-3 text-sm text-bone/55">
+            <p className="mt-3 text-sm text-ink/55">
               {finishMultiplier[finish].label} {projects.find((p) => p.key === project)!.label} ·{' '}
               {sqft.toLocaleString()} sqft
             </p>
           </motion.div>
 
-          <dl className="mt-10 divide-y divide-bone/10 border-y border-bone/10">
+          <dl className="mt-10 divide-y divide-ink/10 border-y border-ink/10">
             <div className="flex items-baseline justify-between py-4">
-              <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+              <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                 Build Window
               </dt>
-              <dd className="font-display text-lg text-bone">
+              <dd className="font-display text-lg text-ink">
                 {result.weeks[0]}–{result.weeks[1]} weeks
               </dd>
             </div>
             <div className="flex items-baseline justify-between py-4">
-              <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+              <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                 Long-Lead Order
               </dt>
-              <dd className="font-display text-lg text-bone">Pre-Construction</dd>
+              <dd className="font-display text-lg text-ink">Pre-Construction</dd>
             </div>
             <div className="flex items-baseline justify-between py-4">
-              <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+              <dt className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                 Studio Lead
               </dt>
-              <dd className="font-display text-lg text-bone">Senior Designer</dd>
+              <dd className="font-display text-lg text-ink">Senior Designer</dd>
             </div>
           </dl>
 
-          <p className="mt-8 text-xs text-bone/40">
+          <p className="mt-8 text-xs text-ink/40">
             Indicative only. A precise investment range is shared after your private
             consultation, tied to your home and goals.
           </p>
@@ -270,11 +270,11 @@ export function InvestmentCalculator() {
                 aria-hidden
                 className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-gold/50 bg-gold/10 shadow-[0_0_14px_-2px_rgba(252,187,0,0.6)]"
               >
-                <CheckCircle2 className="h-5 w-5 text-bone" />
+                <CheckCircle2 className="h-5 w-5 text-ink" />
               </span>
               <div>
-                <p className="font-display text-lg text-bone">On its way.</p>
-                <p className="mt-1 text-xs text-bone/65">
+                <p className="font-display text-lg text-ink">On its way.</p>
+                <p className="mt-1 text-xs text-ink/65">
                   Your detailed breakdown arrives within one business day.
                 </p>
               </div>
@@ -287,18 +287,18 @@ export function InvestmentCalculator() {
               }}
               className="mt-8"
             >
-              <p className="mb-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55">
+              <p className="mb-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink/55">
                 Send me the detailed breakdown
               </p>
               <label className="relative block">
-                <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-bone/40" />
+                <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40" />
                 <input
                   required
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="w-full border border-bone/15 bg-ink/70 py-3 pl-12 pr-4 text-sm text-bone placeholder:text-bone/40 focus:border-gold focus:outline-none"
+                  className="w-full border border-ink/15 bg-bone/70 py-3 pl-12 pr-4 text-sm text-ink placeholder:text-ink/40 focus:border-gold focus:outline-none"
                 />
               </label>
               <button type="submit" className="btn-gold mt-3 w-full">

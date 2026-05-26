@@ -4,7 +4,7 @@ import { Reveal } from './Reveal';
 
 export function BookingStrip() {
   return (
-    <section className="relative overflow-hidden bg-ink-800/40">
+    <section className="relative overflow-hidden bg-bone-800/40">
       {/* Gradient hairline top + bottom */}
       <div
         aria-hidden
@@ -27,7 +27,7 @@ export function BookingStrip() {
                 {/* Corner ticks */}
                 <span aria-hidden className="absolute left-1 top-1 h-1.5 w-1.5 border-l border-t border-gold" />
                 <span aria-hidden className="absolute bottom-1 right-1 h-1.5 w-1.5 border-b border-r border-gold" />
-                <Calendar className="relative h-5 w-5 text-bone" />
+                <Calendar className="relative h-5 w-5 text-ink" />
               </span>
               <div>
                 <div className="flex items-center gap-3">
@@ -35,15 +35,15 @@ export function BookingStrip() {
                     aria-hidden
                     className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-gold"
                   />
-                  <p className="text-[0.62rem] uppercase tracking-[0.32em] text-bone">
+                  <p className="text-[0.62rem] uppercase tracking-[0.32em] text-ink">
                     Studio Calendar · Now Booking
                   </p>
                 </div>
-                <p className="mt-2 font-display text-lg text-bone md:text-xl">
+                <p className="mt-2 font-display text-lg text-ink md:text-xl">
                   Currently booking design consultations for{' '}
-                  <span className="italic text-bone">Q3 2026</span>.
+                  <span className="italic text-ink">Q3 2026</span>.
                 </p>
-                <p className="mt-1 text-xs text-bone/55">
+                <p className="mt-1 text-xs text-ink/55">
                   Limited capacity for premium-scope projects. Reserve a private
                   walkthrough.
                 </p>
@@ -51,7 +51,7 @@ export function BookingStrip() {
             </div>
             <Link
               href="/visit"
-              className="group relative flex items-center gap-3 self-end overflow-hidden border border-bone/15 px-5 py-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:bg-gold/5 md:self-auto"
+              className="group relative flex items-center gap-3 self-end overflow-hidden border border-ink/15 px-5 py-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:border-gold hover:bg-gold/5 md:self-auto"
             >
               {/* Diagonal gold shimmer sweep on hover */}
               <span

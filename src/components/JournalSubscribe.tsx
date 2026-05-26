@@ -9,7 +9,7 @@ export function JournalSubscribe() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <section className="relative overflow-hidden bg-ink-800/40">
+    <section className="relative overflow-hidden bg-bone-800/40">
       {/* Top gradient hairline */}
       <div
         aria-hidden
@@ -31,14 +31,14 @@ export function JournalSubscribe() {
                     <span aria-hidden className="absolute inset-0 bg-gradient-to-br from-gold/15 to-transparent" />
                     <span aria-hidden className="absolute left-1 top-1 h-1.5 w-1.5 border-l border-t border-gold" />
                     <span aria-hidden className="absolute bottom-1 right-1 h-1.5 w-1.5 border-b border-r border-gold" />
-                    <Mail className="relative h-4 w-4 text-bone" aria-hidden />
+                    <Mail className="relative h-4 w-4 text-ink" aria-hidden />
                   </span>
-                  <p className="eyebrow !text-bone">Quarterly Letter</p>
+                  <p className="eyebrow !text-ink">Quarterly Letter</p>
                 </div>
-                <h3 className="font-display text-2xl text-bone text-balance md:text-3xl">
+                <h3 className="font-display text-2xl text-ink text-balance md:text-3xl">
                   Get the next note in your inbox.
                 </h3>
-                <p className="mt-3 text-sm text-bone/55">
+                <p className="mt-3 text-sm text-ink/55">
                   Four letters a year. Design notes, finish specifications,
                   and project studies. Unsubscribe anytime.
                 </p>
@@ -56,9 +56,9 @@ export function JournalSubscribe() {
                     aria-hidden
                     className="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-gold/50 bg-gold/10 shadow-[0_0_12px_-2px_rgba(252,187,0,0.6)]"
                   >
-                    <CheckCircle2 className="h-4 w-4 text-bone" />
+                    <CheckCircle2 className="h-4 w-4 text-ink" />
                   </span>
-                  <p className="text-sm text-bone/85">Subscribed.</p>
+                  <p className="text-sm text-ink/85">Subscribed.</p>
                 </motion.div>
               ) : (
                 <form
@@ -69,13 +69,13 @@ export function JournalSubscribe() {
                   className="flex flex-col gap-3 sm:flex-row"
                 >
                   <label className="relative flex-1">
-                    <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-bone/40" />
+                    <Mail className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-ink/40" />
                     <input
                       required
                       type="email"
                       name="email"
                       placeholder="you@example.com"
-                      className="w-full border border-bone/15 bg-ink/70 py-3 pl-12 pr-4 text-sm text-bone placeholder:text-bone/40 focus:border-gold focus:outline-none"
+                      className="w-full border border-ink/15 bg-bone/70 py-3 pl-12 pr-4 text-sm text-ink placeholder:text-ink/40 focus:border-gold focus:outline-none"
                     />
                   </label>
                   <button type="submit" className="btn-gold sm:shrink-0">

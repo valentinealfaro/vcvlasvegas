@@ -40,7 +40,7 @@ export function SectionDivider({
         style={{ background: palettes[variant] }}
       />
       <span
-        className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rotate-45 border border-gold/80 bg-ink shadow-[0_0_10px_rgba(252,187,0,0.6)]"
+        className="absolute left-1/2 top-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rotate-45 border border-gold/80 bg-bone shadow-[0_0_10px_rgba(252,187,0,0.6)]"
       />
     </div>
   );

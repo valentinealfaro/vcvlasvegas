@@ -89,24 +89,24 @@ export default function WhyPage() {
       />
 
       {/* Do / Don't band */}
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="What We Do · What We Don’t"
             title="An honest read on the studio."
           />
-          <div className="mt-16 grid gap-px bg-bone/10 lg:grid-cols-2">
+          <div className="mt-16 grid gap-px bg-ink/10 lg:grid-cols-2">
             {/* Do */}
             <Reveal>
-              <div className="bg-ink p-8 lg:p-12">
-                <p className="eyebrow mb-6 !text-bone">What We Do</p>
+              <div className="bg-bone p-8 lg:p-12">
+                <p className="eyebrow mb-6 !text-ink">What We Do</p>
                 <ul className="space-y-5">
                   {doDo.map((d) => (
                     <li key={d} className="flex items-start gap-4">
                       <span className="mt-1.5 grid h-5 w-5 shrink-0 place-items-center border border-gold/50 bg-gold/10">
-                        <Check className="h-3 w-3 text-bone" />
+                        <Check className="h-3 w-3 text-ink" />
                       </span>
-                      <span className="text-base text-bone/80 md:text-lg">{d}</span>
+                      <span className="text-base text-ink/80 md:text-lg">{d}</span>
                     </li>
                   ))}
                 </ul>
@@ -114,15 +114,15 @@ export default function WhyPage() {
             </Reveal>
             {/* Don't */}
             <Reveal delay={1}>
-              <div className="bg-ink p-8 lg:p-12">
-                <p className="eyebrow mb-6 !text-bone/55">What We Don’t Do</p>
+              <div className="bg-bone p-8 lg:p-12">
+                <p className="eyebrow mb-6 !text-ink/55">What We Don’t Do</p>
                 <ul className="space-y-5">
                   {dont.map((d) => (
                     <li key={d} className="flex items-start gap-4">
-                      <span className="mt-1.5 grid h-5 w-5 shrink-0 place-items-center border border-bone/15">
-                        <X className="h-3 w-3 text-bone/45" />
+                      <span className="mt-1.5 grid h-5 w-5 shrink-0 place-items-center border border-ink/15">
+                        <X className="h-3 w-3 text-ink/45" />
                       </span>
-                      <span className="text-base text-bone/55 md:text-lg">{d}</span>
+                      <span className="text-base text-ink/55 md:text-lg">{d}</span>
                     </li>
                   ))}
                 </ul>
@@ -133,21 +133,21 @@ export default function WhyPage() {
       </section>
 
       {/* Right for */}
-      <section className="bg-ink-800 py-24 lg:py-32">
+      <section className="bg-bone-800 py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="The Right Fit"
             title="Who we’re right for."
             description="If one of these reads like you, we should talk."
           />
-          <div className="mt-16 grid gap-px bg-bone/10 sm:grid-cols-2">
+          <div className="mt-16 grid gap-px bg-ink/10 sm:grid-cols-2">
             {rightFor.map((r, i) => (
-              <Reveal key={r.t} delay={i % 2} className="bg-ink-800 p-8 lg:p-10">
-                <p className="font-display text-3xl text-bone">0{i + 1}</p>
-                <p className="mt-5 font-display text-xl text-bone md:text-2xl">
+              <Reveal key={r.t} delay={i % 2} className="bg-bone-800 p-8 lg:p-10">
+                <p className="font-display text-3xl text-ink">0{i + 1}</p>
+                <p className="mt-5 font-display text-xl text-ink md:text-2xl">
                   {r.t}
                 </p>
-                <p className="mt-3 text-base leading-relaxed text-bone/65">
+                <p className="mt-3 text-base leading-relaxed text-ink/65">
                   {r.d}
                 </p>
               </Reveal>
@@ -163,18 +163,18 @@ export default function WhyPage() {
       />
 
       {/* Not right for */}
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Be Honest"
             title="Who we’re not right for."
             description="If one of these reads like your project, there are excellent contractors in this market who are a better fit — and we’ll happily point you to them."
           />
-          <div className="mt-16 grid gap-px bg-bone/10 sm:grid-cols-3">
+          <div className="mt-16 grid gap-px bg-ink/10 sm:grid-cols-3">
             {notRightFor.map((r, i) => (
-              <Reveal key={r.t} delay={i % 3} className="bg-ink p-8 lg:p-10">
-                <p className="font-display text-2xl text-bone/40">{r.t}</p>
-                <p className="mt-3 text-sm leading-relaxed text-bone/50">
+              <Reveal key={r.t} delay={i % 3} className="bg-bone p-8 lg:p-10">
+                <p className="font-display text-2xl text-ink/40">{r.t}</p>
+                <p className="mt-3 text-sm leading-relaxed text-ink/50">
                   {r.d}
                 </p>
               </Reveal>
@@ -184,7 +184,7 @@ export default function WhyPage() {
       </section>
 
       {/* Closing quote */}
-      <section className="relative isolate overflow-hidden bg-ink-800 py-28 lg:py-40">
+      <section className="relative isolate overflow-hidden bg-bone-800 py-28 lg:py-40">
         <div
           aria-hidden
           className="pointer-events-none absolute -right-40 top-1/2 -z-10 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-gold/15 blur-[180px]"
@@ -192,12 +192,12 @@ export default function WhyPage() {
         <div className="container-luxe">
           <div className="mx-auto max-w-4xl">
             <Reveal>
-              <p className="font-display text-7xl leading-none text-bone/40">“</p>
-              <blockquote className="mt-6 font-display text-3xl leading-snug text-bone text-balance md:text-5xl">
+              <p className="font-display text-7xl leading-none text-ink/40">“</p>
+              <blockquote className="mt-6 font-display text-3xl leading-snug text-ink text-balance md:text-5xl">
                 We would rather lose a project at the door than at the
                 punch list. Both happen — the first one quietly.
               </blockquote>
-              <figcaption className="mt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
+              <figcaption className="mt-8 text-[0.65rem] uppercase tracking-[0.28em] text-ink">
                 — From the studio
               </figcaption>
             </Reveal>

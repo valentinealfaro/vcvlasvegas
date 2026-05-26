@@ -16,7 +16,7 @@ export function InvestmentBlock({
   rows: Row[];
 }) {
   return (
-    <section className="relative overflow-hidden bg-ink-800 py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-bone-800 py-20 lg:py-28">
       <div aria-hidden className="glow-duotone" />
 
       <div className="container-luxe">
@@ -28,22 +28,22 @@ export function InvestmentBlock({
                   <span aria-hidden className="absolute inset-0 bg-gradient-to-br from-gold/15 to-transparent" />
                   <span aria-hidden className="absolute left-1 top-1 h-1.5 w-1.5 border-l border-t border-gold" />
                   <span aria-hidden className="absolute bottom-1 right-1 h-1.5 w-1.5 border-b border-r border-gold" />
-                  <Calculator className="relative h-4 w-4 text-bone" aria-hidden />
+                  <Calculator className="relative h-4 w-4 text-ink" aria-hidden />
                 </span>
-                <p className="eyebrow !text-bone">{eyebrow}</p>
+                <p className="eyebrow !text-ink">{eyebrow}</p>
               </div>
-              <h2 className="font-display text-3xl text-bone md:text-4xl">
+              <h2 className="font-display text-3xl text-ink md:text-4xl">
                 {title}
               </h2>
               {description && (
-                <p className="mt-5 max-w-md text-base leading-relaxed text-bone/60">
+                <p className="mt-5 max-w-md text-base leading-relaxed text-ink/60">
                   {description}
                 </p>
               )}
               <div className="mt-8">
                 <Link
                   href="/investment"
-                  className="group relative inline-flex items-center gap-3 overflow-hidden border border-bone/15 px-5 py-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:bg-gold/5"
+                  className="group relative inline-flex items-center gap-3 overflow-hidden border border-ink/15 px-5 py-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:border-gold hover:bg-gold/5"
                 >
                   <span
                     aria-hidden
@@ -57,7 +57,7 @@ export function InvestmentBlock({
           </Reveal>
           <Reveal delay={1}>
             <div className="border-gradient">
-              <dl className="divide-y divide-bone/10 bg-ink-800 px-7 py-2 lg:px-10">
+              <dl className="divide-y divide-ink/10 bg-bone-800 px-7 py-2 lg:px-10">
                 {rows.map((row, i) => (
                   <div
                     key={row.label}
@@ -68,14 +68,14 @@ export function InvestmentBlock({
                       }s backwards`,
                     }}
                   >
-                    <dt className="flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/45 transition-colors duration-500 group-hover:text-bone/75">
+                    <dt className="flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink/45 transition-colors duration-500 group-hover:text-ink/75">
                       <span
                         aria-hidden
                         className="h-1.5 w-1.5 rounded-full bg-gold/40 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]"
                       />
                       {row.label}
                     </dt>
-                    <dd className="flex items-baseline gap-3 font-display text-xl text-bone transition-all duration-500 group-hover:[text-shadow:0_0_18px_rgba(252,187,0,0.35)] md:text-2xl">
+                    <dd className="flex items-baseline gap-3 font-display text-xl text-ink transition-all duration-500 group-hover:[text-shadow:0_0_18px_rgba(252,187,0,0.35)] md:text-2xl">
                       <span
                         aria-hidden
                         className="h-px w-0 bg-gold transition-all duration-500 group-hover:w-6 group-hover:shadow-[0_0_8px_rgba(252,187,0,0.6)]"

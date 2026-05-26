@@ -45,15 +45,15 @@ export function TradeIntakeForm() {
           aria-hidden
           className="grid h-14 w-14 place-items-center rounded-full border border-gold/40 bg-gold/10 shadow-[0_0_28px_-6px_rgba(252,187,0,0.6)]"
         >
-          <CheckCircle2 className="h-7 w-7 text-bone" />
+          <CheckCircle2 className="h-7 w-7 text-ink" />
         </span>
         <div>
-          <h3 className="font-display text-4xl text-bone">Brief received.</h3>
+          <h3 className="font-display text-4xl text-ink">Brief received.</h3>
           <span
             aria-hidden
             className="mt-4 block h-px w-16 bg-gradient-to-r from-gold via-gold/40 to-transparent"
           />
-          <p className="mt-4 max-w-md text-bone/65">
+          <p className="mt-4 max-w-md text-ink/65">
             A senior pre-construction lead will review it personally and
             respond within one business day with a fit assessment and the
             next step. NDA available on request.
@@ -64,9 +64,9 @@ export function TradeIntakeForm() {
   }
 
   const labelClass =
-    'mb-2 block text-[0.62rem] uppercase tracking-[0.28em] text-bone/55';
+    'mb-2 block text-[0.62rem] uppercase tracking-[0.28em] text-ink/55';
   const inputClass =
-    'w-full border border-bone/15 bg-ink-700/50 px-4 py-3 text-bone placeholder:text-bone/40 focus:border-gold focus:outline-none';
+    'w-full border border-ink/15 bg-bone-700/50 px-4 py-3 text-ink placeholder:text-ink/40 focus:border-gold focus:outline-none';
 
   return (
     <form
@@ -77,11 +77,11 @@ export function TradeIntakeForm() {
       className="space-y-10"
     >
       {/* Section 01 - The firm */}
-      <section className="border-b border-bone/10 pb-10">
+      <section className="border-b border-ink/10 pb-10">
         <div className="mb-6 flex items-center gap-3">
           <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
           <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-          <p className="eyebrow !text-bone">Section 01 · The Firm</p>
+          <p className="eyebrow !text-ink">Section 01 · The Firm</p>
         </div>
         <div className="grid gap-5 md:grid-cols-2">
           <label>
@@ -119,11 +119,11 @@ export function TradeIntakeForm() {
       </section>
 
       {/* Section 02 - The project */}
-      <section className="border-b border-bone/10 pb-10">
+      <section className="border-b border-ink/10 pb-10">
         <div className="mb-6 flex items-center gap-3">
           <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
           <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-          <p className="eyebrow !text-bone">Section 02 · The Project</p>
+          <p className="eyebrow !text-ink">Section 02 · The Project</p>
         </div>
         <div className="grid gap-5 md:grid-cols-2">
           <label>
@@ -164,11 +164,11 @@ export function TradeIntakeForm() {
       </section>
 
       {/* Section 03 - Engagement */}
-      <section className="border-b border-bone/10 pb-10">
+      <section className="border-b border-ink/10 pb-10">
         <div className="mb-6 flex items-center gap-3">
           <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
           <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-          <p className="eyebrow !text-bone">Section 03 · The Engagement</p>
+          <p className="eyebrow !text-ink">Section 03 · The Engagement</p>
         </div>
         <div className="grid gap-5">
           <label>
@@ -204,7 +204,7 @@ export function TradeIntakeForm() {
           Send Trade Brief
           <ArrowRight className="h-3.5 w-3.5" />
         </button>
-        <p className="mt-4 text-xs text-bone/45">
+        <p className="mt-4 text-xs text-ink/45">
           Reviewed personally by a senior pre-construction lead.
           Mutual NDA available on request before drawings are shared.
         </p>

@@ -5,7 +5,7 @@
 :root {
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', system-ui, sans-serif;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -16,15 +16,15 @@ html {
 }
 
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #faf7f2;
+  color: #0e0e0e;
   font-family: var(--font-sans);
   font-feature-settings: 'ss01', 'cv11';
 }
 
 ::selection {
   background-color: #fcbb00;
-  color: #000000;
+  color: #0e0e0e;
 }
 
 /* Keyboard focus ring — applied only on keyboard nav, not on mouse click */
@@ -62,22 +62,22 @@ textarea:hover:not(:focus) {
   border-color: rgba(252, 187, 0, 0.4);
 }
 
-/* Browser autofill override — keep ink-700 dark background, white text,
+/* Browser autofill override — keep cream background, dark text,
    no rude WebKit yellow autofill fill */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
-  -webkit-text-fill-color: #ffffff;
-  -webkit-box-shadow: 0 0 0px 1000px rgba(20, 20, 20, 0.95) inset;
-  caret-color: #ffffff;
+  -webkit-text-fill-color: #0e0e0e;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  caret-color: #0e0e0e;
   transition: background-color 9999s ease-in-out 0s;
 }
 
 /* Placeholder color softened consistently */
 ::placeholder {
-  color: rgba(255, 255, 255, 0.35) !important;
+  color: rgba(14, 14, 14, 0.4) !important;
   opacity: 1;
 }
 
@@ -104,7 +104,7 @@ select:-webkit-autofill {
     font-weight: 500;
     letter-spacing: 0.32em;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #0e0e0e;
     font-feature-settings: 'tnum';
   }
 }
@@ -163,25 +163,30 @@ select:-webkit-autofill {
   }
 
   .btn-gold {
-    @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold-light to-gold px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:from-gold hover:to-gold-deep hover:shadow-[0_20px_60px_-20px_rgba(252,187,0,0.55)];
+    @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-gold-light to-gold px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:from-gold hover:to-gold-deep hover:text-ink hover:shadow-[0_20px_60px_-20px_rgba(252,187,0,0.6)];
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 border border-bone/20 px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:bg-gold/5 hover:text-bone hover:shadow-[0_12px_36px_-14px_rgba(252,187,0,0.4)];
+    @apply inline-flex items-center justify-center gap-2 border border-bone/15 px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:border-gold hover:bg-gold/5 hover:text-ink hover:shadow-[0_12px_36px_-14px_rgba(252,187,0,0.4)];
   }
 
   .btn-dark {
-    @apply inline-flex items-center justify-center gap-2 border border-bone/0 bg-ink px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:bg-ink-700 hover:shadow-[0_10px_30px_-12px_rgba(252,187,0,0.4)];
+    @apply inline-flex items-center justify-center gap-2 border border-bone/0 bg-bone px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:border-gold hover:bg-bone-800 hover:shadow-[0_10px_30px_-12px_rgba(252,187,0,0.5)];
   }
 
   .btn-accent {
-    @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-light to-accent px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:from-accent hover:to-accent-deep hover:shadow-[0_20px_60px_-20px_rgba(37,99,235,0.55)];
+    @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent-light to-accent px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:from-accent hover:to-accent-deep hover:shadow-[0_20px_60px_-20px_rgba(37,99,235,0.5)];
   }
 
-  /* Signature franchise overlays — drop these on any section with `relative` */
+  .btn-coral {
+    @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-coral-light to-coral px-7 py-4 text-[0.72rem] font-medium uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:from-coral hover:to-coral-deep hover:shadow-[0_20px_60px_-20px_rgba(249,115,22,0.5)];
+  }
+
+  /* Signature sunlight overlays — drop these on any section with `relative`.
+     Reads as warm light washing through the room, not shadow. */
   .glow-amber {
     @apply pointer-events-none absolute inset-0 -z-10;
-    background: radial-gradient(circle at 0% 100%, rgba(252, 187, 0, 0.18), transparent 55%);
+    background: radial-gradient(circle at 0% 100%, rgba(252, 187, 0, 0.22), transparent 55%);
   }
   .glow-blue {
     @apply pointer-events-none absolute inset-0 -z-10;
@@ -190,8 +195,14 @@ select:-webkit-autofill {
   .glow-duotone {
     @apply pointer-events-none absolute inset-0 -z-10;
     background:
-      radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.15), transparent 55%),
-      radial-gradient(circle at 0% 100%, rgba(252, 187, 0, 0.15), transparent 55%);
+      radial-gradient(circle at 100% 0%, rgba(59, 130, 246, 0.14), transparent 55%),
+      radial-gradient(circle at 0% 100%, rgba(252, 187, 0, 0.20), transparent 55%);
+  }
+  .glow-sunset {
+    @apply pointer-events-none absolute inset-0 -z-10;
+    background:
+      radial-gradient(circle at 100% 0%, rgba(249, 115, 22, 0.18), transparent 55%),
+      radial-gradient(circle at 0% 100%, rgba(252, 187, 0, 0.22), transparent 55%);
   }
 
   /* Gradient hairline border via padding+mask. Wrap any card in
@@ -284,7 +295,7 @@ select:-webkit-autofill {
     transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.55s ease;
   }
   .link-quiet:hover {
-    color: #ffffff;
+    color: #0e0e0e;
   }
   .link-quiet:hover::after {
     transform: scaleX(1);
@@ -293,7 +304,7 @@ select:-webkit-autofill {
   }
 
   /* Nav-link: animated gradient underline that expands from the center.
-     Pair with text-bone Tailwind for the base color. */
+     Pair with text-ink Tailwind for the base color. */
   .link-nav {
     position: relative;
     display: inline-block;
@@ -347,8 +358,8 @@ select:-webkit-autofill {
   appearance: none;
   height: 2px;
   background:
-    linear-gradient(to right, rgba(252, 187, 0, 0.4), rgba(59, 130, 246, 0.25)),
-    rgba(255, 255, 255, 0.15);
+    linear-gradient(to right, rgba(252, 187, 0, 0.5), rgba(249, 115, 22, 0.35)),
+    rgba(14, 14, 14, 0.12);
   outline: none;
   border-radius: 999px;
 }
@@ -426,6 +437,6 @@ select:-webkit-autofill {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 8px; height: 8px; }
-::-webkit-scrollbar-track { background: #0a0a0a; }
-::-webkit-scrollbar-thumb { background: #2c2c2c; border-radius: 0; }
+::-webkit-scrollbar-track { background: #f5efe5; }
+::-webkit-scrollbar-thumb { background: #d8cdba; border-radius: 0; }
 ::-webkit-scrollbar-thumb:hover { background: #fcbb00; }

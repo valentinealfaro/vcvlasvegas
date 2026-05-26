@@ -120,7 +120,7 @@ export default function RootLayout({
           href="/feed.xml"
         />
       </head>
-      <body className="min-h-screen bg-ink text-bone antialiased">
+      <body className="min-h-screen bg-bone text-ink antialiased">
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <ScrollProgress />
         <CursorGlow />

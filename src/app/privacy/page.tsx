@@ -76,7 +76,7 @@ export default function PrivacyPage() {
                 at any time by emailing{' '}
                 <a
                   href={siteConfig.emailHref}
-                  className="text-bone underline-offset-4 hover:underline"
+                  className="text-ink underline-offset-4 hover:underline"
                 >
                   {siteConfig.email}
                 </a>
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
                 any time. Send a note to{' '}
                 <a
                   href={siteConfig.emailHref}
-                  className="text-bone underline-offset-4 hover:underline"
+                  className="text-ink underline-offset-4 hover:underline"
                 >
                   {siteConfig.email}
                 </a>{' '}

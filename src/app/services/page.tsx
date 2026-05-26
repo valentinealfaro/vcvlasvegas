@@ -52,7 +52,7 @@ export default function ServicesPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Services' }]}
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
             {servicesIndex.map((s, i) => (
@@ -60,7 +60,7 @@ export default function ServicesPage() {
                 <div className="border-gradient">
                   <Link
                     href={`/${s.slug}`}
-                    className="group relative block overflow-hidden bg-ink-800 p-6 transition-colors duration-500 hover:bg-ink-700 lg:p-7"
+                    className="group relative block overflow-hidden bg-bone-800 p-6 transition-colors duration-500 hover:bg-bone-700 lg:p-7"
                   >
                     {/* Per-card hover sweep */}
                     <span
@@ -86,14 +86,14 @@ export default function ServicesPage() {
                       <div>
                         <div className="mb-2 flex items-center gap-3">
                           <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-                          <p className="eyebrow !text-bone/45">{s.eyebrow}</p>
+                          <p className="eyebrow !text-ink/45">{s.eyebrow}</p>
                         </div>
-                        <h2 className="font-display text-3xl text-bone transition-colors group-hover:text-bone md:text-4xl">
+                        <h2 className="font-display text-3xl text-ink transition-colors group-hover:text-ink md:text-4xl">
                           {s.title}
                         </h2>
-                        <p className="mt-3 max-w-md text-bone/60">{s.summary}</p>
+                        <p className="mt-3 max-w-md text-ink/60">{s.summary}</p>
                       </div>
-                      <div className="grid h-12 w-12 shrink-0 place-items-center border border-bone/15 transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-ink group-hover:shadow-[0_0_24px_-4px_rgba(252,187,0,0.7)]">
+                      <div className="grid h-12 w-12 shrink-0 place-items-center border border-ink/15 transition-all duration-500 group-hover:border-gold group-hover:bg-gold group-hover:text-ink group-hover:shadow-[0_0_24px_-4px_rgba(252,187,0,0.7)]">
                         <ArrowUpRight className="h-4 w-4 transition-transform duration-500 group-hover:rotate-45" />
                       </div>
                     </div>

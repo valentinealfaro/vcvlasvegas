@@ -9,7 +9,7 @@ export type FAQItem = { q: string; a: string };
 export function FAQ({ items }: { items: FAQItem[] }) {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <div className="divide-y divide-bone/10 border-y border-bone/10">
+    <div className="divide-y divide-ink/10 border-y border-ink/10">
       {items.map((item, i) => {
         const isOpen = open === i;
         return (
@@ -27,7 +27,7 @@ export function FAQ({ items }: { items: FAQItem[] }) {
                 'absolute left-0 top-1/2 h-12 w-px -translate-y-1/2 transition-all duration-500',
                 isOpen
                   ? 'bg-gold shadow-[0_0_10px_rgba(252,187,0,0.6)]'
-                  : 'bg-bone/0 group-hover:bg-bone/15',
+                  : 'bg-ink/0 group-hover:bg-ink/15',
               )}
             />
             <button
@@ -43,13 +43,13 @@ export function FAQ({ items }: { items: FAQItem[] }) {
                     'h-1.5 w-1.5 shrink-0 rounded-full transition-all duration-500',
                     isOpen
                       ? 'bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]'
-                      : 'bg-bone/30 group-hover:bg-gold/60',
+                      : 'bg-ink/30 group-hover:bg-gold/60',
                   )}
                 />
                 <span
                   className={cn(
                     'font-display text-xl transition-colors duration-500 md:text-2xl',
-                    isOpen ? 'text-bone' : 'text-bone/85 group-hover:text-bone',
+                    isOpen ? 'text-ink' : 'text-ink/85 group-hover:text-ink',
                   )}
                 >
                   {item.q}
@@ -60,13 +60,13 @@ export function FAQ({ items }: { items: FAQItem[] }) {
                   'grid h-9 w-9 shrink-0 place-items-center border transition-all duration-500',
                   isOpen
                     ? 'rotate-180 border-gold bg-gold/10 shadow-[0_0_18px_-4px_rgba(252,187,0,0.5)]'
-                    : 'rotate-0 border-bone/15 group-hover:border-gold/60',
+                    : 'rotate-0 border-ink/15 group-hover:border-gold/60',
                 )}
               >
                 {isOpen ? (
-                  <Minus className="h-4 w-4 text-bone" />
+                  <Minus className="h-4 w-4 text-ink" />
                 ) : (
-                  <Plus className="h-4 w-4 text-bone transition-colors group-hover:text-bone" />
+                  <Plus className="h-4 w-4 text-ink transition-colors group-hover:text-ink" />
                 )}
               </span>
             </button>
@@ -83,7 +83,7 @@ export function FAQ({ items }: { items: FAQItem[] }) {
                     aria-hidden
                     className="mb-4 block h-px w-10 bg-gradient-to-r from-gold via-gold/40 to-transparent"
                   />
-                  <p className="text-base leading-relaxed text-bone/65 md:text-lg">
+                  <p className="text-base leading-relaxed text-ink/65 md:text-lg">
                     {item.a}
                   </p>
                 </div>

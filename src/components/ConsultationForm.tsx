@@ -98,12 +98,12 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
           aria-hidden
           className="grid h-14 w-14 place-items-center rounded-full border border-gold/40 bg-gold/10 shadow-[0_0_28px_-6px_rgba(252,187,0,0.6)]"
         >
-          <CheckCircle2 className="h-7 w-7 text-bone" />
+          <CheckCircle2 className="h-7 w-7 text-ink" />
         </span>
         <div>
-          <h3 className="font-display text-4xl text-bone">Thank you.</h3>
+          <h3 className="font-display text-4xl text-ink">Thank you.</h3>
           <span aria-hidden className="mt-4 block h-px w-16 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
-          <p className="mt-4 max-w-md text-bone/65">
+          <p className="mt-4 max-w-md text-ink/65">
             A senior VCV Vegas designer will personally reach out within one
             business day to schedule your private consultation. Your information
             stays confidential.
@@ -115,14 +115,14 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
 
   const fieldBase =
     variant === 'inset'
-      ? 'w-full border-b border-bone/20 bg-transparent py-3 text-bone placeholder:text-bone/40 focus:border-gold focus:outline-none'
-      : 'w-full border border-bone/15 bg-ink-700/50 px-4 py-3 text-bone placeholder:text-bone/40 focus:border-gold focus:outline-none';
+      ? 'w-full border-b border-ink/20 bg-transparent py-3 text-ink placeholder:text-ink/40 focus:border-gold focus:outline-none'
+      : 'w-full border border-ink/15 bg-bone-700/50 px-4 py-3 text-ink placeholder:text-ink/40 focus:border-gold focus:outline-none';
 
   return (
     <div>
       {/* Progress */}
       <div className="mb-8 flex items-center gap-4">
-        <div className="relative h-px flex-1 overflow-hidden bg-bone/15">
+        <div className="relative h-px flex-1 overflow-hidden bg-ink/15">
           <motion.div
             initial={false}
             animate={{ width: `${progress}%` }}
@@ -132,7 +132,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
         </div>
         <div className="flex items-center gap-2">
           <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
             Step {step + 1} / {totalSteps}
           </p>
         </div>
@@ -148,8 +148,8 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
         >
           {step === 0 && (
             <div>
-              <p className="eyebrow mb-3 !text-bone">Your Project</p>
-              <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <p className="eyebrow mb-3 !text-ink">Your Project</p>
+              <h3 className="font-display text-3xl text-ink md:text-4xl">
                 What kind of project are you considering?
               </h3>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -166,14 +166,14 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
                       className={cn(
                         'group flex items-center gap-4 border px-5 py-5 text-left transition-all duration-300',
                         active
-                          ? 'border-gold bg-gold/5 text-bone'
-                          : 'border-bone/15 text-bone/75 hover:border-gold/60 hover:text-bone',
+                          ? 'border-gold bg-gold/5 text-ink'
+                          : 'border-ink/15 text-ink/75 hover:border-gold/60 hover:text-ink',
                       )}
                     >
                       <Icon
                         className={cn(
                           'h-5 w-5 shrink-0 transition-colors',
-                          active ? 'text-bone' : 'text-bone/45 group-hover:text-bone',
+                          active ? 'text-ink' : 'text-ink/45 group-hover:text-ink',
                         )}
                       />
                       <span className="text-sm tracking-wide">{label}</span>
@@ -186,11 +186,11 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
 
           {step === 1 && (
             <div>
-              <p className="eyebrow mb-3 !text-bone">Investment Range</p>
-              <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <p className="eyebrow mb-3 !text-ink">Investment Range</p>
+              <h3 className="font-display text-3xl text-ink md:text-4xl">
                 What investment range are you working with?
               </h3>
-              <p className="mt-3 text-sm text-bone/55">
+              <p className="mt-3 text-sm text-ink/55">
                 Indicative only — final ranges are tied to your home and goals.
               </p>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -207,8 +207,8 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
                       className={cn(
                         'border px-5 py-5 text-left text-sm transition-all duration-300',
                         active
-                          ? 'border-gold bg-gold/5 text-bone'
-                          : 'border-bone/15 text-bone/75 hover:border-gold/60 hover:text-bone',
+                          ? 'border-gold bg-gold/5 text-ink'
+                          : 'border-ink/15 text-ink/75 hover:border-gold/60 hover:text-ink',
                       )}
                     >
                       {r.label}
@@ -221,8 +221,8 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
 
           {step === 2 && (
             <div>
-              <p className="eyebrow mb-3 !text-bone">Timing</p>
-              <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <p className="eyebrow mb-3 !text-ink">Timing</p>
+              <h3 className="font-display text-3xl text-ink md:text-4xl">
                 When would you like to begin?
               </h3>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -239,8 +239,8 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
                       className={cn(
                         'border px-5 py-5 text-left text-sm transition-all duration-300',
                         active
-                          ? 'border-gold bg-gold/5 text-bone'
-                          : 'border-bone/15 text-bone/75 hover:border-gold/60 hover:text-bone',
+                          ? 'border-gold bg-gold/5 text-ink'
+                          : 'border-ink/15 text-ink/75 hover:border-gold/60 hover:text-ink',
                       )}
                     >
                       {t.label}
@@ -253,17 +253,17 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
 
           {step === 3 && (
             <form onSubmit={handleSubmit} className="grid gap-5">
-              <p className="eyebrow mb-1 !text-bone">Private Details</p>
-              <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <p className="eyebrow mb-1 !text-ink">Private Details</p>
+              <h3 className="font-display text-3xl text-ink md:text-4xl">
                 How can we reach you?
               </h3>
-              <p className="-mt-1 text-sm text-bone/55">
+              <p className="-mt-1 text-sm text-ink/55">
                 Your information stays confidential. Senior designer follow-up within one business day.
               </p>
 
               <div className="mt-4 grid gap-5 md:grid-cols-2">
                 <label className="block">
-                  <span className="mb-2 block text-[0.65rem] uppercase tracking-[0.28em] text-bone/50">
+                  <span className="mb-2 block text-[0.65rem] uppercase tracking-[0.28em] text-ink/50">
                     Full Name
                   </span>
                   <input
@@ -275,7 +275,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
                   />
                 </label>
                 <label className="block">
-                  <span className="mb-2 block text-[0.65rem] uppercase tracking-[0.28em] text-bone/50">
+                  <span className="mb-2 block text-[0.65rem] uppercase tracking-[0.28em] text-ink/50">
                     Phone
                   </span>
                   <input
@@ -289,7 +289,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
                 </label>
               </div>
               <label className="block">
-                <span className="mb-2 block text-[0.65rem] uppercase tracking-[0.28em] text-bone/50">
+                <span className="mb-2 block text-[0.65rem] uppercase tracking-[0.28em] text-ink/50">
                   Email
                 </span>
                 <input
@@ -302,7 +302,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
                 />
               </label>
               <label className="block">
-                <span className="mb-2 block text-[0.65rem] uppercase tracking-[0.28em] text-bone/50">
+                <span className="mb-2 block text-[0.65rem] uppercase tracking-[0.28em] text-ink/50">
                   Neighborhood
                 </span>
                 <input
@@ -313,7 +313,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
                 />
               </label>
               <label className="block">
-                <span className="mb-2 block text-[0.65rem] uppercase tracking-[0.28em] text-bone/50">
+                <span className="mb-2 block text-[0.65rem] uppercase tracking-[0.28em] text-ink/50">
                   Anything specific you’d like us to know? (optional)
                 </span>
                 <textarea
@@ -335,12 +335,12 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
       </AnimatePresence>
 
       {/* Footer navigation */}
-      <div className="mt-10 flex items-center justify-between border-t border-bone/10 pt-6">
+      <div className="mt-10 flex items-center justify-between border-t border-ink/10 pt-6">
         <button
           type="button"
           onClick={() => setStep((s) => Math.max(0, s - 1))}
           disabled={step === 0}
-          className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55 transition-colors hover:text-bone disabled:cursor-not-allowed disabled:opacity-30"
+          className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-ink/55 transition-colors hover:text-ink disabled:cursor-not-allowed disabled:opacity-30"
         >
           <ArrowLeft className="h-3 w-3" />
           Back
@@ -350,7 +350,7 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
             type="button"
             onClick={() => setStep((s) => Math.min(3, s + 1))}
             disabled={!canAdvance()}
-            className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-opacity disabled:cursor-not-allowed disabled:opacity-30"
+            className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-ink transition-opacity disabled:cursor-not-allowed disabled:opacity-30"
           >
             Continue
             <ArrowRight className="h-3 w-3" />

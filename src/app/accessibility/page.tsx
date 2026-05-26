@@ -45,7 +45,7 @@ export default function AccessibilityPage() {
                   Specific accessibility considerations already in place
                   across the site:
                 </p>
-                <ul className="ml-6 list-disc space-y-2 text-bone/65">
+                <ul className="ml-6 list-disc space-y-2 text-ink/65">
                   <li>Semantic landmarks (header, main, footer, nav) on every page.</li>
                   <li>Skip-to-content link visible to keyboard navigation.</li>
                   <li>
@@ -89,14 +89,14 @@ export default function AccessibilityPage() {
                 email{' '}
                 <a
                   href={siteConfig.emailHref}
-                  className="text-bone underline-offset-4 hover:underline"
+                  className="text-ink underline-offset-4 hover:underline"
                 >
                   {siteConfig.email}
                 </a>{' '}
                 or call{' '}
                 <a
                   href={siteConfig.phoneHref}
-                  className="text-bone underline-offset-4 hover:underline"
+                  className="text-ink underline-offset-4 hover:underline"
                 >
                   {siteConfig.phone}
                 </a>

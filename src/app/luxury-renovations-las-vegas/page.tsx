@@ -115,7 +115,7 @@ export default function LuxuryRenovationsPage() {
         description="A senior designer will sit with you, walk the project, and respond within one business day."
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader eyebrow="Renovation FAQs" title="What to know." />
           <div className="mt-16 max-w-4xl">

@@ -123,7 +123,7 @@ export default function ForTradePage() {
         image={kitchenImages[1]}
       />
 
-      <section className="bg-ink-800 py-24 lg:py-32">
+      <section className="bg-bone-800 py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="The Program"
@@ -132,14 +132,14 @@ export default function ForTradePage() {
           <div className="mt-16 space-y-12">
             {program.map((p, i) => (
               <Reveal key={p.n} delay={i}>
-                <div className="grid items-start gap-8 border-t border-bone/10 pt-10 lg:grid-cols-[auto_1fr_2fr] lg:gap-14">
-                  <p className="font-display text-5xl text-bone lg:text-6xl">
+                <div className="grid items-start gap-8 border-t border-ink/10 pt-10 lg:grid-cols-[auto_1fr_2fr] lg:gap-14">
+                  <p className="font-display text-5xl text-ink lg:text-6xl">
                     {p.n}
                   </p>
-                  <h3 className="font-display text-2xl text-bone md:text-3xl">
+                  <h3 className="font-display text-2xl text-ink md:text-3xl">
                     {p.t}
                   </h3>
-                  <p className="text-base leading-relaxed text-bone/65">
+                  <p className="text-base leading-relaxed text-ink/65">
                     {p.d}
                   </p>
                 </div>
@@ -180,7 +180,7 @@ export default function ForTradePage() {
         description="Three short sections covering the firm, project, and engagement type. Our pre-construction team responds within one business day. NDA available on request before any drawings are shared."
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Trade FAQs"
@@ -193,17 +193,17 @@ export default function ForTradePage() {
       </section>
 
       {/* Trade intake */}
-      <section id="trade-intake" className="bg-ink-800 py-24 lg:py-32">
+      <section id="trade-intake" className="bg-bone-800 py-24 lg:py-32">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl">
             <Reveal>
               <div>
                 <p className="eyebrow mb-6">Trade Intake</p>
-                <h2 className="font-display text-4xl text-bone md:text-5xl">
+                <h2 className="font-display text-4xl text-ink md:text-5xl">
                   Send a project<br />
-                  <span className="italic text-bone">straight to pre-construction.</span>
+                  <span className="italic text-ink">straight to pre-construction.</span>
                 </h2>
-                <p className="mt-6 text-bone/65">
+                <p className="mt-6 text-ink/65">
                   Three short sections — the firm, the project, and the
                   engagement you want from us. NDA available on request
                   before drawings are shared. Senior pre-construction lead
@@ -212,7 +212,7 @@ export default function ForTradePage() {
               </div>
             </Reveal>
             <Reveal delay={1}>
-              <div className="mt-14 border border-bone/10 bg-ink p-8 md:p-10">
+              <div className="mt-14 border border-ink/10 bg-bone p-8 md:p-10">
                 <TradeIntakeForm />
               </div>
             </Reveal>

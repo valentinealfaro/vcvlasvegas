@@ -176,7 +176,7 @@ export default function KitchenPage() {
         description="Tell us about your home and how you cook — we’ll come back with a direction within one business day."
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Kitchen FAQs"

@@ -40,7 +40,7 @@ export function RelatedProjects({ currentSlug }: { currentSlug: string }) {
   if (others.length === 0) return null;
 
   return (
-    <section className="bg-ink-800 py-24 lg:py-32">
+    <section className="bg-bone-800 py-24 lg:py-32">
       <div className="container-luxe">
         <SectionHeader
           eyebrow="More Project Studies"
@@ -51,7 +51,7 @@ export function RelatedProjects({ currentSlug }: { currentSlug: string }) {
             <Reveal key={p.slug} delay={i}>
               <Link
                 href={`/projects/${p.slug}`}
-                className="group relative block aspect-[4/5] w-full overflow-hidden bg-ink-700 transition-shadow duration-700 group-hover:shadow-[0_30px_80px_-20px_rgba(252,187,0,0.25)]"
+                className="group relative block aspect-[4/5] w-full overflow-hidden bg-bone-700 transition-shadow duration-700 group-hover:shadow-[0_30px_80px_-20px_rgba(252,187,0,0.25)]"
               >
                 <Image
                   src={p.image.src}
@@ -60,7 +60,7 @@ export function RelatedProjects({ currentSlug }: { currentSlug: string }) {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.04]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-bone/85 via-bone/35 to-transparent" />
                 {/* Amber sweep on hover */}
                 <div
                   aria-hidden
@@ -78,19 +78,19 @@ export function RelatedProjects({ currentSlug }: { currentSlug: string }) {
                 <div className="absolute inset-x-0 top-0 flex items-center justify-between p-8 md:p-10">
                   <div className="flex items-center gap-3">
                     <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-                    <p className="eyebrow !text-bone/85">{p.eyebrow}</p>
+                    <p className="eyebrow !text-ink/85">{p.eyebrow}</p>
                   </div>
-                  <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bone/55">
+                  <p className="text-[0.6rem] uppercase tracking-[0.28em] text-ink/55">
                     {p.duration}
                   </p>
                 </div>
                 <div className="absolute inset-x-0 bottom-0 flex flex-col p-8 md:p-10">
-                  <h3 className="font-display text-3xl text-bone md:text-5xl">
+                  <h3 className="font-display text-3xl text-ink md:text-5xl">
                     {p.title}{' '}
-                    <span className="italic text-bone">{p.italic}</span>
+                    <span className="italic text-ink">{p.italic}</span>
                   </h3>
-                  <p className="mt-3 max-w-md text-bone/75">{p.scope}</p>
-                  <div className="mt-5 inline-flex items-center gap-3 self-start text-[0.7rem] uppercase tracking-[0.28em] text-bone">
+                  <p className="mt-3 max-w-md text-ink/75">{p.scope}</p>
+                  <div className="mt-5 inline-flex items-center gap-3 self-start text-[0.7rem] uppercase tracking-[0.28em] text-ink">
                     <span className="relative">
                       Read the study
                       <span aria-hidden className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />

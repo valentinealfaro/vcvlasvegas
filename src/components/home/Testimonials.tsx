@@ -21,7 +21,7 @@ const promises = [
 
 export function Testimonials() {
   return (
-    <section className="relative overflow-hidden bg-ink py-28 lg:py-40">
+    <section className="relative overflow-hidden bg-bone py-28 lg:py-40">
       <div aria-hidden className="glow-duotone" />
 
       <div className="container-luxe">
@@ -34,7 +34,7 @@ export function Testimonials() {
           {promises.map((p, i) => (
             <Reveal key={p.n} delay={i}>
               <div className="border-gradient h-full">
-                <div className="group relative h-full overflow-hidden bg-ink p-8 transition-colors duration-500 hover:bg-ink-700 lg:p-10">
+                <div className="group relative h-full overflow-hidden bg-bone p-8 transition-colors duration-500 hover:bg-bone-700 lg:p-10">
                   {/* Per-card corner sweep */}
                   <span
                     aria-hidden
@@ -50,7 +50,7 @@ export function Testimonials() {
                   <span aria-hidden className="pointer-events-none absolute left-4 top-4 h-3 w-3 border-l border-t border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
                   <span aria-hidden className="pointer-events-none absolute bottom-4 right-4 h-3 w-3 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
                   <div className="flex items-baseline gap-4">
-                    <p className="font-display text-5xl text-bone transition-all duration-500 group-hover:scale-110 group-hover:origin-left group-hover:[text-shadow:0_0_24px_rgba(252,187,0,0.45)]">
+                    <p className="font-display text-5xl text-ink transition-all duration-500 group-hover:scale-110 group-hover:origin-left group-hover:[text-shadow:0_0_24px_rgba(252,187,0,0.45)]">
                       {p.n}
                     </p>
                     <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/40 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
@@ -59,10 +59,10 @@ export function Testimonials() {
                     aria-hidden
                     className="mt-5 block h-px w-8 bg-gold transition-all duration-500 group-hover:w-16 group-hover:shadow-[0_0_8px_rgba(252,187,0,0.6)]"
                   />
-                  <h3 className="mt-6 font-display text-2xl text-bone md:text-[1.65rem]">
+                  <h3 className="mt-6 font-display text-2xl text-ink md:text-[1.65rem]">
                     {p.t}
                   </h3>
-                  <p className="mt-4 text-base leading-relaxed text-bone/65 transition-colors duration-500 group-hover:text-bone/85">
+                  <p className="mt-4 text-base leading-relaxed text-ink/65 transition-colors duration-500 group-hover:text-ink/85">
                     {p.d}
                   </p>
                 </div>

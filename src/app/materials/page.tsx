@@ -227,7 +227,7 @@ export default function MaterialsPage() {
       {groups.map((g, gi) => (
         <section
           key={g.eyebrow}
-          className={gi % 2 === 0 ? 'bg-ink py-24 lg:py-32' : 'bg-ink-800 py-24 lg:py-32'}
+          className={gi % 2 === 0 ? 'bg-bone py-24 lg:py-32' : 'bg-bone-800 py-24 lg:py-32'}
         >
           <div className="container-luxe">
             <SectionHeader
@@ -236,20 +236,20 @@ export default function MaterialsPage() {
               description={g.description}
             />
 
-            <div className="mt-16 grid gap-px bg-bone/10 md:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-2 lg:grid-cols-4">
               {g.specs.map((s, i) => (
-                <Reveal key={s.name} delay={i % 4} className={gi % 2 === 0 ? 'bg-ink p-8 lg:p-9' : 'bg-ink-800 p-8 lg:p-9'}>
+                <Reveal key={s.name} delay={i % 4} className={gi % 2 === 0 ? 'bg-bone p-8 lg:p-9' : 'bg-bone-800 p-8 lg:p-9'}>
                   {s.tone && (
                     <div
-                      className="mb-6 h-20 w-full border border-bone/10"
+                      className="mb-6 h-20 w-full border border-ink/10"
                       style={{ backgroundColor: s.tone }}
                     />
                   )}
-                  <p className="font-display text-xl text-bone md:text-2xl">{s.name}</p>
-                  <p className="mt-2 text-[0.6rem] uppercase tracking-[0.24em] text-bone">
+                  <p className="font-display text-xl text-ink md:text-2xl">{s.name}</p>
+                  <p className="mt-2 text-[0.6rem] uppercase tracking-[0.24em] text-ink">
                     {s.spec}
                   </p>
-                  <p className="mt-4 text-sm leading-relaxed text-bone/55">
+                  <p className="mt-4 text-sm leading-relaxed text-ink/55">
                     {s.description}
                   </p>
                 </Reveal>

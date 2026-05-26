@@ -177,7 +177,7 @@ export default function BathroomPage() {
         description="A senior designer will walk your home, listen, and respond with scope direction within one business day."
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Bathroom FAQs"

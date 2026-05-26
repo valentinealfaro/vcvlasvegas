@@ -125,10 +125,10 @@ export default function SampleBudgetsPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Sample Budgets' }]}
       />
 
-      <section className="border-b border-bone/8 bg-ink-800/40 py-12">
+      <section className="border-b border-ink/8 bg-bone-800/40 py-12">
         <div className="container-luxe">
           <Reveal>
-            <p className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-bone/55 md:text-base">
+            <p className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-ink/55 md:text-base">
               These breakdowns are illustrative — published to demystify
               where the budget goes on a typical luxury Las Vegas remodel.
               Real project budgets are calibrated to your home, your scope,
@@ -142,13 +142,13 @@ export default function SampleBudgetsPage() {
       {budgets.map((budget, gi) => (
         <section
           key={budget.title}
-          className={gi % 2 === 0 ? 'bg-ink py-24 lg:py-32' : 'bg-ink-800 py-24 lg:py-32'}
+          className={gi % 2 === 0 ? 'bg-bone py-24 lg:py-32' : 'bg-bone-800 py-24 lg:py-32'}
         >
           <div className="container-luxe">
             <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
               <Reveal>
                 <div className="lg:sticky lg:top-32">
-                  <div className="relative aspect-[4/5] overflow-hidden bg-ink-700">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-bone-700">
                     <Image
                       src={budget.image.src}
                       alt={budget.image.alt}
@@ -156,30 +156,30 @@ export default function SampleBudgetsPage() {
                       sizes="(max-width: 1024px) 100vw, 40vw"
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-bone/60 to-transparent" />
                     {/* Gold corner ticks */}
                     <span aria-hidden className="pointer-events-none absolute left-3 top-3 h-3 w-3 border-l border-t border-gold/60" />
                     <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/60" />
                   </div>
                   <div className="mt-8 flex items-center gap-3">
                     <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-                    <p className="eyebrow !text-bone/45">{budget.eyebrow}</p>
+                    <p className="eyebrow !text-ink/45">{budget.eyebrow}</p>
                   </div>
-                  <h2 className="mt-3 font-display text-3xl text-bone md:text-4xl">
+                  <h2 className="mt-3 font-display text-3xl text-ink md:text-4xl">
                     {budget.title}
                   </h2>
                   <div className="mt-6 flex items-baseline gap-6">
-                    <p className="font-display text-5xl text-bone [text-shadow:0_0_28px_rgba(252,187,0,0.4)] md:text-6xl">
+                    <p className="font-display text-5xl text-ink [text-shadow:0_0_28px_rgba(252,187,0,0.4)] md:text-6xl">
                       {budget.total}
                     </p>
                   </div>
-                  <p className="mt-2 text-sm text-bone/55">
+                  <p className="mt-2 text-sm text-ink/55">
                     Illustrative · {budget.duration}
                   </p>
                   <div className="mt-8">
                     <Link
                       href={budget.href}
-                      className="group inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
+                      className="group inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink transition-colors hover:text-ink"
                     >
                       <span className="relative">
                         {budget.hrefLabel}
@@ -196,36 +196,36 @@ export default function SampleBudgetsPage() {
                   <div className="mb-6 flex items-center gap-3">
                     <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
                     <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-                    <p className="eyebrow !text-bone">Line-Item Breakdown</p>
+                    <p className="eyebrow !text-ink">Line-Item Breakdown</p>
                   </div>
-                  <ul className="divide-y divide-bone/10 border-y border-bone/10">
+                  <ul className="divide-y divide-ink/10 border-y border-ink/10">
                     {budget.lines.map((line, lineIdx) => (
                       <li
                         key={line.label}
-                        className="group grid grid-cols-[1fr_auto] items-baseline gap-3 py-4 transition-colors duration-500 hover:bg-ink-800/30 md:grid-cols-[auto_1fr_auto_auto] md:gap-6"
+                        className="group grid grid-cols-[1fr_auto] items-baseline gap-3 py-4 transition-colors duration-500 hover:bg-bone-800/30 md:grid-cols-[auto_1fr_auto_auto] md:gap-6"
                       >
                         <span
                           aria-hidden
                           className={`hidden h-1.5 w-1.5 shrink-0 rounded-full transition-all duration-500 md:inline-block ${lineIdx % 2 === 0 ? 'bg-gold/60 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]' : 'bg-accent/60 group-hover:bg-accent group-hover:shadow-[0_0_8px_rgba(59,130,246,0.7)]'}`}
                         />
                         <div>
-                          <p className="font-display text-lg text-bone md:text-xl">
+                          <p className="font-display text-lg text-ink md:text-xl">
                             {line.label}
                           </p>
-                          <p className="mt-1 text-xs leading-relaxed text-bone/50">
+                          <p className="mt-1 text-xs leading-relaxed text-ink/50">
                             {line.notes}
                           </p>
                         </div>
-                        <p className="text-[0.65rem] uppercase tracking-[0.24em] text-bone/45 md:order-3">
+                        <p className="text-[0.65rem] uppercase tracking-[0.24em] text-ink/45 md:order-3">
                           {line.share}%
                         </p>
-                        <p className="font-display text-lg text-bone transition-all duration-500 group-hover:[text-shadow:0_0_18px_rgba(252,187,0,0.35)] md:order-4 md:text-xl">
+                        <p className="font-display text-lg text-ink transition-all duration-500 group-hover:[text-shadow:0_0_18px_rgba(252,187,0,0.35)] md:order-4 md:text-xl">
                           {formatAmount(budget.total, line.share)}
                         </p>
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-6 text-xs text-bone/40">
+                  <p className="mt-6 text-xs text-ink/40">
                     Percentages are indicative. Real projects vary based on
                     scope, finish tier, structural complexity, and site
                     conditions.

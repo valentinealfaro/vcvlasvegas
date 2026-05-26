@@ -7,7 +7,7 @@ export function AreasServed() {
   const profiledSlugs = new Set(cityPages.map((c) => c.city));
 
   return (
-    <section className="relative overflow-hidden border-y border-bone/5 bg-ink py-20 lg:py-28">
+    <section className="relative overflow-hidden border-y border-ink/5 bg-bone py-20 lg:py-28">
       <div aria-hidden className="glow-duotone" />
 
       <div className="container-luxe">
@@ -19,22 +19,22 @@ export function AreasServed() {
                   <span aria-hidden className="absolute inset-0 bg-gradient-to-br from-gold/15 to-transparent" />
                   <span aria-hidden className="absolute left-1 top-1 h-1.5 w-1.5 border-l border-t border-gold" />
                   <span aria-hidden className="absolute bottom-1 right-1 h-1.5 w-1.5 border-b border-r border-gold" />
-                  <MapPin className="relative h-4 w-4 text-bone" aria-hidden />
+                  <MapPin className="relative h-4 w-4 text-ink" aria-hidden />
                 </span>
-                <p className="eyebrow !text-bone">Service Area</p>
+                <p className="eyebrow !text-ink">Service Area</p>
               </div>
-              <h2 className="font-display text-3xl text-bone md:text-4xl">
+              <h2 className="font-display text-3xl text-ink md:text-4xl">
                 Built for the<br />
-                <span className="italic text-bone">Las Vegas valley.</span>
+                <span className="italic text-ink">Las Vegas valley.</span>
               </h2>
-              <p className="mt-5 max-w-md text-bone/60">
+              <p className="mt-5 max-w-md text-ink/60">
                 Twelve neighborhoods inside the studio's active project radius.
                 The first five are profiled with dedicated pages; the rest fall
                 under our standing service zone.
               </p>
               <Link
                 href="/neighborhoods"
-                className="group mt-8 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone/80"
+                className="group mt-8 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink transition-colors hover:text-ink/80"
               >
                 <span>All neighborhoods</span>
                 <span aria-hidden className="h-px w-6 bg-gold transition-all duration-500 group-hover:w-12 group-hover:shadow-[0_0_8px_rgba(252,187,0,0.6)]" />
@@ -49,10 +49,10 @@ export function AreasServed() {
                 const slug = cityPages.find((cp) => cp.city === c)?.slug;
                 const inner = (
                   <span
-                    className={`group relative block overflow-hidden border border-bone/15 px-4 py-3 text-[0.7rem] uppercase tracking-[0.22em] transition-all duration-500 ${
+                    className={`group relative block overflow-hidden border border-ink/15 px-4 py-3 text-[0.7rem] uppercase tracking-[0.22em] transition-all duration-500 ${
                       profiled
-                        ? 'cursor-pointer text-bone hover:border-gold hover:bg-gold/5'
-                        : 'text-bone/65'
+                        ? 'cursor-pointer text-ink hover:border-gold hover:bg-gold/5'
+                        : 'text-ink/65'
                     }`}
                   >
                     {profiled && (

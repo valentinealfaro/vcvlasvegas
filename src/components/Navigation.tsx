@@ -44,7 +44,7 @@ export function Navigation() {
       <header
         className={cn(
           'fixed inset-x-0 top-0 z-50 transition-all duration-500',
-          scrolled ? 'bg-ink/85 backdrop-blur-xl' : 'bg-transparent',
+          scrolled ? 'bg-bone/85 backdrop-blur-xl' : 'bg-transparent',
         )}
       >
         {/* Gradient bottom-border when scrolled — quietly announces the chrome */}
@@ -62,18 +62,18 @@ export function Navigation() {
         <div className="container-luxe flex items-center justify-between py-5 lg:py-6">
           <Link
             href="/"
-            className="group flex items-center gap-3 text-bone"
+            className="group flex items-center gap-3 text-ink"
             aria-label="VCV Vegas Home"
           >
             <Monogram
               size={36}
-              className="text-bone transition-transform duration-700 ease-out group-hover:rotate-[8deg] group-hover:scale-110"
+              className="text-ink transition-transform duration-700 ease-out group-hover:rotate-[8deg] group-hover:scale-110"
             />
             <span className="flex items-baseline gap-2">
               <span className="font-display text-2xl tracking-tight lg:text-[1.65rem]">
                 VCV
               </span>
-              <span className="relative font-sans text-[0.62rem] uppercase tracking-[0.4em] text-bone">
+              <span className="relative font-sans text-[0.62rem] uppercase tracking-[0.4em] text-ink">
                 Vegas
                 <span
                   aria-hidden
@@ -91,7 +91,7 @@ export function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="link-nav text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-bone"
+                  className="link-nav text-[0.72rem] font-medium uppercase tracking-[0.22em] text-ink/75 transition-colors hover:text-ink"
                 >
                   {item.label}
                 </Link>
@@ -102,7 +102,7 @@ export function Navigation() {
           <div className="hidden items-center gap-4 lg:flex">
             <a
               href={siteConfig.phoneHref}
-              className="flex items-center gap-2 text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-bone"
+              className="flex items-center gap-2 text-[0.72rem] font-medium uppercase tracking-[0.22em] text-ink/75 transition-colors hover:text-ink"
             >
               <Phone className="h-3.5 w-3.5" />
               {siteConfig.phone}
@@ -115,7 +115,7 @@ export function Navigation() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="lg:hidden text-bone"
+            className="lg:hidden text-ink"
             aria-label="Open menu"
           >
             <Menu className="h-6 w-6" />
@@ -155,24 +155,24 @@ export function Navigation() {
                 </motion.div>
               </AnimatePresence>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/75 to-ink" />
+            <div className="absolute inset-0 bg-gradient-to-b from-bone/85 via-bone/75 to-bone" />
 
             <div className="relative flex h-full flex-col">
               <div className="container-luxe flex items-center justify-between py-5">
                 <Link
                   href="/"
                   onClick={() => setOpen(false)}
-                  className="flex items-baseline gap-2 text-bone"
+                  className="flex items-baseline gap-2 text-ink"
                 >
                   <span className="font-display text-2xl tracking-tight">VCV</span>
-                  <span className="font-sans text-[0.62rem] uppercase tracking-[0.4em] text-bone">
+                  <span className="font-sans text-[0.62rem] uppercase tracking-[0.4em] text-ink">
                     Vegas
                   </span>
                 </Link>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="text-bone"
+                  className="text-ink"
                   aria-label="Close menu"
                 >
                   <X className="h-6 w-6" />
@@ -180,7 +180,7 @@ export function Navigation() {
               </div>
 
               <div className="container-luxe flex-1 overflow-y-auto pt-8 pb-32">
-                <p className="eyebrow mb-6 !text-bone/60">Navigate</p>
+                <p className="eyebrow mb-6 !text-ink/60">Navigate</p>
                 <nav>
                   <ul className="flex flex-col gap-5">
                     {navigation.map((item, idx) => (
@@ -197,10 +197,10 @@ export function Navigation() {
                           <Link
                             href={item.href}
                             onClick={() => setOpen(false)}
-                            className="group flex items-center justify-between border-b border-bone/10 pb-4 font-display text-3xl text-bone transition-colors hover:text-bone"
+                            className="group flex items-center justify-between border-b border-ink/10 pb-4 font-display text-3xl text-ink transition-colors hover:text-ink"
                           >
                             {item.label}
-                            <ArrowUpRight className="h-5 w-5 text-bone/30 transition-all group-hover:rotate-45 group-hover:text-bone" />
+                            <ArrowUpRight className="h-5 w-5 text-ink/30 transition-all group-hover:rotate-45 group-hover:text-ink" />
                           </Link>
                         </motion.div>
                       </li>
@@ -208,7 +208,7 @@ export function Navigation() {
                   </ul>
                 </nav>
 
-                <p className="eyebrow mb-5 mt-12 !text-bone/60">Signature Services</p>
+                <p className="eyebrow mb-5 mt-12 !text-ink/60">Signature Services</p>
                 <ul className="grid grid-cols-2 gap-3">
                   {servicesIndex.slice(0, 6).map((s, idx) => (
                     <li key={s.slug}>
@@ -223,7 +223,7 @@ export function Navigation() {
                         <Link
                           href={`/${s.slug}`}
                           onClick={() => setOpen(false)}
-                          className="group relative block overflow-hidden border border-bone/10 bg-ink/40 px-4 py-3.5 text-xs text-bone/75 backdrop-blur-sm transition-all duration-500 hover:border-gold/50 hover:bg-ink/70 hover:text-bone"
+                          className="group relative block overflow-hidden border border-ink/10 bg-bone/40 px-4 py-3.5 text-xs text-ink/75 backdrop-blur-sm transition-all duration-500 hover:border-gold/50 hover:bg-bone/70 hover:text-ink"
                         >
                           {/* Diagonal gold sweep on hover */}
                           <span
@@ -243,12 +243,12 @@ export function Navigation() {
                 </ul>
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 border-t border-bone/10 bg-ink/95 backdrop-blur-xl">
+              <div className="absolute inset-x-0 bottom-0 border-t border-ink/10 bg-bone/95 backdrop-blur-xl">
                 <div className="container-luxe py-6">
                   <a
                     href={siteConfig.phoneHref}
                     onClick={() => setOpen(false)}
-                    className="mb-3 flex items-center gap-2 text-sm uppercase tracking-[0.22em] text-bone"
+                    className="mb-3 flex items-center gap-2 text-sm uppercase tracking-[0.22em] text-ink"
                   >
                     <Phone className="h-4 w-4" />
                     {siteConfig.phone}

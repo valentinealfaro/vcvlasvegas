@@ -19,13 +19,13 @@ export function NewsletterSignup() {
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="flex items-center gap-3 text-sm text-bone"
+        className="flex items-center gap-3 text-sm text-ink"
       >
         <span
           aria-hidden
           className="grid h-7 w-7 place-items-center rounded-full border border-gold/40 bg-gold/10 shadow-[0_0_18px_-4px_rgba(252,187,0,0.6)]"
         >
-          <CheckCircle2 className="h-4 w-4 text-bone" />
+          <CheckCircle2 className="h-4 w-4 text-ink" />
         </span>
         Subscribed. The next letter arrives soon.
       </motion.div>
@@ -45,7 +45,7 @@ export function NewsletterSignup() {
           placeholder="you@example.com"
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          className="peer w-full border-b border-bone/20 bg-transparent py-3 pr-4 text-sm text-bone placeholder:text-bone/40 focus:border-transparent focus:outline-none"
+          className="peer w-full border-b border-ink/20 bg-transparent py-3 pr-4 text-sm text-ink placeholder:text-ink/40 focus:border-transparent focus:outline-none"
           aria-label="Email address"
         />
         {/* Animated gradient underline — gold to blue, expands from center on focus */}
@@ -60,7 +60,7 @@ export function NewsletterSignup() {
       </label>
       <button
         type="submit"
-        className="group relative inline-flex items-center justify-center gap-2 overflow-hidden border border-bone/20 px-5 py-3 text-[0.65rem] font-medium uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:text-bone sm:shrink-0"
+        className="group relative inline-flex items-center justify-center gap-2 overflow-hidden border border-ink/20 px-5 py-3 text-[0.65rem] font-medium uppercase tracking-[0.28em] text-ink transition-all duration-500 hover:border-gold hover:text-ink sm:shrink-0"
       >
         {/* Diagonal gold shimmer sweep on hover */}
         <span

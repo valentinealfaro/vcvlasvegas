@@ -86,12 +86,12 @@ export default function Post() {
         ]}
       />
 
-      <article className="bg-ink py-20 lg:py-28">
+      <article className="bg-bone py-20 lg:py-28">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl">
             <Reveal>
-              <p className="text-lg leading-relaxed text-bone/75 md:text-xl">
-                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-bone md:text-8xl">
+              <p className="text-lg leading-relaxed text-ink/75 md:text-xl">
+                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-ink md:text-8xl">
                   T
                 </span>
                 he most consequential phase of a luxury remodel is the one
@@ -104,15 +104,15 @@ export default function Post() {
               </p>
             </Reveal>
 
-            <section id="discovery" className="mt-16 border-t border-bone/10 pt-12">
+            <section id="discovery" className="mt-16 border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">01</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">01</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Discovery — the week the project actually starts.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   After the design is signed off, the senior designer goes
                   back to the home — alone — and re-measures every dimension
                   that matters. Wall thicknesses. Ceiling heights. Sightlines
@@ -120,7 +120,7 @@ export default function Post() {
                   the existing windows. The square corners that turn out not
                   to be square.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   The drawing set that comes after this week is the source of
                   truth for the rest of the project. Skipping it means the
                   field improvises later — and improvisation is the most
@@ -130,7 +130,7 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-ink-700">
+              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-bone-700">
                 <Image
                   src={kitchenImages[1].src}
                   alt={kitchenImages[1].alt}
@@ -141,22 +141,22 @@ export default function Post() {
               </figure>
             </Reveal>
 
-            <section id="drawings" className="border-t border-bone/10 pt-12">
+            <section id="drawings" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">02</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">02</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Drawings — turning design into instructions.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   A construction drawing set for a luxury remodel is thirty
                   to sixty pages — floor plans, elevations, cabinetry
                   schedules, plumbing schedules, electrical schedules,
                   detail drawings of every joint that matters. Every
                   measurement annotated. Every finish specified.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   This is the document that lets the field execute without
                   asking. The trades read it once at intake, once at
                   installation, and rarely need to interpret. The cleaner
@@ -166,27 +166,27 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="my-14 border-y border-bone/10 py-10">
-                <blockquote className="font-display text-3xl leading-tight text-bone text-balance md:text-4xl">
+              <figure className="my-14 border-y border-ink/10 py-10">
+                <blockquote className="font-display text-3xl leading-tight text-ink text-balance md:text-4xl">
                   “The cleaner the drawing set, the quieter the job site.
                   Every line we draw in pre-construction is a question we
                   never have to answer in the field.”
                 </blockquote>
-                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
+                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-ink">
                   — From the studio
                 </figcaption>
               </figure>
             </Reveal>
 
-            <section id="engineering" className="border-t border-bone/10 pt-12">
+            <section id="engineering" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">03</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">03</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Engineering — the work no one will ever see.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Any structural work — a beam where a load-bearing wall
                   used to be, a foundation cut for a new patio door, a
                   re-engineered roof line — is designed by a Nevada-licensed
@@ -194,7 +194,7 @@ export default function Post() {
                   are stamped. The drawings are sealed. The permit reflects
                   the engineering.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   This is the line item that does not show up on the
                   cosmetic budget — and it is the line item that decides
                   whether the roof still bears load in twenty years.
@@ -203,7 +203,7 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-ink-700">
+              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-bone-700">
                 <Image
                   src={customHomeImages[3].src}
                   alt={customHomeImages[3].alt}
@@ -214,21 +214,21 @@ export default function Post() {
               </figure>
             </Reveal>
 
-            <section id="longlead" className="border-t border-bone/10 pt-12">
+            <section id="longlead" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">04</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">04</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   Long-lead orders — placed before the wall comes down.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Custom cabinetry: 12 weeks. Book-matched stone slabs: 4–8
                   weeks. Integrated appliances: 6–14 weeks. Architectural
                   glass: 6 weeks. Decorative lighting: 4–10 weeks. None of
                   these arrive faster because the project needs them faster.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   We order every long-lead item during pre-construction, on
                   a published delivery calendar tied to the build schedule.
                   When the wall comes down, everything is already moving
@@ -237,15 +237,15 @@ export default function Post() {
               </Reveal>
             </section>
 
-            <section id="calendar" className="border-t border-bone/10 pt-12">
+            <section id="calendar" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">05</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">05</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   The build calendar — published before the first hammer.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Pre-construction ends with a published calendar showing
                   every trade, every milestone, every inspection, and every
                   delivery from demolition day to final walkthrough. You
@@ -253,7 +253,7 @@ export default function Post() {
                   see it. The field lead sees it. The calendar is the
                   project.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   If your contractor cannot show you a calendar at the end
                   of pre-construction, the project has not actually entered
                   construction yet.
@@ -262,11 +262,11 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <div className="my-16 border-y border-bone/10 py-12">
-                <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <div className="my-16 border-y border-ink/10 py-12">
+                <h3 className="font-display text-3xl text-ink md:text-4xl">
                   The point.
                 </h3>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Pre-construction is the eight weeks where the project
                   becomes a project rather than a hope. Drawings are
                   produced. Engineering is coordinated. Permits are pulled.
@@ -274,7 +274,7 @@ export default function Post() {
                   Everything that happens afterward depends on these eight
                   weeks being run with discipline.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   We treat it as the most important phase of every
                   engagement. Most contractors don’t. That is the
                   difference you will feel on the third week of
@@ -285,12 +285,12 @@ export default function Post() {
             </Reveal>
 
             <Reveal delay={3}>
-              <div className="flex items-center justify-between border-t border-bone/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55">
-                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-bone">
+              <div className="flex items-center justify-between border-t border-ink/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-ink/55">
+                <Link href="/journal" className="flex items-center gap-3 transition-colors hover:text-ink">
                   <ArrowLeft className="h-4 w-4" />
                   All Notes
                 </Link>
-                <Link href="/process" className="flex items-center gap-3 text-bone transition-colors hover:text-bone">
+                <Link href="/process" className="flex items-center gap-3 text-ink transition-colors hover:text-ink">
                   Read our full process
                   <ArrowRight className="h-4 w-4" />
                 </Link>

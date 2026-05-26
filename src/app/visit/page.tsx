@@ -46,33 +46,33 @@ export default function VisitPage() {
       />
 
       {/* What to expect */}
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <div className="grid items-start gap-16 lg:grid-cols-[1fr_1.4fr]">
             <Reveal>
               <div className="sticky top-32">
                 <p className="eyebrow mb-6">The Visit</p>
-                <h2 className="font-display text-4xl text-bone md:text-5xl">
+                <h2 className="font-display text-4xl text-ink md:text-5xl">
                   What a first<br />
-                  <span className="italic text-bone">consultation looks like.</span>
+                  <span className="italic text-ink">consultation looks like.</span>
                 </h2>
               </div>
             </Reveal>
             <div className="space-y-12">
               {expect.map((e, i) => (
                 <Reveal key={e.t} delay={i}>
-                  <div className="group grid gap-6 border-t border-bone/10 pt-8 sm:grid-cols-[auto_1fr] sm:gap-10">
+                  <div className="group grid gap-6 border-t border-ink/10 pt-8 sm:grid-cols-[auto_1fr] sm:gap-10">
                     <div className="flex flex-col gap-2">
-                      <p className="font-display text-4xl text-bone [text-shadow:0_0_20px_rgba(252,187,0,0.4)]">
+                      <p className="font-display text-4xl text-ink [text-shadow:0_0_20px_rgba(252,187,0,0.4)]">
                         0{i + 1}
                       </p>
                       <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
                     </div>
                     <div>
-                      <h3 className="font-display text-2xl text-bone md:text-3xl">
+                      <h3 className="font-display text-2xl text-ink md:text-3xl">
                         {e.t}
                       </h3>
-                      <p className="mt-3 text-base leading-relaxed text-bone/65">
+                      <p className="mt-3 text-base leading-relaxed text-ink/65">
                         {e.d}
                       </p>
                     </div>
@@ -85,15 +85,15 @@ export default function VisitPage() {
       </section>
 
       {/* Logistics card */}
-      <section className="border-y border-bone/8 bg-ink-800/40">
+      <section className="border-y border-ink/8 bg-bone-800/40">
         <div className="container-luxe py-20">
-          <div className="grid gap-px bg-bone/10 md:grid-cols-3">
+          <div className="grid gap-px bg-ink/10 md:grid-cols-3">
             {[
               { icon: MapPin, t: 'Where', d: 'In your home, across the Las Vegas metro.' },
               { icon: Clock, t: 'When', d: 'Monday – Saturday, by appointment.' },
               { icon: Calendar, t: 'How', d: 'Schedule below. We respond within one business day.' },
             ].map(({ icon: Icon, t, d }, i) => (
-              <div key={t} className="group relative overflow-hidden bg-ink-800/60 p-8 transition-colors duration-500 hover:bg-ink-700 lg:p-10">
+              <div key={t} className="group relative overflow-hidden bg-bone-800/60 p-8 transition-colors duration-500 hover:bg-bone-700 lg:p-10">
                 {/* Per-card hover sweep */}
                 <span
                   aria-hidden
@@ -112,15 +112,15 @@ export default function VisitPage() {
                   <span aria-hidden className="absolute inset-0 bg-gradient-to-br from-gold/15 to-transparent" />
                   <span aria-hidden className="absolute left-1 top-1 h-1.5 w-1.5 border-l border-t border-gold" />
                   <span aria-hidden className="absolute bottom-1 right-1 h-1.5 w-1.5 border-b border-r border-gold" />
-                  <Icon className="relative h-4 w-4 text-bone" />
+                  <Icon className="relative h-4 w-4 text-ink" />
                 </span>
                 <div className="mt-5 flex items-center gap-3">
                   <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-                  <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                  <p className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                     {t}
                   </p>
                 </div>
-                <p className="mt-2 font-display text-xl text-bone">{d}</p>
+                <p className="mt-2 font-display text-xl text-ink">{d}</p>
               </div>
             ))}
           </div>
@@ -128,7 +128,7 @@ export default function VisitPage() {
       </section>
 
       {/* Booking form */}
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl">
             <Reveal>
@@ -136,22 +136,22 @@ export default function VisitPage() {
                 <div className="mb-6 flex items-center justify-center gap-3">
                   <span aria-hidden className="h-px w-10 bg-gradient-to-r from-transparent via-gold to-transparent" />
                   <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
-                  <p className="eyebrow !text-bone">Schedule</p>
+                  <p className="eyebrow !text-ink">Schedule</p>
                   <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
                   <span aria-hidden className="h-px w-10 bg-gradient-to-r from-transparent via-gold to-transparent" />
                 </div>
-                <h2 className="font-display text-4xl text-bone md:text-5xl">
+                <h2 className="font-display text-4xl text-ink md:text-5xl">
                   Request your<br />
-                  <span className="italic text-bone">private consultation.</span>
+                  <span className="italic text-ink">private consultation.</span>
                 </h2>
-                <p className="mt-6 text-bone/65">
+                <p className="mt-6 text-ink/65">
                   Senior-designer response within one business day. Confidential.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={1}>
               <div className="mt-14 border-gradient">
-                <div className="bg-ink-800/40 p-8 md:p-10">
+                <div className="bg-bone-800/40 p-8 md:p-10">
                   <ConsultationForm />
                 </div>
               </div>

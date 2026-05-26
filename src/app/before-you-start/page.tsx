@@ -84,7 +84,7 @@ export default function BeforeYouStartPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Before You Start' }]}
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="The Preparation Checklist"
@@ -95,24 +95,24 @@ export default function BeforeYouStartPage() {
           <div className="mt-20 space-y-16">
             {steps.map((step) => (
               <Reveal key={step.n}>
-                <div className="group grid items-start gap-10 border-t border-bone/10 pt-12 lg:grid-cols-[auto_1fr_1.6fr] lg:gap-16">
+                <div className="group grid items-start gap-10 border-t border-ink/10 pt-12 lg:grid-cols-[auto_1fr_1.6fr] lg:gap-16">
                   <div className="flex flex-col gap-3">
-                    <p className="font-display text-6xl text-bone [text-shadow:0_0_24px_rgba(252,187,0,0.4)] lg:text-7xl">
+                    <p className="font-display text-6xl text-ink [text-shadow:0_0_24px_rgba(252,187,0,0.4)] lg:text-7xl">
                       {step.n}
                     </p>
                     <span aria-hidden className="h-px w-10 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
                   </div>
-                  <h3 className="font-display text-2xl text-bone md:text-3xl">
+                  <h3 className="font-display text-2xl text-ink md:text-3xl">
                     {step.t}
                   </h3>
                   <div>
-                    <p className="text-base leading-relaxed text-bone/70 md:text-lg">
+                    <p className="text-base leading-relaxed text-ink/70 md:text-lg">
                       {step.d}
                     </p>
                     {step.link && (
                       <Link
                         href={step.link.href}
-                        className="group/link mt-5 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
+                        className="group/link mt-5 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink transition-colors hover:text-ink"
                       >
                         <span className="relative">
                           {step.link.label}
@@ -136,13 +136,13 @@ export default function BeforeYouStartPage() {
       />
 
       {/* Quick next steps */}
-      <section className="bg-ink-800 py-24 lg:py-32">
+      <section className="bg-bone-800 py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Two Paths Forward"
             title="When the prep is done."
           />
-          <div className="mt-16 grid gap-px bg-bone/10 md:grid-cols-2">
+          <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-2">
             {[
               {
                 eyebrow: 'Faster Path',
@@ -159,7 +159,7 @@ export default function BeforeYouStartPage() {
                 cta: 'Open the project brief',
               },
             ].map((card, i) => (
-              <Reveal key={card.eyebrow} delay={i} className="group relative overflow-hidden bg-ink-800 p-8 transition-colors duration-500 hover:bg-ink-700 lg:p-12">
+              <Reveal key={card.eyebrow} delay={i} className="group relative overflow-hidden bg-bone-800 p-8 transition-colors duration-500 hover:bg-bone-700 lg:p-12">
                 <span
                   aria-hidden
                   className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
@@ -174,17 +174,17 @@ export default function BeforeYouStartPage() {
                 <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
                 <div className="mb-5 flex items-center gap-3">
                   <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-                  <p className="eyebrow !text-bone/45">{card.eyebrow}</p>
+                  <p className="eyebrow !text-ink/45">{card.eyebrow}</p>
                 </div>
-                <h3 className="font-display text-2xl text-bone md:text-3xl">
+                <h3 className="font-display text-2xl text-ink md:text-3xl">
                   {card.title}
                 </h3>
-                <p className="mt-4 text-base leading-relaxed text-bone/65 transition-colors duration-500 group-hover:text-bone/80">
+                <p className="mt-4 text-base leading-relaxed text-ink/65 transition-colors duration-500 group-hover:text-ink/80">
                   {card.desc}
                 </p>
                 <Link
                   href={card.href}
-                  className="group/link mt-8 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
+                  className="group/link mt-8 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink transition-colors hover:text-ink"
                 >
                   <span className="relative">
                     {card.cta}

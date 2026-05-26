@@ -129,7 +129,7 @@ export default function ModernBathPage() {
         description="A private design consultation in your home — by appointment, within one business day."
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader eyebrow="Modern Bath FAQs" title="What to know." />
           <div className="mt-16 max-w-4xl">

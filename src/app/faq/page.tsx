@@ -127,22 +127,22 @@ export default function FAQPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'FAQ' }]}
       />
 
-      <section className="bg-ink py-20 lg:py-28">
+      <section className="bg-bone py-20 lg:py-28">
         <div className="container-luxe">
           <div className="space-y-24">
             {groups.map((g, gi) => (
               <Reveal key={g.title}>
-                <div className="grid gap-12 border-t border-bone/10 pt-14 lg:grid-cols-[1fr_2fr] lg:gap-20">
+                <div className="grid gap-12 border-t border-ink/10 pt-14 lg:grid-cols-[1fr_2fr] lg:gap-20">
                   <div className="lg:sticky lg:top-32 lg:self-start">
                     <div className="mb-5 flex items-baseline gap-4">
-                      <p className="font-display text-5xl text-bone [text-shadow:0_0_24px_rgba(252,187,0,0.4)] md:text-6xl">
+                      <p className="font-display text-5xl text-ink [text-shadow:0_0_24px_rgba(252,187,0,0.4)] md:text-6xl">
                         0{gi + 1}
                       </p>
                       <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
                     </div>
                     <span aria-hidden className="mb-4 block h-px w-10 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
-                    <p className="eyebrow mb-3 !text-bone/45">{g.eyebrow}</p>
-                    <h2 className="font-display text-3xl text-bone md:text-4xl">
+                    <p className="eyebrow mb-3 !text-ink/45">{g.eyebrow}</p>
+                    <h2 className="font-display text-3xl text-ink md:text-4xl">
                       {g.title}
                     </h2>
                   </div>

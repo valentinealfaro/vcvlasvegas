@@ -13,7 +13,7 @@ const InvestmentCalculator = dynamic(
   () => import('@/components/InvestmentCalculator').then((m) => m.InvestmentCalculator),
   {
     loading: () => (
-      <div className="h-[640px] w-full animate-pulse border border-bone/10 bg-ink-800/40" aria-label="Loading calculator" />
+      <div className="h-[640px] w-full animate-pulse border border-ink/10 bg-bone-800/40" aria-label="Loading calculator" />
     ),
   },
 );
@@ -169,30 +169,30 @@ export default function CostGuidePage() {
       />
 
       {/* Quick reference ranges */}
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="At a Glance"
             title="The ranges, by scope."
             description="Indicative 2026 ranges for typical VCV Vegas projects in the Las Vegas metro. A precise number arrives after your private consultation."
           />
-          <div className="mt-16 grid gap-px bg-bone/10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-2 lg:grid-cols-3">
             {ranges.map((r, i) => (
               <Reveal key={r.label} delay={i % 3}>
                 <Link
                   href={r.href}
-                  className="group flex h-full flex-col justify-between gap-10 bg-ink p-8 transition-colors hover:bg-ink-700 lg:p-10"
+                  className="group flex h-full flex-col justify-between gap-10 bg-bone p-8 transition-colors hover:bg-bone-700 lg:p-10"
                 >
                   <div>
-                    <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                    <p className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                       {r.label}
                     </p>
-                    <p className="mt-4 font-display text-3xl text-bone group-hover:text-bone md:text-4xl">
+                    <p className="mt-4 font-display text-3xl text-ink group-hover:text-ink md:text-4xl">
                       {r.range}
                     </p>
-                    <p className="mt-2 text-sm text-bone/55">{r.duration}</p>
+                    <p className="mt-2 text-sm text-ink/55">{r.duration}</p>
                   </div>
-                  <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone opacity-70 transition-opacity group-hover:opacity-100">
+                  <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-ink opacity-70 transition-opacity group-hover:opacity-100">
                     Explore
                     <ArrowUpRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
                   </div>
@@ -204,21 +204,21 @@ export default function CostGuidePage() {
       </section>
 
       {/* Cost drivers */}
-      <section className="bg-ink-800 py-24 lg:py-32">
+      <section className="bg-bone-800 py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="What Drives the Number"
             title="Six factors. Every project."
             description="The same room can vary by 2× or more depending on these six. Understanding them is the difference between an estimate and an investment."
           />
-          <div className="mt-16 grid gap-px bg-bone/10 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-3">
             {drivers.map((d, i) => (
-              <Reveal key={d.t} delay={i % 3} className="bg-ink-800 p-8 lg:p-10">
-                <p className="font-display text-3xl text-bone">0{i + 1}</p>
-                <p className="mt-5 font-display text-xl text-bone md:text-2xl">
+              <Reveal key={d.t} delay={i % 3} className="bg-bone-800 p-8 lg:p-10">
+                <p className="font-display text-3xl text-ink">0{i + 1}</p>
+                <p className="mt-5 font-display text-xl text-ink md:text-2xl">
                   {d.t}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-bone/60">
+                <p className="mt-3 text-sm leading-relaxed text-ink/60">
                   {d.d}
                 </p>
               </Reveal>
@@ -228,7 +228,7 @@ export default function CostGuidePage() {
       </section>
 
       {/* Calculator embed */}
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Try the Calculator"
@@ -242,7 +242,7 @@ export default function CostGuidePage() {
       </section>
 
       {/* Visual reference grid */}
-      <section className="bg-ink-800 py-24 lg:py-32">
+      <section className="bg-bone-800 py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Recent Work · Cost Reference"
@@ -251,22 +251,22 @@ export default function CostGuidePage() {
           <div className="mt-16 grid gap-6 md:grid-cols-3 lg:gap-8">
             <Reveal>
               <ImageCard image={kitchenImages[0]} aspect="portrait" caption={false} />
-              <p className="mt-4 font-display text-lg text-bone">$240k – $360k</p>
-              <p className="text-xs uppercase tracking-[0.22em] text-bone/45">
+              <p className="mt-4 font-display text-lg text-ink">$240k – $360k</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-ink/45">
                 Chef’s Kitchen · 320 sqft · Premium
               </p>
             </Reveal>
             <Reveal delay={1}>
               <ImageCard image={bathroomImages[0]} aspect="portrait" caption={false} />
-              <p className="mt-4 font-display text-lg text-bone">$140k – $200k</p>
-              <p className="text-xs uppercase tracking-[0.22em] text-bone/45">
+              <p className="mt-4 font-display text-lg text-ink">$140k – $200k</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-ink/45">
                 Spa Primary Bath · 240 sqft · Bespoke
               </p>
             </Reveal>
             <Reveal delay={2}>
               <ImageCard image={customHomeImages[1]} aspect="portrait" caption={false} />
-              <p className="mt-4 font-display text-lg text-bone">$1.2M – $1.7M</p>
-              <p className="text-xs uppercase tracking-[0.22em] text-bone/45">
+              <p className="mt-4 font-display text-lg text-ink">$1.2M – $1.7M</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-ink/45">
                 Whole-Home · 4,800 sqft · Premium
               </p>
             </Reveal>
@@ -280,7 +280,7 @@ export default function CostGuidePage() {
         description="A senior designer walks the project and responds with a transparent investment range within one business day."
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader eyebrow="Cost FAQs" title="The questions homeowners ask first." />
           <div className="mt-16 max-w-4xl">

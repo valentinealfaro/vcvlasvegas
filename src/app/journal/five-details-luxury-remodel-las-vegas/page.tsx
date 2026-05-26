@@ -91,12 +91,12 @@ export default function Post() {
       />
 
       {/* Article body */}
-      <article className="bg-ink py-20 lg:py-28">
+      <article className="bg-bone py-20 lg:py-28">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl">
             <Reveal>
-              <p className="text-lg leading-relaxed text-bone/75 md:text-xl">
-                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-bone md:text-8xl">
+              <p className="text-lg leading-relaxed text-ink/75 md:text-xl">
+                <span className="float-left mr-3 mt-1 font-display text-7xl leading-[0.85] text-ink md:text-8xl">
                   T
                 </span>
                 here is a recognizable difference between a remodel that
@@ -110,21 +110,21 @@ export default function Post() {
             </Reveal>
 
             {/* 01 */}
-            <section id="d1" className="mt-16 border-t border-bone/10 pt-12">
+            <section id="d1" className="mt-16 border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">01</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">01</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   The plane of the wall continues into the shower.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   In a builder-grade bath, the shower lives in a box. There is a
                   curb. A separate floor tile. A different wall material. The
                   eye reads three rooms inside one bathroom and the space feels
                   smaller than the square footage.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   In a luxury bath, the floor is continuous. The walls are
                   continuous. The drain is linear and recessed into the same
                   stone the floor is made of. The frameless glass partition is
@@ -136,7 +136,7 @@ export default function Post() {
 
             {/* image break */}
             <Reveal delay={2}>
-              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-ink-700">
+              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-bone-700">
                 <Image
                   src={bathroomImages[0].src}
                   alt={bathroomImages[0].alt}
@@ -148,21 +148,21 @@ export default function Post() {
             </Reveal>
 
             {/* 02 */}
-            <section id="d2" className="border-t border-bone/10 pt-12">
+            <section id="d2" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">02</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">02</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   The cabinetry is millwork, not a product.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Stock cabinetry comes in factory increments. Those increments
                   almost never match the room. Fillers appear at the ends.
                   Tops are returned awkwardly to the wall. The fridge sticks
                   forward of the panels around it.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   Full-custom millwork is drawn to the inch of the room it
                   lives in. The cabinetry meets the ceiling. The refrigerator
                   panels are flush with the cabinets to either side of it. The
@@ -174,33 +174,33 @@ export default function Post() {
 
             {/* pull quote */}
             <Reveal delay={2}>
-              <figure className="my-14 border-y border-bone/10 py-10">
-                <blockquote className="font-display text-3xl leading-tight text-bone text-balance md:text-4xl">
+              <figure className="my-14 border-y border-ink/10 py-10">
+                <blockquote className="font-display text-3xl leading-tight text-ink text-balance md:text-4xl">
                   “If the cabinets meet the ceiling and the fridge sits flush
                   with its panels, you’re standing in a luxury kitchen. If they
                   don’t, you’re not.”
                 </blockquote>
-                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
+                <figcaption className="mt-6 text-[0.65rem] uppercase tracking-[0.28em] text-ink">
                   — From the studio
                 </figcaption>
               </figure>
             </Reveal>
 
             {/* 03 */}
-            <section id="d3" className="border-t border-bone/10 pt-12">
+            <section id="d3" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">03</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">03</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   The lighting works in layers.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Most homes are lit by a single overhead can field on one
                   switch. Everything in the room is either fully on or fully
                   off, at one color temperature, at one intensity.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   A luxury home has at least four lighting layers — ambient
                   ceiling, decorative pendants, task lighting at the counter
                   or vanity, and architectural cove or under-cabinet light at
@@ -214,7 +214,7 @@ export default function Post() {
             </section>
 
             <Reveal delay={2}>
-              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-ink-700">
+              <figure className="relative my-14 aspect-[16/10] overflow-hidden bg-bone-700">
                 <Image
                   src={kitchenImages[3].src}
                   alt={kitchenImages[3].alt}
@@ -226,22 +226,22 @@ export default function Post() {
             </Reveal>
 
             {/* 04 */}
-            <section id="d4" className="border-t border-bone/10 pt-12">
+            <section id="d4" className="border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">04</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">04</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   The stone is book-matched and dry-laid first.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   A stone slab is a piece of geology. No two are identical, the
                   veining matters, and where the cut lands on the slab shows up
                   forever in the finished room. Most kitchens are built by
                   ordering a slab, sending the fabricator a template, and
                   hoping.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   In a luxury build, the slab is selected at the yard, the
                   fabrication is dry-laid in the shop, and the seam location,
                   vein flow, and waterfall miter are all reviewed before the
@@ -252,22 +252,22 @@ export default function Post() {
             </section>
 
             {/* 05 */}
-            <section id="d5" className="mt-12 border-t border-bone/10 pt-12">
+            <section id="d5" className="mt-12 border-t border-ink/10 pt-12">
               <Reveal>
-                <p className="font-display text-7xl text-bone">05</p>
-                <h2 className="mt-4 font-display text-3xl text-bone md:text-4xl">
+                <p className="font-display text-7xl text-ink">05</p>
+                <h2 className="mt-4 font-display text-3xl text-ink md:text-4xl">
                   The hardware is the right weight.
                 </h2>
               </Reveal>
               <Reveal delay={1}>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   Knobs, pulls, hinges, sconces, switch plates, faucets — the
                   things you actually touch every day. Builder-grade hardware
                   is light, hollow, and finished thinly. The difference between
                   a $40 pull and a $200 pull is something you feel before you
                   see it.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   In any luxury home, run your hand across a drawer pull or
                   shut a vanity door. The weight is the answer to whether the
                   rest of the build is real.
@@ -277,23 +277,23 @@ export default function Post() {
 
             {/* closing */}
             <Reveal delay={2}>
-              <div className="my-16 border-y border-bone/10 py-12">
-                <h3 className="font-display text-3xl text-bone md:text-4xl">
+              <div className="my-16 border-y border-ink/10 py-12">
+                <h3 className="font-display text-3xl text-ink md:text-4xl">
                   The point.
                 </h3>
-                <p className="mt-6 text-lg leading-relaxed text-bone/70">
+                <p className="mt-6 text-lg leading-relaxed text-ink/70">
                   None of these details are about money for its own sake.
                   Each of them is a decision the architect made before the
                   project went into the field, defended through every change
                   order, and protected during the finish phase when most of
                   these things get value-engineered out.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   When a remodel feels expensive, it usually means all five of
                   these decisions were made the right way. When it doesn’t,
                   one of them — sometimes all of them — was traded away.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed text-bone/70">
+                <p className="mt-4 text-lg leading-relaxed text-ink/70">
                   Our job is to make sure none of them are.
                 </p>
               </div>
@@ -301,17 +301,17 @@ export default function Post() {
 
             {/* Footer / nav */}
             <Reveal delay={3}>
-              <div className="flex items-center justify-between border-t border-bone/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55">
+              <div className="flex items-center justify-between border-t border-ink/10 pt-8 text-[0.65rem] uppercase tracking-[0.28em] text-ink/55">
                 <Link
                   href="/journal"
-                  className="flex items-center gap-3 transition-colors hover:text-bone"
+                  className="flex items-center gap-3 transition-colors hover:text-ink"
                 >
                   <ArrowLeft className="h-4 w-4" />
                   All Notes
                 </Link>
                 <Link
                   href="/contact"
-                  className="flex items-center gap-3 text-bone transition-colors hover:text-bone"
+                  className="flex items-center gap-3 text-ink transition-colors hover:text-ink"
                 >
                   Start a project
                   <ArrowRight className="h-4 w-4" />

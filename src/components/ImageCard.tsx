@@ -30,7 +30,7 @@ export function ImageCard({
   cornerTicks = false,
 }: Props) {
   return (
-    <figure className={cn('group relative overflow-hidden bg-ink-700', aspectMap[aspect], className)}>
+    <figure className={cn('group relative overflow-hidden bg-bone-700', aspectMap[aspect], className)}>
       <Image
         src={image.src}
         alt={image.alt}
@@ -40,7 +40,7 @@ export function ImageCard({
         className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
       />
       {/* Base bottom-up gradient — always visible for legibility */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/0 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bone/80 via-bone/0 to-transparent" />
       {/* Amber sweep that lights the bottom-left on hover */}
       <div
         aria-hidden
@@ -61,7 +61,7 @@ export function ImageCard({
       {caption && image.caption && (
         <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 lg:p-6">
           <div className="overflow-hidden">
-            <p className="font-display text-lg text-bone transition-transform duration-700 ease-out md:text-xl group-hover:-translate-y-1">
+            <p className="font-display text-lg text-ink transition-transform duration-700 ease-out md:text-xl group-hover:-translate-y-1">
               {image.caption}
             </p>
             <span

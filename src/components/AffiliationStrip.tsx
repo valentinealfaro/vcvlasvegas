@@ -9,7 +9,7 @@ const items = [
 
 export function AffiliationStrip() {
   return (
-    <section className="relative overflow-hidden bg-ink py-9">
+    <section className="relative overflow-hidden bg-bone py-9">
       {/* Top gradient hairline */}
       <div
         aria-hidden
@@ -48,7 +48,7 @@ export function AffiliationStrip() {
                   className="hidden h-1 w-1 rounded-full bg-gold/60 md:inline-block"
                 />
               )}
-              <span className="group relative flex items-center gap-2 text-[0.62rem] uppercase tracking-[0.32em] text-bone/55 transition-colors duration-500 hover:text-bone">
+              <span className="group relative flex items-center gap-2 text-[0.62rem] uppercase tracking-[0.32em] text-ink/55 transition-colors duration-500 hover:text-ink">
                 <span
                   aria-hidden
                   className="h-1.5 w-1.5 rounded-full bg-gold/50 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]"

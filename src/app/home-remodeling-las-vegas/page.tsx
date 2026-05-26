@@ -151,7 +151,7 @@ export default function HomeRemodelingPage() {
         description="A senior designer visits, walks the property, and listens — before we draw anything. By appointment."
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Whole-Home FAQs"

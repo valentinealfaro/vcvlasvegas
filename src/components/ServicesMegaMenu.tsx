@@ -42,7 +42,7 @@ export function ServicesMegaMenu() {
     >
       <Link
         href="/services"
-        className="link-nav text-[0.72rem] font-medium uppercase tracking-[0.22em] text-bone/75 transition-colors hover:text-bone"
+        className="link-nav text-[0.72rem] font-medium uppercase tracking-[0.22em] text-ink/75 transition-colors hover:text-ink"
       >
         Services
       </Link>
@@ -54,7 +54,7 @@ export function ServicesMegaMenu() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-x-0 top-[72px] z-40 bg-ink/95 backdrop-blur-xl"
+            className="fixed inset-x-0 top-[72px] z-40 bg-bone/95 backdrop-blur-xl"
           >
             {/* Top gradient hairline */}
             <div
@@ -93,7 +93,7 @@ export function ServicesMegaMenu() {
                         <Link
                           href={`/${s.slug}`}
                           onMouseEnter={() => setHover(s.slug)}
-                          className="group relative flex items-center justify-between gap-4 border-b border-transparent py-3 pl-4 transition-all duration-500 hover:border-bone/15 hover:pl-6"
+                          className="group relative flex items-center justify-between gap-4 border-b border-transparent py-3 pl-4 transition-all duration-500 hover:border-ink/15 hover:pl-6"
                         >
                           {/* Gold left bar — grows on hover */}
                           <span
@@ -101,19 +101,19 @@ export function ServicesMegaMenu() {
                             className="absolute left-0 top-1/2 h-0 w-px -translate-y-1/2 bg-gold transition-all duration-500 group-hover:h-8 group-hover:shadow-[0_0_8px_rgba(252,187,0,0.6)]"
                           />
                           <div>
-                            <p className="font-display text-xl text-bone group-hover:text-bone transition-colors md:text-2xl">
+                            <p className="font-display text-xl text-ink group-hover:text-ink transition-colors md:text-2xl">
                               {s.title}
                             </p>
-                            <p className="mt-1 text-xs text-bone/45">{s.eyebrow}</p>
+                            <p className="mt-1 text-xs text-ink/45">{s.eyebrow}</p>
                           </div>
-                          <ArrowUpRight className="h-4 w-4 text-bone/30 transition-all duration-500 group-hover:text-bone group-hover:rotate-45" />
+                          <ArrowUpRight className="h-4 w-4 text-ink/30 transition-all duration-500 group-hover:text-ink group-hover:rotate-45" />
                         </Link>
                       </li>
                     ))}
                   </ul>
                 </div>
                 <div className="border-gradient hidden lg:block">
-                  <div className="relative aspect-[4/3] overflow-hidden bg-ink-700">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-bone-700">
                     <AnimatePresence mode="wait">
                       <motion.div
                         key={previewKey}
@@ -130,7 +130,7 @@ export function ServicesMegaMenu() {
                           sizes="(max-width: 1280px) 100vw, 35vw"
                           className="object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-bone/70 to-transparent" />
                       </motion.div>
                     </AnimatePresence>
                     {/* Gold corner ticks */}
@@ -138,7 +138,7 @@ export function ServicesMegaMenu() {
                     <span aria-hidden className="absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/70" />
                     <div className="absolute inset-x-0 bottom-0 flex items-center gap-3 p-6">
                       <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-                      <p className="eyebrow !text-bone">Preview</p>
+                      <p className="eyebrow !text-ink">Preview</p>
                     </div>
                   </div>
                 </div>

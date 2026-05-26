@@ -37,7 +37,7 @@ const studies = [
 
 export function FeaturedStudies() {
   return (
-    <section className="bg-ink py-24 lg:py-32">
+    <section className="bg-bone py-24 lg:py-32">
       <div className="container-luxe">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
           <SectionHeader
@@ -59,7 +59,7 @@ export function FeaturedStudies() {
               <div className="group" style={{ perspective: '1200px' }}>
                 <Link
                   href={s.href}
-                  className="relative block aspect-[4/5] w-full overflow-hidden bg-ink-700 transition-transform duration-700 ease-out group-hover:-translate-y-1 group-hover:[transform:rotateX(2deg)_rotateY(-2deg)] group-hover:shadow-[0_30px_80px_-20px_rgba(252,187,0,0.25)]"
+                  className="relative block aspect-[4/5] w-full overflow-hidden bg-bone-700 transition-transform duration-700 ease-out group-hover:-translate-y-1 group-hover:[transform:rotateX(2deg)_rotateY(-2deg)] group-hover:shadow-[0_30px_80px_-20px_rgba(252,187,0,0.25)]"
                 >
                   <Image
                     src={s.image.src}
@@ -68,7 +68,7 @@ export function FeaturedStudies() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.06]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-bone/90 via-bone/40 to-transparent" />
 
                   {/* Amber sweep on hover */}
                   <div
@@ -90,21 +90,21 @@ export function FeaturedStudies() {
                   <div className="absolute inset-x-0 top-0 flex items-center justify-between p-8 md:p-10">
                   <div className="flex items-center gap-3">
                     <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-                    <p className="eyebrow !text-bone/85">{s.eyebrow}</p>
+                    <p className="eyebrow !text-ink/85">{s.eyebrow}</p>
                   </div>
-                  <p className="text-[0.6rem] uppercase tracking-[0.28em] text-bone/55">
+                  <p className="text-[0.6rem] uppercase tracking-[0.28em] text-ink/55">
                     {s.duration}
                   </p>
                 </div>
 
                 {/* Bottom content */}
                 <div className="absolute inset-x-0 bottom-0 flex flex-col p-8 md:p-10">
-                  <h3 className="font-display text-3xl text-bone md:text-5xl">
+                  <h3 className="font-display text-3xl text-ink md:text-5xl">
                     {s.title}{' '}
-                    <span className="italic text-bone">{s.italic}</span>
+                    <span className="italic text-ink">{s.italic}</span>
                   </h3>
-                  <p className="mt-3 max-w-md text-bone/75">{s.scope}</p>
-                  <div className="mt-5 inline-flex items-center gap-3 self-start text-[0.7rem] uppercase tracking-[0.28em] text-bone">
+                  <p className="mt-3 max-w-md text-ink/75">{s.scope}</p>
+                  <div className="mt-5 inline-flex items-center gap-3 self-start text-[0.7rem] uppercase tracking-[0.28em] text-ink">
                     <span className="relative">
                       Read the study
                       <span aria-hidden className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />

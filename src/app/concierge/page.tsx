@@ -83,21 +83,21 @@ export default function ConciergePage() {
         image={customHomeImages[1]}
       />
 
-      <section className="bg-ink-800 py-24 lg:py-32">
+      <section className="bg-bone-800 py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="The Concierge Principles"
             title="Four commitments."
             description="The disciplines that separate a Concierge engagement from a standard luxury remodel."
           />
-          <div className="mt-16 grid gap-px bg-bone/10 sm:grid-cols-2">
+          <div className="mt-16 grid gap-px bg-ink/10 sm:grid-cols-2">
             {principles.map((p, i) => (
-              <Reveal key={p.t} delay={i % 2} className="bg-ink-800 p-8 lg:p-12">
-                <p className="font-display text-4xl text-bone">0{i + 1}</p>
-                <p className="mt-6 font-display text-2xl text-bone md:text-3xl">
+              <Reveal key={p.t} delay={i % 2} className="bg-bone-800 p-8 lg:p-12">
+                <p className="font-display text-4xl text-ink">0{i + 1}</p>
+                <p className="mt-6 font-display text-2xl text-ink md:text-3xl">
                   {p.t}
                 </p>
-                <p className="mt-4 text-base leading-relaxed text-bone/65">
+                <p className="mt-4 text-base leading-relaxed text-ink/65">
                   {p.d}
                 </p>
               </Reveal>
@@ -119,7 +119,7 @@ export default function ConciergePage() {
       />
 
       {/* By referral note */}
-      <section className="relative isolate overflow-hidden bg-ink-800 py-24 lg:py-32">
+      <section className="relative isolate overflow-hidden bg-bone-800 py-24 lg:py-32">
         <div
           aria-hidden
           className="pointer-events-none absolute -right-40 top-1/2 -z-10 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-gold/15 blur-[180px]"
@@ -128,11 +128,11 @@ export default function ConciergePage() {
           <div className="mx-auto max-w-3xl text-center">
             <Reveal>
               <p className="eyebrow mb-6 justify-center">By Referral</p>
-              <p className="font-display text-3xl text-bone md:text-4xl">
+              <p className="font-display text-3xl text-ink md:text-4xl">
                 Studio Concierge engagements are typically introduced through
                 a previous client, architect, designer, or private wealth
                 advisor.{' '}
-                <span className="italic text-bone">
+                <span className="italic text-ink">
                   Direct inquiries are welcomed and reviewed personally by a
                   studio principal.
                 </span>

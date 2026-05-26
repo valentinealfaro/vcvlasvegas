@@ -66,7 +66,7 @@ export default function HomePage() {
       <Testimonials />
       <AreasServed />
 
-      <section className="bg-ink py-28 lg:py-40">
+      <section className="bg-bone py-28 lg:py-40">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Questions, answered"

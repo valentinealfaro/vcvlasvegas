@@ -31,17 +31,17 @@ const tiers = [
 
 export function InvestmentRange() {
   return (
-    <section className="bg-ink py-24 lg:py-32">
+    <section className="bg-bone py-24 lg:py-32">
       <div className="container-luxe">
         <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-end">
           <Reveal>
             <div className="max-w-2xl">
               <p className="eyebrow mb-6">Investment Ranges</p>
-              <h2 className="font-display text-4xl text-bone text-balance md:text-5xl">
+              <h2 className="font-display text-4xl text-ink text-balance md:text-5xl">
                 Transparent ranges,<br />
-                <span className="italic text-bone">private numbers.</span>
+                <span className="italic text-ink">private numbers.</span>
               </h2>
-              <p className="mt-6 max-w-xl text-bone/65">
+              <p className="mt-6 max-w-xl text-ink/65">
                 Indicative investment windows for typical VCV Vegas projects.
                 A precise range is shared after your private consultation,
                 tied to your home and your goals.
@@ -62,7 +62,7 @@ export function InvestmentRange() {
               <div className="border-gradient h-full">
                 <Link
                   href={t.href}
-                  className="group relative flex h-full flex-col justify-between gap-12 overflow-hidden bg-ink p-8 transition-colors duration-500 hover:bg-ink-700 lg:p-10"
+                  className="group relative flex h-full flex-col justify-between gap-12 overflow-hidden bg-bone p-8 transition-colors duration-500 hover:bg-bone-700 lg:p-10"
                 >
                   {/* Subtle corner sweep */}
                   <span
@@ -81,16 +81,16 @@ export function InvestmentRange() {
                   <div>
                     <div className="flex items-center gap-3">
                       <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
-                      <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                      <p className="text-[0.65rem] uppercase tracking-[0.28em] text-ink/45">
                         {t.label}
                       </p>
                     </div>
-                    <p className="mt-5 font-display text-3xl text-bone transition-all duration-500 group-hover:[text-shadow:0_0_24px_rgba(252,187,0,0.4)] md:text-4xl">
+                    <p className="mt-5 font-display text-3xl text-ink transition-all duration-500 group-hover:[text-shadow:0_0_24px_rgba(252,187,0,0.4)] md:text-4xl">
                       {t.range}
                     </p>
-                    <p className="mt-3 text-sm text-bone/55">{t.duration}</p>
+                    <p className="mt-3 text-sm text-ink/55">{t.duration}</p>
                   </div>
-                  <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-bone opacity-70 transition-opacity duration-500 group-hover:opacity-100">
+                  <div className="flex items-center gap-2 text-[0.65rem] uppercase tracking-[0.28em] text-ink opacity-70 transition-opacity duration-500 group-hover:opacity-100">
                     <span className="relative">
                       Explore
                       <span aria-hidden className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />

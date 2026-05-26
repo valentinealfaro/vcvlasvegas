@@ -5,22 +5,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand-aligned with vcvservices.com:
-        // pure-black background, amber gold accent, blue secondary.
+        // VEGAS LIGHT PALETTE — warm cream base, near-black text, amber gold,
+        // blue accent, and a coral sunset for energy. Semantic naming is kept
+        // so `text-ink` always means "dark text" and `bg-bone` always means
+        // "light background" — only the shades flipped, not the meaning.
         ink: {
-          DEFAULT: '#000000',
-          900: '#000000',
-          800: '#0a0a0a',
-          700: '#141414',
-          600: '#1a1a1a',
-          500: '#222222',
+          DEFAULT: '#0e0e0e',  // primary near-black text
+          900: '#0e0e0e',
+          800: '#1f1f1f',
+          700: '#3a3a3a',
+          600: '#525252',
+          500: '#737373',      // muted
         },
         bone: {
-          DEFAULT: '#ffffff',
-          50: '#fafafa',
-          100: '#f5f5f5',
-          200: '#e5e5e5',
-          300: '#d4d4d4',
+          DEFAULT: '#faf7f2',  // warm cream — Vegas hotel lobby
+          50: '#ffffff',       // pure white — elevated cards
+          100: '#f5efe5',      // warmer cream — section alternation
+          200: '#ebe3d4',      // soft beige edge
+          300: '#dcd2bc',      // sand
+          // Higher shades mirror the ink token positions so the
+          // dark→light sweep can rewrite mechanically.
+          700: '#f5efe5',      // form input bg (parallels bg-ink-700)
+          800: '#f0e9dc',      // section alt (parallels bg-ink-800)
+          900: '#ebe3d4',
         },
         stone: {
           warm: '#a89c8a',
@@ -40,6 +47,12 @@ const config: Config = {
           light: '#3b82f6',    // blue-500
           deep: '#1d4ed8',     // blue-700
           glow: '#0a66ff',
+        },
+        // Coral sunset — Vegas energy accent
+        coral: {
+          DEFAULT: '#f97316',  // orange-500
+          light: '#fb923c',    // orange-400
+          deep: '#c2410c',     // orange-700
         },
       },
       fontFamily: {
@@ -98,14 +111,16 @@ const config: Config = {
         },
       },
       backgroundImage: {
-        'grain': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
-        // Franchise signature gradients (vcvservices.com)
-        'gradient-amber': 'linear-gradient(to right, #fcbb00, #b45309)',
-        'gradient-amber-soft': 'linear-gradient(to bottom right, rgba(252,187,0,0.18), rgba(180,83,9,0.04))',
+        'grain': "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+        // Vegas signature gradients
+        'gradient-amber': 'linear-gradient(to right, #fcbb00, #f97316)',
+        'gradient-sunset': 'linear-gradient(to right, #fcbb00, #fb923c, #f97316)',
+        'gradient-amber-soft': 'linear-gradient(to bottom right, rgba(252,187,0,0.20), rgba(249,115,22,0.08))',
         'gradient-blue': 'linear-gradient(to right, #3b82f6, #1d4ed8)',
-        'gradient-blue-radial': 'radial-gradient(circle at 100% 0%, rgba(59,130,246,0.18), transparent 60%)',
-        'gradient-amber-radial': 'radial-gradient(circle at 0% 100%, rgba(252,187,0,0.20), transparent 55%)',
-        'gradient-ink-fade': 'linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 35%, rgba(0,0,0,0.92) 100%)',
+        'gradient-blue-radial': 'radial-gradient(circle at 100% 0%, rgba(59,130,246,0.22), transparent 60%)',
+        'gradient-amber-radial': 'radial-gradient(circle at 0% 100%, rgba(252,187,0,0.25), transparent 55%)',
+        'gradient-sunset-radial': 'radial-gradient(circle at 50% 100%, rgba(249,115,22,0.18), transparent 60%)',
+        'gradient-bone-fade': 'linear-gradient(to bottom, rgba(250,247,242,0.92) 0%, rgba(250,247,242,0.55) 35%, rgba(250,247,242,0.95) 100%)',
       },
     },
   },

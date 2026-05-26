@@ -47,7 +47,7 @@ export function SectionHeader({
                 className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]"
               />
             )}
-            <p className="eyebrow !text-bone">{eyebrow}</p>
+            <p className="eyebrow !text-ink">{eyebrow}</p>
             <span
               aria-hidden
               className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]"
@@ -65,7 +65,7 @@ export function SectionHeader({
         </Reveal>
       )}
       <Reveal delay={1}>
-        <h2 className="font-display text-4xl text-bone text-balance md:text-5xl lg:text-6xl">
+        <h2 className="font-display text-4xl text-ink text-balance md:text-5xl lg:text-6xl">
           {title}
         </h2>
       </Reveal>
@@ -80,7 +80,7 @@ export function SectionHeader({
       </Reveal>
       {description && (
         <Reveal delay={2}>
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-bone/65 md:text-lg">
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-ink/65 md:text-lg">
             {description}
           </p>
         </Reveal>

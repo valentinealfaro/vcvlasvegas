@@ -113,7 +113,7 @@ export default function CentennialHillsPage() {
 
       <ImageRow images={[customHomeImages[0], bathroomImages[2], kitchenImages[0]]} />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader eyebrow="Centennial Hills FAQs" title="Questions from northwest homeowners." />
           <div className="mt-16 max-w-4xl">

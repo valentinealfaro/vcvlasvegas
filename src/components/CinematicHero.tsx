@@ -50,7 +50,7 @@ export function CinematicHero({
   const words = title.split(' ');
 
   return (
-    <section className="relative isolate w-full overflow-hidden bg-ink">
+    <section className="relative isolate w-full overflow-hidden bg-bone">
       {/* Crossfading Ken Burns gallery */}
       <div className="absolute inset-0 -z-10">
         <AnimatePresence>
@@ -76,8 +76,18 @@ export function CinematicHero({
           </motion.div>
         </AnimatePresence>
       </div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/72 via-ink/55 to-ink" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/40 to-transparent" />
+      {/* Sunlight wash — image fades to bg at edges, left wash anchors text */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-bone/30 via-bone/10 to-bone" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-bone/90 via-bone/40 to-transparent" />
+      {/* Coral sunset tint over photograph */}
+      <div
+        aria-hidden
+        className="absolute inset-0 -z-10 mix-blend-overlay opacity-25"
+        style={{
+          background:
+            'linear-gradient(to top, rgba(249,115,22,0.18) 0%, transparent 40%, rgba(252,187,0,0.10) 100%)',
+        }}
+      />
 
       {/* Top gradient hairline announcing the chrome */}
       <div
@@ -85,15 +95,15 @@ export function CinematicHero({
         className="pointer-events-none absolute inset-x-0 top-0 h-px"
         style={{
           background:
-            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.4) 35%, rgba(59,130,246,0.4) 65%, transparent 100%)',
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 35%, rgba(249,115,22,0.55) 65%, transparent 100%)',
         }}
       />
 
-      {/* Ambient amber + blue franchise glow */}
+      {/* Sun-flare blobs */}
       <motion.div
         aria-hidden
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.42 }}
+        animate={{ opacity: 0.4 }}
         transition={{ delay: 1.2, duration: 2.5 }}
         className="pointer-events-none absolute -bottom-32 -left-32 -z-10 h-[420px] w-[420px] rounded-full bg-gold blur-[160px] md:h-[560px] md:w-[560px]"
       />
@@ -102,7 +112,7 @@ export function CinematicHero({
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.28 }}
         transition={{ delay: 1.4, duration: 2.5 }}
-        className="pointer-events-none absolute -right-32 -top-24 -z-10 h-[380px] w-[380px] rounded-full bg-accent-light blur-[180px] md:h-[560px] md:w-[560px]"
+        className="pointer-events-none absolute -right-32 -top-24 -z-10 h-[380px] w-[380px] rounded-full bg-coral-light blur-[180px] md:h-[560px] md:w-[560px]"
       />
 
       <div className="container-luxe relative flex min-h-[88svh] flex-col justify-end pt-36 pb-24 lg:min-h-[92svh] lg:pt-44 lg:pb-28">
@@ -112,19 +122,19 @@ export function CinematicHero({
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.7 }}
             aria-label="Breadcrumb"
-            className="mb-10 flex flex-wrap items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone/55"
+            className="mb-10 flex flex-wrap items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-ink/55"
           >
             {breadcrumbs.map((c, i) => (
               <span key={i} className="flex items-center gap-3">
                 {c.href ? (
-                  <Link href={c.href} className="transition-colors hover:text-bone">
+                  <Link href={c.href} className="transition-colors hover:text-ink">
                     {c.label}
                   </Link>
                 ) : (
-                  <span className="text-bone">{c.label}</span>
+                  <span className="text-ink">{c.label}</span>
                 )}
                 {i < breadcrumbs.length - 1 && (
-                  <span className="text-bone/30">/</span>
+                  <span className="text-ink/30">/</span>
                 )}
               </span>
             ))}
@@ -147,7 +157,7 @@ export function CinematicHero({
           </motion.div>
 
           {/* Kinetic title with word-by-word reveal */}
-          <h1 className="font-display text-[2.6rem] leading-[1.05] text-bone text-balance sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="font-display text-[2.6rem] leading-[1.05] text-ink text-balance [text-shadow:0_2px_20px_rgba(250,247,242,0.6)] sm:text-5xl md:text-6xl lg:text-7xl">
             <span className="block overflow-hidden pb-[0.05em]">
               {words.map((w, i) => (
                 <motion.span
@@ -177,7 +187,7 @@ export function CinematicHero({
                       duration: 0.95,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="mr-[0.25em] inline-block italic text-bone"
+                    className="mr-[0.25em] inline-block italic text-ink"
                   >
                     {w}
                   </motion.span>
@@ -190,7 +200,7 @@ export function CinematicHero({
             initial={reduce ? { opacity: 1 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.9 }}
-            className="mt-8 max-w-2xl text-base leading-relaxed text-bone/70 md:text-lg"
+            className="mt-8 max-w-2xl text-base leading-relaxed text-ink/70 md:text-lg"
           >
             {description}
           </motion.p>
@@ -221,7 +231,7 @@ export function CinematicHero({
             className="absolute bottom-8 right-6 lg:right-16"
           >
             <div className="flex items-center gap-3">
-              <span className="text-[0.6rem] uppercase tracking-[0.32em] tabular-nums text-bone/55">
+              <span className="text-[0.6rem] uppercase tracking-[0.32em] tabular-nums text-ink/55">
                 {String(index + 1).padStart(2, '0')}
               </span>
               <div className="flex items-center gap-2">
@@ -237,13 +247,13 @@ export function CinematicHero({
                       className={`block h-px transition-all duration-700 ${
                         i === index
                           ? 'w-10 bg-gradient-to-r from-gold to-gold-light shadow-[0_0_6px_rgba(252,187,0,0.6)]'
-                          : 'w-5 bg-bone/30 group-hover:bg-bone/60'
+                          : 'w-5 bg-ink/30 group-hover:bg-ink/60'
                       }`}
                     />
                   </button>
                 ))}
               </div>
-              <span className="text-[0.6rem] uppercase tracking-[0.32em] tabular-nums text-bone/35">
+              <span className="text-[0.6rem] uppercase tracking-[0.32em] tabular-nums text-ink/35">
                 / {String(images.length).padStart(2, '0')}
               </span>
             </div>

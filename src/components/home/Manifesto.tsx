@@ -21,7 +21,7 @@ const principles = [
 
 export function Manifesto() {
   return (
-    <section className="relative overflow-hidden bg-ink py-28 lg:py-40">
+    <section className="relative overflow-hidden bg-bone py-28 lg:py-40">
       <div aria-hidden className="glow-duotone" />
       <div className="container-luxe">
         <div className="grid items-start gap-16 lg:grid-cols-[1fr_1.4fr]">
@@ -32,12 +32,12 @@ export function Manifesto() {
                   className="h-px w-12 origin-left bg-gradient-to-r from-gold via-gold to-transparent"
                   style={{ animation: 'hairline-grow 1.2s cubic-bezier(0.16,1,0.3,1) backwards' }}
                 />
-                <p className="eyebrow !text-bone">Studio Philosophy</p>
+                <p className="eyebrow !text-ink">Studio Philosophy</p>
                 <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
               </div>
-              <h2 className="font-display text-4xl text-bone md:text-5xl lg:text-6xl">
+              <h2 className="font-display text-4xl text-ink md:text-5xl lg:text-6xl">
                 Architectural<br />
-                <span className="italic text-bone">restraint.</span>
+                <span className="italic text-ink">restraint.</span>
               </h2>
               <span
                 aria-hidden
@@ -46,7 +46,7 @@ export function Manifesto() {
             </div>
           </Reveal>
 
-          <div className="space-y-10 text-lg leading-relaxed text-bone/75 md:text-xl">
+          <div className="space-y-10 text-lg leading-relaxed text-ink/75 md:text-xl">
             <Reveal delay={1}>
               <p className="text-balance">
                 We build the way the best architects design — with restraint,
@@ -64,11 +64,11 @@ export function Manifesto() {
               </p>
             </Reveal>
             <Reveal delay={3}>
-              <div className="grid gap-px bg-bone/10 border-y border-bone/10 sm:grid-cols-2">
+              <div className="grid gap-px bg-ink/10 border-y border-ink/10 sm:grid-cols-2">
                 {principles.map((b, i) => (
                   <div
                     key={b.t}
-                    className="group relative overflow-hidden bg-ink p-6 transition-colors duration-500 hover:bg-ink-700"
+                    className="group relative overflow-hidden bg-bone p-6 transition-colors duration-500 hover:bg-bone-700"
                     style={{
                       animation: `fade-up 0.6s cubic-bezier(0.16,1,0.3,1) ${
                         0.08 * i + 0.3
@@ -98,11 +98,11 @@ export function Manifesto() {
                         aria-hidden
                         className="h-px w-6 bg-gold transition-all duration-500 group-hover:w-10"
                       />
-                      <p className="font-display text-lg text-bone md:text-xl">
+                      <p className="font-display text-lg text-ink md:text-xl">
                         {b.t}
                       </p>
                     </div>
-                    <p className="mt-3 text-sm text-bone/60 transition-colors duration-500 group-hover:text-bone/80">
+                    <p className="mt-3 text-sm text-ink/60 transition-colors duration-500 group-hover:text-ink/80">
                       {b.d}
                     </p>
                   </div>

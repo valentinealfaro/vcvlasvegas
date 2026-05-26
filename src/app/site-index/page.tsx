@@ -103,7 +103,7 @@ export default function SiteIndexPage() {
         breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Site Index' }]}
       />
 
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <SectionHeader
             eyebrow="Table of Contents"
@@ -111,11 +111,11 @@ export default function SiteIndexPage() {
             description="Roughly fifty pages organized into six categories. Click anything to jump straight in."
           />
 
-          <div className="mt-16 grid gap-px bg-bone/10 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-px bg-ink/10 md:grid-cols-2 lg:grid-cols-3">
             {sections.map((section, i) => (
-              <Reveal key={section.title} delay={i % 3} className="bg-ink p-8 lg:p-10">
+              <Reveal key={section.title} delay={i % 3} className="bg-bone p-8 lg:p-10">
                 <p className="eyebrow mb-3">{section.eyebrow}</p>
-                <h2 className="font-display text-2xl text-bone md:text-3xl">
+                <h2 className="font-display text-2xl text-ink md:text-3xl">
                   {section.title}
                 </h2>
                 <ul className="mt-6 space-y-2">
@@ -123,7 +123,7 @@ export default function SiteIndexPage() {
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="link-quiet text-sm leading-relaxed text-bone/70 transition-colors hover:text-bone"
+                        className="link-quiet text-sm leading-relaxed text-ink/70 transition-colors hover:text-ink"
                       >
                         {link.label}
                       </Link>

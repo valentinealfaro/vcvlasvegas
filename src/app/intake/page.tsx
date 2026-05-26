@@ -49,11 +49,11 @@ export default function IntakePage() {
       />
 
       {/* Why the long form */}
-      <section className="bg-ink-800 py-20 lg:py-24">
+      <section className="bg-bone-800 py-20 lg:py-24">
         <div className="container-luxe">
-          <div className="grid gap-px bg-bone/10 md:grid-cols-3">
+          <div className="grid gap-px bg-ink/10 md:grid-cols-3">
             {why.map((w, i) => (
-              <Reveal key={w.t} delay={i} className="group relative overflow-hidden bg-ink-800 p-8 transition-colors duration-500 hover:bg-ink-700 lg:p-10">
+              <Reveal key={w.t} delay={i} className="group relative overflow-hidden bg-bone-800 p-8 transition-colors duration-500 hover:bg-bone-700 lg:p-10">
                 {/* Hover sweep */}
                 <span
                   aria-hidden
@@ -69,14 +69,14 @@ export default function IntakePage() {
                 <span aria-hidden className="pointer-events-none absolute left-2 top-2 h-2.5 w-2.5 border-l border-t border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
                 <span aria-hidden className="pointer-events-none absolute bottom-2 right-2 h-2.5 w-2.5 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
                 <div className="flex items-baseline gap-4">
-                  <p className="font-display text-3xl text-bone transition-all duration-500 group-hover:[text-shadow:0_0_20px_rgba(252,187,0,0.4)]">0{i + 1}</p>
+                  <p className="font-display text-3xl text-ink transition-all duration-500 group-hover:[text-shadow:0_0_20px_rgba(252,187,0,0.4)]">0{i + 1}</p>
                   <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
                 </div>
                 <span aria-hidden className="mt-3 block h-px w-8 bg-gold transition-all duration-500 group-hover:w-14 group-hover:shadow-[0_0_8px_rgba(252,187,0,0.6)]" />
-                <p className="mt-5 font-display text-xl text-bone md:text-2xl">
+                <p className="mt-5 font-display text-xl text-ink md:text-2xl">
                   {w.t}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-bone/60 transition-colors duration-500 group-hover:text-bone/80">
+                <p className="mt-3 text-sm leading-relaxed text-ink/60 transition-colors duration-500 group-hover:text-ink/80">
                   {w.d}
                 </p>
               </Reveal>
@@ -86,7 +86,7 @@ export default function IntakePage() {
       </section>
 
       {/* The intake form */}
-      <section className="bg-ink py-24 lg:py-32">
+      <section className="bg-bone py-24 lg:py-32">
         <div className="container-luxe">
           <div className="mx-auto max-w-3xl">
             <Reveal>
@@ -94,13 +94,13 @@ export default function IntakePage() {
                 <div className="mb-6 flex items-center gap-4">
                   <span aria-hidden className="h-px w-12 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
                   <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
-                  <p className="eyebrow !text-bone">The Brief</p>
+                  <p className="eyebrow !text-ink">The Brief</p>
                 </div>
-                <h2 className="font-display text-4xl text-bone md:text-5xl">
+                <h2 className="font-display text-4xl text-ink md:text-5xl">
                   Four short sections.<br />
-                  <span className="italic text-bone">About ten minutes.</span>
+                  <span className="italic text-ink">About ten minutes.</span>
                 </h2>
-                <p className="mt-6 text-bone/65">
+                <p className="mt-6 text-ink/65">
                   Contact, the property, the project, the vision. The deeper
                   the brief, the better our first response can be.
                 </p>
@@ -108,7 +108,7 @@ export default function IntakePage() {
             </Reveal>
             <Reveal delay={1}>
               <div className="mt-14 border-gradient">
-                <div className="bg-ink-800/40 p-8 md:p-10">
+                <div className="bg-bone-800/40 p-8 md:p-10">
                   <IntakeForm />
                 </div>
               </div>
