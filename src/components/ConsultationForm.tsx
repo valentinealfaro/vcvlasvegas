@@ -94,10 +94,16 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
         transition={{ duration: 0.6 }}
         className="flex flex-col items-start gap-5 py-12"
       >
-        <CheckCircle2 className="h-12 w-12 text-bone" />
+        <span
+          aria-hidden
+          className="grid h-14 w-14 place-items-center rounded-full border border-gold/40 bg-gold/10 shadow-[0_0_28px_-6px_rgba(252,187,0,0.6)]"
+        >
+          <CheckCircle2 className="h-7 w-7 text-bone" />
+        </span>
         <div>
           <h3 className="font-display text-4xl text-bone">Thank you.</h3>
-          <p className="mt-3 max-w-md text-bone/65">
+          <span aria-hidden className="mt-4 block h-px w-16 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+          <p className="mt-4 max-w-md text-bone/65">
             A senior VCV Vegas designer will personally reach out within one
             business day to schedule your private consultation. Your information
             stays confidential.
@@ -121,12 +127,15 @@ export function ConsultationForm({ variant = 'dark' }: { variant?: 'dark' | 'ins
             initial={false}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute left-0 top-0 h-full bg-gold"
+            className="absolute left-0 top-0 h-full bg-gradient-to-r from-gold via-gold to-accent shadow-[0_0_8px_rgba(252,187,0,0.6)]"
           />
         </div>
-        <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
-          Step {step + 1} / {totalSteps}
-        </p>
+        <div className="flex items-center gap-2">
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+            Step {step + 1} / {totalSteps}
+          </p>
+        </div>
       </div>
 
       <AnimatePresence mode="wait">

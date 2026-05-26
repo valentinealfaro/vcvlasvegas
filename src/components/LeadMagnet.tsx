@@ -40,10 +40,18 @@ export function LeadMagnet() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/30 to-transparent" />
+                {/* Gold corner ticks */}
+                <span aria-hidden className="pointer-events-none absolute left-4 top-4 h-3 w-3 border-l border-t border-gold/60" />
+                <span aria-hidden className="pointer-events-none absolute right-4 top-4 h-3 w-3 border-r border-t border-gold/60" />
+                <span aria-hidden className="pointer-events-none absolute bottom-4 left-4 h-3 w-3 border-b border-l border-gold/60" />
+                <span aria-hidden className="pointer-events-none absolute bottom-4 right-4 h-3 w-3 border-b border-r border-gold/60" />
                 <div className="absolute inset-0 flex flex-col justify-between p-8 lg:p-12">
                   <div className="flex items-center gap-3 text-bone">
-                    <span className="grid h-9 w-9 place-items-center border border-gold/40 bg-gold/5 backdrop-blur-md">
-                      <BookOpen className="h-4 w-4 text-bone" />
+                    <span className="relative grid h-9 w-9 place-items-center overflow-hidden border border-gold/40 bg-gold/5 shadow-[0_0_18px_-4px_rgba(252,187,0,0.45)] backdrop-blur-md">
+                      <span aria-hidden className="absolute inset-0 bg-gradient-to-br from-gold/15 to-transparent" />
+                      <span aria-hidden className="absolute left-1 top-1 h-1.5 w-1.5 border-l border-t border-gold" />
+                      <span aria-hidden className="absolute bottom-1 right-1 h-1.5 w-1.5 border-b border-r border-gold" />
+                      <BookOpen className="relative h-4 w-4 text-bone" />
                     </span>
                     <p className="eyebrow !text-bone/85">Studio Brief · 2026</p>
                   </div>
@@ -74,9 +82,13 @@ export function LeadMagnet() {
             </p>
 
             <ul className="mt-8 space-y-3 border-y border-bone/10 py-7">
-              {includes.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm text-bone/75">
-                  <span className="h-px w-4 bg-gold" />
+              {includes.map((item, i) => (
+                <li key={item} className="group flex items-center gap-3 text-sm text-bone/75 transition-colors duration-500 hover:text-bone">
+                  <span
+                    aria-hidden
+                    className={`h-1.5 w-1.5 shrink-0 rounded-full transition-all duration-500 ${i % 2 === 0 ? 'bg-gold/70 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]' : 'bg-accent/70 group-hover:bg-accent group-hover:shadow-[0_0_8px_rgba(59,130,246,0.7)]'}`}
+                  />
+                  <span aria-hidden className="h-px w-4 bg-gold/60 transition-all duration-500 group-hover:w-8" />
                   {item}
                 </li>
               ))}
@@ -87,9 +99,16 @@ export function LeadMagnet() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="mt-8 flex items-start gap-4 border border-gold/30 bg-gold/5 p-6"
+                className="relative mt-8 flex items-start gap-4 overflow-hidden border border-gold/30 bg-gold/5 p-6 shadow-[0_0_30px_-12px_rgba(252,187,0,0.45)]"
               >
-                <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-bone" />
+                <span aria-hidden className="absolute left-2 top-2 h-2 w-2 border-l border-t border-gold" />
+                <span aria-hidden className="absolute bottom-2 right-2 h-2 w-2 border-b border-r border-gold" />
+                <span
+                  aria-hidden
+                  className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-gold/50 bg-gold/10 shadow-[0_0_18px_-4px_rgba(252,187,0,0.6)]"
+                >
+                  <CheckCircle2 className="h-5 w-5 text-bone" />
+                </span>
                 <div>
                   <p className="font-display text-xl text-bone">
                     On its way.
