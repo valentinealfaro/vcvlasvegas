@@ -9,14 +9,23 @@ const items = [
 
 export function TrustBar() {
   return (
-    <section className="relative border-y border-ink/8 bg-bone/95">
-      <div className="container-luxe py-7">
-        <div className="border-gradient">
-          <div className="grid grid-cols-2 gap-px bg-ink/10 bg-bone/95 md:grid-cols-4">
+    <section className="relative overflow-hidden border-y border-ink/8 bg-bone/95">
+      {/* Soft sunset wash behind the trust grid */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(ellipse at 10% 50%, rgba(252,187,0,0.06), transparent 55%), radial-gradient(ellipse at 90% 50%, rgba(249,115,22,0.05), transparent 55%)',
+        }}
+      />
+      <div className="container-luxe relative py-7">
+        <div className="border-gradient shadow-[0_8px_32px_-16px_rgba(0,0,0,0.12)]">
+          <div className="grid grid-cols-2 gap-px bg-ink/10 bg-bone-50 md:grid-cols-4">
             {items.map(({ icon: Icon, label }) => (
               <div
                 key={label}
-                className="group relative flex items-center justify-center gap-3 overflow-hidden bg-bone/95 px-6 py-6 text-center transition-colors duration-500 hover:bg-bone-700 md:py-7"
+                className="group relative flex items-center justify-center gap-3 overflow-hidden bg-bone-50 px-6 py-6 text-center transition-colors duration-500 hover:bg-bone md:py-7"
               >
                 {/* Diagonal gold shimmer sweep on hover */}
                 <span

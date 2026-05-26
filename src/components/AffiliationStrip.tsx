@@ -10,31 +10,31 @@ const items = [
 export function AffiliationStrip() {
   return (
     <section className="relative overflow-hidden bg-bone py-9">
-      {/* Top gradient hairline */}
+      {/* Top gradient hairline — amber → coral → blue */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px"
         style={{
           background:
-            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.45) 35%, rgba(59,130,246,0.45) 65%, transparent 100%)',
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.6) 30%, rgba(249,115,22,0.6) 50%, rgba(59,130,246,0.6) 70%, transparent 100%)',
         }}
       />
-      {/* Bottom gradient hairline */}
+      {/* Bottom gradient hairline — reversed */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 h-px"
         style={{
           background:
-            'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.45) 35%, rgba(252,187,0,0.45) 65%, transparent 100%)',
+            'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.6) 30%, rgba(249,115,22,0.6) 50%, rgba(252,187,0,0.6) 70%, transparent 100%)',
         }}
       />
-      {/* Soft ambient amber glow at the band's heart */}
+      {/* Soft sunset wash — amber-left, coral-right */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse at center, rgba(252,187,0,0.05), transparent 60%)',
+            'radial-gradient(ellipse at 20% 50%, rgba(252,187,0,0.08), transparent 55%), radial-gradient(ellipse at 80% 50%, rgba(249,115,22,0.06), transparent 55%)',
         }}
       />
 
@@ -45,13 +45,13 @@ export function AffiliationStrip() {
               {i > 0 && (
                 <span
                   aria-hidden
-                  className="hidden h-1 w-1 rounded-full bg-gold/60 md:inline-block"
+                  className={`hidden h-1 w-1 rounded-full md:inline-block ${i % 2 === 0 ? 'bg-gold/60' : 'bg-coral/60'}`}
                 />
               )}
-              <span className="group relative flex items-center gap-2 text-[0.62rem] uppercase tracking-[0.32em] text-ink/55 transition-colors duration-500 hover:text-ink">
+              <span className="group relative flex items-center gap-2 text-[0.62rem] uppercase tracking-[0.32em] text-ink/60 transition-colors duration-500 hover:text-ink">
                 <span
                   aria-hidden
-                  className="h-1.5 w-1.5 rounded-full bg-gold/50 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]"
+                  className={`h-1.5 w-1.5 rounded-full transition-all duration-500 ${i % 2 === 0 ? 'bg-gold/60 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]' : 'bg-coral/60 group-hover:bg-coral group-hover:shadow-[0_0_8px_rgba(249,115,22,0.7)]'}`}
                 />
                 {item}
               </span>
