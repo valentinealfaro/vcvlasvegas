@@ -46,60 +46,81 @@ export default function ContactPage() {
             </Reveal>
 
             <Reveal delay={2}>
-              <aside className="border border-bone/10 bg-ink-800/60 p-8 lg:p-10">
-                <p className="eyebrow mb-6">Direct</p>
-                <div className="space-y-7">
-                  <div>
-                    <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
-                      Phone
-                    </p>
-                    <a
-                      href={siteConfig.phoneHref}
-                      className="mt-2 flex items-center gap-3 font-display text-2xl text-bone transition-colors hover:text-bone"
-                    >
-                      <Phone className="h-5 w-5 text-bone" />
-                      {siteConfig.phone}
-                    </a>
+              <div className="border-gradient">
+                <aside className="relative overflow-hidden bg-ink-800/60 p-8 lg:p-10">
+                  {/* Gold corner ticks */}
+                  <span aria-hidden className="pointer-events-none absolute left-3 top-3 h-3 w-3 border-l border-t border-gold/50" />
+                  <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/50" />
+                  <div className="mb-6 flex items-center gap-3">
+                    <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+                    <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_10px_rgba(252,187,0,0.7)]" />
+                    <p className="eyebrow !text-bone">Direct</p>
                   </div>
-                  <div>
-                    <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
-                      Email
-                    </p>
-                    <a
-                      href={siteConfig.emailHref}
-                      className="mt-2 flex items-center gap-3 text-bone transition-colors hover:text-bone"
-                    >
-                      <Mail className="h-5 w-5 text-bone" />
-                      {siteConfig.email}
-                    </a>
-                  </div>
-                  <div>
-                    <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
-                      Service Area
-                    </p>
-                    <div className="mt-2 flex items-start gap-3 text-bone/80">
-                      <MapPin className="mt-1 h-5 w-5 shrink-0 text-bone" />
-                      Las Vegas Metro — Summerlin, Henderson, Paradise, Spring Valley, Enterprise, Centennial Hills, Mountains Edge, Silverado Ranch
+                  <div className="space-y-7">
+                    <div>
+                      <div className="flex items-center gap-3">
+                        <span aria-hidden className="h-1 w-1 rounded-full bg-gold/70" />
+                        <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                          Phone
+                        </p>
+                      </div>
+                      <a
+                        href={siteConfig.phoneHref}
+                        className="group mt-2 flex items-center gap-3 font-display text-2xl text-bone transition-all duration-500 hover:[text-shadow:0_0_18px_rgba(252,187,0,0.45)]"
+                      >
+                        <Phone className="h-5 w-5 text-bone transition-colors duration-500 group-hover:text-gold" />
+                        {siteConfig.phone}
+                      </a>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-3">
+                        <span aria-hidden className="h-1 w-1 rounded-full bg-gold/70" />
+                        <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                          Email
+                        </p>
+                      </div>
+                      <a
+                        href={siteConfig.emailHref}
+                        className="group mt-2 flex items-center gap-3 text-bone transition-colors hover:text-bone"
+                      >
+                        <Mail className="h-5 w-5 text-bone transition-colors duration-500 group-hover:text-gold" />
+                        {siteConfig.email}
+                      </a>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-3">
+                        <span aria-hidden className="h-1 w-1 rounded-full bg-gold/70" />
+                        <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                          Service Area
+                        </p>
+                      </div>
+                      <div className="mt-2 flex items-start gap-3 text-bone/80">
+                        <MapPin className="mt-1 h-5 w-5 shrink-0 text-bone" />
+                        Las Vegas Metro — Summerlin, Henderson, Paradise, Spring Valley, Enterprise, Centennial Hills, Mountains Edge, Silverado Ranch
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-3">
+                        <span aria-hidden className="h-1 w-1 rounded-full bg-gold/70" />
+                        <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+                          Hours
+                        </p>
+                      </div>
+                      <div className="mt-2 flex items-center gap-3 text-bone/80">
+                        <Clock className="h-5 w-5 text-bone" />
+                        {siteConfig.hours}
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
-                      Hours
-                    </p>
-                    <div className="mt-2 flex items-center gap-3 text-bone/80">
-                      <Clock className="h-5 w-5 text-bone" />
-                      {siteConfig.hours}
-                    </div>
-                  </div>
-                </div>
 
-                <div className="mt-10 border-t border-bone/10 pt-8">
-                  <p className="text-sm leading-relaxed text-bone/55">
-                    All consultations are by appointment with a senior VCV Vegas
-                    designer. We respond within one business day.
-                  </p>
-                </div>
-              </aside>
+                  <div className="mt-10 border-t border-bone/10 pt-8">
+                    <p className="text-sm leading-relaxed text-bone/55">
+                      All consultations are by appointment with a senior VCV Vegas
+                      designer. We respond within one business day.
+                    </p>
+                  </div>
+                </aside>
+              </div>
             </Reveal>
           </div>
         </div>

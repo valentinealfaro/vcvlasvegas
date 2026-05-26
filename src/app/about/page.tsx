@@ -94,7 +94,8 @@ export default function AboutPage() {
       </section>
 
       {/* Numbers band */}
-      <section className="border-y border-bone/8 bg-ink py-20">
+      <section className="relative overflow-hidden border-y border-bone/8 bg-ink py-20">
+        <div aria-hidden className="glow-duotone" />
         <div className="container-luxe">
           <div className="grid gap-12 md:grid-cols-4">
             {[
@@ -104,13 +105,20 @@ export default function AboutPage() {
               { n: '1', l: 'Year Service Relationship Standard' },
             ].map((stat, i) => (
               <Reveal key={stat.l} delay={i}>
-                <div>
-                  <p className="font-display text-5xl text-bone md:text-6xl">
+                <div className="group relative pl-4">
+                  <span
+                    aria-hidden
+                    className="absolute inset-y-1 left-0 w-px bg-bone/15 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.6)]"
+                  />
+                  <p className="font-display text-5xl text-bone transition-all duration-500 group-hover:[text-shadow:0_0_24px_rgba(252,187,0,0.45)] md:text-6xl">
                     {stat.n}
                   </p>
-                  <p className="mt-3 max-w-[18ch] text-sm uppercase tracking-[0.22em] text-bone/55">
-                    {stat.l}
-                  </p>
+                  <div className="mt-3 flex items-center gap-2">
+                    <span aria-hidden className="h-1 w-1 rounded-full bg-gold/0 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_6px_rgba(252,187,0,0.7)]" />
+                    <p className="max-w-[18ch] text-sm uppercase tracking-[0.22em] text-bone/55 transition-colors duration-500 group-hover:text-bone/80">
+                      {stat.l}
+                    </p>
+                  </div>
                 </div>
               </Reveal>
             ))}
@@ -152,12 +160,30 @@ export default function AboutPage() {
                 d: 'Design, drawings, permits, trades, and finish — one studio, one project lead, one phone call. End to end.',
               },
             ].map((v, i) => (
-              <Reveal key={v.t} delay={i % 3} className="bg-ink p-8 lg:p-10">
-                <p className="font-display text-3xl text-bone">0{i + 1}</p>
+              <Reveal key={v.t} delay={i % 3} className="group relative overflow-hidden bg-ink p-8 transition-colors duration-500 hover:bg-ink-700 lg:p-10">
+                {/* Hover sweep */}
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                  style={{
+                    background:
+                      i % 2 === 0
+                        ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.10), transparent 55%)'
+                        : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.10), transparent 55%)',
+                  }}
+                />
+                {/* Gold corner ticks on hover */}
+                <span aria-hidden className="pointer-events-none absolute left-2 top-2 h-2.5 w-2.5 border-l border-t border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
+                <span aria-hidden className="pointer-events-none absolute bottom-2 right-2 h-2.5 w-2.5 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
+                <div className="flex items-baseline gap-4">
+                  <p className="font-display text-3xl text-bone transition-all duration-500 group-hover:[text-shadow:0_0_20px_rgba(252,187,0,0.4)]">0{i + 1}</p>
+                  <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+                </div>
+                <span aria-hidden className="mt-3 block h-px w-8 bg-gold transition-all duration-500 group-hover:w-14 group-hover:shadow-[0_0_8px_rgba(252,187,0,0.6)]" />
                 <p className="mt-5 font-display text-xl text-bone md:text-2xl">
                   {v.t}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-bone/60">
+                <p className="mt-3 text-sm leading-relaxed text-bone/60 transition-colors duration-500 group-hover:text-bone/80">
                   {v.d}
                 </p>
               </Reveal>
@@ -173,16 +199,23 @@ export default function AboutPage() {
           className="pointer-events-none absolute -right-40 top-1/2 -z-10 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-gold/15 blur-[180px]"
         />
         <div className="container-luxe">
-          <div className="mx-auto max-w-4xl">
+          <div className="relative mx-auto max-w-4xl">
+            {/* Decorative gold corner frames around the pull quote */}
+            <span aria-hidden className="pointer-events-none absolute -left-3 -top-3 hidden h-6 w-6 border-l border-t border-gold/50 md:block" />
+            <span aria-hidden className="pointer-events-none absolute -right-3 -top-3 hidden h-6 w-6 border-r border-t border-gold/50 md:block" />
+            <span aria-hidden className="pointer-events-none absolute -bottom-3 -left-3 hidden h-6 w-6 border-b border-l border-gold/50 md:block" />
+            <span aria-hidden className="pointer-events-none absolute -bottom-3 -right-3 hidden h-6 w-6 border-b border-r border-gold/50 md:block" />
             <Reveal>
-              <p className="font-display text-7xl leading-none text-bone/40">“</p>
+              <p className="font-display text-7xl leading-none text-gold/60 [text-shadow:0_0_24px_rgba(252,187,0,0.4)]">“</p>
               <blockquote className="mt-6 font-display text-3xl leading-snug text-bone text-balance md:text-5xl">
                 The brief we give every senior designer is to build the home
                 they would want to walk into ten years from now. That single
                 instruction does most of the work.
               </blockquote>
-              <figcaption className="mt-8 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
-                — From the studio
+              <figcaption className="mt-8 flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone">
+                <span aria-hidden className="h-px w-8 bg-gold" />
+                <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+                From the studio
               </figcaption>
             </Reveal>
           </div>
