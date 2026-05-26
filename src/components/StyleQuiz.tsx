@@ -112,12 +112,15 @@ export function StyleQuiz() {
             initial={false}
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute left-0 top-0 h-full bg-gold"
+            className="absolute left-0 top-0 h-full bg-gradient-to-r from-gold via-gold to-accent shadow-[0_0_8px_rgba(252,187,0,0.6)]"
           />
         </div>
-        <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
-          {step >= totalSteps - 1 ? 'Profile' : `Step ${step + 1} / ${totalSteps - 1}`}
-        </p>
+        <div className="flex items-center gap-2">
+          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+          <p className="text-[0.65rem] uppercase tracking-[0.28em] text-bone/45">
+            {step >= totalSteps - 1 ? 'Profile' : `Step ${step + 1} / ${totalSteps - 1}`}
+          </p>
+        </div>
       </div>
 
       <AnimatePresence mode="wait">
@@ -283,9 +286,16 @@ export function StyleQuiz() {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="mt-8 flex items-start gap-4 border border-gold/30 bg-gold/5 p-6"
+                  className="relative mt-8 flex items-start gap-4 overflow-hidden border border-gold/30 bg-gold/5 p-6 shadow-[0_0_30px_-12px_rgba(252,187,0,0.45)]"
                 >
-                  <CheckCircle2 className="mt-1 h-6 w-6 shrink-0 text-bone" />
+                  <span aria-hidden className="absolute left-2 top-2 h-2 w-2 border-l border-t border-gold" />
+                  <span aria-hidden className="absolute bottom-2 right-2 h-2 w-2 border-b border-r border-gold" />
+                  <span
+                    aria-hidden
+                    className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-gold/50 bg-gold/10 shadow-[0_0_18px_-4px_rgba(252,187,0,0.6)]"
+                  >
+                    <CheckCircle2 className="h-5 w-5 text-bone" />
+                  </span>
                   <div>
                     <p className="font-display text-xl text-bone">
                       Your style direction is on its way.

@@ -10,12 +10,13 @@ export function JournalSubscribe() {
 
   return (
     <section className="relative overflow-hidden bg-ink-800/40">
+      {/* Top gradient hairline */}
       <div
         aria-hidden
         className="h-px w-full"
         style={{
           background:
-            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 50%, transparent 100%)',
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.45) 35%, rgba(59,130,246,0.45) 65%, transparent 100%)',
         }}
       />
       <div aria-hidden className="glow-amber" />
@@ -26,8 +27,11 @@ export function JournalSubscribe() {
             <div className="grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
               <div>
                 <div className="mb-4 flex items-center gap-3">
-                  <span className="grid h-9 w-9 place-items-center border border-gold/40 bg-gold/5">
-                    <Mail className="h-4 w-4 text-bone" aria-hidden />
+                  <span className="relative grid h-9 w-9 place-items-center overflow-hidden border border-gold/40 bg-gold/5 shadow-[0_0_18px_-4px_rgba(252,187,0,0.45)]">
+                    <span aria-hidden className="absolute inset-0 bg-gradient-to-br from-gold/15 to-transparent" />
+                    <span aria-hidden className="absolute left-1 top-1 h-1.5 w-1.5 border-l border-t border-gold" />
+                    <span aria-hidden className="absolute bottom-1 right-1 h-1.5 w-1.5 border-b border-r border-gold" />
+                    <Mail className="relative h-4 w-4 text-bone" aria-hidden />
                   </span>
                   <p className="eyebrow !text-bone">Quarterly Letter</p>
                 </div>
@@ -44,10 +48,17 @@ export function JournalSubscribe() {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="flex items-center gap-3 border border-gold/30 bg-gold/5 px-5 py-4"
+                  className="relative flex items-center gap-3 overflow-hidden border border-gold/30 bg-gold/5 px-5 py-4 shadow-[0_0_18px_-6px_rgba(252,187,0,0.5)]"
                 >
-                  <CheckCircle2 className="h-5 w-5 text-bone" />
-                  <p className="text-sm text-bone/75">Subscribed.</p>
+                  <span aria-hidden className="absolute left-2 top-2 h-1.5 w-1.5 border-l border-t border-gold" />
+                  <span aria-hidden className="absolute bottom-2 right-2 h-1.5 w-1.5 border-b border-r border-gold" />
+                  <span
+                    aria-hidden
+                    className="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-gold/50 bg-gold/10 shadow-[0_0_12px_-2px_rgba(252,187,0,0.6)]"
+                  >
+                    <CheckCircle2 className="h-4 w-4 text-bone" />
+                  </span>
+                  <p className="text-sm text-bone/85">Subscribed.</p>
                 </motion.div>
               ) : (
                 <form
@@ -78,12 +89,13 @@ export function JournalSubscribe() {
         </div>
       </div>
 
+      {/* Bottom gradient hairline (reversed) */}
       <div
         aria-hidden
         className="h-px w-full"
         style={{
           background:
-            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 50%, transparent 100%)',
+            'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.45) 35%, rgba(252,187,0,0.45) 65%, transparent 100%)',
         }}
       />
     </section>

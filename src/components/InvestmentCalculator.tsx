@@ -218,7 +218,7 @@ export function InvestmentCalculator() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
-            <p className="font-display text-4xl text-bone md:text-6xl">
+            <p className="font-display text-4xl text-bone [text-shadow:0_0_28px_rgba(252,187,0,0.35)] md:text-6xl">
               {formatCurrency(result.low)}
               <span className="mx-3 text-bone/30">–</span>
               {formatCurrency(result.high)}
@@ -262,9 +262,16 @@ export function InvestmentCalculator() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="mt-8 flex items-start gap-4 border border-gold/30 bg-gold/5 p-5"
+              className="relative mt-8 flex items-start gap-4 overflow-hidden border border-gold/30 bg-gold/5 p-5 shadow-[0_0_24px_-10px_rgba(252,187,0,0.45)]"
             >
-              <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-bone" />
+              <span aria-hidden className="absolute left-2 top-2 h-2 w-2 border-l border-t border-gold" />
+              <span aria-hidden className="absolute bottom-2 right-2 h-2 w-2 border-b border-r border-gold" />
+              <span
+                aria-hidden
+                className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-gold/50 bg-gold/10 shadow-[0_0_14px_-2px_rgba(252,187,0,0.6)]"
+              >
+                <CheckCircle2 className="h-5 w-5 text-bone" />
+              </span>
               <div>
                 <p className="font-display text-lg text-bone">On its way.</p>
                 <p className="mt-1 text-xs text-bone/65">
