@@ -19,11 +19,14 @@ export function BookingStrip() {
         <Reveal>
           <div className="flex flex-col items-start justify-between gap-6 py-10 md:flex-row md:items-center md:py-9">
             <div className="flex items-start gap-4 md:items-center">
-              <span className="relative grid h-12 w-12 shrink-0 place-items-center overflow-hidden border border-gold/40 bg-gold/5">
+              <span className="relative grid h-12 w-12 shrink-0 place-items-center overflow-hidden border border-gold/40 bg-gold/5 shadow-[0_0_20px_-4px_rgba(252,187,0,0.4)]">
                 <span
                   aria-hidden
                   className="absolute inset-0 bg-gradient-to-br from-gold/15 to-transparent"
                 />
+                {/* Corner ticks */}
+                <span aria-hidden className="absolute left-1 top-1 h-1.5 w-1.5 border-l border-t border-gold" />
+                <span aria-hidden className="absolute bottom-1 right-1 h-1.5 w-1.5 border-b border-r border-gold" />
                 <Calendar className="relative h-5 w-5 text-bone" />
               </span>
               <div>
@@ -48,10 +51,15 @@ export function BookingStrip() {
             </div>
             <Link
               href="/visit"
-              className="group flex items-center gap-3 self-end border border-bone/15 px-5 py-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:bg-gold/5 md:self-auto"
+              className="group relative flex items-center gap-3 self-end overflow-hidden border border-bone/15 px-5 py-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-all duration-500 hover:border-gold hover:bg-gold/5 md:self-auto"
             >
-              Reserve a slot
-              <ArrowUpRight className="h-3 w-3 transition-transform duration-500 group-hover:rotate-45" />
+              {/* Diagonal gold shimmer sweep on hover */}
+              <span
+                aria-hidden
+                className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-gold/15 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"
+              />
+              <span className="relative">Reserve a slot</span>
+              <ArrowUpRight className="relative h-3 w-3 transition-transform duration-500 group-hover:rotate-45" />
             </Link>
           </div>
         </Reveal>
