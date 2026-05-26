@@ -157,13 +157,19 @@ export default function SampleBudgetsPage() {
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/60 to-transparent" />
+                    {/* Gold corner ticks */}
+                    <span aria-hidden className="pointer-events-none absolute left-3 top-3 h-3 w-3 border-l border-t border-gold/60" />
+                    <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/60" />
                   </div>
-                  <p className="eyebrow mt-8 !text-bone/45">{budget.eyebrow}</p>
+                  <div className="mt-8 flex items-center gap-3">
+                    <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+                    <p className="eyebrow !text-bone/45">{budget.eyebrow}</p>
+                  </div>
                   <h2 className="mt-3 font-display text-3xl text-bone md:text-4xl">
                     {budget.title}
                   </h2>
                   <div className="mt-6 flex items-baseline gap-6">
-                    <p className="font-display text-5xl text-bone md:text-6xl">
+                    <p className="font-display text-5xl text-bone [text-shadow:0_0_28px_rgba(252,187,0,0.4)] md:text-6xl">
                       {budget.total}
                     </p>
                   </div>
@@ -173,10 +179,13 @@ export default function SampleBudgetsPage() {
                   <div className="mt-8">
                     <Link
                       href={budget.href}
-                      className="inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
+                      className="group inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
                     >
-                      {budget.hrefLabel}
-                      <ArrowUpRight className="h-3 w-3" />
+                      <span className="relative">
+                        {budget.hrefLabel}
+                        <span aria-hidden className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
+                      </span>
+                      <ArrowUpRight className="h-3 w-3 transition-all duration-500 group-hover:rotate-45 group-hover:text-gold" />
                     </Link>
                   </div>
                 </div>
@@ -184,13 +193,21 @@ export default function SampleBudgetsPage() {
 
               <Reveal delay={1}>
                 <div>
-                  <p className="eyebrow mb-6 !text-bone">Line-Item Breakdown</p>
+                  <div className="mb-6 flex items-center gap-3">
+                    <span aria-hidden className="h-px w-8 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+                    <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+                    <p className="eyebrow !text-bone">Line-Item Breakdown</p>
+                  </div>
                   <ul className="divide-y divide-bone/10 border-y border-bone/10">
-                    {budget.lines.map((line) => (
+                    {budget.lines.map((line, lineIdx) => (
                       <li
                         key={line.label}
-                        className="grid grid-cols-[1fr_auto] items-baseline gap-3 py-4 md:grid-cols-[1fr_auto_auto] md:gap-6"
+                        className="group grid grid-cols-[1fr_auto] items-baseline gap-3 py-4 transition-colors duration-500 hover:bg-ink-800/30 md:grid-cols-[auto_1fr_auto_auto] md:gap-6"
                       >
+                        <span
+                          aria-hidden
+                          className={`hidden h-1.5 w-1.5 shrink-0 rounded-full transition-all duration-500 md:inline-block ${lineIdx % 2 === 0 ? 'bg-gold/60 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]' : 'bg-accent/60 group-hover:bg-accent group-hover:shadow-[0_0_8px_rgba(59,130,246,0.7)]'}`}
+                        />
                         <div>
                           <p className="font-display text-lg text-bone md:text-xl">
                             {line.label}
@@ -199,10 +216,10 @@ export default function SampleBudgetsPage() {
                             {line.notes}
                           </p>
                         </div>
-                        <p className="text-[0.65rem] uppercase tracking-[0.24em] text-bone/45 md:order-2">
+                        <p className="text-[0.65rem] uppercase tracking-[0.24em] text-bone/45 md:order-3">
                           {line.share}%
                         </p>
-                        <p className="font-display text-lg text-bone md:order-3 md:text-xl">
+                        <p className="font-display text-lg text-bone transition-all duration-500 group-hover:[text-shadow:0_0_18px_rgba(252,187,0,0.35)] md:order-4 md:text-xl">
                           {formatAmount(budget.total, line.share)}
                         </p>
                       </li>

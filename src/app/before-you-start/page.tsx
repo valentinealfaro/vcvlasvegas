@@ -95,10 +95,13 @@ export default function BeforeYouStartPage() {
           <div className="mt-20 space-y-16">
             {steps.map((step) => (
               <Reveal key={step.n}>
-                <div className="grid items-start gap-10 border-t border-bone/10 pt-12 lg:grid-cols-[auto_1fr_1.6fr] lg:gap-16">
-                  <p className="font-display text-6xl text-bone lg:text-7xl">
-                    {step.n}
-                  </p>
+                <div className="group grid items-start gap-10 border-t border-bone/10 pt-12 lg:grid-cols-[auto_1fr_1.6fr] lg:gap-16">
+                  <div className="flex flex-col gap-3">
+                    <p className="font-display text-6xl text-bone [text-shadow:0_0_24px_rgba(252,187,0,0.4)] lg:text-7xl">
+                      {step.n}
+                    </p>
+                    <span aria-hidden className="h-px w-10 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
+                  </div>
                   <h3 className="font-display text-2xl text-bone md:text-3xl">
                     {step.t}
                   </h3>
@@ -109,10 +112,13 @@ export default function BeforeYouStartPage() {
                     {step.link && (
                       <Link
                         href={step.link.href}
-                        className="mt-5 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
+                        className="group/link mt-5 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
                       >
-                        {step.link.label}
-                        <ArrowUpRight className="h-3 w-3" />
+                        <span className="relative">
+                          {step.link.label}
+                          <span aria-hidden className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover/link:w-full" />
+                        </span>
+                        <ArrowUpRight className="h-3 w-3 transition-all duration-500 group-hover/link:rotate-45 group-hover/link:text-gold" />
                       </Link>
                     )}
                   </div>
@@ -137,42 +143,57 @@ export default function BeforeYouStartPage() {
             title="When the prep is done."
           />
           <div className="mt-16 grid gap-px bg-bone/10 md:grid-cols-2">
-            <Reveal className="bg-ink-800 p-8 lg:p-12">
-              <p className="eyebrow mb-5 !text-bone/45">Faster Path</p>
-              <h3 className="font-display text-2xl text-bone md:text-3xl">
-                Schedule a consultation.
-              </h3>
-              <p className="mt-4 text-base leading-relaxed text-bone/65">
-                A short multi-step form to reserve a private walkthrough. Best
-                if you already have a sense of scope and want a senior
-                designer in your home soon.
-              </p>
-              <Link
-                href="/contact"
-                className="mt-8 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
-              >
-                Open the consultation form
-                <ArrowRight className="h-3 w-3" />
-              </Link>
-            </Reveal>
-            <Reveal delay={1} className="bg-ink-800 p-8 lg:p-12">
-              <p className="eyebrow mb-5 !text-bone/45">Deeper Path</p>
-              <h3 className="font-display text-2xl text-bone md:text-3xl">
-                Send a project brief.
-              </h3>
-              <p className="mt-4 text-base leading-relaxed text-bone/65">
-                A ten-minute intake with four sections (contact, property,
-                project, vision). Best if the prep is done and you want the
-                first conversation to land at scope rather than biography.
-              </p>
-              <Link
-                href="/intake"
-                className="mt-8 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
-              >
-                Open the project brief
-                <ArrowRight className="h-3 w-3" />
-              </Link>
-            </Reveal>
+            {[
+              {
+                eyebrow: 'Faster Path',
+                title: 'Schedule a consultation.',
+                desc: 'A short multi-step form to reserve a private walkthrough. Best if you already have a sense of scope and want a senior designer in your home soon.',
+                href: '/contact',
+                cta: 'Open the consultation form',
+              },
+              {
+                eyebrow: 'Deeper Path',
+                title: 'Send a project brief.',
+                desc: 'A ten-minute intake with four sections (contact, property, project, vision). Best if the prep is done and you want the first conversation to land at scope rather than biography.',
+                href: '/intake',
+                cta: 'Open the project brief',
+              },
+            ].map((card, i) => (
+              <Reveal key={card.eyebrow} delay={i} className="group relative overflow-hidden bg-ink-800 p-8 transition-colors duration-500 hover:bg-ink-700 lg:p-12">
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                  style={{
+                    background:
+                      i % 2 === 0
+                        ? 'radial-gradient(circle at 100% 0%, rgba(252,187,0,0.10), transparent 55%)'
+                        : 'radial-gradient(circle at 0% 100%, rgba(59,130,246,0.10), transparent 55%)',
+                  }}
+                />
+                <span aria-hidden className="pointer-events-none absolute left-3 top-3 h-3 w-3 border-l border-t border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
+                <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 h-3 w-3 border-b border-r border-gold/0 transition-colors duration-500 group-hover:border-gold/70" />
+                <div className="mb-5 flex items-center gap-3">
+                  <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-gold/60 transition-all duration-500 group-hover:bg-gold group-hover:shadow-[0_0_8px_rgba(252,187,0,0.7)]" />
+                  <p className="eyebrow !text-bone/45">{card.eyebrow}</p>
+                </div>
+                <h3 className="font-display text-2xl text-bone md:text-3xl">
+                  {card.title}
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-bone/65 transition-colors duration-500 group-hover:text-bone/80">
+                  {card.desc}
+                </p>
+                <Link
+                  href={card.href}
+                  className="group/link mt-8 inline-flex items-center gap-3 text-[0.65rem] uppercase tracking-[0.28em] text-bone transition-colors hover:text-bone"
+                >
+                  <span className="relative">
+                    {card.cta}
+                    <span aria-hidden className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-500 group-hover/link:w-full" />
+                  </span>
+                  <ArrowRight className="h-3 w-3 transition-all duration-500 group-hover/link:translate-x-1 group-hover/link:text-gold" />
+                </Link>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
