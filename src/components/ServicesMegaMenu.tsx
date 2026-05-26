@@ -54,15 +54,15 @@ export function ServicesMegaMenu() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-x-0 top-[72px] z-40 bg-bone/95 backdrop-blur-xl"
+            className="fixed inset-x-0 top-[72px] z-40 bg-bone/95 shadow-[0_28px_80px_-30px_rgba(0,0,0,0.18)] backdrop-blur-xl"
           >
-            {/* Top gradient hairline */}
+            {/* Top gradient hairline — amber → coral → blue */}
             <div
               aria-hidden
               className="pointer-events-none absolute inset-x-0 top-0 h-px"
               style={{
                 background:
-                  'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.45) 35%, rgba(59,130,246,0.45) 65%, transparent 100%)',
+                  'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.6) 30%, rgba(249,115,22,0.6) 50%, rgba(59,130,246,0.6) 70%, transparent 100%)',
               }}
             />
             {/* Bottom gradient hairline */}
@@ -71,7 +71,7 @@ export function ServicesMegaMenu() {
               className="pointer-events-none absolute inset-x-0 bottom-0 h-px"
               style={{
                 background:
-                  'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.45) 35%, rgba(252,187,0,0.45) 65%, transparent 100%)',
+                  'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.6) 30%, rgba(249,115,22,0.6) 50%, rgba(252,187,0,0.6) 70%, transparent 100%)',
               }}
             />
             {/* Ambient duotone glow */}

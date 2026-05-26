@@ -5,13 +5,22 @@ import { Reveal } from './Reveal';
 export function BookingStrip() {
   return (
     <section className="relative overflow-hidden bg-bone-800/40">
-      {/* Gradient hairline top + bottom */}
+      {/* Soft sunset wash behind the strip */}
       <div
         aria-hidden
-        className="h-px w-full"
+        className="pointer-events-none absolute inset-0 opacity-50"
         style={{
           background:
-            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 50%, transparent 100%)',
+            'radial-gradient(ellipse at 0% 50%, rgba(252,187,0,0.10), transparent 55%), radial-gradient(ellipse at 100% 50%, rgba(249,115,22,0.08), transparent 55%)',
+        }}
+      />
+      {/* Gradient hairline top — amber → coral → blue */}
+      <div
+        aria-hidden
+        className="relative h-px w-full"
+        style={{
+          background:
+            'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.6) 30%, rgba(249,115,22,0.6) 50%, rgba(59,130,246,0.6) 70%, transparent 100%)',
         }}
       />
 
@@ -67,10 +76,10 @@ export function BookingStrip() {
 
       <div
         aria-hidden
-        className="h-px w-full"
+        className="relative h-px w-full"
         style={{
           background:
-            'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.55) 50%, transparent 100%)',
+            'linear-gradient(to right, transparent 0%, rgba(59,130,246,0.6) 30%, rgba(249,115,22,0.6) 50%, rgba(252,187,0,0.6) 70%, transparent 100%)',
         }}
       />
     </section>

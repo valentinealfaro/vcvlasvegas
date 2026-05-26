@@ -67,7 +67,7 @@ export function IntakeForm() {
   const labelClass =
     'mb-2 block text-[0.62rem] uppercase tracking-[0.28em] text-ink/55';
   const inputClass =
-    'w-full border border-ink/15 bg-bone-700/50 px-4 py-3 text-ink placeholder:text-ink/40 focus:border-gold focus:outline-none';
+    'w-full border border-ink/15 bg-bone-50 px-4 py-3 text-ink placeholder:text-ink/40 transition-all duration-300 hover:border-gold/40 focus:border-gold focus:shadow-[0_4px_18px_-6px_rgba(252,187,0,0.35)] focus:outline-none';
 
   return (
     <form

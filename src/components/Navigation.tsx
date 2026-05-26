@@ -44,10 +44,12 @@ export function Navigation() {
       <header
         className={cn(
           'fixed inset-x-0 top-0 z-50 transition-all duration-500',
-          scrolled ? 'bg-bone/85 backdrop-blur-xl' : 'bg-transparent',
+          scrolled
+            ? 'bg-bone/90 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.12)] backdrop-blur-xl'
+            : 'bg-transparent',
         )}
       >
-        {/* Gradient bottom-border when scrolled — quietly announces the chrome */}
+        {/* Gradient bottom-border when scrolled — amber → coral → blue */}
         <div
           aria-hidden
           className={cn(
@@ -56,7 +58,7 @@ export function Navigation() {
           )}
           style={{
             background:
-              'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.55) 35%, rgba(59,130,246,0.55) 65%, transparent 100%)',
+              'linear-gradient(to right, transparent 0%, rgba(252,187,0,0.6) 30%, rgba(249,115,22,0.6) 50%, rgba(59,130,246,0.6) 70%, transparent 100%)',
           }}
         />
         <div className="container-luxe flex items-center justify-between py-5 lg:py-6">
